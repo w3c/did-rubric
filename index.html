@@ -130,24 +130,20 @@ reliability, or efficiency.
         <h3>Background</h3>
         <p>
 A rubric is a tool used in academia to communicate expectations and evaluate
-performance. It clarifies what will be evaluated and how. Written records of
+performance. It consists of a set of criteria to be evaluated, possible
+responses for each criterion, and a scoring guide explaining both how to
+choose and interpret each response. The act of evaluating a rubric, which we
+call an Evaluation, provides basis for self-evaluation, procurement decisions,
+or even marketing points. Written records of
 an evaluation, which we'll call an <a>Evaluation Report</a>, document how a
 particular subject is measured against the criteria. For students, a rubric
 helps to clarify how their work will be evaluated by others. For
 <a>Evaluator</a>s, a rubric provides a consistent framework for investigating
 and documenting the performance of a subject against a particular set of
-criteria. In short, a shared rubric improves decision making when selecting or
-comparing subjects.
+criteria.
         </p>
         <p>
-A rubric consists of a set of criteria to be evaluated, possible responses for
-each criteria, and a scoring guide explaining both how to choose and interpret
-each response. The act of evaluating a rubric, which we call an
-<a>Evaluation</a>, provides basis for self-evaluation, procurement decisions,
-or even marketing points.
-        </p>
-        <p>
-The authors of this paper were inspired to develop a rubric for
+We were inspired to develop a rubric for
 decentralization when discussions about the requirements for decentralized
 identifiers, aka DIDs, led to intractable disagreement. It became clear that
 no single definition of "decentralized" would suffice for all of the
@@ -168,50 +164,24 @@ they also had numerous, distinct reasons for doing so.
 Rather than attempt to force a definition of "decentralized" that might work
 for many but would alienate others, the group set out to capture the
 measurable factors that could enable <a>Evaluator</a>s to judge the
-decentralization of DID Methods based on their own independent requirements.
-Instead of a top-down formal definition of "decentralized", the group chose a
-rubric as a mechanism for objective <a>Evaluation</a> with minimal embedded
-bias.
-        </p>
-        <p>
-The result is this document.
+decentralization of DID Methods based on their own independent requirements,
+with minimal embedded bias.
         </p>
       </section> <!-- background -->
 
       <section>
         <h3>How to apply this rubric</h3>
         <p>
-This rubric is meant to be applied by an <a>Evaluator</a> considering the
-decentralization of any given DID Method for suitability to their purpose. In
-short, <a>you</a> apply the rubric by evaluating the criteria: ask each
-relevant question and select the most appropriate response. Pick the most
-important criteria for your use and apply that against the most relevant DID
-Methods under consideration. We call the result of that analysis an
-<a>Evaluation</a> and the written record of an <a>Evaluation</a> an
-<a>Evaluation Report</a>.
+Pick the most important criteria for your use, ask each question, and select the
+most appropriate response. Do this for all of the DID
+Methods under consideration.
         </p>
-        <p>
-In simple steps:
-        </p>
-        <ol>
-          <li>
-Understand the use for which the DID Method is being evaluated.
-          </li>
-          <li>
-Select the criteria that are most relevant to the use.
-          </li>
-          <li>
-Evaluate one or more DID Methods against the selected criteria.
-          </li>
-        </ol>
-
         <p>
 Each <a>Evaluation</a> should start with an explicit framing of the use under
 consideration. Are you evaluating the Method for use in Internet-of-Things
 (IoT)? For school childrens' extra-curricular activities? For international
 travel? The use, or set of uses, will directly affect how some of the
-questions are answered. This doesn't take a lot of work or detail; just
-identify them at the beginning of the process.
+questions are answered.
         </p>
         <p>
 Where a given Method offers variability, such as multiple networks for the
@@ -226,7 +196,7 @@ for multiple underlying DID registries.
         <p>
 When creating an <a>Evaluation Report</a>, we recommend noting both the
 <a>Evaluator</a> and the date of the <a>Evaluation</a>. Many of the criteria
-are subjective and all of them are subject to change over time. Tracking who
+are subjective and all of them may evolve. Tracking who
 made the <a>Evaluation</a> and when they made it will help readers better
 understand any biases or timeliness issues that may affect the applicability
 of the <a>Evaluation</a>.
@@ -366,15 +336,15 @@ as why we included some criteria and not others.
 The sections on Alternatives and Adoption were created because we identified
 decentralization factors that have nothing to do with governance. As an
 example, a completely open system of formal "decentralized" governance could
-be <em>de facto</em> centralized because it is the only available option. For
-example, if there is only one wallet you can use for a given Method, that may
+be <em>de facto</em> centralized because it is the only available option. If
+there is only one wallet you can use for a given Method, that may
 be unacceptably centralized for a given use. On the other hand, if that wallet
 is already ubiquitous in the use cases that matter, this centralizing factor
 may not be as relevant given its accessibility by intended users. Similarly,
 some use cases would be dramatically limited if there were only one relying
 party who is willing to accept DIDs of a given Method. If a theoretical
-did:facebook Method is only accepted by Facebook (because no other services are
-willing to use it) that would affect its centralization, even if it is possible
+did:facebook Method were only accepted by Facebook (because no other services were
+willing to use it) that would affect its centralization, even if it were possible
 by design for any service to do so. The criteria in Alternatives and Adoption
 sections attempt to evaluate these factors.
         </p>
@@ -519,7 +489,7 @@ Registry
 did:peer
             </td>
             <td>
-<a href="https://openssi.github.io/peer-did-Method-spec/index.html">Peer DID
+<a href="https://identity.foundation/peer-did-method-spec/index.html">Peer DID
 Method Spec</a>
             </td>
             <td>
@@ -2768,7 +2738,7 @@ how long had the Method been live, in production?
         </p>
         <p>
 These are all excellent questions to ask when considering supporting, adopting,
-or contributing to a particular DID Method, but sadly, they do not capture
+or contributing to a particular DID Method, but they do not capture
 anything about how decentralized a Method is. A system simply doesn't become
 more or less centralized just because it is around a long time.
         </p>
