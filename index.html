@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,33 +11,3186 @@
         shortName: "did-rubric",
         edDraftURI: "https://w3c.github.io/did-rubric/",
         wgPublicList: "public-did-wg",
+        wg: "Decentralized Identifier Working Group",
+        wgURI: "https://www.w3.org/2019/did-wg/",
         wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/117488/status",
         github:                  {
             repoURL: "https://github.com/w3c/did-rubric/",
             branch: "master"
         },
-        noRecTrack: "true"
+        noRecTrack: "true",
+        editors: [{
+          name: "Joe Andrieu"
+        }],
+        authors: [{
+          name: "Joe Andrieu"
+        },
+        {
+          name: "Shannon Appelcline"
+        },
+        {
+          name: "Joachim Lohkamp"
+        },
+        {
+          name: "Drummond Reed",
+          url: "https://www.linkedin.com/in/drummondreed/",
+          company: "Evernym",
+          companyURL: "https://www.evernym.com/",
+          w3cid: 3096
+        },
+        {
+          name: "Markus Sabadello",
+          url: "https://www.linkedin.com/in/markus-sabadello-353a0821",
+          company: "Danube Tech",
+          companyURL: "https://danubetech.com/",
+          w3cid: 46729
+        },
+        {
+          name: "Oliver Terbu"
+        },
+        {
+          name: "Amy Guy"
+        }
+        ],
+
+        maxTocLevel: 3,
+        localBiblio: {
+          "DID-CORE": {
+            title: "DID Core Specification",
+            href: "https://www.w3.org/TR/did-core",
+            authors: [
+              "Manu Sporny",
+              "Markus Sabadello",
+              "Drummond Reed"
+            ],
+            status: "WD",
+            publisher: "Decentralized Identifier Working Group"
+          },
+          "DID-SPEC-REGISTRIES": {
+            title: "DID Specification Registries",
+            href: "https://w3c.github.io/did-spec-registries/",
+            authors: [
+              "Orie Steele",
+              "Manu Sporny"
+            ],
+            status: "ED",
+            publisher: "Decentralized Identifier Working Group"
+          }
+        }
       };
     </script>
   </head>
   <body>
     <section id="abstract">
       <p>
-        This is just a placeholder for now.
+The communities behind Decentralized Identifiers (DIDs) bring together a
+diverse group of contributors who have decidedly different notions of exactly
+what "decentralization" means.
+      </p>
+      <p>
+Rather than attempting to resolve this potentially unresolvable question, we
+propose a rubric &mdash; a scoring guide used to evaluate performance, a
+product, or a project &mdash; that teaches how to evaluate a given DID Method
+according to one's own requirements.
+      </p>
+      <p>
+This rubric presents a set of criteria which an <a>Evaluator</a> can apply to
+any DID Method based on the use cases most relevant to them. We avoid reducing
+the Evaluation to a single number because the criteria tend to be multidimensional
+and many of the possible responses are not necessarily good or bad. It is up
+to the <a>Evaluator</a> to understand how each response in each criteria might
+illuminate favorable or unfavorable consequences for their needs.
+      </p>
+      <p>
+While this rubric allows the evaluation of many aspects of decentralization of
+a DID Method, it is not exhaustive, and does not cover other factors that may
+affect selection or adoption of a particular Method, such as privacy, security,
+reliability, or efficiency.
       </p>
     </section>
     <section id="sotd">
-      <p>
-        This is just a placeholder for now.
-      </p>
     </section>
 
-    <section id="introduction">
+    <section>
       <h2>Introduction</h2>
+
+      <section>
+        <h3>Background</h3>
+        <p>
+A rubric is a tool used in academia to communicate expectations and evaluate
+performance. It clarifies what will be evaluated and how. Written records of
+an evaluation, which we'll call an <a>Evaluation Report</a>, document how a
+particular subject is measured against the criteria. For students, a rubric
+helps to clarify how their work will be evaluated by others. For
+<a>Evaluator</a>s, a rubric provides a consistent framework for investigating
+and documenting the performance of a subject against a particular set of
+criteria. In short, a shared rubric improves decision making when selecting or
+comparing subjects.
+        </p>
+        <p>
+A rubric consists of a set of criteria to be evaluated, possible responses for
+each criteria, and a scoring guide explaining both how to choose and interpret
+each response. The act of evaluating a rubric, which we call an
+<a>Evaluation</a>, provides basis for self-evaluation, procurement decisions,
+or even marketing points.
+        </p>
+        <p>
+The authors of this paper were inspired to develop a rubric for
+decentralization when discussions about the requirements for decentralized
+identifiers, aka DIDs, led to intractable disagreement. It became clear that
+no single definition of "decentralized" would suffice for all of the
+motivations that inspired developers of DID Methods to work on a new
+decentralized approach to identity. Despite this challenge, two facts remained
+clear:
+        </p>
+        <ol>
+          <li>
+the people invested in this work shared a common goal of reversing the
+problems with centralized identity systems and
+          </li>
+          <li>
+they also had numerous, distinct reasons for doing so.
+          </li>
+        </ol>
+        <p>
+Rather than attempt to force a definition of "decentralized" that might work
+for many but would alienate others, the group set out to capture the
+measurable factors that could enable <a>Evaluator</a>s to judge the
+decentralization of DID Methods based on their own independent requirements.
+Instead of a top-down formal definition of "decentralized", the group chose a
+rubric as a mechanism for objective <a>Evaluation</a> with minimal embedded
+bias.
+        </p>
+        <p>
+The result is this document.
+        </p>
+      </section> <!-- background -->
+
+      <section>
+        <h3>How to apply this rubric</h3>
+        <p>
+This rubric is meant to be applied by an <a>Evaluator</a> considering the
+decentralization of any given DID Method for suitability to their purpose. In
+short, <a>you</a> apply the rubric by evaluating the criteria: ask each
+relevant question and select the most appropriate response. Pick the most
+important criteria for your use and apply that against the most relevant DID
+Methods under consideration. We call the result of that analysis an
+<a>Evaluation</a> and the written record of an <a>Evaluation</a> an
+<a>Evaluation Report</a>.
+        </p>
+        <p>
+In simple steps:
+        </p>
+        <ol>
+          <li>
+Understand the use for which the DID Method is being evaluated.
+          </li>
+          <li>
+Select the criteria that are most relevant to the use.
+          </li>
+          <li>
+Evaluate one or more DID Methods against the selected criteria.
+          </li>
+        </ol>
+
+        <p>
+Each <a>Evaluation</a> should start with an explicit framing of the use under
+consideration. Are you evaluating the Method for use in Internet-of-Things
+(IoT)? For school childrens' extra-curricular activities? For international
+travel? The use, or set of uses, will directly affect how some of the
+questions are answered. This doesn't take a lot of work or detail; just
+identify them at the beginning of the process.
+        </p>
+        <p>
+Where a given Method offers variability, such as multiple networks for the
+same Method, then evaluate each variant. For example, did:ethr supports
+Ethereum mainnet, multiple testnets and permissioned EVM-compliant networks
+such as Quorum. To apply a criterion to did:ethr, you will evaluate it against
+all the variations that matter <em>to you</em>. Each variation should get its
+own <a>Evaluation</a>. This applies to Level 2 Networks that can operate on
+multiple Level 1 Networks as well as DID Methods that directly offer support
+for multiple underlying DID registries.
+        </p>
+        <p>
+When creating an <a>Evaluation Report</a>, we recommend noting both the
+<a>Evaluator</a> and the date of the <a>Evaluation</a>. Many of the criteria
+are subjective and all of them are subject to change over time. Tracking who
+made the <a>Evaluation</a> and when they made it will help readers better
+understand any biases or timeliness issues that may affect the applicability
+of the <a>Evaluation</a>.
+        </p>
+        <p>
+Be selective and acknowledge the subjective. <a>Evaluations</a> do not need to
+be exhaustive. There is no requirement to answer all the questions. Simply
+answer the ones most relevant to the use contemplated.  Similarly, understand
+that any recorded <a>Evaluation</a> is going to represent the biases of the
+<a>Evaluator</a> in the context of their target use. Even the same
+<a>Evaluator</a>, evaluating the same Method for a different use, may come up
+with slightly different answers&mdash;for example, that which is economically
+accessible for small businesses might not be cost-effective for refugees, and
+that could affect how well-suited a given Method is for a specific use.
+        </p>
+        <p>
+Finally, note that this particular rubric is about decentralization. It
+doesn't cover all of the other criteria that might be relevant to evaluating a
+given DID Method. There are security, privacy, and economic concerns that
+should be considered. We look forward to working with the community to develop
+additional rubrics for these other areas and encourage <a>Evaluator</a>s to
+use this rubric as a starting point for their own work rather than the final
+say in the merit of any given Method.
+        </p>
+        <p>
+In short, use this rubric to help understand if a given DID Method is
+decentralized enough for your needs.
+        </p>
+
+      </section> <!-- how to apply -->
+
+      <section>
+        <h3>Evaluation reports</h3>
+        <p>
+To record and report an <a>Evaluation</a>, we recommend two possible formats,
+either comprehensive or comparative.
+        </p>
+        <p>
+A comprehensive <a>Evaluation</a> applies a single set of criteria to just one
+Method. This set is chosen by the <a>Evaluator</a>; it need not be all
+possible criteria, but it is all relevant criteria as judged by the
+<a>Evaluator</a>. This is the type of <a>Evaluation Report</a> we include in
+<a href="#"></a>.
+        </p>
+        <p>
+A comparative <a>Evaluation</a> includes multiple Methods in the same table to
+easily compare and contrast two or more different Methods. This may include
+any number of criteria. These are the type of reports we use as examples
+throughout the criteria list.
+        </p>
+        <p>
+In addition to the selected criteria, we recommend each report specify
+        </p>
+        <ol>
+          <li>
+The Method(s) being evaluated
+          </li>
+          <li>
+A link to the Method specification
+          </li>
+          <li>
+The <a>Evaluator</a>(s)
+          </li>
+          <li>
+The date of the <a>Evaluation</a>
+          </li>
+          <li>
+A description of the use case(s) for which the Method is being evaluated
+          </li>
+          <li>
+The rubric used for the <a>Evaluation</a>, along with reference to the
+specific version.
+          </li>
+          <li>
+Optionally, a URL for retrieving the report.
+          </li>
+        </ol>
+        <p>
+An example comprehensive report header can be found in <a href="#"></a>. An
+example comparative report header can be found in
+<a href="#comparative-evaluation-report-header"></a>.
+        </p>
+      </section> <!-- evaluation -->
+
+      <section>
+        <h3>Categories of criteria</h3>
+        <p>
+We have grouped our criteria into five categories:
+        </p>
+        <ol>
+          <li>
+Rulemaking
+          </li>
+          <li>
+Operations
+          </li>
+          <li>
+Enforcement
+          </li>
+          <li>
+Alternatives
+          </li>
+          <li>
+Adoption
+          </li>
+        </ol>
+
+        <p>
+<a>Evaluator</a>s should consider criteria from all five groups, as best fits
+your use cases. The first three are about how a given Method is governed:
+Rulemaking, Operations, and Enforcement. The latter two address issues of
+lock-in and accessibility: Alternatives and Adoption.
+        </p>
+        <p>
+A few notes about governance. Our approach parallels the same breakdown in
+authority embodied in the United States Constitution.
+        </p>
+        </p>
+        <p>
+<strong>Rulemaking</strong> addresses who makes the rules and how. (This is
+the legislative branch in the US.)
+        </p>
+        <p>
+<strong>Operations</strong> addresses how those rules are executed and how
+everyone knows that they are carried out. (This is the executive branch in the
+US.)
+        </p>
+        <p>
+<strong>Enforcement</strong> addresses how we find and respond to rule
+breaking. (This is the judicial branch in the US.)
+        </p>
+        <p>
+This mental model is key to understanding the criteria of each section as well
+as why we included some criteria and not others.
+        </p>
+        <p>
+The sections on Alternatives and Adoption were created because we identified
+decentralization factors that have nothing to do with governance. As an
+example, a completely open system of formal "decentralized" governance could
+be <em>de facto</em> centralized because it is the only available option. For
+example, if there is only one wallet you can use for a given Method, that may
+be unacceptably centralized for a given use. On the other hand, if that wallet
+is already ubiquitous in the use cases that matter, this centralizing factor
+may not be as relevant given its accessibility by intended users. Similarly,
+some use cases would be dramatically limited if there were only one relying
+party who is willing to accept DIDs of a given Method. If a theoretical
+did:facebook Method is only accepted by Facebook (because no other services are
+willing to use it) that would affect its centralization, even if it is possible
+by design for any service to do so. The criteria in Alternatives and Adoption
+sections attempt to evaluate these factors.
+        </p>
+      </section> <!-- categories -->
+
+      <section>
+        <h3>The architecture</h3>
+        <p>
+​When evaluating the governance of DID Methods, three potentially independent
+layers should be considered: the specification, the network, and the registry.
+        </p>
+        <ul>
+          <li>
+The <strong>specification</strong> is the governing document for the Method
+that outlines how that particular Method implements the required and any
+optional components of the DID Core specification [[DID-CORE]].
+          </li>
+          <li>
+The <strong>network</strong> is the underlying communications layer, i.e., how
+users of the Method communicate with others to invoke the operations of the
+Method.
+          </li>
+          <li>
+The <strong>registry</strong> is a given instance of recorded state changes,
+managed according to the specification, using the communications channel.
+          </li>
+        </ul>
+        <p>
+For Rulemaking, the criteria should be evaluated against all three of the
+above layers.
+        </p>
+        <p>
+For Operations, the criteria should be evaluated against the network and the
+registry. The specification is taken as a given (it is the core output of
+Rulemaking).
+        </p>
+        <p>
+For Adoption, the criteria should be evaluated for each major software
+component: wallet, resolver, and registry.
+        </p>
+        <p>
+For Alternatives, the criteria should be evaluated against the particular DID
+Method.
+        </p>
+        <p>
+For the examples in the rest of this document we refer to a set of Methods
+that are familiar to the authors and exhibit interesting characteristics for
+<a>Evaluation</a>. These are listed in the "Comparative Evaluation Report
+Header" table below.
+        </p>
+      </section> <!-- architecture -->
+
+      <section>
+        <h3>Comparative evaluation report header</h3>
+        <table class="simple">
+          <caption>
+Comparison Evaluation (used throughout the criteria list)
+          </caption>
+          <tr>
+            <th>
+<a>Evaluator</a>s
+            </th>
+            <td>
+Joe Andrieu &lt;<a href="mailto:joe@legreq.com">joe@legreq.com</a>&gt;
+            </td>
+          </tr>
+          <tr>
+            <th>
+Evaluation date
+            </th>
+            <td>
+2020-01-03
+            </td>
+          </tr>
+          <tr>
+            <th>
+Use cases
+            </th>
+            <td>
+              <p>
+<strong>Verifiable software development.</strong> The signing of commits by
+developers and their verification to ensure that source code in a particular
+git repository is authentic.
+              </p>
+              <p>
+<strong>User authentication.</strong> The use of DIDs for authenticating users
+for access to system services.
+              </p>
+              <p>
+<strong>Long term verifiable credentials.</strong> The use of DIDs as subject
+identifiers for long term (life-long) verifiable credentials such as earned
+academic degrees.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+Report URL
+            </th>
+            <td>
+TBD
+            </td>
+          </tr>
+          <tr>
+            <th>
+Rubric
+            </th>
+            <td>
+A Rubric for Decentralization of DID Methods v0.0.1
+            </td>
+          </tr>
+          <tr>
+            <th>
+Rubric URL
+            </th>
+            <td>
+TBD
+            </td>
+          </tr>
+        </table>
+
+        <table class="simple">
+          <caption>
+            <p>Methods considered</p>
+          </caption>
+          <tr>
+            <th>
+Method
+            </th>
+            <th>
+Specification
+            </th>
+            <th>
+Network
+            </th>
+            <th>
+Registry
+            </th>
+          </tr>
+          <tr>
+            <td>
+did:peer
+            </td>
+            <td>
+<a href="https://openssi.github.io/peer-did-Method-spec/index.html">Peer DID
+Method Spec</a>
+            </td>
+            <td>
+n/a (communications can flow over any agreeable channel)
+            </td>
+            <td>
+Held by each peer
+            </td>
+          </tr>
+          <tr>
+            <td>
+did:git
+            </td>
+            <td>
+<a href="https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md">
+DID git Spec</a>
+            </td>
+            <td>
+<a href="https://git-scm.com/">git</a> (an open source version control system)
+            </td>
+            <td>
+Any Method-compliant git repository
+            </td>
+          </tr>
+          <tr>
+            <td>
+did:btcr
+            </td>
+            <td>
+<a href="https://w3c-ccg.github.io/didm-btcr">DID Method BTCR</a>
+            </td>
+            <td>
+Bitcoin
+            </td>
+            <td>
+Bitcoin
+            </td>
+          </tr>
+          <tr>
+            <td>
+did:sov
+            </td>
+            <td>
+<a href="https://sovrin-foundation.github.io/sovrin/spec/did-Method-spec-template.html">
+Sovrin DID Method Spec</a>
+            </td>
+            <td>
+Hyperledger Indy
+            </td>
+            <td>
+A particular instance of Hyperledger Indy
+            </td>
+          </tr>
+          <tr>
+            <td>
+did:ethr
+            </td>
+            <td>
+<a href="https://github.com/decentralized-identity/ethr-did-resolver/blob/develop/doc/did-method-spec.md">
+ethr DID Method Spec</a>
+            </td>
+            <td>
+Ethereum
+            </td>
+            <td>
+Specific smart contracts for each network.
+            </td>
+          </tr>
+          <tr>
+            <td>
+did:jolo
+            </td>
+            <td>
+<a href="https://github.com/jolocom/jolocom-did-driver/blob/master/jolocom-did-Method-specification.md">
+Jolocom DID Method Specification</a>
+            </td>
+            <td>
+Ethereum
+            </td>
+            <td>
+Specific smart contracts for different networks and subnetworks.
+            </td>
+          </tr>
+        </table>
+        <p class="note">
+Note: The evaluations in this document are made by Joe Andrieu
+&lt;joe@legreq.com&gt;. Other authors have expressed different evaluations,
+because of different weighting of the relevant of different characteristics
+in particular methods. This should be expected in any evaluation: they will
+always be colored by the particular perspective of the <a>Evaluator</a>.
+        </p>
+      </section> <!-- evaluation report header -->
+    </section> <!-- introduction -->
+
+    <section>
+      <h2>The criteria</h2>
+      <section>
+        <h3>Rulemaking</h3>
+        <p>
+​Rulemaking addresses who makes the rules and how. Output of rulemaking are the
+rules.
+        </p>
+        <section>
+          <h4>Open contribution (participation)</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How open is participation in governance decisions?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Anyone can participate in an open, fair process where all participants have
+equal opportunity to be heard and influence decisions.
+              </li>
+              <li>
+Anyone can comment and contribute to open debate, but decisions are ultimately
+made by a closed group.
+              </li>
+              <li>
+Debate is restricted to a selected but known group.
+              </li>
+              <li>
+Debate is conducted in secret by an unknown group.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Governance determines how the rules of the underlying network are set and
+maintained. The more parties that are able to contribute to governance debates,
+the more decentralized the governance.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Spec.
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+B
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+did:peer has no intrinsic network. It can use any communications channel
+between parties. Only those two parties are privy to the decisions made about
+communications and recordation. The spec is openly developed on github by a
+listed set of contributors and issues may be raised by anyone.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B
+                </td>
+                <td>
+C
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The git network is the git source code, which is controlled (currently) by 16
+people. They do not have a public issues process. The spec is openly developed
+on github by a listed set of contributors and issues may be raised by anyone.
+Each  registry is controlled by potentially unknown parties as negotiated in
+"meatspace".
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+B
+                </td>
+                <td>
+D
+                </td>
+                <td>
+D
+                </td>
+                <td>
+Changes to the bitcoin protocol are chaotic and uncertain. They use BIPs, but
+the path to adoption is uncertain and the relative power of developers, miners,
+and users is open to debate. The spec is openly developed on github by a
+listed set of contributors and issues may be raised by anyone.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The Sovrin Foundation has an open community governance model but has not yet
+had open elections of trustees.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+C
+                </td>
+                <td>
+B
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+The network is Ethereum, which evolves through EIPs proposed by anyone,
+discussed by "the community" and ultimately adopted by Ethereum core devs. The
+spec is published on GitHub with issues open to the public. The smart contract
+for the registry is immutable.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+D
+                </td>
+                <td>
+B
+                </td>
+                <td>
+D
+                </td>
+                <td>
+Jolocom's network is Ethereum. Decisions over Jolocom's smart contracts are
+made by an unknown group within Jolocom. The specification (as listed in the
+DID Method Registry [[DID-SPEC-REGISTRIES]]) is currently archived and not
+open to public comment.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- participation -->
+
+        <section>
+          <h4>Transparency</h4>
+          <p>
+          </p>
+          <section>
+            <h5>Question</h5>
+            <p>
+How visible are rulemaking processes?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Agendas and participation details for all meetings are publicly announced, the
+meetings are broadcast in real-time to any listeners, and all minutes and
+recordings are captured in realtime and publicly reviewable in perpetuity.
+              </li>
+              <li>
+Minutes of meetings are reviewable by the public, including all votes and who
+cast them, but real-time observation may be limited.
+              </li>
+              <li>
+All current rules are publicly available.
+              </li>
+              <li>
+Rules may be changed without public notice.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+While participation measures active contribution, transparency measures the
+visibility of discussions affecting rule making. If such discussions are only
+visible to a limited group, it centralizes decision making in ways that
+<a>Evaluators</a> and users cannot easily see.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Spec.
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+C
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+B
+                </td>
+                <td>
+Rules for accepting changes to the business rules are bilaterally negotiated
+between the peers, subject to conformance with the specification.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+C
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The controllers of the git repo are a limited set, but their decisions are
+"meatspace protocol" and hence not explicitly transparent.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+The spec is maintained by volunteers, operating in an open fashion but without
+formal processes for announcements and meeting notes. The network and registry
+are bitcoin, which has a fairly public but messy innovation process, without
+formal meetings or votes.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The Sovrin Governance Framework actually requires all minutes of Sovrin
+governance discussions are public with a handful of exceptions for legal
+reasons (e.g., HR actions, legal actions). See Section 9 of
+<a href="https://sovrin.org/wp-content/uploads/Sovrin-Governing-Body-Policies-V1.pdf">
+Sovrin Governing Body Policies</a>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The governance is controlled by a smart contract, which is immutable.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+D
+                </td>
+                <td>
+Jolocom does not expose the internal and/or customer conversations that drive
+rulemaking.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- transparency -->
+
+        <section>
+          <h4>Breadth of Authority</h4>
+          <p>
+          </p>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many independent parties actively participate in the governance authority?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Rules are decided by an open set of multiple parties.
+              </li>
+              <li>
+Rules are decided by a closed set of multiple parties.
+              </li>
+              <li>
+Rules are decided by a single known entity.
+              </li>
+              <li>
+Rules are decided by an unknown party.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Is the governing authority for the DID Method innately centralized? Is the
+Method governed by a single entity, who could make arbitrary changes to the
+governance? Or is it governed by a closed set of parties, without fully open
+access? Or is there a legitimate effort to open the decision making process
+to multiple, competing and cooperating parties?
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Spec.
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+There is only one editor to the did:peer specification, but the repository
+itself lists 14 contributors with actual commits. The network and registry
+rules are ultimately decided by the parties participating in each did:peer
+context (a closed set of peers).
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+D
+                </td>
+                <td>
+There is only one editor to the did:git specification, with a total of three
+contributors with actual commits (although more are listed). The network is
+git (controlled by an unknown population) and the registry is a particular
+repo under the control of potentially unknown parties.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+B
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+The spec lists 4 editors and the repo lists 4 committers. The network and
+registry is bitcoin, which relies on an informal process of any number of
+parties.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+C+
+                </td>
+                <td>
+C+
+                </td>
+                <td>
+C+
+                </td>
+                <td>
+All three layers are ultimately under the control of the Sovrin Foundation,
+which itself has a governance framework to coordinate input from multiple
+parties.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+The specification is now under DIF control and the registry is immutable. The
+network is Ethereum, which is controlled by Ethereum core devs.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+C
+                </td>
+                <td>
+B
+                </td>
+                <td>
+C+
+                </td>
+                <td>
+The specification and registry are controlled by Jolocom, sometimes in
+coordination with customers. The network is Ethereum, which is controlled by
+Ethereum core devs.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- breadth -->
+
+        <section>
+          <h4>Public v private economies</h4>
+          <p>
+          </p>
+          <section>
+            <h5>Question</h5>
+            <p>
+How privatized is the economic interest of the governing authority?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+The governing authority is established for the public good without rents or
+remuneration.
+              </li>
+              <li>
+The governing authority is established for the common good of a limited set of
+parties.
+              </li>
+              <li>
+The governing authority is established to enhance profits for a limited set of
+parties.
+              </li>
+              <li>
+The governing authority is established to extract rents.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+The underlying financial goals of DID Method creators may affect the
+centralization of their Method. If the goal of a Method is to enhance or
+support a certain group, then there may be centralization focused on that
+group and their interests. In the most centralized extreme, a Method may be
+created explicitly to establish a monopoly market that it can extract rent
+from. The opposite extreme is a Method created explicitly for the public good.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Spec.
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The specification was developed to demonstrate a way that anyone can use DIDs
+without a distributed ledger. Each network and registry is established solely
+for the benefit of each peer.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The specification was developed to demonstrate how you might use DIDs to
+enhance git-based software development. Git itself (the network) was developed
+so anyone could have better software development practices. Any given registry
+(each repo is a registry) is assumed to be established for the common good of
+its controllers.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+The specification was developed to demonstrate how you could use Bitcoin for
+DIDs. The network and registry were created as a public benefit proof of
+concept for decentralized digital cash.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+All three elements are developed and maintained for the common good. As a
+501(c)4 the Sovrin foundation is a social welfare organization that must
+operate primarily to further the common good and general welfare of the people
+of its community.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+The specification and registry were created by a private company (uPort) to
+support their business. The smart contract is a common good and free to use.
+However, the network, Ethereum, was created to create wealth for its creators.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+The specification and registry were created by a private company (Jolocom) to
+support their business, but are now available for anyone to use. Similarly,
+the network, Ethereum, was created to create wealth for its creators.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- public v private -->
+
+        <section>
+          <h4>Cost</h4>
+          <p>
+          </p>
+          <section>
+            <h5>Question</h5>
+            <p>
+How expensive is it to participate in governance (in time, money, or effort)?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Free to all
+              </li>
+              <li>
+Inexpensive, but accessible
+              </li>
+              <li>
+Modest cost for interested parties
+              </li>
+              <li>
+Expensive and restricted
+              </li>
+              <li>
+Not possible to participate
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Governance takes resources, which can limit the ability of interested parties
+to influence rulemaking. Generally, the more expensive it is to participate,
+the more governance centralizes to those parties most able to make the
+investment.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Spec.
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+B
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+n/a
+                </td>
+                <td>
+The specification is available for engagement via Github, but participating in
+decision making takes time and requires expertise. The network and registry
+are negotiated on a case-by-case basis, so participation could be anywhere on
+the spectrum.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B
+                </td>
+                <td>
+D+
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The specification is available for engagement via Github, but participating in
+decision making takes time and requires expertise. Git itself (the network) is
+partially influenceable through online issues, but real change requires deep
+expertise and is controlled by a handful of developers. Any given registry's
+governance is, by design, a question of "meatspace" negotiations, which is
+expensive and limited to the parties who control the repo.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+B
+                </td>
+                <td>
+D
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The specification is available for engagement via Github, but participating in
+decision making takes time and requires expertise. The network and registry
+(bitcoin) are theoretically open to any participants, but influencing the
+direction of bitcoin is notoriously expensive and unpredictable.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The did:sov: method together with 100% of the Sovrin ledger and Sovrin
+infrastructure are governed by an open public non-profit organization that is
+open to anyone to participate. The Sovrin Governance Framework Working Group
+is an all-volunteer community-driven effort in which over 50 volunteers have
+participated for over three years to develop a
+<a href="https://sovrin.org/governance-framework/">fully public governance
+framework</a> on which anyone can comment and suggest improvements. The Sovrin
+ledger operates on the Hyperledger Indy open source code base to which anyone
+can contribute.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+C
+                </td>
+                <td>
+D
+                </td>
+                <td>
+E
+                </td>
+                <td>
+The specification is available for engagement via Github, and managed by DIF.
+The network itself, Ethereum, is expensive and difficult to influence: not
+impossible for an outsider, but expensive. Governance of the registry is not
+accessible except with uPort's permission.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+D
+                </td>
+                <td>
+D
+                </td>
+                <td>
+E
+                </td>
+                <td>
+While the did:jolo specification is available online, it is archived and not
+open to further engagement. Jolocom has sole control over who can participate
+in developing specifications based on did:jolo, and they work with customers
+to customize the Method. The network itself, Ethereum, is expensive and
+difficult to influence: not impossible for an outsider, but expensive. The
+registry is immutable and therefore not open to participation.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+      </section> <!-- cost -->
+
+      <section>
+        <h3>Operation</h3>
+        <section>
+          <h4>Permissioned operation</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+To use the DID Method, do you need permission?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Anyone can participate fully (full read/write and participation in consensus).
+              </li>
+              <li>
+Anyone can read/write, but consensus mechanism is permissioned.
+              </li>
+              <li>
+Anyone can read, but writing and consensus is permissioned.
+              </li>
+              <li>
+All participation is permissioned.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Permissioned operation impacts the availability of the network to various
+participants, which can affect inclusivity with regard to underserved or
+vulnerable populations. Permissioned networks also expose the permission giver
+to legal or other attacks.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A
+                </td>
+                <td>
+D
+                </td>
+                <td>
+By design, did:peer can use any communications channel and only the
+participation of the participants is required. Unfortunately, for those
+outside the peer context, the registry is inaccessible.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+A
+                </td>
+                <td>
+D
+                </td>
+                <td>
+Git software is available to anyone. Participation and access is controlled by
+the repo maintainers.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+The bitcoin network is open to anyone.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+C
+                </td>
+                <td>
+C
+                </td>
+                <td>
+Sovrin foundation limits access to writing and consensus, but the network is
+open to all for reading.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Ethereum is open to anyone. The registry is accessible to anyone.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Ethereum is open to anyone. The registry is accessible to anyone, although
+some subregistries/subnetworks may have alternate rules.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- permissioned -->
+
+        <section>
+          <h4>Financial accountability</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How transparent and fair are the economics of the Method?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+All operational finances are transparent and accounted for.
+​              </li>
+              <li>
+Compensation for primary operators is transparent.
+​              </li>
+              <li>
+Some financial flows are visible.
+​              </li>
+              <li>
+Operation is privatized with no visibility.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Similar to Governance, financial accountability reflects the integrity and
+sustainability of the DID registry. The more open, transparent, and accountable
+the system, the greater the confidence a DID controller may have that it will
+remain stable and operational, and therefore continue to provide service.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+D
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The financials of both parties have no visibility.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+A
+                </td>
+                <td>
+D
+                </td>
+                <td>
+The financials of both parties have no visibility. However, the underlying git
+software is free and open source.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+Bitcoin is transparent, although operations are somewhat obscured by
+pseudonymous transaction addresses.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+The Sovrin Foundation publishes an annual report with details about overall
+finances for their operation, and the books are required to be openly
+available for inspection by anyone.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+Ethereum is transparent, although operations are somewhat obscured by pseudonymous transaction addresses.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+Ethereum is transparent, although operations are somewhat obscured by
+pseudonymous transaction addresses.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- financial -->
+
+        <section>
+          <h4>Interoperability</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Does the DID Method restrict access or functionality to particular wallet
+implementations per the specification? (Whether or not any given wallet works
+with the resolver or registry is covered elsewhere.)
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Any wallet can work with any resolver on any registry,
+              </li>
+              <li>
+Any wallet can work with multiple resolvers and multiple registries,
+              </li>
+              <li>
+Some implementations of some wallets can work with some resolvers,
+              </li>
+              <li>
+There is a single combined suite of resolver, registry, and wallet.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+The ability to communicate with different (ideally all) resolvers and
+registries significantly increases the applicability of a decentralized
+identity layer / usability of a given wallet. Vice versa, limited capability
+to work with other Methods and registries restrict usage.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+did:peer is agnostic regarding the software that implements it.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+did:git is predicated on using git software. However, git itself uses a
+protocol that any software could implement. Although we know of no other
+implementation in widespread use, we know of no limitations in the protocol
+itself.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Bitcoin has no restrictions on the software used to access the network.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+did:sov: has no restrictions on any software that implements it.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Neither Ethereum nor the smart contract has any restrictions on the software
+used to access them.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Neither Ethereum nor the smart contract has any restrictions on the software
+used to access them.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- interop -->
+
+        <section>
+          <h4>Limited resource resolution</h4>
+          <p>
+          </p>
+          <section>
+            <h5>Question</h5>
+            <p>
+How much memory is required for DID resolution, without relying on authoritative
+intermediaries (e.g. blockchain explorer APIs)? We consider the amount of memory
+required to fully resolve a DID of the method, whether that memory is stored
+locally or processed ephemerally via communications.
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Minimal. Less than 1MB
+              </li>
+              <li>
+Modest. 1MB to 1GB
+              </li>
+              <li>
+Substantial. 1GB to 128 GB
+              </li>
+              <li>
+Exceptional. Over 128GB in memory
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Whether or not one can resolve a DID directly on a resource-constrained device
+affects the granularity at which smaller devices can be part of the ecosystem.
+If small edge devices, such as a smart watch, smart speaker, or even a mobile
+phone, are incapable of directly resolving a DID of the DID Method, then the
+method will lead to cloud-based services like blockchain explorer APIs, which
+themselves become a point of centralization. Many find this option an
+acceptable engineering trade-off. Others would prefer solutions that allow
+even the smallest devices to be fully capable of resolving DIDs in an
+authoritative manner.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B
+                </td>
+                <td>
+varies
+                </td>
+                <td>
+Git for Windows is just shy of 50 MB (please update if there are smaller
+versions available). However, one must still download the entire repo
+containing the registry material.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+D
+                </td>
+                <td>
+D
+                </td>
+                <td>
+To definitively resolve, one must operate a full node.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+The Sovrin ledger is based on Hyperledger Indy which supports highly efficient
+state proofs for cryptographic verification of resolution responses. A full
+node is not required.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+A full ethereum node takes >100GB, but a light ethereum node can support this
+method with less than 256kb.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+B
+                </td>
+                <td>
+B
+                </td>
+                <td>
+A full ethereum node takes >100GB, but a light ethereum node can support this
+method with less than 256kb.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- resource res -->
+
+        <section>
+          <h4>Limited resource registration</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+What are the minimum resources required to create a trusted DID without relying
+on intermediaries?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Minimal. Less than 1MB
+              </li>
+              <li>
+Modest. 1MB to 1GB
+              </li>
+              <li>
+Substantial. 1GB to 128 GB
+              </li>
+              <li>
+Exceptional. Over 128GB in memory
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Being able to create a DID in constrained situations enables certain types of
+decentralized applications that otherwise are not possible. On the edge, many
+devices rely on gateways to manage compute-, memory-, and bandwidth- intensive
+tasks. For example, while a smart lightbulb might use ZigBee or 6LowPAN, it
+will typically use a hub to connect to the Internet, even for access from
+devices within the local IP network. The more resources it takes for small
+devices to participate in registration, the greater the percentage of those
+that will need to rely on centralizing factors like hubs and gateways.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B
+                </td>
+                <td>
+varies
+                </td>
+                <td>
+Git for Windows is just shy of 50 MB (please update if there are smaller
+versions available). However, one must still download the entire repo
+containing the registry material.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+A-
+                </td>
+                <td>
+To register a DID, one must simply get a transaction on the ledger, unless you
+choose to host a continuation DID Document elsewhere, which would require its
+own resources.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Registration of a DID is a single transaction that can be performed by a thin
+client.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A+
+                </td>
+                <td>
+A+
+                </td>
+                <td>
+The smart contract used for did:ethr recognizes any valid public key as a DID,
+without requiring registration. This means DIDs can even be created offline
+with full usability. Only rotation and the registration of service endpoints
+require network access.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A+
+                </td>
+                <td>
+A+
+                </td>
+                <td>
+The smart contract used for did:ethr recognizes any valid public key as a DID,
+without requiring registration. Only rotation and the registration of service
+endpoints require network access.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- resource reg -->
+
+        <section>
+          <h4>Scope of usage</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How widely can DIDs of this Method be used?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Universal: DIDs can only be created and used universally, between any number
+of parties.
+              </li>
+              <li>
+Contextual: DIDs can be created and used contextually, between any set of
+collaborating parties.
+              </li>
+              <li>
+Paired: DID can be created and used pairwise, between any two parties.
+              </li>
+              <li>
+Central: DIDs can only be created and used with a single, centralized party.
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Different Methods enable different scopes in which a DID might be considered
+usable or valid. For example, peer DIDs are only usable between the two peers
+who share unique DIDs with each other; other parties are unable to resolve the
+DID, find the DID Document, or use its information to establish secure
+interactions. In contrast, BTCR records all DIDs on a public ledger, meaning
+that all DIDs are fundamentally accessible to any party who might receive the
+DID. Contextual DIDs are a middle ground that allow a set of parties to use
+DIDs, while those outside that group cannot meaningfully do so. Finally,
+central DIDs use the DID syntax and DID Documents to establish secure
+communications, but authority to use these DIDs resides with the central party,
+who may revoke that ability at their discretion.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Net.
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+A+
+                </td>
+                <td>
+C
+                </td>
+                <td>
+Did:peer is communication-layer independent, so it can be used on any network,
+including direct physical links. However, only those parties to the creation
+of the DID can actually use it. The DIDs have no use outside that direct
+peer-to-peer relationship.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+A
+                </td>
+                <td>
+B
+                </td>
+                <td>
+Anyone can set up a git-based repo and use did:git. However, to interact with
+a given repo, one must be aware of the repo, including which instance of it is
+authoritative.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Open, permissionless, and globally resolvable.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+A
+                </td>
+                <td>
+B
+                </td>
+                <td>
+Transactions on the Sovrin ledger are publicly readable by anyone. Transactions
+may be written by any Transaction Author however for GDPR reasons personal
+data may not currently be written to the Sovrin ledger. See
+<a href="https://sovrin.org/data-protection/">Sovrin Data Protection</a>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Open, permissionless, and globally resolvable.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Open, permissionless, and globally resolvable.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section> <!-- scope -->
+
+        <section>
+          <h4>Auditability</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Who can retrieve cryptographic proof of the history of changes to a given DID
+Document?
+            </p>
+          </section>
+          <section>
+            <h5>Responses</h5>
+            <ol type="A">
+              <li>
+Anyone
+              </li>
+              <li>
+Only a select group, including parties not involved in a given DID transaction
+              </li>
+              <li>
+Only parties to the transaction
+              </li>
+              <li>
+Not available
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h5>Relevance</h5>
+            <p>
+Trustlessness is a prerequisite of a decentralized system. If you have to
+trust the source of a DID Document (i.e., if you can't verify
+cryptographically a DID Document that is returned from resolution), then you
+are at the mercy of a potentially centralized authority. If, instead you have
+a cryptographic audit trail, then the current state of a DID cannot be
+compromised by an intermediary or central party.
+            </p>
+          </section>
+          <section>
+            <h5>Examples</h5>
+            <table class="simple">
+              <tr>
+                <th>
+Method
+                </th>
+                <th>
+Reg.
+                </th>
+                <th>
+Notes
+                </th>
+              </tr>
+              <tr>
+                <td>
+did:peer
+                </td>
+                <td>
+C-
+                </td>
+                <td>
+DID:peer maintains a cryptographic journal, but it is only available to the
+peers and, technically, can be refused (each peer may suspend interactions at
+any time).
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:git
+                </td>
+                <td>
+B-
+                </td>
+                <td>
+<em>If</em> you have access to the authoritative git repo, you can see the
+cryptographic journal. However, within the method specification, there is no
+way to know if the repo you are inspecting is, in fact, definitive.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:btcr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Anyone can see everything.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:sov
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Anyone can see everything&mdash;the Sovrin ledger is completely public.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:ethr
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Anyone can see updates and deletes. Creation is private.
+                </td>
+              </tr>
+              <tr>
+                <td>
+did:jolo
+                </td>
+                <td>
+A
+                </td>
+                <td>
+Anyone can see updates and deletes. Creation is private.
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+      </section> <!-- auditability -->
+
+      <section>
+        <h3>Enforcement</h3>
+        <p>
+The matter of enforcement is a tricky question, one that the authors did not
+have sufficient time to explore and resolve. Although we are forced to leave
+this section for future collaboration, we want to share some of our insights.
+        </p>
+        <p>
+In state-level governance, enforcement is an operational matter for the police
+and a judgmental matter for the courts. In other words, the police and the
+courts constitute the enforcement powers of governance.
+        </p>
+        <p>
+For distributed systems, especially those like Bitcoin and Ethereum,
+enforcement is a function of both social and technical functions.
+        </p>
+        <p>
+Technical enforcement could include such notions as which cryptography is used
+to ensure proper authentication of transactions or the details of a consensus
+mechanism such as proof of work (POW) or proof of stake (POS). Should a given
+cryptographic technique prove to be compromised, that would affect the ability
+of the system to enforce its own rules, making the specific cryptography used
+by a given Method a significant factor in evaluating the suitability of a
+given Method. Further, understanding the decentralized nature of a given POW
+or POS mechanism requires an <a>Evaluation</a> of both the means for executing
+the mechanism as well as a profile of those parties who could potentially
+influence or even undermine that mechanism.
+        </p>
+        <p>
+Social enforcement mechanisms rely on community or institutions. For Methods
+that have explicit governing bodies, like did:sov, presumably enforcement is a
+matter under their jurisdiction. Nodes on the network that operate outside the
+guidelines of the governing bodies can presumably have permission revoked as a
+means of enforcement. Methods that do not have formal governing bodies may,
+nevertheless, have a strong enough community to correct violations, as Ethereum
+did in response to the
+<a href="https://www.coindesk.com/understanding-dao-hack-journalists">DAO hack</a>.
+        </p>
+        <p>
+Finally, all Methods operate in (and across) one or more geographic
+jurisdictions, each with potentially distinct laws and mechanisms of
+enforcement. Identifying the potential enforcement mechanisms that
+<em>could</em> apply to the Method, to those using a Method, or to the
+operators of a Method, is almost certainly going to be relevant to certain
+<a>Evaluator</a>s. We have already seen GDPR and various US laws being applied
+based on where different servers are physically located, with lawsuits brought
+against server operators. It is inevitable that similar actions will eventually
+be brought against DID Method operators at various levels.
+        </p>
+        <p>
+In short, understanding the process for identifying violations and enforcing
+the rules as set by the rulemakers is vital to a complete Evaluation of the
+decentralization of a DID Method. We regret that we were not able to sufficiently
+explore these issues for this rubric and we look forward to working with
+subsequent collaborators to flesh out criteria that can provide suitable
+guidance for enforcement criteria.
+        </p>
+      </section> <!-- enforcement -->
+
+      <section>
+        <h3>Alternatives</h3>
+        <p>
+For each major software component (Wallet, Resolver, and <a>Registry</a>), ask
+each of the following questions. In this section, because DIDs are so early in
+the development lifecycle, most DID methods in production have only one
+implementation and some have none. Therefore, we have not standardized the
+responses nor provided examples. Consider these open-ended essay questions for
+consideration. As the market matures, this subset of questions will improve.
+        </p>
+        <section>
+          <h4>Active implementations</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many (active) substitutable, interoperable implementations support this
+Method?
+            </p>
+          </section>
+        </section> <!-- active implementations -->
+
+        <section>
+          <h4>Market share</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How large is the share of use by each of the top three implementations?
+            </p>
+          </section>
+        </section> <!-- market share -->
+
+        <section>
+          <h4>Platform support</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Which platforms have implementations?
+            </p>
+          </section>
+        </section> <!-- platform support -->
+
+        <section>
+          <h4>Language support</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Which programming languages have implementations?
+            </p>
+          </section>
+        </section> <!-- language support -->
+
+        <section>
+          <h4>Rogue risk</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+If there is one dominant implementation, how many programmers would need to be
+compromised to get a back-door into distribution?
+            </p>
+          </section>
+        </section> <!-- rogue risk -->
+
+        <section>
+          <h4>Forkability</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Is it forkable?
+            </p>
+          </section>
+        </section> <!-- forkability -->
+      </section> <!-- alternatives -->
+
+      <section>
+        <h3>Adoption (and diversity)</h3>
+        <p>
+Similar to the alternatives section, this section is limited because DID
+methods are just beginning to reach production, and so we have minimal
+knowledge of current adoption. As the market matures, we anticipate this
+section improving.
+        </p>
+
+        <section>
+          <h4>Acceptance</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many relying parties accept DIDs of this Method?
+            </p>
+          </section>
+        </section> <!-- acceptance -->
+
+        <section>
+          <h4>Users</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many daily active users use this Method?
+            </p>
+          </section>
+        </section> <!-- users -->
+
+        <section>
+          <h4>International adoption</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many different countries have significant usage?
+            </p>
+          </section>
+        </section><!-- international -->
+
+        <section>
+          <h4>In which countries?</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+Which countries have significant usage?
+            </p>
+          </section>
+        </section><!-- which countries -->
+
+        <section>
+          <h4>Language support</h4>
+          <section>
+            <h5>Question</h5>
+            <p>
+How many (human) languages are supported?
+            </p>
+          </section>
+        </section>
+      </section> <!-- language support -->
+
+      <section>
+        <h3>Not decentralization criteria</h3>
+        <p>
+We reviewed a lot of proposed criteria for inclusion in this rubric. Not all
+of them turned out to be a good fit, often because they were simply not related
+to decentralization. They were useful criteria for evaluating a DID Method,
+but we specifically limited ourselves to ONLY consider those criteria that
+specifically capture some notion of decentralization or its related benefits.
+        </p>
+        <p>
+We've included a list of additional considered criteria in <a href="#possible-additional-criteria"></a>.
+        </p>
+        <p>
+Maturity was one of those categories of criteria that we liked, but just
+wasn't related to how decentralized a Method is. We considered the maturity of
+the specification, such as how long it has been published. We considered the
+organizational maturity of the lead proponents of the Method: is this Method
+backed by a major player that has been around a while or is its only advocate
+a small startup? We even considered the operational maturity of the Method:
+how long had the Method been live, in production?
+        </p>
+        <p>
+These are all excellent questions to ask when considering supporting, adopting,
+or contributing to a particular DID Method, but sadly, they do not capture
+anything about how decentralized a Method is. A system simply doesn't become
+more or less centralized just because it is around a long time.
+        </p>
+        <p>
+What can happen over time is that a given Method might improve in its adoption
+or diversity, as more institutions, users, and platforms add support in
+various ways, and these aspects of a Method can shift how decentralized a
+Method might be, but maturity itself does NOT affect
+centralization.
+        </p>
+        <p>
+The authors had similar discussions considering security, privacy, and
+reliability criteria. All of these are important, but not directly related to
+the question of decentralization. While decentralization can improve
+reliability, it can also undermine it if done poorly. Similarly, security and
+privacy don't necessarily impact decentrality and vice-versa.
+        </p>
+        <p>
+We encourage everyone using this rubric to consider it as one tool for
+evaluating only the decentralization aspect of DID Methods. Other
+<a>Evaluations</a> will also be necessary to make a fully informed decision
+about adopting, supporting, or contributing to any given Method.
+        </p>
+      </section> <!-- not decent. criteria -->
+
+      <section>
+        <h3>Conclusion</h3>
+        <p>
+This Rubric for Decentralization of DID Methods provides one framework for
+evaluating how "decentralized" a given DID Method is. It offers a set of
+criteria which can be used selectively by <a>Evaluator</a>s to better
+understand and document their considerations when deciding to support or adopt
+a given DID Method.
+        </p>
+        <p>
+We look forward to feedback and improvements on this document and will be
+proposing it as the foundation for further development in the Decentralized
+Identifier Working Group (DID WG) of the World Wide Web Consortium. Today,
+comments are welcome in the Rebooting Web of Trust repository in which this
+document is published. Our intention is to move this conversation to the DID
+WG, should the group accept this contribution as a starting point for future
+work.
+        </p>
+      </section> <!-- conclusion -->
+
+    </section> <!-- criteria -->
+
+    <section class="appendix">
+      <h2>Terminology</h2>
+      <dl>
+        <dt><dfn data-lt="Evaluator">
+Evaluator
+        </dfn></dt>
+        <dd>
+The individual or organization applying this rubric to evaluate a DID Method.
+        </dd>
+
+        <dt><dfn data-lt="evaluation">
+Evaluation
+        </dfn></dt>
+        <dd>
+The process of and analysis from answering the question in each selected
+criteria for a given DID Method. Evaluation could refer to deciding the answer
+to a single criteria or to a "complete" set, where completeness is in the
+judgment of the <a>Evaluator</a>.
+        </dd>
+
+        <dt><dfn data-lt="evaluation report">
+Evaluation Report
+        </dfn></dt>
+        <dd>
+The output of an <a>Evaluation</a>. The written documentation of the result of
+evaluating one or more DID Methods against this rubric. In practice, this is a
+completed report template, with answers for all of the criteria selected by
+the <a>Evaluator</a>.
+        </dd>
+
+        <dt><dfn data-lt="network">
+Network
+        </dfn></dt>
+        <dd>
+the channel that enables communication of DID Method operations, .e.g, for
+BTCR, any of the main bitcoin networks can be used (mainnet, testnet, etc.).
+For did:ethr, the network is any EVM-compliant network (each DID specifies one
+and only one such network).
+        </dd>
+
+        <dt><dfn data-lt="registry">
+Registry
+        </dfn></dt>
+        <dd>
+the instantiated storage and integrated business logic that record the effect
+of DID Method operations. In did:ethr, the registry is a smart contract. In
+did:btcr, the registry is the specific bitcoin network (the network and the
+registry are the same).
+        </dd>
+
+        <dt><dfn data-lt="you">you</dfn></dt>
+        <dd>
+Throughout this document we use the second-person pronoun "you" to refer to
+<a>Evaluator</a>s of a DID Method applying this Rubric.
+        </dd>
+      </dl>
+    </section> <!-- appendix terminology -->
+
+    <section class="appendix">
+      <h2>Possible additional criteria</h2>
+      <section>
+        <h3>Maturity</h3>
+        <ol>
+          <li>
+​How long has the specification been published?
+            <ol type="A">
+              <li>
+Just a concept sketch
+              </li>
+              <li>
+A complete draft...
+              </li>
+              <li>
+...
+              </li>
+              <li>
+Published as a fixed, recommended specification
+              </li>
+              <li>
+[Published for X years]
+              </li>
+            </ol>
+          </li>
+          <li>
+​How mature is the entity who controls the specification?
+          </li>
+          <li>
+​How long has the specification been in live usage?
+          </li>
+        </ol>
+      </section> <!-- maturity -->
+
+      <section>
+        <h3>Cryptography</h3>
+​        <ol>
+          <li>
+Can the individual use their own cryptographic material for key generation
+without sharing secrets?
+​          </li>
+          <li>
+Can DID Controllers specify their own cryptographic suite for key generation /
+signing / hashing / etc.?
+​          </li>
+          <li>
+Can DID Controllers specify ANY cryptographic suite for key generation /
+signing / hashing / etc.?
+​          </li>
+          <li>
+Do DID Controllers have cryptographically provable control over DID Documents?
+​          </li>
+          <li>
+Are all registry transactions publicly inspectable and cryptographically
+verifiable?Does the Method support specific cryptographic capabilities?
+            <ol type="A">
+              <li>
+Multi-sig
+              </li>
+              <li>
+Shamir secret sharing
+              </li>
+              <li>
+HD Keys
+              </li>
+              <li>
+Object capabilities
+              </li>
+            </ol>
+​          </li>
+          <li>
+Does the Method provide a cryptographic DID, or does it try to provide a
+human-readable name?
+​          </li>
+          <li>
+Do DIDs with a few random substitutions result in different valid DIDs, or is
+there cryptographic error correction to identify transmission errors and
+typosquatting?
+​          </li>
+          <li>
+Can the Method-specific-id be generated without the use of a per-Method
+centralized registry service (as required in the DID specification [[DID-CORE]])?
+          </li>
+        </ol>
+      </section> <!-- cryptography -->
+
+      <section>
+        <h3>Fiduciary commitments</h3>
+​        <ol>
+          <li>
+Do operators  of resolvers accept fiduciary responsibility to users? Do any?
+​          </li>
+          <li>
+Do operators of registry nodes accept fiduciary responsibility to users? Do
+any?
+​          </li>
+          <li>
+Do the parties in charge of governance accept fiduciary responsibility to
+users? Do any?
+​          </li>
+          <li>
+Do wallet creators & maintainers accept fiduciary responsibility to users? Do
+any?
+          </li>
+        </ol>
+      </section> <!-- fiduciary -->
+
+      <section>
+        <h3>Reliable recovery</h3>
+​        <ol>
+          <li>
+Are there mechanisms to recover from key loss?
+​          </li>
+          <li>
+Are there non-administrative mechanisms to recover from key loss
+​          </li>
+          <li>
+Are there cryptographically robust mechanisms for key recovery that allow
+individuals to select specific advocates or stewards?
+          </li>
+        </ol>
+      </section> <!-- reliable recovery -->
+
+      <section>
+        <h3>Substitutability</h3>
+​        <ol>
+          <li>
+Are the DIDs portable to other Methods?
+​          </li>
+          <li>
+Are the DIDs portable to multiple registries?
+​          </li>
+          <li>
+Does the Method allow DID Controllers to specify where the DID Document resides?
+​          </li>
+          <li>
+Does the Method allow DID Controllers to specify wherever they want the DID
+Document to reside?
+          </li>
+        </ol>
+      </section> <!-- substitutability -->
+
+      <section>
+        <h3>Revocation / deactivation / deletion</h3>
+​        <ol>
+          <li>
+Is it possible to provably remove a DID from the system (and all nodes)?
+​          </li>
+          <li>
+Is it possible to provably remove a DID Document from the system (and all
+nodes)?
+​          </li>
+          <li>
+Are revocations and deactivations provably documented?
+​          </li>
+          <li>
+Do revocations and deactivations allow for publicly visible explanations?
+​          </li>
+          <li>
+Can cryptographic material be selectively revoked or rotated?
+​          </li>
+          <li>
+Resolution
+​          </li>
+          <li>
+Are all DIDs globally resolvable to a definitive, provably current DID Document?
+​          </li>
+          <li>
+Are private DIDs (which are NOT globally resolvable) supported?
+​          </li>
+          <li>
+Can access to DID Documents be limited to authorized parties?
+​          </li>
+          <li>
+Can you get older versions by version number and by timestamp?
+​          </li>
+          <li>
+Can you get cryptographic proof of the history of changes to a given DID
+Document?
+          </li>
+        </ol>
+      </section> <!-- revocation -->
+
+      <section>
+        <h3>Costs</h3>
+        <ol>
+          <li>
+How much does DID creation and key rotation cost a DID Controller?
+​          </li>
+          <li>
+Must individual DIDs be written to the registry?
+​          </li>
+          <li>
+How much do changes to a DID Document cost the DID Controller?
+​          </li>
+          <li>
+Do changes to DID Documents require updating the registry?
+​          </li>
+          <li>
+What is the total cost of ownership for a typical DID and DID Document?
+​          </li>
+          <li>
+Are there free versions of wallets?
+​          </li>
+          <li>
+Are there free versions of registry software?
+​          </li>
+          <li>
+Are the free versions of resolvers?
+          </li>
+        </ol>
+      </section> <!-- costs -->
+
+      <section>
+        <h3>Censorship resistance</h3>
+        <ol>
+          <li>
+Is there a single legal or natural entity, or set of known entities, who can
+be targeted with intent to manipulate the operation or governance of the Method?
+          ​</li>
+          <li>
+Is participation in operation of the Method dependent on identification using
+traditional legal credentials, such as a birth certificate, driver's license, or passport?
+          ​</li>
+          <li>
+Are activities on the registry traceable to real world individuals?
+          ​</li>
+          <li>
+Can DIDs be disabled or revoked by an administrator?
+          ​</li>
+          <li>
+Can DID Documents be edited or removed by an administrator?
+          </li>
+        </ol>
+      </section> <!-- censorship -->
+
+      <section>
+        <h3>Uncategorized</h3>
+        <ol>
+          <li>
+Is the Method name definitive? (there are no known alternative forks or
+namespace collisions)
+          </li>
+          <li>
+Is the Method resilient against registry forks?
+​          </li>
+          <li>
+Permissioned: governed/operation vs. use/creation
+​          </li>
+          <li>
+Open source: multiple independent implementations
+​          </li>
+          <li>
+Open standard
+​          </li>
+          <li>
+Does the individual create and control?
+​          </li>
+          <li>
+Can the individual choose how keys are managed?
+​          </li>
+          <li>
+Does the issuer/controller have a fiduciary responsibility to DID Controller?
+​          </li>
+          <li>
+Does it support social recovery?
+​          </li>
+          <li>
+What does a single DID cost? TCO
+​          </li>
+          <li>
+Is resolution observable?
+​          </li>
+          <li>
+Are stealth DIDs supported?
+​          </li>
+          <li>
+Is deactivation publicly documented?
+​          </li>
+          <li>
+After control is lost can other people deactivate?
+​          </li>
+          <li>
+Possible confusion between implementations and DID Methods
+​          </li>
+          <li>
+Does it support HD Keys?
+​          </li>
+          <li>
+Are transactions publicly cryptographically verifiable?
+​          </li>
+          <li>
+Are DIDs permanent (unremovable--still able to be deactivated but all traces
+can never vanish)?
+​          </li>
+          <li>
+Can you get the latest version and older versions? Provable order of versions?
+​          </li>
+          <li>
+Is the Method published?
+​          </li>
+          <li>
+Is that Method independently implementable?
+​          </li>
+          <li>
+did:web and the .onion TLD (truly decentralized) RFC 6761 and 7686
+​          </li>
+          <li>
+Is there a centralized database?
+​          </li>
+          <li>
+Is its blockchain byzantine fault tolerant?
+​          </li>
+          <li>
+Does a single party control a majority of the source of truth? (Under what
+conditions can the DID controller lose capability?)
+​          </li>
+          <li>
+If you give control away, can you get it back?
+          </li>
+        </ol>
+      </section> <!-- uncategorized -->
+    </section> <!-- appendix additional criteria -->
+
+    <section class="appendix">
+      <h2>Acknowledgements</h2>
       <p>
-        See <a href="https://github.com/w3c/respec/wiki/User's-Guide">ReSpec's user guide</a>
-        for how to get started!
+Many thanks to contributions from Kai Wagner.
       </p>
-    </section>
+    </section> <!-- appendix acknowledgements -->
   </body>
 </html>
