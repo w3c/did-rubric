@@ -1,0 +1,318 @@
+<h3>Privacy</h3>
+<p>
+    When DIDs are used as identifiers for people, it becomes important to consider what tools a DID method offers to operate at different levels of privacy. Use cases that focus on IoT or institutions may not feel that this dimension is especially important (though institutional privacy may sometimes be desirable).
+</p>
+
+<p>
+    Privacy tends to surface some interesting tradeoffs. For example, DID methods that score very high in the "transparency" dimension may score low in privacy, and vice versa.
+</p>
+
+<section>
+    <h4>Per-DID constraints on visibility</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            What provisions are made for restricting visibility of DIDs to audiences other than the general public?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Fully private is possible.
+            </li>
+            <li>
+                VDR is visible to "all", but "all" is a restricted audience with enforced terms of service or other disincentives to abuse.
+            </li>
+            <li>
+                VDR is fully public with no constraints.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Restricting the audience for a DID is a way to discourage crawling and secondary, possibly abusive publication. However, no mechanism can completely prevent this; creating disincentives, accountability, and/or costs that encourage the DID owner's wishes to be respected is the best we can hope for.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:foo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:foo is super private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+<section>
+    <h4>Cross-DID Leakage</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How possible is it to control multiple DIDs, without having an observer of one DID be able to deduce that another DID has the same controller?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Each DID is entirely isolated; there is no practical way to infer relationships of common control between them.
+            </li>
+            <li>
+                It may be possible to infer relationships of common control based on timing and the IP address of clients, but not based on data persisted in the VDR itself. Inference is expensive or impractical.
+            </li>
+            <li>
+                It is possible to infer relationships based on data persisted in the VDR itself, and the inference is easy.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Inferring relationships between Bitcoin addresses allowed law enforcement to track down the operators of Silk Road, even though those operators believed they had privacy.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:foo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:foo is super private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+<section>
+    <h4>Incentives for Multicontext DIDs</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            To what extent does the method incentivize (due to cost, hassle, etc) a DID to be reused in multiple contexts?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                The natural and default behavior is to create a new DID in each new context, and there is no meaningful incentive to do otherwise.
+            </li>
+            <li>
+                It is possible to create and manage numerous DIDs, but the latency, complexity, or monetary expense of doing so results in modest pressure to reuse a DID.
+            </li>
+            <li>
+                Each DID is expensive in at least one important dimension. Incentives to reuse are strong.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            People will often trade away privacy for a low price or ease of use. Methods that encourage this tradeoff are less optimal from a privacy perspective, even if their privacy features are theoretically reasonable.        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:foo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:foo is super private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+<section>
+    <h4>Deletion</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How are mistakes corrected, and how is the right to be forgotten addressed? (Note how this creates a tension with immutability, which may be valuable in 2.7.1 and elsewhere.)
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Provable deletion of data is fully supported. Once something is deleted, nothing internal to the system allows it to be recovered.
+            </li>
+            <li>
+                True, provable deletion is not supported, but deleted data can be suppressed in jurisdictions where this is required.
+            </li>
+            <li>
+                The VDR is a permanent, immutable record with no support for deletion of any kind.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            ?
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:foo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:foo is super private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+<section>
+    <h4>Help With Best Practice</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            Does the method acknowledge privacy risks in service endpoints and other forms of DID document data, and provide technical, policy, or explanatory safeguards?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                ?
+            </li>
+            <li>
+                ?
+            </li>
+            <li>
+                ?
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            ?
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:foo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:foo is super private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
