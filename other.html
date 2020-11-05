@@ -1,0 +1,368 @@
+<h3>Other Possible Criteria</h3>
+<p>
+    We reviewed a lot of proposed criteria for inclusion in this rubric. Not all
+    of them turned out to be a good fit, often because they were simply not related
+    to decentralization. They were useful criteria for evaluating a DID Method,
+    but we specifically limited ourselves to ONLY consider those criteria that
+    specifically capture some notion of decentralization or its related benefits.
+</p>
+<p>
+    We've included a list of additional considered criteria in <a href="#possible-additional-criteria"></a>.
+</p>
+<p>
+    Maturity was one of those categories of criteria that we liked, but just
+    wasn't related to how decentralized a Method is. We considered the maturity of
+    the specification, such as how long it has been published. We considered the
+    organizational maturity of the lead proponents of the Method: is this Method
+    backed by a major player that has been around a while or is its only advocate
+    a small startup? We even considered the operational maturity of the Method:
+    how long had the Method been live, in production?
+</p>
+<p>
+    These are all excellent questions to ask when considering supporting, adopting,
+    or contributing to a particular DID Method, but they do not capture
+    anything about how decentralized a Method is. A system simply doesn't become
+    more or less centralized just because it is around a long time.
+</p>
+<p>
+    What can happen over time is that a given Method might improve in its adoption
+    or diversity, as more institutions, users, and platforms add support in
+    various ways, and these aspects of a Method can shift how decentralized a
+    Method might be, but maturity itself does NOT affect
+    centralization.
+</p>
+<p>
+    The authors had similar discussions considering security, privacy, and
+    reliability criteria. All of these are important, but not directly related to
+    the question of decentralization. While decentralization can improve
+    reliability, it can also undermine it if done poorly. Similarly, security and
+    privacy don't necessarily impact decentrality and vice-versa.
+</p>
+<p>
+    We encourage everyone using this rubric to consider it as one tool for
+    evaluating only the decentralization aspect of DID Methods. Other
+    <a>Evaluations</a> will also be necessary to make a fully informed decision
+    about adopting, supporting, or contributing to any given Method.
+</p>
+
+<h2>Possible additional criteria</h2>
+<section>
+    <h3>Maturity</h3>
+    <ol>
+        <li>
+            How long has the specification been published?
+            <ol type="A">
+                <li>
+                    Just a concept sketch
+                </li>
+                <li>
+                    A complete draft...
+                </li>
+                <li>
+                    ...
+                </li>
+                <li>
+                    Published as a fixed, recommended specification
+                </li>
+                <li>
+                    [Published for X years]
+                </li>
+            </ol>
+        </li>
+        <li>
+            How mature is the entity who controls the specification?
+        </li>
+        <li>
+            How long has the specification been in live usage?
+        </li>
+    </ol>
+</section> <!-- maturity -->
+
+<section>
+    <h3>Cryptography</h3>
+    <ol>
+        <li>
+            Can the individual use their own cryptographic material for key generation
+            without sharing secrets?
+        </li>
+        <li>
+            Can DID Controllers specify their own cryptographic suite for key generation /
+            signing / hashing / etc.?
+        </li>
+        <li>
+            Can DID Controllers specify ANY cryptographic suite for key generation /
+            signing / hashing / etc.?
+        </li>
+        <li>
+            Do DID Controllers have cryptographically provable control over DID Documents?
+        </li>
+        <li>
+            Are all registry transactions publicly inspectable and cryptographically
+            verifiable?Does the Method support specific cryptographic capabilities?
+            <ol type="A">
+                <li>
+                    Multi-sig
+                </li>
+                <li>
+                    Shamir secret sharing
+                </li>
+                <li>
+                    HD Keys
+                </li>
+                <li>
+                    Object capabilities
+                </li>
+            </ol>
+        </li>
+        <li>
+            Does the Method provide a cryptographic DID, or does it try to provide a
+            human-readable name?
+        </li>
+        <li>
+            Do DIDs with a few random substitutions result in different valid DIDs, or is
+            there cryptographic error correction to identify transmission errors and
+            typosquatting?
+        </li>
+        <li>
+            Can the Method-specific-id be generated without the use of a per-Method
+            centralized registry service (as required in the DID specification [[DID-CORE]])?
+        </li>
+    </ol>
+</section> <!-- cryptography -->
+
+<section>
+    <h3>Fiduciary commitments</h3>
+    <ol>
+        <li>
+            Do operators of resolvers accept fiduciary responsibility to users? Do any?
+        </li>
+        <li>
+            Do operators of registry nodes accept fiduciary responsibility to users? Do
+            any?
+        </li>
+        <li>
+            Do the parties in charge of governance accept fiduciary responsibility to
+            users? Do any?
+        </li>
+        <li>
+            Do wallet creators & maintainers accept fiduciary responsibility to users? Do
+            any?
+        </li>
+    </ol>
+</section> <!-- fiduciary -->
+
+<section>
+    <h3>Reliable recovery</h3>
+    <ol>
+        <li>
+            Are there mechanisms to recover from key loss?
+        </li>
+        <li>
+            Are there non-administrative mechanisms to recover from key loss
+        </li>
+        <li>
+            Are there cryptographically robust mechanisms for key recovery that allow
+            individuals to select specific advocates or stewards?
+        </li>
+    </ol>
+</section> <!-- reliable recovery -->
+
+<section>
+    <h3>Substitutability</h3>
+    <ol>
+        <li>
+            Are the DIDs portable to other Methods?
+        </li>
+        <li>
+            Are the DIDs portable to multiple registries?
+        </li>
+        <li>
+            Does the Method allow DID Controllers to specify where the DID Document resides?
+        </li>
+        <li>
+            Does the Method allow DID Controllers to specify wherever they want the DID
+            Document to reside?
+        </li>
+    </ol>
+</section> <!-- substitutability -->
+
+<section>
+    <h3>Revocation / deactivation / deletion</h3>
+    <ol>
+        <li>
+            Is it possible to provably remove a DID from the system (and all nodes)?
+        </li>
+        <li>
+            Is it possible to provably remove a DID Document from the system (and all
+            nodes)?
+        </li>
+        <li>
+            Are revocations and deactivations provably documented?
+        </li>
+        <li>
+            Do revocations and deactivations allow for publicly visible explanations?
+        </li>
+        <li>
+            Can cryptographic material be selectively revoked or rotated?
+        </li>
+        <li>
+            Resolution
+        </li>
+        <li>
+            Are all DIDs globally resolvable to a definitive, provably current DID Document?
+        </li>
+        <li>
+            Are private DIDs (which are NOT globally resolvable) supported?
+        </li>
+        <li>
+            Can access to DID Documents be limited to authorized parties?
+        </li>
+        <li>
+            Can you get older versions by version number and by timestamp?
+        </li>
+        <li>
+            Can you get cryptographic proof of the history of changes to a given DID
+            Document?
+        </li>
+    </ol>
+</section> <!-- revocation -->
+
+<section>
+    <h3>Costs</h3>
+    <ol>
+        <li>
+            How much does DID creation and key rotation cost a DID Controller?
+        </li>
+        <li>
+            Must individual DIDs be written to the registry?
+        </li>
+        <li>
+            How much do changes to a DID Document cost the DID Controller?
+        </li>
+        <li>
+            Do changes to DID Documents require updating the registry?
+        </li>
+        <li>
+            What is the total cost of ownership for a typical DID and DID Document?
+        </li>
+        <li>
+            Are there free versions of wallets?
+        </li>
+        <li>
+            Are there free versions of registry software?
+        </li>
+        <li>
+            Are the free versions of resolvers?
+        </li>
+    </ol>
+</section> <!-- costs -->
+
+<section>
+    <h3>Censorship resistance</h3>
+    <ol>
+        <li>
+            Is there a single legal or natural entity, or set of known entities, who can
+            be targeted with intent to manipulate the operation or governance of the Method?
+        </li>
+        <li>
+            Is participation in operation of the Method dependent on identification using
+            traditional legal credentials, such as a birth certificate, driver's license, or passport?
+        </li>
+        <li>
+            Are activities on the registry traceable to real world individuals?
+        </li>
+        <li>
+            Can DIDs be disabled or revoked by an administrator?
+        </li>
+        <li>
+            Can DID Documents be edited or removed by an administrator?
+        </li>
+    </ol>
+</section> <!-- censorship -->
+
+<section>
+    <h3>Uncategorized</h3>
+    <ol>
+        <li>
+            Is the Method name definitive? (there are no known alternative forks or
+            namespace collisions)
+        </li>
+        <li>
+            Is the Method resilient against registry forks?
+        </li>
+        <li>
+            Permissioned: governed/operation vs. use/creation
+        </li>
+        <li>
+            Open source: multiple independent implementations
+        </li>
+        <li>
+            Open standard
+        </li>
+        <li>
+            Does the individual create and control?
+        </li>
+        <li>
+            Can the individual choose how keys are managed?
+        </li>
+        <li>
+            Does the issuer/controller have a fiduciary responsibility to DID Controller?
+        </li>
+        <li>
+            Does it support social recovery?
+        </li>
+        <li>
+            What does a single DID cost? TCO
+        </li>
+        <li>
+            Is resolution observable?
+        </li>
+        <li>
+            Are stealth DIDs supported?
+        </li>
+        <li>
+            Is deactivation publicly documented?
+        </li>
+        <li>
+            After control is lost can other people deactivate?
+        </li>
+        <li>
+            Possible confusion between implementations and DID Methods
+        </li>
+        <li>
+            Does it support HD Keys?
+        </li>
+        <li>
+            Are transactions publicly cryptographically verifiable?
+        </li>
+        <li>
+            Are DIDs permanent (unremovable--still able to be deactivated but all traces
+            can never vanish)?
+        </li>
+        <li>
+            Can you get the latest version and older versions? Provable order of versions?
+        </li>
+        <li>
+            Is the Method published?
+        </li>
+        <li>
+            Is that Method independently implementable?
+        </li>
+        <li>
+            did:web and the .onion TLD (truly decentralized) RFC 6761 and 7686
+        </li>
+        <li>
+            Is there a centralized database?
+        </li>
+        <li>
+            Is its blockchain byzantine fault tolerant?
+        </li>
+        <li>
+            Does a single party control a majority of the source of truth? (Under what
+            conditions can the DID controller lose capability?)
+        </li>
+        <li>
+            If you give control away, can you get it back?
+        </li>
+    </ol>
+</section> <!-- uncategorized -->

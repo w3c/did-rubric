@@ -1,0 +1,1025 @@
+<h3>Operation</h3>
+<section>
+    <h4>Permissioned operation</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            To use the DID Method, do you need permission?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Anyone can participate fully (full read/write and participation in consensus).
+            </li>
+            <li>
+                Anyone can read/write, but consensus mechanism is permissioned.
+            </li>
+            <li>
+                Anyone can read, but writing and consensus is permissioned.
+            </li>
+            <li>
+                All participation is permissioned.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Permissioned operation impacts the availability of the network to various
+            participants, which can affect inclusivity with regard to underserved or
+            vulnerable populations. Permissioned networks also expose the permission giver
+            to legal or other attacks.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    By design, did:peer can use any communications channel and only the
+                    participation of the participants is required. Unfortunately, for those
+                    outside the peer context, the registry is inaccessible.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    Git software is available to anyone. Participation and access is controlled by
+                    the repo maintainers.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    The bitcoin network is open to anyone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    Sovrin foundation limits access to writing and consensus, but the network is
+                    open to all for reading.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Ethereum is open to anyone. The registry is accessible to anyone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Ethereum is open to anyone. The registry is accessible to anyone, although
+                    some subregistries/subnetworks may have alternate rules.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- permissioned -->
+
+<section>
+    <h4>Financial accountability</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How transparent and fair are the economics of the Method?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                All operational finances are transparent and accounted for.
+                ​              </li>
+            <li>
+                Compensation for primary operators is transparent.
+                ​              </li>
+            <li>
+                Some financial flows are visible.
+                ​              </li>
+            <li>
+                Operation is privatized with no visibility.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Similar to Governance, financial accountability reflects the integrity and
+            sustainability of the DID registry. The more open, transparent, and accountable
+            the system, the greater the confidence a DID controller may have that it will
+            remain stable and operational, and therefore continue to provide service.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The financials of both parties have no visibility.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The financials of both parties have no visibility. However, the underlying git
+                    software is free and open source.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    Bitcoin is transparent, although operations are somewhat obscured by
+                    pseudonymous transaction addresses.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The Sovrin Foundation publishes an annual report with details about overall
+                    finances for their operation, and the books are required to be openly
+                    available for inspection by anyone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    Ethereum is transparent, although operations are somewhat obscured by pseudonymous transaction addresses.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    Ethereum is transparent, although operations are somewhat obscured by
+                    pseudonymous transaction addresses.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- financial -->
+
+<section>
+    <h4>Interoperability</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            Does the DID Method restrict access or functionality to particular wallet
+            implementations per the specification? (Whether or not any given wallet works
+            with the resolver or registry is covered elsewhere.)
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Any wallet can work with any resolver on any registry,
+            </li>
+            <li>
+                Any wallet can work with multiple resolvers and multiple registries,
+            </li>
+            <li>
+                Some implementations of some wallets can work with some resolvers,
+            </li>
+            <li>
+                There is a single combined suite of resolver, registry, and wallet.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            The ability to communicate with different (ideally all) resolvers and
+            registries significantly increases the applicability of a decentralized
+            identity layer / usability of a given wallet. Vice versa, limited capability
+            to work with other Methods and registries restrict usage.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    did:peer is agnostic regarding the software that implements it.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    did:git is predicated on using git software. However, git itself uses a
+                    protocol that any software could implement. Although we know of no other
+                    implementation in widespread use, we know of no limitations in the protocol
+                    itself.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Bitcoin has no restrictions on the software used to access the network.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    did:sov: has no restrictions on any software that implements it.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Neither Ethereum nor the smart contract has any restrictions on the software
+                    used to access them.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Neither Ethereum nor the smart contract has any restrictions on the software
+                    used to access them.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- interop -->
+
+<section>
+    <h4>Limited resource resolution</h4>
+    <p>
+    </p>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How much memory is required for DID resolution, without relying on authoritative
+            intermediaries (e.g. blockchain explorer APIs)? We consider the amount of memory
+            required to fully resolve a DID of the method, whether that memory is stored
+            locally or processed ephemerally via communications.
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Minimal. Less than 1MB
+            </li>
+            <li>
+                Modest. 1MB to 1GB
+            </li>
+            <li>
+                Substantial. 1GB to 128 GB
+            </li>
+            <li>
+                Exceptional. Over 128GB in memory
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Whether or not one can resolve a DID directly on a resource-constrained device
+            affects the granularity at which smaller devices can be part of the ecosystem.
+            If small edge devices, such as a smart watch, smart speaker, or even a mobile
+            phone, are incapable of directly resolving a DID of the DID Method, then the
+            method will lead to cloud-based services like blockchain explorer APIs, which
+            themselves become a point of centralization. Many find this option an
+            acceptable engineering trade-off. Others would prefer solutions that allow
+            even the smallest devices to be fully capable of resolving DIDs in an
+            authoritative manner.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    varies
+                </td>
+                <td>
+                    Git for Windows is just shy of 50 MB (please update if there are smaller
+                    versions available). However, one must still download the entire repo
+                    containing the registry material.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    To definitively resolve, one must operate a full node.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    The Sovrin ledger is based on Hyperledger Indy which supports highly efficient
+                    state proofs for cryptographic verification of resolution responses. A full
+                    node is not required.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    A full ethereum node takes >100GB, but a light ethereum node can support this
+                    method with less than 256kb.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    A full ethereum node takes >100GB, but a light ethereum node can support this
+                    method with less than 256kb.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- resource res -->
+
+<section>
+    <h4>Limited resource registration</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            What are the minimum resources required to create a trusted DID without relying
+            on intermediaries?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Minimal. Less than 1MB
+            </li>
+            <li>
+                Modest. 1MB to 1GB
+            </li>
+            <li>
+                Substantial. 1GB to 128 GB
+            </li>
+            <li>
+                Exceptional. Over 128GB in memory
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Being able to create a DID in constrained situations enables certain types of
+            decentralized applications that otherwise are not possible. On the edge, many
+            devices rely on gateways to manage compute-, memory-, and bandwidth- intensive
+            tasks. For example, while a smart lightbulb might use ZigBee or 6LowPAN, it
+            will typically use a hub to connect to the Internet, even for access from
+            devices within the local IP network. The more resources it takes for small
+            devices to participate in registration, the greater the percentage of those
+            that will need to rely on centralizing factors like hubs and gateways.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    varies
+                </td>
+                <td>
+                    Git for Windows is just shy of 50 MB (please update if there are smaller
+                    versions available). However, one must still download the entire repo
+                    containing the registry material.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    A-
+                </td>
+                <td>
+                    To register a DID, one must simply get a transaction on the ledger, unless you
+                    choose to host a continuation DID Document elsewhere, which would require its
+                    own resources.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Registration of a DID is a single transaction that can be performed by a thin
+                    client.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A+
+                </td>
+                <td>
+                    A+
+                </td>
+                <td>
+                    The smart contract used for did:ethr recognizes any valid public key as a DID,
+                    without requiring registration. This means DIDs can even be created offline
+                    with full usability. Only rotation and the registration of service endpoints
+                    require network access.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A+
+                </td>
+                <td>
+                    A+
+                </td>
+                <td>
+                    The smart contract used for did:ethr recognizes any valid public key as a DID,
+                    without requiring registration. Only rotation and the registration of service
+                    endpoints require network access.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- resource reg -->
+
+<section>
+    <h4>Scope of usage</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How widely can DIDs of this Method be used?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Universal: DIDs can only be created and used universally, between any number
+                of parties.
+            </li>
+            <li>
+                Contextual: DIDs can be created and used contextually, between any set of
+                collaborating parties.
+            </li>
+            <li>
+                Paired: DID can be created and used pairwise, between any two parties.
+            </li>
+            <li>
+                Central: DIDs can only be created and used with a single, centralized party.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Different Methods enable different scopes in which a DID might be considered
+            usable or valid. For example, peer DIDs are only usable between the two peers
+            who share unique DIDs with each other; other parties are unable to resolve the
+            DID, find the DID Document, or use its information to establish secure
+            interactions. In contrast, BTCR records all DIDs on a public ledger, meaning
+            that all DIDs are fundamentally accessible to any party who might receive the
+            DID. Contextual DIDs are a middle ground that allow a set of parties to use
+            DIDs, while those outside that group cannot meaningfully do so. Finally,
+            central DIDs use the DID syntax and DID Documents to establish secure
+            communications, but authority to use these DIDs resides with the central party,
+            who may revoke that ability at their discretion.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A+
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    Did:peer is communication-layer independent, so it can be used on any network,
+                    including direct physical links. However, only those parties to the creation
+                    of the DID can actually use it. The DIDs have no use outside that direct
+                    peer-to-peer relationship.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    Anyone can set up a git-based repo and use did:git. However, to interact with
+                    a given repo, one must be aware of the repo, including which instance of it is
+                    authoritative.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Open, permissionless, and globally resolvable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    Transactions on the Sovrin ledger are publicly readable by anyone. Transactions
+                    may be written by any Transaction Author however for GDPR reasons personal
+                    data may not currently be written to the Sovrin ledger. See
+                    <a href="https://sovrin.org/data-protection/">Sovrin Data Protection</a>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Open, permissionless, and globally resolvable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Open, permissionless, and globally resolvable.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- scope -->
+
+<section>
+    <h4>Auditability</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            Who can retrieve cryptographic proof of the history of changes to a given DID
+            Document?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Anyone
+            </li>
+            <li>
+                Only a select group, including parties not involved in a given DID transaction
+            </li>
+            <li>
+                Only parties to the transaction
+            </li>
+            <li>
+                Not available
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Trustlessness is a prerequisite of a decentralized system. If you have to
+            trust the source of a DID Document (i.e., if you can't verify
+            cryptographically a DID Document that is returned from resolution), then you
+            are at the mercy of a potentially centralized authority. If, instead you have
+            a cryptographic audit trail, then the current state of a DID cannot be
+            compromised by an intermediary or central party.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    C-
+                </td>
+                <td>
+                    DID:peer maintains a cryptographic journal, but it is only available to the
+                    peers and, technically, can be refused (each peer may suspend interactions at
+                    any time).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B-
+                </td>
+                <td>
+                    <em>If</em> you have access to the authoritative git repo, you can see the
+                    cryptographic journal. However, within the method specification, there is no
+                    way to know if the repo you are inspecting is, in fact, definitive.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Anyone can see everything.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Anyone can see everything&mdash;the Sovrin ledger is completely public.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Anyone can see updates and deletes. Creation is private.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    Anyone can see updates and deletes. Creation is private.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
+

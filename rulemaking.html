@@ -1,0 +1,907 @@
+<h3>Rulemaking</h3>
+<p>
+    Rulemaking addresses who makes the rules and how. Output of rulemaking are the
+    rules.
+</p>
+<section>
+    <h4>Open contribution (participation)</h4>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How open is participation in governance decisions?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Anyone can participate in an open, fair process where all participants have
+                equal opportunity to be heard and influence decisions.
+            </li>
+            <li>
+                Anyone can comment and contribute to open debate, but decisions are ultimately
+                made by a closed group.
+            </li>
+            <li>
+                Debate is restricted to a selected but known group.
+            </li>
+            <li>
+                Debate is conducted in secret by an unknown group.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Governance determines how the rules of the underlying network are set and
+            maintained. The more parties that are able to contribute to governance debates,
+            the more decentralized the governance.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Spec.
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    did:peer has no intrinsic network. It can use any communications channel
+                    between parties. Only those two parties are privy to the decisions made about
+                    communications and recordation. The spec is openly developed on github by a
+                    listed set of contributors and issues may be raised by anyone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The git network is the git source code, which is controlled (currently) by 16
+                    people. They do not have a public issues process. The spec is openly developed
+                    on github by a listed set of contributors and issues may be raised by anyone.
+                    Each  registry is controlled by potentially unknown parties as negotiated in
+                    "meatspace".
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    Changes to the bitcoin protocol are chaotic and uncertain. They use BIPs, but
+                    the path to adoption is uncertain and the relative power of developers, miners,
+                    and users is open to debate. The spec is openly developed on github by a
+                    listed set of contributors and issues may be raised by anyone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The Sovrin Foundation has an open community governance model but has not yet
+                    had open elections of trustees.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    The network is Ethereum, which evolves through EIPs proposed by anyone,
+                    discussed by "the community" and ultimately adopted by Ethereum core devs. The
+                    spec is published on GitHub with issues open to the public. The smart contract
+                    for the registry is immutable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    Jolocom's network is Ethereum. Decisions over Jolocom's smart contracts are
+                    made by an unknown group within Jolocom. The specification (as listed in the
+                    DID Method Registry [[DID-SPEC-REGISTRIES]]) is currently archived and not
+                    open to public comment.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- participation -->
+
+<section>
+    <h4>Transparency</h4>
+    <p>
+    </p>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How visible are rulemaking processes?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Agendas and participation details for all meetings are publicly announced, the
+                meetings are broadcast in real-time to any listeners, and all minutes and
+                recordings are captured in realtime and publicly reviewable in perpetuity.
+            </li>
+            <li>
+                Minutes of meetings are reviewable by the public, including all votes and who
+                cast them, but real-time observation may be limited.
+            </li>
+            <li>
+                All current rules are publicly available.
+            </li>
+            <li>
+                Rules may be changed without public notice.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            While participation measures active contribution, transparency measures the
+            visibility of discussions affecting rule making. If such discussions are only
+            visible to a limited group, it centralizes decision making in ways that
+            <a>Evaluators</a> and users cannot easily see.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Spec.
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    Rules for accepting changes to the business rules are bilaterally negotiated
+                    between the peers, subject to conformance with the specification.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The controllers of the git repo are a limited set, but their decisions are
+                    "meatspace protocol" and hence not explicitly transparent.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    The spec is maintained by volunteers, operating in an open fashion but without
+                    formal processes for announcements and meeting notes. The network and registry
+                    are bitcoin, which has a fairly public but messy innovation process, without
+                    formal meetings or votes.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The Sovrin Governance Framework actually requires all minutes of Sovrin
+                    governance discussions are public with a handful of exceptions for legal
+                    reasons (e.g., HR actions, legal actions). See Section 9 of
+                    <a href="https://sovrin.org/wp-content/uploads/Sovrin-Governing-Body-Policies-V1.pdf">
+                        Sovrin Governing Body Policies</a>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The governance is controlled by a smart contract, which is immutable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    Jolocom does not expose the internal and/or customer conversations that drive
+                    rulemaking.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- transparency -->
+
+<section>
+    <h4>Breadth of Authority</h4>
+    <p>
+    </p>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How many independent parties actively participate in the governance authority?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Rules are decided by an open set of multiple parties.
+            </li>
+            <li>
+                Rules are decided by a closed set of multiple parties.
+            </li>
+            <li>
+                Rules are decided by a single known entity.
+            </li>
+            <li>
+                Rules are decided by an unknown party.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Is the governing authority for the DID Method innately centralized? Is the
+            Method governed by a single entity, who could make arbitrary changes to the
+            governance? Or is it governed by a closed set of parties, without fully open
+            access? Or is there a legitimate effort to open the decision making process
+            to multiple, competing and cooperating parties?
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Spec.
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    There is only one editor to the did:peer specification, but the repository
+                    itself lists 14 contributors with actual commits. The network and registry
+                    rules are ultimately decided by the parties participating in each did:peer
+                    context (a closed set of peers).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    There is only one editor to the did:git specification, with a total of three
+                    contributors with actual commits (although more are listed). The network is
+                    git (controlled by an unknown population) and the registry is a particular
+                    repo under the control of potentially unknown parties.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    The spec lists 4 editors and the repo lists 4 committers. The network and
+                    registry is bitcoin, which relies on an informal process of any number of
+                    parties.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    C+
+                </td>
+                <td>
+                    C+
+                </td>
+                <td>
+                    C+
+                </td>
+                <td>
+                    All three layers are ultimately under the control of the Sovrin Foundation,
+                    which itself has a governance framework to coordinate input from multiple
+                    parties.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    The specification is now under DIF control and the registry is immutable. The
+                    network is Ethereum, which is controlled by Ethereum core devs.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    C+
+                </td>
+                <td>
+                    The specification and registry are controlled by Jolocom, sometimes in
+                    coordination with customers. The network is Ethereum, which is controlled by
+                    Ethereum core devs.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- breadth -->
+
+<section>
+    <h4>Public v private economies</h4>
+    <p>
+    </p>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How privatized is the economic interest of the governing authority?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                The governing authority is established for the public good without rents or
+                remuneration.
+            </li>
+            <li>
+                The governing authority is established for the common good of a limited set of
+                parties.
+            </li>
+            <li>
+                The governing authority is established to enhance profits for a limited set of
+                parties.
+            </li>
+            <li>
+                The governing authority is established to extract rents.
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            The underlying financial goals of DID Method creators may affect the
+            centralization of their Method. If the goal of a Method is to enhance or
+            support a certain group, then there may be centralization focused on that
+            group and their interests. In the most centralized extreme, a Method may be
+            created explicitly to establish a monopoly market that it can extract rent
+            from. The opposite extreme is a Method created explicitly for the public good.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Spec.
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The specification was developed to demonstrate a way that anyone can use DIDs
+                    without a distributed ledger. Each network and registry is established solely
+                    for the benefit of each peer.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The specification was developed to demonstrate how you might use DIDs to
+                    enhance git-based software development. Git itself (the network) was developed
+                    so anyone could have better software development practices. Any given registry
+                    (each repo is a registry) is assumed to be established for the common good of
+                    its controllers.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    A
+                </td>
+                <td>
+                    The specification was developed to demonstrate how you could use Bitcoin for
+                    DIDs. The network and registry were created as a public benefit proof of
+                    concept for decentralized digital cash.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    All three elements are developed and maintained for the common good. As a
+                    501(c)4 the Sovrin foundation is a social welfare organization that must
+                    operate primarily to further the common good and general welfare of the people
+                    of its community.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    The specification and registry were created by a private company (uPort) to
+                    support their business. The smart contract is a common good and free to use.
+                    However, the network, Ethereum, was created to create wealth for its creators.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    The specification and registry were created by a private company (Jolocom) to
+                    support their business, but are now available for anyone to use. Similarly,
+                    the network, Ethereum, was created to create wealth for its creators.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section> <!-- public v private -->
+
+<section>
+    <h4>Cost</h4>
+    <p>
+    </p>
+    <section>
+        <h5>Question</h5>
+        <p>
+            How expensive is it to participate in governance (in time, money, or effort)?
+        </p>
+    </section>
+    <section>
+        <h5>Responses</h5>
+        <ol type="A">
+            <li>
+                Free to all
+            </li>
+            <li>
+                Inexpensive, but accessible
+            </li>
+            <li>
+                Modest cost for interested parties
+            </li>
+            <li>
+                Expensive and restricted
+            </li>
+            <li>
+                Not possible to participate
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h5>Relevance</h5>
+        <p>
+            Governance takes resources, which can limit the ability of interested parties
+            to influence rulemaking. Generally, the more expensive it is to participate,
+            the more governance centralizes to those parties most able to make the
+            investment.
+        </p>
+    </section>
+    <section>
+        <h5>Examples</h5>
+        <table class="simple">
+            <tr>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Spec.
+                </th>
+                <th>
+                    Net.
+                </th>
+                <th>
+                    Reg.
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    did:peer
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    The specification is available for engagement via Github, but participating in
+                    decision making takes time and requires expertise. The network and registry
+                    are negotiated on a case-by-case basis, so participation could be anywhere on
+                    the spectrum.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:git
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    D+
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The specification is available for engagement via Github, but participating in
+                    decision making takes time and requires expertise. Git itself (the network) is
+                    partially influenceable through online issues, but real change requires deep
+                    expertise and is controlled by a handful of developers. Any given registry's
+                    governance is, by design, a question of "meatspace" negotiations, which is
+                    expensive and limited to the parties who control the repo.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:btcr
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    The specification is available for engagement via Github, but participating in
+                    decision making takes time and requires expertise. The network and registry
+                    (bitcoin) are theoretically open to any participants, but influencing the
+                    direction of bitcoin is notoriously expensive and unpredictable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:sov
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    B
+                </td>
+                <td>
+                    The did:sov: method together with 100% of the Sovrin ledger and Sovrin
+                    infrastructure are governed by an open public non-profit organization that is
+                    open to anyone to participate. The Sovrin Governance Framework Working Group
+                    is an all-volunteer community-driven effort in which over 50 volunteers have
+                    participated for over three years to develop a
+                    <a href="https://sovrin.org/governance-framework/">fully public governance
+                        framework</a> on which anyone can comment and suggest improvements. The Sovrin
+                    ledger operates on the Hyperledger Indy open source code base to which anyone
+                    can contribute.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:ethr
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    E
+                </td>
+                <td>
+                    The specification is available for engagement via Github, and managed by DIF.
+                    The network itself, Ethereum, is expensive and difficult to influence: not
+                    impossible for an outsider, but expensive. Governance of the registry is not
+                    accessible except with uPort's permission.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    did:jolo
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    D
+                </td>
+                <td>
+                    E
+                </td>
+                <td>
+                    While the did:jolo specification is available online, it is archived and not
+                    open to further engagement. Jolocom has sole control over who can participate
+                    in developing specifications based on did:jolo, and they work with customers
+                    to customize the Method. The network itself, Ethereum, is expensive and
+                    difficult to influence: not impossible for an outsider, but expensive. The
+                    registry is immutable and therefore not open to participation.
+                </td>
+            </tr>
+        </table>
+    </section>
+</section>
