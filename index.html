@@ -1494,7 +1494,7 @@ registry is immutable and therefore not open to participation.
             </table>
           </section>
         </section>
-      </section> <!-- cost -->
+      </section> <!-- rulemaking -->
 
       <section>
         <h3>Operation</h3>
@@ -2521,7 +2521,7 @@ Anyone can see updates and deletes. Creation is private.
             </table>
           </section>
         </section>
-      </section> <!-- auditability -->
+      </section> <!-- operation -->
 
       <section>
         <h3>Enforcement</h3>
@@ -2713,7 +2713,913 @@ How many (human) languages are supported?
             </p>
           </section>
         </section>
-      </section> <!-- language support -->
+      </section> <!-- adoption and diversity -->
+
+      <section>
+            <h3>Security</h3>
+            <p>
+                Security has a strong influence on overall trust in the ecosystem. Different DID methods offer different security guarantees, or guarantees of different strengths.
+            </p>
+
+            <section>
+                <h4>Robust Crypto</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        What is the lowest security level ("bits of security") provided by the combination of algorithms and key types that the method requires its implementations to support?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            No combination of required features produces a profile with less than 256 bits of security.
+                        </li>
+                        <li>
+                            Between 128 and 256 bits.
+                        </li>
+                        <li>
+                            Less than 128 bits
+                        </li>
+                        <li>
+                            Less than 64 bits
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        A DID method that requires implementations to support something weak (e.g., 1024-bit RSA) is guaranteeing that its users will cooperate by default with encryption that's relatively easy to crack, with hashing that's not adequately collision-resistant, etc.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Expert Review</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        Does the system use cryptographic and security primitives that are well vetted by technical experts, and battle hardened in the school of experience?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            Experts generally consider the system very secure, and this opinion is reinforced by a track record of secure production use.
+                        </li>
+                        <li>
+                            The theoretical security of the system looks excellent, and no known attacks or substantive criticisms are unaddressed. However, limited review or limited experience informs the opinion.
+                        </li>
+                        <li>
+                            Credible reports of vulnerabilities or design shortcomings have not been addressed.
+                        </li>
+                        <li>
+                            The system actively uses mechanisms that are officially deprecated.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        Exotic crypto and other security mechanisms without expert review and a production track record is likely to contain hidden risks.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Future Proofing</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        How friendly is the system to adopting post-quantum crypto, larger hashes, or other measures that upgrade its security?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            Any user of the system can easily upgrade their crypto at any time
+                        </li>
+                        <li>
+                            No code changes are needed, but the whole system needs to be reconfigured to allow new crypto.
+                        </li>
+                        <li>
+                            Code changes must be implemented before new crypto is possible.
+                        </li>
+                        <li>
+                            Code changes must be implemented, and migration of all existing data must be performed, before new crypto is possible.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        A DID method that is hard to upgrade with respect to crypto creates incentives to remain with deprecated algorithms beyond their useful lifespan.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Self Certification</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        To what extent is the entropy used to create an identifier demonstrably connected to the party that created its inception key?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            Identifier entropy is directly derived from inception keys. Initial pre-rotation preserves this quality.
+                        </li>
+                        <li>
+                            Identifiers are assigned by a VDR rather than chosen by users. The VDR uses a cryptographically robust RNG. This creates a chain of custody that's as strong as the VDR's integrity.
+                        </li>
+                        <li>
+                            Identifiers are related to inception keys with some caveats, or they are assigned by a VDR using an algorithm that has vulnerabilities.
+                        </li>
+                        <li>
+                            Identifiers are arbitrary. They have no chain of custody before they are registered on a VDR. DID squatting is possible.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        An identifier that has a predictable or manipulable value, or that has inception keys that anyone could have created, is an attack vector.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Availability</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        How robust are protections against attempts to suppress information flow, whether legal (cease and desist) or technical (denial of service)?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            The VDR is practically immune from this risk.
+                        </li>
+                        <li>
+                            The VDR has reasonable protections in place. However, motivated and well resourced attackers could temporarily disrupt access in a targeted context.
+                        </li>
+                        <li>
+                            Attackers could permanently disrupt access in a targeted context.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        Control over an identifier is far less valuable if the propagation of that control can be limited by someone else. Availability is the "A" in the security evaluation acronym CIA.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Evolution</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        Is the current state of a DID document provably correct from a history that's visible to anyone who can resolve the DID?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            Every evolution of state is recorded, accessible, and linked appropriately to its predecessor. Arbitrary versions can be queried and proved correct, and they have a reasonably useful timestamp.
+                        </li>
+                        <li>
+                            Adequate evidence of proper evolution exists, and a forensic analysis could prove correctness. However, it's not exposed for consumption of ordinary resolvers, it lacks supporting metadata, or it's exposed in a very suboptimal way.
+                        </li>
+                        <li>
+                            Limited evidence of proper evolution exists.
+                        </li>
+                        <li>
+                            No evidence of proper evolution exists; the users have to trust the system's assertion that current state resulted from something appropriate.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        It's possible to tamper with systems that don't actively prove the correctness of their current state. Such tampering is not easy to discover.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Many Eyes</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        Is the code of the method published, does it have many contributors, and does it have a published vulnerability reporting (responsible disclosure) mechanism?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            The code is public. It has hundreds of contributors. CVEs or similar reports have been published and handled appropriately.
+                        </li>
+                        <li>
+                            The code is public, but the list of contributors is small. No vulnerability reporting mechanism has been announced, or it's been announced but has no demonstrable track record.
+                        </li>
+                        <li>
+                            The code is partly private.
+                        </li>
+                        <li>
+                            The code is entirely private.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        Security vulnerabilities tend to be found and fixed best in code that has many active contributions and a strong history of correctly handled responsible disclosure.
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Diffuse Control</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        To what extent does the system support mechanisms where DID control is distributed across multiple parties (m-of-n control, threshold signatures, etc)?
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>
+                            Rich diffuse control mechanisms are a first-class feature, and anyone who resolves a DID can see whether they are in use so confidence is increased. This may include device revocation (where keys must be exercised on a particular device to be valid).
+                        </li>
+                        <li>
+                            Some diffuse control is possible but has important deficits in documentation, maturity, or visibility.
+                        </li>
+                        <li>
+                            Multiple parties can exercise control independently. Diffuse control is possible outside the system (e.g., using Shamir secret sharing to reconstitute a single key before updating a DID document). It's not possible to know whether such mechanisms are in use.
+                        </li>
+                        <li>
+                            Only a single party can exercise control at a time.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        Diffuse trust makes hacking harder and recovery more robust (but maybe more complex).
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h4>Regulatory Compliance</h4>
+                <section>
+                    <h5>Question</h5>
+                    <p>
+                        Does the system use cryptographic mechanisms that satisfy legal requirements in relevant jurisdictions (e.g., FIPS-certified algorithms, requirements for encryption back doors, etc).
+                    </p>
+                </section>
+                <section>
+                    <h5>Responses</h5>
+                    <ol type="A">
+                        <li>>
+                            ?
+                        </li>
+                        <li>
+                            ?
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h5>Relevance</h5>
+                    <p>
+                        ?
+                    </p>
+                </section>
+                <section>
+                    <h5>Examples</h5>
+                    <table class="simple">
+                        <tr>
+                            <th>
+                                Method
+                            </th>
+                            <th>
+                                Net.
+                            </th>
+                            <th>
+                                Reg.
+                            </th>
+                            <th>
+                                Notes
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:foo
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                By design, did:foo supports 123.5 bits of security.
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+
+      </section> <!-- security -->
+
+      <section>
+          <h3>Privacy</h3>
+          <p>
+              When DIDs are used as identifiers for people, it becomes important to consider what tools a DID method offers to operate at different levels of privacy. Use cases that focus on IoT or institutions may not feel that this dimension is especially important (though institutional privacy may sometimes be desirable).
+          </p>
+
+          <p>
+              Privacy tends to surface some interesting tradeoffs. For example, DID methods that score very high in the "transparency" dimension may score low in privacy, and vice versa.
+          </p>
+
+          <section>
+              <h4>Per-DID constraints on visibility</h4>
+              <section>
+                  <h5>Question</h5>
+                  <p>
+                      What provisions are made for restricting visibility of DIDs to audiences other than the general public?
+                  </p>
+              </section>
+              <section>
+                  <h5>Responses</h5>
+                  <ol type="A">
+                      <li>
+                          Fully private is possible.
+                      </li>
+                      <li>
+                          VDR is visible to "all", but "all" is a restricted audience with enforced terms of service or other disincentives to abuse.
+                      </li>
+                      <li>
+                          VDR is fully public with no constraints.
+                      </li>
+                  </ol>
+              </section>
+              <section>
+                  <h5>Relevance</h5>
+                  <p>
+                      Restricting the audience for a DID is a way to discourage crawling and secondary, possibly abusive publication. However, no mechanism can completely prevent this; creating disincentives, accountability, and/or costs that encourage the DID owner's wishes to be respected is the best we can hope for.
+                  </p>
+              </section>
+              <section>
+                  <h5>Examples</h5>
+                  <table class="simple">
+                      <tr>
+                          <th>
+                              Method
+                          </th>
+                          <th>
+                              Net.
+                          </th>
+                          <th>
+                              Reg.
+                          </th>
+                          <th>
+                              Notes
+                          </th>
+                      </tr>
+                      <tr>
+                          <td>
+                              did:foo
+                          </td>
+                          <td>
+                              A
+                          </td>
+                          <td>
+                              D
+                          </td>
+                          <td>
+                              By design, did:foo is super private.
+                          </td>
+                      </tr>
+                  </table>
+              </section>
+          </section>
+          <section>
+              <h4>Cross-DID Leakage</h4>
+              <section>
+                  <h5>Question</h5>
+                  <p>
+                      How possible is it to control multiple DIDs, without having an observer of one DID be able to deduce that another DID has the same controller?
+                  </p>
+              </section>
+              <section>
+                  <h5>Responses</h5>
+                  <ol type="A">
+                      <li>
+                          Each DID is entirely isolated; there is no practical way to infer relationships of common control between them.
+                      </li>
+                      <li>
+                          It may be possible to infer relationships of common control based on timing and the IP address of clients, but not based on data persisted in the VDR itself. Inference is expensive or impractical.
+                      </li>
+                      <li>
+                          It is possible to infer relationships based on data persisted in the VDR itself, and the inference is easy.
+                      </li>
+                  </ol>
+              </section>
+              <section>
+                  <h5>Relevance</h5>
+                  <p>
+                      Inferring relationships between Bitcoin addresses allowed law enforcement to track down the operators of Silk Road, even though those operators believed they had privacy.
+                  </p>
+              </section>
+              <section>
+                  <h5>Examples</h5>
+                  <table class="simple">
+                      <tr>
+                          <th>
+                              Method
+                          </th>
+                          <th>
+                              Net.
+                          </th>
+                          <th>
+                              Reg.
+                          </th>
+                          <th>
+                              Notes
+                          </th>
+                      </tr>
+                      <tr>
+                          <td>
+                              did:foo
+                          </td>
+                          <td>
+                              A
+                          </td>
+                          <td>
+                              D
+                          </td>
+                          <td>
+                              By design, did:foo is super private.
+                          </td>
+                      </tr>
+                  </table>
+              </section>
+          </section>
+          <section>
+              <h4>Incentives for Multicontext DIDs</h4>
+              <section>
+                  <h5>Question</h5>
+                  <p>
+                      To what extent does the method incentivize (due to cost, hassle, etc) a DID to be reused in multiple contexts?
+                  </p>
+              </section>
+              <section>
+                  <h5>Responses</h5>
+                  <ol type="A">
+                      <li>
+                          The natural and default behavior is to create a new DID in each new context, and there is no meaningful incentive to do otherwise.
+                      </li>
+                      <li>
+                          It is possible to create and manage numerous DIDs, but the latency, complexity, or monetary expense of doing so results in modest pressure to reuse a DID.
+                      </li>
+                      <li>
+                          Each DID is expensive in at least one important dimension. Incentives to reuse are strong.
+                      </li>
+                  </ol>
+              </section>
+              <section>
+                  <h5>Relevance</h5>
+                  <p>
+                      People will often trade away privacy for a low price or ease of use. Methods that encourage this tradeoff are less optimal from a privacy perspective, even if their privacy features are theoretically reasonable.        </p>
+              </section>
+              <section>
+                  <h5>Examples</h5>
+                  <table class="simple">
+                      <tr>
+                          <th>
+                              Method
+                          </th>
+                          <th>
+                              Net.
+                          </th>
+                          <th>
+                              Reg.
+                          </th>
+                          <th>
+                              Notes
+                          </th>
+                      </tr>
+                      <tr>
+                          <td>
+                              did:foo
+                          </td>
+                          <td>
+                              A
+                          </td>
+                          <td>
+                              D
+                          </td>
+                          <td>
+                              By design, did:foo is super private.
+                          </td>
+                      </tr>
+                  </table>
+              </section>
+          </section>
+          <section>
+              <h4>Deletion</h4>
+              <section>
+                  <h5>Question</h5>
+                  <p>
+                      How are mistakes corrected, and how is the right to be forgotten addressed? (Note how this creates a tension with immutability, which may be valuable in 2.7.1 and elsewhere.)
+                  </p>
+              </section>
+              <section>
+                  <h5>Responses</h5>
+                  <ol type="A">
+                      <li>
+                          Provable deletion of data is fully supported. Once something is deleted, nothing internal to the system allows it to be recovered.
+                      </li>
+                      <li>
+                          True, provable deletion is not supported, but deleted data can be suppressed in jurisdictions where this is required.
+                      </li>
+                      <li>
+                          The VDR is a permanent, immutable record with no support for deletion of any kind.
+                      </li>
+                  </ol>
+              </section>
+              <section>
+                  <h5>Relevance</h5>
+                  <p>
+                      ?
+                  </p>
+              </section>
+              <section>
+                  <h5>Examples</h5>
+                  <table class="simple">
+                      <tr>
+                          <th>
+                              Method
+                          </th>
+                          <th>
+                              Net.
+                          </th>
+                          <th>
+                              Reg.
+                          </th>
+                          <th>
+                              Notes
+                          </th>
+                      </tr>
+                      <tr>
+                          <td>
+                              did:foo
+                          </td>
+                          <td>
+                              A
+                          </td>
+                          <td>
+                              D
+                          </td>
+                          <td>
+                              By design, did:foo is super private.
+                          </td>
+                      </tr>
+                  </table>
+              </section>
+          </section>
+          <section>
+              <h4>Help With Best Practice</h4>
+              <section>
+                  <h5>Question</h5>
+                  <p>
+                      Does the method acknowledge privacy risks in service endpoints and other forms of DID document data, and provide technical, policy, or explanatory safeguards?
+                  </p>
+              </section>
+              <section>
+                  <h5>Responses</h5>
+                  <ol type="A">
+                      <li>
+                          ?
+                      </li>
+                      <li>
+                          ?
+                      </li>
+                      <li>
+                          ?
+                      </li>
+                  </ol>
+              </section>
+              <section>
+                  <h5>Relevance</h5>
+                  <p>
+                      ?
+                  </p>
+              </section>
+              <section>
+                  <h5>Examples</h5>
+                  <table class="simple">
+                      <tr>
+                          <th>
+                              Method
+                          </th>
+                          <th>
+                              Net.
+                          </th>
+                          <th>
+                              Reg.
+                          </th>
+                          <th>
+                              Notes
+                          </th>
+                      </tr>
+                      <tr>
+                          <td>
+                              did:foo
+                          </td>
+                          <td>
+                              A
+                          </td>
+                          <td>
+                              D
+                          </td>
+                          <td>
+                              By design, did:foo is super private.
+                          </td>
+                      </tr>
+                  </table>
+              </section>
+          </section>
+      </section>  <!-- privacy -->
 
       <section>
         <h3>Not decentralization criteria</h3>
