@@ -7,16 +7,63 @@
     <script class='remove'>
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
-        specStatus: "FPWD",
-        shortName: "did-rubric",
-        edDraftURI: "https://w3c.github.io/did-rubric/",
+        // the W3C WG and public mailing list
         group: "did",
         wgPublicList: "public-did-wg",
-        github:                  {
+
+        // the specification's short name, as in http://www.w3.org/TR/short-name/
+        shortName: "did-rubric",
+
+        // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
+        specStatus: "FPWD",
+
+        // Editor's Draft URL
+        edDraftURI: "https://w3c.github.io/did-rubric/",
+
+        // subtitle for the spec
+        // subtitle: "A reproducible method for evaluating DID Methods",
+
+        // if you wish the publication date to be other than today, set this
+        publishDate: "2021-06-15",
+        //previousMaturity: "ED",
+
+        // automatically allow term pluralization
+        pluralize: true,
+
+        // extend the bibliography entries
+        localBiblio: {
+          "DID-CORE": {
+            title: "DID Core Specification",
+            href: "https://www.w3.org/TR/did-core/",
+            authors: [
+              "Manu Sporny",
+              "Markus Sabadello",
+              "Drummond Reed"
+            ],
+            status: "WD",
+            publisher: "Decentralized Identifier Working Group"
+          },
+          "DID-SPEC-REGISTRIES": {
+            title: "DID Specification Registries",
+            href: "https://w3c.github.io/did-spec-registries/",
+            authors: [
+              "Orie Steele",
+              "Manu Sporny"
+            ],
+            status: "ED",
+            publisher: "Decentralized Identifier Working Group"
+          }
+        },
+
+        github: {
             repoURL: "https://github.com/w3c/did-rubric/",
             branch: "main"
         },
+        includePermaLInks: false,
         noRecTrack: "true",
+        maxTocLevel: 3,
+
+        // list of specification editors
         editors: [{
           name: "Joe Andrieu",
           company: "Invited Expert",
@@ -26,9 +73,11 @@
           name: "Daniel Hardman",
           url: "https://www.linkedin.com/in/danielhardman/",
           company: "SICPA",
-          companyURL: "https://www.sicpa.com",
+          companyURL: "https://www.sicpa.com/",
           w3cid: 108790
         }],
+
+        // list of specification authors
         authors: [{
           name: "Joe Andrieu",
           company: "Invited Expert",
@@ -65,36 +114,10 @@
           name: "Daniel Hardman",
           url: "https://www.linkedin.com/in/danielhardman/",
           company: "SICPA",
-          companyURL: "http://sicpa.com",
+          companyURL: "https://www.sicpa.com/",
           w3cid: 108790
         }
-        ],
-        publishDate: "2021-06-15",
-        maxTocLevel: 3,
-        pluralize: true,
-        localBiblio: {
-          "DID-CORE": {
-            title: "DID Core Specification",
-            href: "https://www.w3.org/TR/did-core/",
-            authors: [
-              "Manu Sporny",
-              "Markus Sabadello",
-              "Drummond Reed"
-            ],
-            status: "WD",
-            publisher: "Decentralized Identifier Working Group"
-          },
-          "DID-SPEC-REGISTRIES": {
-            title: "DID Specification Registries",
-            href: "https://w3c.github.io/did-spec-registries/",
-            authors: [
-              "Orie Steele",
-              "Manu Sporny"
-            ],
-            status: "ED",
-            publisher: "Decentralized Identifier Working Group"
-          }
-        }
+        ]
       };
     </script>
   </head>
@@ -126,20 +149,8 @@ affect selection or adoption of a particular Method, such as privacy, security,
 reliability, or efficiency.
       </p>
     </section>
+
     <section id="sotd">
-        <p>
-            The W3C Decentralized Identifier Working Group has published this document as a
-            First Public Working Draft and is requesting that software developers and DID
-            Method specification authors provide input.
-        </p>
-        <p>
-            Comments regarding this document are welcome. Please file issues
-            directly on <a href="https://github.com/w3c/did-rubric/issues/">GitHub</a>,
-            or send them
-            to <a href="mailto:public-did-wg@w3.org">public-did-wg@w3.org</a> (
-            <a href="mailto:public-did-wg-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-did-wg/">archives</a>).
-        </p>
     </section>
 
     <section class="informative">
