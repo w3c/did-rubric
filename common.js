@@ -7,16 +7,6 @@ var ccg = {
   // Add as the respecConfig localBiblio variable
   // Extend or override global respec references
   localBiblio: {
-    "DID-SPEC-REGISTRIES": {
-      title: "DID Specification Registries",
-      href: "https://w3c.github.io/did-spec-registries/",
-      authors: [
-        "Orie Steele",
-        "Manu Sporny"
-      ],
-      status: "ED",
-      publisher: "Decentralized Identifier Working Group"
-    },
     "REST": {
       title: "Architectural Styles and the Design of Network-based Software Architectures",
       date: "2000",
