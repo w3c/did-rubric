@@ -3301,49 +3301,69 @@ algorithms, requirements for encryption back doors, etc.).
                 <section>
                     <h5>Responses</h5>
                     <ol type="A">
-                        <li>>
-                            ?
+                        <li>
+                            The method uses only algorithms that are officially endorsed by
+                            whatever regulatory bodies are important to the reviewer.
+                            For example, a reviewer in the USA might assign this score
+                            if cryptography is FIPS-approved.
                         </li>
                         <li>
-                            ?
+                            The method uses algorithms that are ignored rather than endorsed by
+                            the relevant authority -- or uses a combination of algorithms
+                            with the practical outcome that interop is unlikely using only
+                            approved settings.
+                        </li>
+                        <li>
+                            The method uses cryptography that is not aligned with requirements
+                            of the relevant authority.
                         </li>
                     </ol>
                 </section>
                 <section>
                     <h5>Relevance</h5>
-                    <p>
-                        ?
+                    <p>Some governments and enterprises may require DID methods that are
+                        officially endorsed by the EU, by their own security bureau, etc.
+                        Note that being out of harmony with government requirments may be
+                        considered a positive property by some reviewers; see
+                        <a href="https://www.wired.com/2013/09/nsa-backdoor/">this story</a>
+                        for an example.
                     </p>
                 </section>
                 <section>
                     <h5>Examples</h5>
                     <table class="simple">
                         <tr>
-                            <th>
-                                Method
-                            </th>
-                            <th>
-                                Net.
-                            </th>
-                            <th>
-                                Reg.
-                            </th>
-                            <th>
-                                Notes
-                            </th>
+                            <th>Method</th><th>Score</th><th>Notes</th>
                         </tr>
                         <tr>
                             <td>
-                                did:foo
+                                did:twit
                             </td>
                             <td>
-                                A
+                                A (for a reviewer suspicious of NIST-approved curves); C (for a
+                                reviewer requiring compliance with standards
+                                of the Australian government)
                             </td>
                             <td>
-                                D
+                                The did:twit method supports only Ed25519 keys, which are
+                                not on the FIPS 186-4 approved curve list required by the
+                                Australian government.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                did:pkh
                             </td>
                             <td>
-                                By design, did:foo supports 123.5 bits of security.
+                                C (for a reviewer requiring compliance with the Chinese
+                                government's SM2 cryptosystem); B (for a reviewer wanting to
+                                use the system in Canadian government contexts).
+                            </td>
+                            <td>
+                                The did:phk method subsumes multiple blockchain ecosystems. Most
+                                use the secp256r1 curve, but supporting the method broadly means
+                                tolerating a variety of crypto algorithms that are not all
+                                equally approved by Canada. None use the SM2 crypto system.
                             </td>
                         </tr>
                     </table>
