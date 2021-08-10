@@ -2996,31 +2996,35 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:keri
               </td>
               <td>
                 A
               </td>
               <td>
+                The value of a DID in did:keri is always directly derived from its
+                inception key. This guarantees a chain of custody even before it is
+                registered on a public VDR. The chain of custody cannot be broken
+                without invalidating the DID.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:web
+              </td>
+              <td>
                 D
               </td>
               <td>
-                By design, did:foo supports 123.5 bits of security.
+                No chain of custody is guaranteed; the current owner of a did:web
+                may not be the same as the owner of that domain in the past or the
+                future. Within the lifespan of ownership of a domain, the DNS
+                record and <code>.well-known</code> data are not guaranteed to
+                provide a stable chain of custody for a DID, either.
               </td>
             </tr>
           </table>
