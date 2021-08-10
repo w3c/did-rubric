@@ -3431,31 +3431,44 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:twit
+              </td>
+              <td>
+                C
+              </td>
+              <td>
+                A did:tweet is created and updated by posting to a public
+                twitter feed; it is always completely public.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:key
               </td>
               <td>
                 A
               </td>
               <td>
-                D
+                Nothing about the did:key method requires it to be published
+                anywhere. It is as private or as public as the mechanism used
+                to share it.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:trustbloc
               </td>
               <td>
-                By design, did:foo is super private.
+                B
+              </td>
+              <td>
+                A did:trustbloc is public to all users of the Hyperledger Fabric
+                instance where it is published -- but that blockchain may be
+                permissioned and restricted to a private audience.
               </td>
             </tr>
           </table>
@@ -3500,31 +3513,32 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:pkh
               </td>
               <td>
-                A
+                B or C
               </td>
               <td>
-                D
+                Some of the blockchains used by did:pkh have Bitcoin-like traceability.
+                Others have Ethereum-like features, which include mixers or zkSNARKS/zkSTARKS.
+                However, none of them render a user completely anonymous.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:keri
               </td>
               <td>
-                By design, did:foo is super private.
+                B
+              </td>
+              <td>
+                If a did:keri uses a blockchain as a witness, it may acquire some privacy
+                characteristics from that blockchain. However, did:keri in and of itself
+                is not easy to correlate.
               </td>
             </tr>
           </table>
