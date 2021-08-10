@@ -3208,31 +3208,41 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:sov
               </td>
               <td>
                 A
               </td>
               <td>
-                D
+                The most prominent codebases that implement this method,
+                github.com/hyperledger/indy-* have over 1000 forks, about
+                200 unique contributors from over a dozen organizations,
+                spanning 5 years and about 25000 commits as of 2021. Sovrin's
+                Technical Governance Board, which vets some aspects of the
+                design, is composed of numerous independent experts, and
+                meets regularly. Both Hyperledger and Sovrin Foundation
+                have responsible disclosure mechanisms for vulnerabilities,
+                and both have successfully handled vulnerabilities from
+                initial report to patch and public disclosure.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:peer
               </td>
               <td>
-                By design, did:foo supports 123.5 bits of security.
+                B
+              </td>
+              <td>
+                The spec and implementations of code are entirely public,
+                with incubation through DIF's identifiers WG.
+                However, contributors are limited to a dozen developers,
+                activity is light, and there is no announced vulnerability
+                mechanism.
               </td>
             </tr>
           </table>
