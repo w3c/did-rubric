@@ -3014,6 +3014,20 @@
             </tr>
             <tr>
               <td>
+                did:hedera
+              </td>
+              <td>
+                B
+              </td>
+              <td>
+                The value of a DID in did:hedera is always directly derived from the
+                <code>#did-root-key</code> value. This guarantees a chain of custody for that
+                key. However, the DID doc may contain other keys at inception, which means that
+                they do not have the same chain of custody. This may or may not matter.
+              </td>
+            </tr>
+            <tr>
+              <td>
                 did:web
               </td>
               <td>
