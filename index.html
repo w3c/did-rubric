@@ -3366,31 +3366,31 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:key
+              </td>
+              <td>
+                C
+              </td>
+              <td>
+                did:key is controlled by a single key. If aggregate control is desired,
+                these keys can be sharded, but that is outside the method's feature set.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:peer
               </td>
               <td>
                 A
               </td>
               <td>
-                D
-              </td>
-              <td>
-                By design, did:foo supports 123.5 bits of security.
+                Dynamic peer DIDs explicitly define an m-of-n scheme that can be
+                used to authorize any evolution of state, or any verification
+                method supported by the DID.
               </td>
             </tr>
           </table>
