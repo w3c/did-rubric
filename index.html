@@ -3114,31 +3114,53 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:sov
+              </td>
+              <td>
+                B
+              </td>
+              <td>
+                A Hyperledger Indy blockchain such as Sovrin MainNet returns
+                state proofs that allow a reliable answer even if only a single
+                node responds. It also separates network traffic related to
+                clients from traffic related to inter-node consensus, with
+                consensus occurring on a NIC that blacklists all IP addresses
+                except other nodes. This significantly mitigates denial of service
+                or service interruptions for reading. Writes are submitted to 1/3
+                of the nodes in parallel, so attacks on individual nodes are
+                unlikely to produce downtime. This behavior is validated with
+                careful testing and has been demonstrated through four years of
+                production usage with greater than 99% uptime. Sovrin adds to
+                Indy's guarantees by publishing a
+                <a href="https://sovrin.org/ssi-metrics-dashboards/">
+                  node and network health dashboard</a>, by maintaining statistics
+                about the historic behavior of nodes, by having a
+                <a href="https://github.com/sovrin-foundation/sovrin-sip/blob/master/text/5001-node-selection-algorithm/README.md">
+                  publicly vetted node selection algorithm</a> that forces nodes
+                in different geographies and legal jurisdictions, and by having a
+                <a href="https://github.com/sovrin-foundation/sovrin-sip/tree/master/text/5002-sovrin-crisis-management-plan#readme">
+                  written crisis management plan</a> that has been exercised
+                and reviewed by security professionals. However, a determined
+                adversary might be able to reduce network write speed by submitting
+                many transactions in parallel, for a sustained period of time.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:btcr
               </td>
               <td>
                 A
               </td>
               <td>
-                D
-              </td>
-              <td>
-                By design, did:foo supports 123.5 bits of security.
+                The global bitcoin network has a
+                <a href="https://bitcoinist.com/better-sov-bitcoin-running-24x7-with-99-98-uptime-since-10-years/">
+                  strong track record of uptime</a>, stretching back for well
+                over a decade, even in the face of motivated attack.
               </td>
             </tr>
           </table>
