@@ -609,7 +609,7 @@
     <section>
       <h3>Rulemaking</h3>
       <p>
-        ​Rulemaking addresses who makes the rules and how. Output of rulemaking are the
+        Rulemaking addresses who makes the rules and how. Output of rulemaking are the
         rules.
       </p>
       <section>
@@ -2420,7 +2420,6 @@
         </section>
       </section> <!-- resource reg -->
     </section> <!-- operation -->
-
     <section>
       <h3>Enforcement</h3>
       <p>
@@ -2604,7 +2603,6 @@
       </section> <!-- auditability -->
 
     </section> <!-- enforcement -->
-
     <section>
       <h3>Alternatives</h3>
       <p>
@@ -2677,7 +2675,6 @@
         </section>
       </section> <!-- forkability -->
     </section> <!-- alternatives -->
-
     <section>
       <h3>Adoption (and diversity)</h3>
       <p>
@@ -2751,24 +2748,28 @@
         <section>
           <h5>Question</h5>
           <p>
-            What is the lowest security level ("bits of security") provided by the combination
-            of algorithms and key types that the method requires its implementations to support?
+            What is the lowest security level ("bits of security", not to be confused with
+            bit size of a key or hash) provided by the combination of algorithms and key
+            types that the method requires its implementations to support?
           </p>
         </section>
         <section>
           <h5>Responses</h5>
           <ol type="A">
             <li>
-              No combination of required features produces a profile with less than 256 bits of security.
+              No combination of required features produces a profile with less than
+              256 bits of security.
             </li>
             <li>
-              Between 128 and 256 bits.
+              Between 128 and 256 bits. (Conventional wisdom &mdash; NIST
+              recommendation &mdash; says that this level of security is
+              adequate until the next revolutionary breakthrough.)
             </li>
             <li>
-              Less than 128 bits
+              Less than 128 bits. (NIST recommends replacing this security by 2030.)
             </li>
             <li>
-              Less than 64 bits
+              Less than 112 bits. (Security is obsolete today.)
             </li>
           </ol>
         </section>
@@ -2778,38 +2779,62 @@
             A DID method that requires implementations to support something weak (e.g.,
             1024-bit RSA) is guaranteeing that its users will cooperate by default with
             encryption that's relatively easy to crack, with hashing that's not adequately
-            collision-resistant, etc.
+            collision-resistant, etc. See
+            <a href="https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-3/archive/2012-07-10">
+            NIST 800-57 Part 1, section 5.6.1</a>.
           </p>
         </section>
         <section>
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:ipid
               </td>
               <td>
-                A
+                C
               </td>
               <td>
-                D
+                The DID method specific identifier for the IPID DID method is
+                a hash of the public key of an IPFS node. Typically this is a
+                SHA-256 value (256 bits of security), but other hashing
+                algorithms can be plugged in. Ed25519 and RSA are the supported
+                keytypes. Edwards keys are 256-bit but offer 128 bits of
+                security; typical 2048-bit RSA offers 112 bits of security.
+                Access to IPFS via a web service API such as ipfs.io/api uses
+                TLS; spot-checking shows 2048-bit RSA certs.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:web
               </td>
               <td>
-                By design, did:foo supports 123.5 bits of security.
+                C
+              </td>
+              <td>
+                Although the DNS subsystem that supports did:web does not
+                provide strong security, control of a DID is proved by
+                accessing /.well-known over TLS. Thus, the security is tied
+                to certificate config. Most web server certificates use 2048-
+                bit RSA, which gives 112 bits of security.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:indy
+              </td>
+              <td>
+                B
+              </td>
+              <td>
+                Hashes are SHA2-256. Keys are Ed25519/Curve25519 (128 bits of
+                security). Reads and writes to the Indy ledger use CurveZMQ
+                rather than TLS. This gives 128 bits of security in the
+                aggregate.
               </td>
             </tr>
           </table>
@@ -2855,31 +2880,33 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th><th>Score</th><th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:iota
               </td>
               <td>
                 A
               </td>
               <td>
-                D
+                The IOTA ecosystem has <a href="https://trinity.iota.org/security/">
+                published security audits by at least three
+                independent experts</a>. Its code is open source. It uses cryptographic
+                primitives that are well known (e.g., the Blake256-2b hash). It has
+                been running in production for years with no reported CVEs.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:git
               </td>
               <td>
-                By design, did:foo supports 123.5 bits of security.
+                C
+              </td>
+              <td>
+                Git uses SHA-1 hashes to identify commits. This hash has known collision
+                attacks.
               </td>
             </tr>
           </table>
