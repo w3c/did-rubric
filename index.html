@@ -3777,67 +3777,92 @@
         </section>
       </section>
       <section>
-        <h4 id="criteria-36">Deletion</h4>
+        <h4 id="criteria-36">Revocation of Consent</h4>
         <a href="#criteria-36">https://www.w3.org/TR/did-rubric#criteria-36</a>
         <section>
           <h5>Question</h5>
           <p>
-            How are mistakes corrected, and how is the right to be forgotten
-            addressed? (Note how this creates a tension with immutability,
-            which may be valuable in 2.7.1 and elsewhere.)
+            How does one revoke consent for the storage of a DID? (Note how this
+            creates a tension with immutability, which may be valuable in 2.7.1
+            and elsewhere.)
           </p>
         </section>
         <section>
           <h5>Responses</h5>
           <ol type="A">
             <li>
-              Provable deletion of data is fully supported. Once something is
-              deleted, nothing internal to the system allows it to be recovered.
+              The VDR fully supports removal of data that no longer has consent.
+              Once something is removed, nothing internal to the system allows
+              it to be recovered, and the system no longer qualifies as a
+              data controller.
             </li>
             <li>
-              True, provable deletion is not supported, but deleted data can be
-              suppressed in jurisdictions where this is required.
+              The DID method only supports a current view, and the state of an
+              identifier in its VDR can be updated to a deleted or removed state.
+              Thus, the identifier ceases to resolve. However, a permanent record
+              of the previous state of the identifier remains, and could be used
+              to reconstruct historical data. The VDR thus remains a data
+              controller for deleted identifiers, at least in concept.
             </li>
             <li>
-              The VDR is a permanent, immutable record with no support for deletion of any kind.
+              The DID method supports both current and previous views of an
+              identifier. While deletes are possible, the old state of an identifier
+              is a fully supported feature, so adding the identifier to the VDR is
+              irrevocable.
             </li>
           </ol>
         </section>
         <section>
           <h5>Relevance</h5>
           <p>
-            ?
+            Some legal authorities may require that individuals have redress when
+            they are not satisfied with the actions of a data controller. This might
+            include but go beyond the so-called "right to be forgotten," encompassing
+            geographical or jurisdictional limitations, limits on processing, and
+            so forth. See
+            <a href="https://medium.com/berkman-klein-center/forget-erasure-why-blockchain-is-really-incompatible-with-the-gdpr-9f60374e90f3">
+              this legal analysis</a> for one view, but note that this is not a well
+            settled legal question.
           </p>
         </section>
         <section>
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th>
+              <th>Score</th>
+              <th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:peer
               </td>
               <td>
                 A
               </td>
               <td>
-                D
+                A peer DID is designed to be shared only with the party that has
+                direct need to process it. That party is a single legal entity
+                that can be held responsible for their behavior. The peer DID
+                protocol includes a way to tell that party that the DID must be
+                deleted. Once deletion has occurred, nothing in the peer DID
+                mechanism preserves inappropriate data.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:jlinc
               </td>
               <td>
-                By design, did:foo is super private.
+                B
+              </td>
+              <td>
+                The `did:jlinc` method supports deletion, and refuses to resolve
+                DIDs that have been deleted. It is also predicated on sophisticated
+                data-sharing agreements that can provide substantial protection for
+                individuals. However, it persists data to an immutable blockchain,
+                meaning that a deleted DID can be reconstructed outside the method,
+                using data that the method created.
               </td>
             </tr>
           </table>
