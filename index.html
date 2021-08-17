@@ -3746,31 +3746,46 @@
           <h5>Examples</h5>
           <table class="simple">
             <tr>
-              <th>
-                Method
-              </th>
-              <th>
-                Net.
-              </th>
-              <th>
-                Reg.
-              </th>
-              <th>
-                Notes
-              </th>
+              <th>Method</th>
+              <th>Score</th>
+              <th>Notes</th>
             </tr>
             <tr>
               <td>
-                did:foo
+                did:btcr
+              </td>
+              <td>
+                C
+              </td>
+              <td>
+                At times when Bitcoin value has spiked, creating a DID on Bitcoin has
+                required an expensive transaction. Finality also takes a significant
+                amount of time. This creates incentives to reuse a DID in multiple
+                contexts.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:sov
+              </td>
+              <td>
+                C
+              </td>
+              <td>
+                The Sovrin ledger deliberately charges for ledger writes to discourage
+                its use for privacy-oriented identifiers.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                did:peer
               </td>
               <td>
                 A
               </td>
               <td>
-                D
-              </td>
-              <td>
-                By design, did:foo is super private.
+                Creating a peer DIDs is free and nearly instantaneous. There are no
+                incentives for reuse.
               </td>
             </tr>
           </table>
