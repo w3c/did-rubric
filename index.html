@@ -638,8 +638,8 @@
   </section> <!-- introduction -->
   <section>
     <h2>Registration Process</h2>
-    <p>This registry provides a public vehicle for publishing updated DID Method Rubric criteria, the DID Method Rubric
-    Registry. In order to add or update a criteria, a submitter MUST submit a modification request for this registry, as a
+    This registry &mdash; the DID Method Rubric Registry &mdash; provides a public vehicle for publishing updated DID Method Rubric
+    criteria. In order to add or update a criteria, a submitter MUST submit a modification request for this registry, as a
     pull request on the repository where this registry is hosted, where the modification request adheres to the following
     policies:</p>
     <section>
@@ -650,9 +650,9 @@
       in writing by the intellectual property rights holder under a F/RAND 
       license. For example, criteria that use trademarked brand names, use the titles or excerpts from copyrighted works, or require patented technology to perform the evaluation.
       </li>
-      <li>Any addition MUST NOT create unreasonable legal, security, 
+      <li>Additions MUST NOT create unreasonable legal, security, 
       moral, or privacy issues that may result in direct or
-      indirect harm to others, including vioations of the W3C Code Of
+      indirect harm to others, including violations of the W3C Code Of
       Ethics And Professional Conduct <a href="https://www.w3.org/Consortium/cepc/">
       https://www.w3.org/Consortium/cepc/</a>
       Examples of unacceptable additions include 
@@ -663,23 +663,23 @@
             </li>
       <li>All criteria MUST be uniquely identified and versioned to ensure
       permanent linkability with version trackability. Those
-      identifiers MUST be present as an href anchor in the html for the 
+      identifiers MUST be present as an `href` anchor in the HTML for the 
       criteria itself. See the sections below on identifiers
       and versioning. Subcomponents, such as questions, responses, 
       relevance, and examples, are not separately versioned; any
-      changes to a subcomponent triggers an appropriate version change to 
+      change to a subcomponent triggers an appropriate version change to 
       its primary component.
       </li>
-      <li>Cited use cases, methods, evaluations within a criteria MUST
+      <li>Use cases, methods, and evaluations cited within a criteria MUST
       include a local link to a full citation in
-      the relevant citation section: Methods Evaluated, Use Cases
-      Referenced, and Evaluations Cited.
+      the relevant citation section: Use Cases Referenced,
+      Methods Evaluated, and Evaluations Cited, respectively.
       </li>
-      <li>Rubric criteria and associated meta-data in the DID Method 
+      <li>Rubric criteria and associated metadata in the DID Method 
       Rubric Registry MAY be updated or removed at the editors’
       discretion, including the addition or removal of categories of 
-      meta-data, e.g., Use Cases Referenced or Implementations
-      of Note.</li>
+      metadata such as <em>Use Cases Referenced</em> or <em>Implementations
+      of Note</em>.</li>
       </ol>
     </section>
     <section>
@@ -687,11 +687,11 @@
     <p>The primary components managed by this registry are criteria for 
     evaluating DID Methods, with as many as eight
     subcomponents: name, id, version, question, responses, relevance, 
-    examples, and, optionally a source. In addition, the
+    examples, and, optionally, a source. In addition, the
     DID Method Rubric maintains a list of cited references: DID methods, 
     use cases, and evaluations. The criteria are
     independently identified and versioned (see those sections for 
-    details) while cited references in the criteria
+    details) while references cited in the criteria
     themselves link to their full citation in the appropriate list.</p>
       <section>
         <h4>Criteria</h4>
@@ -702,13 +702,13 @@
         <li>Proposed criteria without at least three independent example 
         evaluations MUST have the word “PROVISIONAL” as the last
         term in its name. Once at least three independent example 
-        evaluations exist, the term SHOULD be removed.
+        evaluations exist, the word “PROVISIONAL” SHOULD be removed.
         </li>
         <li>Accepted (non-provisional) criteria MUST have at least three example evaluations, and generally SHOULD have no more example
-        evaluations than there are possible responses. Each example should distinctly illustrate one possible response to the
-        criteria.
+        evaluations than there are possible responses to its question. Each example should distinctly illustrate one possible response to the
+        criteria's question.
         </li>
-        <li>To be considered, criteria MUST have the following subcomponents
+        <li>To be considered, criteria MUST have the following subcomponents:
           <ol type="a">
             <li>
               Name
@@ -734,7 +734,7 @@
           </ol>
         </li>
         <li>
-        Additionally, criteria MAY have the following additional subcomponents
+        Additionally, criteria MAY have the following optional subcomponents:
           <ol type="a">
             <li>
               Source
@@ -802,7 +802,7 @@
         same criteria.
         </p>
         <ol>
-        <li>Each example must have the following entries, each its own column(s) in the examples table.
+        <li>Each example must have the following entries, each as its own column(s) in the examples table.
         <ol type="a">
           <li>Method</li>
           <li>Responses (on column for each element)</li>
