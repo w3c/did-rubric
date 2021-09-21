@@ -643,6 +643,531 @@
     </section> <!-- criteria v criterion -->
   </section> <!-- introduction -->
   <section>
+    <h2>Registration Process</h2>
+    This registry &mdash; the DID Method Rubric Registry &mdash; provides a public vehicle for publishing updated DID Method Rubric
+    criteria. In order to add or update a criteria, a submitter MUST submit a modification request for this registry, as a
+    pull request on the repository where this registry is hosted, where the modification request adheres to the following
+    policies:</p>
+    <section>
+      <h3>General Requirements</h3>
+      <ol>
+      <li>If there are copyright, trademark, or intellectual property
+      rights concerns, the addition and use MUST be authorized
+      in writing by the intellectual property rights holder under a F/RAND 
+      license. For example, criteria that use trademarked brand names, use the titles or excerpts from copyrighted works, or require patented technology to perform the evaluation.
+      </li>
+      <li>Additions MUST NOT create unreasonable legal, security, 
+      moral, or privacy issues that may result in direct or
+      indirect harm to others, including violations of the W3C Code Of
+      Ethics And Professional Conduct <a href="https://www.w3.org/Consortium/cepc/">
+      https://www.w3.org/Consortium/cepc/</a>
+      Examples of unacceptable additions include 
+      any containing hate speech, unprofessional or
+      unethical attacks, proprietary information, and any personal data or 
+      personally identifiable information (excepting
+      identification details of the submitter).
+            </li>
+      <li>All criteria MUST be uniquely identified and versioned to ensure
+      permanent linkability with version trackability. Those
+      identifiers MUST be present as an `href` anchor in the HTML for the 
+      criteria itself. See the sections below on identifiers
+      and versioning. Subcomponents, such as questions, responses, 
+      relevance, and examples, are not separately versioned; any
+      change to a subcomponent triggers an appropriate version change to 
+      its primary component.
+      </li>
+      <li>Use cases, methods, and evaluations cited within a criteria MUST
+      include a local link to a full citation in
+      the relevant citation section: Use Cases Referenced,
+      Methods Evaluated, and Evaluations Cited, respectively.
+      </li>
+      <li>Rubric criteria and associated metadata in the DID Method 
+      Rubric Registry MAY be updated or removed at the editors’
+      discretion, including the addition or removal of categories of 
+      metadata such as <em>Use Cases Referenced</em> or <em>Implementations
+      of Note</em>.</li>
+      </ol>
+    </section>
+    <section>
+    <h3>Component Requirements</h3>
+    <p>The primary components managed by this registry are criteria for 
+    evaluating DID Methods, with as many as eight
+    subcomponents: name, id, version, question, responses, relevance, 
+    examples, and, optionally, a source. In addition, the
+    DID Method Rubric maintains a list of cited references: DID methods, 
+    use cases, and evaluations. The criteria are
+    independently identified and versioned (see those sections for 
+    details) while references cited in the criteria
+    themselves link to their full citation in the appropriate list.</p>
+      <section>
+        <h4>Criteria</h4>
+        <ol>
+        <li>Updates to criteria MUST follow the following versioning
+        guidelines.
+        </li>
+        <li>Proposed criteria without at least three independent example 
+        evaluations MUST have the word “PROVISIONAL” as the last
+        term in its name. Once at least three independent example 
+        evaluations exist, the word “PROVISIONAL” SHOULD be removed.
+        </li>
+        <li>Accepted (non-provisional) criteria MUST have at least three example evaluations, and generally SHOULD have no more example
+        evaluations than there are possible responses to its question. Each example should distinctly illustrate one possible response to the
+        criteria's question.
+        </li>
+        <li>To be considered, criteria MUST have the following subcomponents:
+          <ol type="a">
+            <li>
+              Name
+            </li>
+            <li>
+              Identifier
+            </li>
+            <li>
+              Version
+            </li>
+            <li>
+              Question
+            </li>
+            <li>
+              Possible Responses
+            </li>
+            <li>
+              Relevance
+            </li>
+            <li>
+            Example Evaluations
+            </li>
+          </ol>
+        </li>
+        <li>
+        Additionally, criteria MAY have the following optional subcomponents:
+          <ol type="a">
+            <li>
+              Source
+            </li>
+          </ol>
+        </li>
+        </ol>
+      </section> <!-- criteria -->
+      <section>
+        <h4>Criteria.Name</h4>
+        <p>Each criteria needs a human-friendly, short, descriptive name 
+        that captures the essence of the criteria as concisely as
+        possible.</p>
+      </section> <!-- Criteria.Name -->
+      <section>
+        <h4>Criteria.Id</h4>
+        <p>The criteria id must be explicit, unique, and persistent. See the section on Identifiers for details.
+</p>
+      </section> <!-- Criteria.Id -->
+      <section>
+        <h4>Criteria.Version</h4>
+        <p>The criteria version must increment, as appropriate, any time 
+        the criteria, or any of its subcomponents, is updated. See
+        the section on <a href="#versioning">Versioning</a> for details.</p>
+      </section> <!-- Criteria.Version -->
+      <section>
+        <h4>Criteria.Question</h4>
+        <p>This subcomponent presents the key question for evaluating the 
+        criteria. The question MUST be a single inquiry that gets to
+        the heart of the criteria. It should be reasonably clear to a 
+        competent professional skilled in the art how to resolve
+        the question into one of the possible responses.</p>
+      </section> <!-- Criteria.Question -->
+      <section>
+        <h4>Criteria.Responses</h4>
+        <p>This subcomponent lists the expected responses to the question.</p>
+        <ol>
+        <li>
+        Responses are either labeled or open ended.
+        </li>
+        <li>
+        Labeled responses MUST include a label and a meaning for that 
+        label.
+        </li>
+        <li>
+        Labels for a response MUST start with “A” in each criteria and progress sequentially through the English alphabet.
+        </li>
+        <li>
+        Open ended responses specify how an evaluator should fill in the response.
+        </li>
+        </ol>
+      </section> <!-- Criteria.Responses -->
+      <section>
+        <h4>Criteria.Relevance</h4>
+        <p>This subcomponent explains why this criteria is useful. Readers 
+        should be able to understand the extent to which this
+        particular criteria is applicable to their situation. 
+        </p>
+      </section> <!-- Criteria.Relevance -->
+      <section>
+        <h4>Criteria.Examples</h4>
+        <p>This section lists example evaluations of different DID methods 
+        using this criteria, presented as a table for easy
+        correlation between evaluations of different methods using the 
+        same criteria.
+        </p>
+        <ol>
+        <li>Each example must have the following entries, each as its own column(s) in the examples table.
+        <ol type="a">
+          <li>Method</li>
+          <li>Responses (on column for each element)</li>
+          <li>Notes</li>
+        </ol>
+        </li>
+        <li>
+        Some criteria MAY require an additional "Referent" entry, in its
+        own column in the examples table.
+        </li>
+        <li>Example Evaluations for a given criteria SHOULD highlight 
+        distinct responses. That is, each evaluation should have a
+        different set of responses from the other example evaluations. 
+        The point of the examples is to illustrate how different
+        DID methods score differently.</li>
+        <li>The editors will curate the list of proposed examples to 
+        provide a best effort illustration of each criteria, with
+        consideration to highlighting a broad corpus of methods.</li>
+        <li>Criteria with fewer than 3 example evaluations MUST be 
+        marked “PROVISIONAL”</li>
+        <li>Criteria SHOULD have no more example evaluations than there 
+        are possible responses.</li>
+        </ol>
+        <section>
+          <h4>Criteria.Examples.Method</h4>
+          <ol>
+            <li>Example evaluations MUST specify the evaluated method in 
+            the first column, using a relative link to the method’s entry
+            in the Methods Evaluated section. The entry in the Methods 
+            Evaluated table MUST conform to the requirements in that
+            section. 
+            </li>
+            <li>The title of this column MUST be “Method”.
+            </li>
+            <li>The Method entry MUST uniquely identify a specific 
+            DID Method specification suitable for evaluation,
+            including any specified variant such as testnet, mainnet, 
+            etc.
+            </li>            
+          </ol>
+        </section><!-- Criteria.Examples.Method-->
+        <section>
+          <h4>Criteria.Examples.Referent</h4>
+          <ol>
+            <li>Evaluations MAY refer to open ended responses from other 
+            evaluations. If present, this referent MUST be listed as a
+            possible response in another criteria’s evaluation. In this 
+            manner, a first criteria can elicit structural elements to
+            be separately evaluated in subsequent criteria. This 
+            “structure-variable” pattern allows the Rubric to support 
+            criteria that matches the structural complexity of the 
+            Method in question.
+            </li>
+            <li>If present, the Referent MUST be in the second column
+            </li>
+            <li>The column title MUST be appropriate for the referred 
+            structure, e.g., “Layer” or “Governing body”, as understood 
+            by the criteria which establishes the structural elements.
+            </li>
+          </ol>
+        </section><!-- Criteria.Examples.Referent-->          
+        <section>
+          <h4>Criteria.Examples.Responses</h4>
+          <ol>
+            <li>Example evaluations MUST include at least one response, 
+            and may include multiple columns when appropriate. Each 
+            column allows for responses to particular system elements 
+            such as “Specification”, “Network”, and “Registry”.
+            </li>
+            <li>
+            Column names such as "Specification", "Network", and 
+            "Registry" may be abbreviated as "Spec.", "Net.", and "Reg."
+            </li>
+            <li>
+            The number and labels for response columns MUST be proposed 
+            by the initial PR and will be finalized when the criteria
+            moves from PROVISIONAL to accepted.
+            </li>
+            <li>Each column MUST contain an entry that communicates the 
+            evaluator’s judgment of the best response to the question for
+            this method for that element (Spec, Reg, Net).
+            </li>
+            <li>For improved comparability across different methods, 
+            responses SHOULD be based on the possible responses listed 
+            in the criteria. However, evaluators MAY provide any 
+            appropriate response, based on their own judgment
+            </li>
+            <li>
+            Responses MAY be a variant of the Possible Responses, to 
+            capture a nuance beyond those listed. For example, one might
+            append a “+” or a “-”, e.g., A+, or even provide two 
+            different responses when different situations merit a 
+            distinction, e.g., A/D. The reasoning behind these variants 
+            &nbps;
+            SHOULD be explained in the Notes column.
+            </li>
+            <li>A response of “n/a” (short for Not Applicable) SHOULD be 
+            used if the criteria doesn’t apply to the evaluated method.
+            </li>
+          </ol>
+        </section><!-- Criteria.Examples.Responses-->
+        <section>
+          <h4>Criteria.Examples.Notes</h4>
+          <ol>
+            <li>This entry SHOULD include any details that help explain 
+            why that particular response was chosen.It MAY be blank.
+            However, the column MUST be included.</li>
+            <li>The Notes entry MUST specify a distinct use case listed 
+            explicitly in this registry in the Use Cases Referenced 
+            section, using the label from that section.
+            <ol type="a">
+              <li>
+                The use case label MUST be delimited by square brackets.
+              </li>
+              <li>
+                The label text itself must be a hyperlink to the entry 
+                in the Use Cases Referenced section, for example [UC.1] 
+                where “UC.1” links to “#useCase-1” in the current 
+                document.
+              </li>
+            </ol>
+            <li>
+              The Notes entry MUST identify a published evaluation by 
+              reference to an entry in the Evaluations Cited section of 
+              the Rubric, using the label from that section.
+            <ol>
+              <li>
+                The evaluation label MUST be delimited by square 
+                brackets.
+              </li>
+              <li>
+                The label text itself must be a hyperlink to the entry 
+                in the Evaluations Cited section, for example [E.1] 
+                where “E.1” links to “#eval-1” in the current document.
+              </li>
+            </ol>
+            </li>
+          </ol>
+        </section><!-- Criteria.Examples.Notes-->
+      </section> <!-- Criteria.Examples -->
+      <section>
+        <h4>Criteria.Source</h4>
+        <p>This subcomponent, if present, MUST list the specific 
+        external source of the criteria, if any, by referring to its 
+        entry in the Rubric’s list of Sources Cited. Source entries 
+        should include both the name (or title) of the source as well as 
+        a URL. When possible, sources should specify the precise page, 
+        section, and/or anchor that points to the specific criteria
+        in the source document. Each source listed in the criteria MUST 
+        also be listed in the Sources Cited section.
+        </p>
+      </section> <!-- Criteria.Source -->
+    </section> <!-- Component Requirements -->
+    <section>
+      <h3>Identifiers</h3>
+      <p>Each criteria must be explicitly, uniquely, and persistently
+       identified using incremental numbers. New criteria should
+      use the next available increment based on the highest numbered 
+      identifier in the current publication.</p>
+      <p>Previous numbered identifiers MUST NOT be re-used, even if the 
+      criteria so identified are no longer published; this
+      maintains the persistent linkability of previously published 
+      versions. Such “retired” criteria MAY be listed in a Prior
+      Criteria section linking directly to the latest published Rubric 
+      containing the retired criteria; this Prior Criteria
+      section MUST also contain an anchor with the canonical id.</p>
+      <p>The registry shall maintain an entry with the “next available”
+      number. Additions should use the “next available”
+      number to construct an identifier for the new criteria, and update 
+      the “next available” entry at the same time. Editors
+      will manage any sequencing errors when accepting PRs.</p>
+      
+      <p>Identifiers must be constructed by appending that numerical value 
+      to the string “criteria-” and incorporated in the ID
+      of the heading element for that criteria, which when placed in the 
+      Rubric appears as something like (note the version in
+      its own span after the permalink):
+      <pre class="example nohighlight" title="Example criteria numbering">
+      &lt;h4 id="criteria-1"&gt;Open contribution (participation)&lt;/h4&gt;
+      &lt;a href="#criteria-1"&gt;https://www.w3.org/TR/did-rubric#criteria-1&lt;/a&gt; &lt;span&gt;1.0.0&lt;/span&gt;
+      </pre>
+      This allows permanent links to citations based on the publication 
+      date of a given Rubric:
+<a href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a> as well as version-free links that resolve to the
+      latest version of the criteria, and if retired, to an entry in the 
+      Prior Criteria list which itself links to the last
+      valid presentation of the criteria, so that, for example, <a 
+      href="https://www.w3.org/TR/did-rubric/#criteria-32">https://www.w3.org/TR/did-rubric/#criteria-32</a> points to the
+      current criteria-32 in the latest published document. When that 
+      criteria is retired, that same URL points to the entry
+      in the Prior Criteria list, which links to its last versioned 
+      publication, e.g.,
+      <a href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a>
+    </section> <!-- Identifiers -->
+    <section>
+      <h3 id="versioning" >Versioning</h3>
+      <p>Criteria versions allow for incremental improvements while 
+      retaining long-term referenceability.</p>
+      <ol>
+      <li>Versions contain a Major, Minor, and Patch number, based on 
+      SemVer 2.0
+      </li>
+      <li>Every new criteria has a version of 1.0.0, even if PROVISIONAL.
+      </li>
+      <li>Updates to criteria must increment the appropriate version 
+      number based on the scope of change:
+      <ol type="a">
+        <li><strong>Major</strong> number MUST increment if, <em>and only if</em>, 
+        the criteria is fundamentally changed in a way that invalidates 
+        existing
+        evaluations. This could be a material change to any subcomponent 
+        of the criteria, including removing or changing
+        Possible Responses.
+        </li>
+        <li><strong>Minor</strong> number MUST increment if, <em>and only 
+        if</em>, new responses are added, without invalidating existing 
+        responses. It’s understood that an evaluator of an existing 
+        evaluation may desire to choose the new response if they were 
+        evaluating the criteria anew; however, as long as prior evaluations
+        remain valid, a Minor increment SHOULD be applied.
+        </li>
+        <li><strong>Patch</strong> number MUST increment if, <em>and only 
+        if</em>, the change to the question is “editorial”, defined by
+        clarifying the original intent of the criteria WITHOUT 
+        invalidating existing evaluations.
+        </li>
+      </ol>
+      </li>
+      <li>
+      As long as a given criteria is an evolution of essentially the same 
+      consideration, it retains the original identifier,
+      even as its version is updated throughout its lifetime.
+      </li>
+      <li>
+      Criteria that address fundamentally different considerations MUST be assigned a new criteria number rather than
+      iterating an existing version number.
+      </li>
+      </ol>
+    </section>
+    <section>
+      <h3>Metadata Tables</h3>
+      The registry maintains several tables of metadata, which aggregate references cited in Criteria. Each table presents an internally referencable label, anchor tag, and the necessary details for the contents of each.
+      <section>
+        <h3>Evaluations Cited</h3>
+        <p>Every example evaluation cited in the Notes entry in an evaluation MUST link to a proper citation in this section.</p>
+        <p>This is not a comprehensive listing of DID Method Rubric evaluations. It is expected that such evaluations are developed and published elsewhere, in support of various methods and use cases. Only those evaluations cited as Example Evaluations in current criteria will be listed.</p> 
+        <p>Entries in this section MUST include:</p>
+        <ol>
+        <li><strong>Evaluators</strong> The name and contact 
+        information for the parties accepting responsibility for that 
+        evaluation. It MAY include each evaluator’s affiliation at the 
+        time of the evaluation.
+        </li>
+        <li><strong>Evaluation Date</strong> The performance date of 
+        the evaluation.
+        </li>
+        <li><strong>Funding</strong> The source, if any, of funds 
+        explicitly paid to perform the evaluation.
+        </li>
+        <li><strong>Use Cases</strong> One or more use cases listed 
+        Use Cases Referenced section of this registry, using the label 
+        from that section.
+        <ol type="a">
+        <li>The use case label MUST be delimited by square brackets.</ li>
+        <li>The label text itself must be a hyperlink to the entry in 
+        the Use Cases Referenced section, for example [UC.1] where
+        “UC.1” links to “#useCase-1” in the current document.
+        </li>
+        </ol>
+        </li>
+        <li><strong>Report URL</strong> A permalink where readers can read or download the published evaluation
+        </li>
+        </ol>
+      </section> <!-- Evaluations Cited -->
+      <section>
+        <h3>Use Cases Referenced</h3>
+        <p>Every use case cited in the Notes entry in an evaluation MUST link to an entry in this section.</p>
+        <p>A collection of the use cases referenced by different evaluations. This is not a comprehensive list (see the DID Use Cases and Requirements document for a more detailed discussion). Rather, it is an aggregation of all the use cases cited by example evaluations in current criteria.</p>
+        <ol>
+        <li>This section MUST list all use cases cited by any example 
+        evaluation for current criteria.
+        </li>
+        <li>Use cases must specify a label for use by citations within 
+        the registry.
+        </li>
+        <li>The label must be of the form UC.x where “x” is a unique, 
+        incremental number within the Use Cases Referenced section.
+        </li>
+        <li>Each use case must have an unique name and an illustrative 
+        description of a value-creating use of DIDs.
+        </li>
+        <li>Use cases SHOULD identify unique contexts or situations 
+        not covered by other use cases in the registry.
+        </li>
+        </ol>
+      </section> <!-- Use Cases Referenced -->
+      <section>
+        <h3>Methods Evaluated</h3>
+        <p>Every DID method cited in the Example Evaluations MUST link to a proper citation in this section.
+        </p>
+        <p>This is not a comprehensive list (see the <a href="https://www.w3.org/TR/did-spec-registries/">DID Specification Registries</a> for a current list of registered Methods). Rather, this section aggregates the methods used in example evaluations of current criteria for easy reference.</p>
+        <p>Each entry in the
+        table SHOULD contain the following:</p>
+        <ol>
+        <li>A label for the DID method within the registry
+        </li>
+        <li>An anchor tag so that the entry in the table can be linked by 
+        fragment from example evaluations.
+        </li>
+        <li>
+        Columns for the Specification, the Network, and the Registry (SNR) 
+        evaluated with this label.
+        </li>
+        <li>
+        In the case that all three SNR entries would be identical for 
+        different rows in the same table, subsequent entries MAY refer to 
+        the prior entry by Method (with link), along with a description of 
+        the difference, in a single column spanning all three SNR columns.
+        </li>
+        <li>Each SNR entry should uniquely describe the component evaluated.
+          <ol type="a">
+            <li><strong>Specification</strong> identifies the DID Method 
+            specification under evaluation, with a hyperlink to the 
+            specification (at the time of the evaluation).</li>
+            <li><strong>Network</strong> identifies the communications 
+            mechanism through which DID operations (create, read, update,
+            and deactivate) are communicated.</li>
+            <li><strong>Registry</strong> should unambiguously identify the 
+            state management substrate of the method’s Verifiable Data 
+            Registry.</li>
+          </ol>
+        </li>
+        <li>Each SNR entry SHOULD include a hyperlinked URL when additional details are available.
+        </li>
+        </ol>
+      </section><!-- Methods Evaluated -->
+    </section><!-- Metadata Tables -->
+<section>
+<h3>Editorial Acceptance & Publication</h3>
+<p>The Editors of the DID Method Rubric Registry MUST consider all of the 
+policies above when reviewing additions to the registry and MUST reject 
+registry entries if they violate any of the policies in this section. 
+Entities registering additions can challenge rejections first with the W3C 
+DID Working Group and then, if they are not satisfied with the outcome, 
+with the W3C Staff. W3C Staff need not be consulted on changes to the DID 
+Method Rubric Registry, but do have the final authority on registry 
+contents. This is to ensure that W3C can adequately respond to time 
+sensitive legal, privacy, security, moral, or other pressing concerns 
+without putting an undue operational burden on W3C Staff.
+</p>
+<p>Submissions to the registry that meet all the criteria listed above 
+will be considered for inclusion, however the editors retain the 
+responsibility of curating the content to ensure the broadest 
+applicability of the DID Method Rubric with the goal of enabling effective
+evaluations of any DID Method for any legitimate use case.
+</p>
+</section>
+  </section> <!-- Registration Process -->
+  <section>
     <h2>The criteria</h2>
     <section>
       <h3>Rulemaking</h3>
@@ -652,7 +1177,7 @@
       </p>
       <section>
         <h4 id="criteria-1">Open contribution (participation)</h4>
-        <a href="#criteria-1">https://www.w3.org/TR/did-rubric#criteria-1</a>
+        <a href="#criteria-1">https://www.w3.org/TR/did-rubric#criteria-1</a> <span>v1.0.0</span>
         <section>
           <h5>Question</h5>
           <p>
