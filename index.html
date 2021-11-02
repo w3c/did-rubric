@@ -417,84 +417,75 @@
       <p>
         For the examples in the rest of this document we refer to a set of Methods
         that are familiar to the authors and exhibit interesting characteristics for
-        <a>Evaluation</a>. These are listed in the "Comparative Evaluation Report
-        Header" table below.
+        <a>Evaluation</a>. See the tables below.
       </p>
     </section> <!-- architecture -->
 
     <section>
-      <h3>Comparative evaluation report header</h3>
+      <h3>DID Evaluations Cited</h3>
+      <p>The following sources provided example evaluations for this rubric. These are
+      not presented as objective fact, but rather as attempts by contributors to illustrate
+      noteworthy differences using their subjective judgement. Additional contributions
+      that flow into the registry should include a section that documents their source
+      with an additional row in the table.</p>
       <table class="simple">
-        <caption>
-          Comparison Evaluation (used throughout the criteria list)
-        </caption>
-        <tr>
-          <th>
-            <a>Evaluator</a>s
-          </th>
-          <td>
-            Joe Andrieu &lt;<a href="mailto:joe@legreq.com">joe@legreq.com</a>&gt;
-          </td>
+        <tr><th>Relative ID</th><th>Citation</th><th>Note</th></tr>
+        <tr id="eval-1">
+          <td>eval-1</td>
+          <td>DID Method Rubric</td>
+          <td>Evaluations written by Joe Andrieu, for this rubric. Not explicitly funded.</td>
         </tr>
-        <tr>
-          <th>
-            Evaluation date
-          </th>
-          <td>
-            2020-01-03
-          </td>
+        <tr id="eval-2">
+          <td>eval-2</td>
+          <td>DID Method Rubric</td>
+          <td>Evaluations written by Daniel Hardman, to illustrate this rubric. Not explicitly funded.</td>
         </tr>
-        <tr>
-          <th>
-            Use cases
-          </th>
-          <td>
-            <p>
-              <strong>Verifiable software development.</strong> The signing of commits by
-              developers and their verification to ensure that source code in a particular
-              git repository is authentic.
-            </p>
-            <p>
-              <strong>User authentication.</strong> The use of DIDs for authenticating users
-              for access to system services.
-            </p>
-            <p>
-              <strong>Long term verifiable credentials.</strong> The use of DIDs as subject
-              identifiers for long term (life-long) verifiable credentials such as earned
-              academic degrees.
-            </p>
+        <tr id="eval-3">
+          <td>eval-3</td>
+          <td>"A Rubric for Decentralization of DID Methods". Joe Andrieu, Shannon Appelcline,
+            Amy Guy, Joachim Lohkamp, Drummond Reed, Markus Sabadello, Oliver Terbu. <cite>Rebooting
+              the Web of Trust</cite>. Published 2020-07-20. <a
+              href="https://github.com/WebOfTrustInfo/rwot9-prague/blob/master/final-documents/decentralization-rubric.pdf">
+              https://github.com/WebOfTrustInfo/rwot9-prague/blob/master/final-documents/decentralization-rubric.pdf</a>.
           </td>
+          <td>The original DID Rubric paper from Rebooting the Web of Trust. Not explicitly funded.</td>
         </tr>
-        <tr>
-          <th>
-            Report URL
-          </th>
-          <td>
-            TBD
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Rubric
-          </th>
-          <td>
-            <a href="https://www.w3.org/TR/did-rubric/">DID Method Rubric v1.0.0</a>
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Rubric URL
-          </th>
-          <td>
-            <a href="https://www.w3.org/TR/did-rubric/">https://www.w3.org/TR/did-rubric/</a>
-          </td>
+        <tr id="eval-4">
+          <td>eval-4</td>
+          <td>VeresOne Rubric Evaluation</td>
+          <td>Funded by Digital Bazaar under DHS SVIP contract 70RSAT20T00000029.</td>
         </tr>
       </table>
-
+    </section>
+    <section>
+      <h3>Use Cases Referenced</h3>
       <table class="simple">
-        <caption>
-          <p>Methods considered</p>
-        </caption>
+        <tr><th>Relative ID</th><th>Citation</th><th>Note</th></tr>
+        <tr id="usecase-1">
+          <td style="width:8em">usecase-1</td>
+          <td>Long term verifiable credentials</td>
+          <td>The use of DIDs as subject
+            identifiers for long term (life-long) verifiable credentials such as earned
+            academic degrees.</td>
+        </tr>
+        <tr id="usecase-2">
+          <td>usecase-2</td>
+          <td>User authentication</td>
+          <td>The use of DIDs for authenticating users
+            for access to system services.</td>
+        </tr>
+        <tr id="usecase-3">
+          <td>usecase-3</td>
+          <td>Verifiable software development</td>
+          <td>The signing of commits by
+            developers and their verification to ensure that source code in a particular
+            git repository is authentic.</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h3>Methods Considered</h3>
+      <table class="simple">
         <tr>
           <th>
             Method
@@ -509,7 +500,7 @@
             Registry
           </th>
         </tr>
-        <tr>
+        <tr id="did:peer">
           <td>
             did:peer
           </td>
@@ -524,7 +515,7 @@
             Held by each peer
           </td>
         </tr>
-        <tr>
+        <tr id="did:git">
           <td>
             did:git
           </td>
@@ -539,7 +530,7 @@
             Any Method-compliant git repository
           </td>
         </tr>
-        <tr>
+        <tr id="did:btcr">
           <td>
             did:btcr
           </td>
@@ -553,7 +544,7 @@
             Bitcoin
           </td>
         </tr>
-        <tr>
+        <tr id="did:sov">
           <td>
             did:sov
           </td>
@@ -568,7 +559,7 @@
             A particular instance of Hyperledger Indy
           </td>
         </tr>
-        <tr>
+        <tr id="did:ethr">
           <td>
             did:ethr
           </td>
@@ -583,7 +574,7 @@
             Specific smart contracts for each network.
           </td>
         </tr>
-        <tr>
+        <tr id="did:jolo">
           <td>
             did:jolo
           </td>
@@ -598,15 +589,173 @@
             Specific smart contracts for different networks and subnetworks.
           </td>
         </tr>
+        <tr id="did:ipid">
+          <td>
+            did:ipid
+          </td>
+          <td>
+            <a href="https://did-ipid.github.io/ipid-did-method/">
+              IPID DID Method</a>
+          </td>
+          <td>
+            @johnnycrunch
+          </td>
+          <td>
+            DIDs persisted to IPFS.
+          </td>
+        </tr>
+        <tr id="did:web">
+          <td>
+            did:web
+          </td>
+          <td>
+            <a href="https://w3c-ccg.github.io/did-method-web/">
+              did:web Method Specification</a>
+          </td>
+          <td>
+            CCG work item
+          </td>
+          <td>
+            DIDs associated with control of a domain name (DNS).
+          </td>
+        </tr>
+        <tr id="did:indy">
+          <td>
+            did:indy
+          </td>
+          <td>
+            <a href="https://github.com/hyperledger/indy-did-method">
+              did:indy Method Spec</a>
+          </td>
+          <td>
+            Hyperledger Indy community
+          </td>
+          <td>
+            Supersedes did:sov to service all Indy-based ledgers.
+          </td>
+        </tr>
+        <tr id="did:iota">
+          <td>
+            did:iota
+          </td>
+          <td>
+            <a href="https://github.com/iotaledger/identity.rs/blob/main/docs/specs/iota_did_method_spec.md">
+              IOTA DID Method Spec</a>
+          </td>
+          <td>
+            IOTA Foundation
+          </td>
+          <td>
+            DIDs persisted to the IOTA tangle.
+          </td>
+        </tr>
+        <tr id="did:keri">
+          <td>
+            did:keri
+          </td>
+          <td>
+            <a href="https://identity.foundation/keri/did_methods/">
+              The did:keri Method 0.1</a>
+          </td>
+          <td>
+            Sam Smith, et al.
+          </td>
+          <td>
+            DIDs that can migrate from one blockchain to another, or use no blockchain at all.
+          </td>
+        </tr>
+        <tr id="did:hedera">
+          <td>
+            did:hedera
+          </td>
+          <td>
+            <a href="https://github.com/hashgraph/did-method/blob/master/did-method-specification.md">
+              Hedera Hashgraph DID Method Specification</a>
+          </td>
+          <td>
+            Hashgraph, Inc
+          </td>
+          <td>
+            DIDs written to a ledger that uses Hashgraph consensus as an alternative to traditional blockchain.
+          </td>
+        </tr>
+        <tr id="did:key">
+          <td>
+            did:key
+          </td>
+          <td>
+            <a href="https://w3c-ccg.github.io/did-method-key/">
+              The did:key Method v0.7</a>
+          </td>
+          <td>
+            CCG work item
+          </td>
+          <td>
+            Use a keypair as a DID.
+          </td>
+        </tr>
+        <tr id="did:twit">
+          <td>
+            did:twit
+          </td>
+          <td>
+            <a href="https://github.com/did-twit/did-twit/blob/master/spec/index.md">
+              Twit DID method specification</a>
+          </td>
+          <td>
+            Gabe Choen
+          </td>
+          <td>
+            Publish a DID via Twitter feed.
+          </td>
+        </tr>
+        <tr id="did:pkh">
+          <td>
+            did:pkh
+          </td>
+          <td>
+            <a href="https://github.com/spruceid/ssi/blob/9ecc25cb4082709d146206b779cf8e8442f9eaf3/did-pkh/did-pkh-method-draft.md">
+              did:pkh Method Specification</a>
+          </td>
+          <td>
+            Spruce ID
+          </td>
+          <td>
+            Wrap an identifier (e.g., payment address) from one of many existing blockchains in did format.
+          </td>
+        </tr>
+        <tr id="did:trustbloc">
+          <td>
+            did:trustbloc
+          </td>
+          <td>
+            <a href="https://github.com/trustbloc/trustbloc-did-method/blob/main/docs/spec/trustbloc-did-method.md">
+              TrustBloc DID Method Specification 0.1</a>
+          </td>
+          <td>
+            Trustbloc
+          </td>
+          <td>
+            Persist DIDs via Sidetree wrapper around a permissioned ledger.
+          </td>
+        </tr>
+        <tr id="did:jlinc">
+          <td>
+            did:jlinc
+          </td>
+          <td>
+            <a href="https://did-spec.jlinc.org/">
+              JLINC DID Method Specification</a>
+          </td>
+          <td>
+            JLincLabs
+          </td>
+          <td>
+            Register DIDs over the JLinc protocol for sharing data with terms and conditions.
+          </td>
+        </tr>
       </table>
-      <p class="note">
-        Note: The evaluations in this document are made by Joe Andrieu
-        &lt;joe@legreq.com&gt;. Other authors have expressed different evaluations,
-        because of different weighting of the relevant of different characteristics
-        in particular methods. This should be expected in any evaluation: they will
-        always be colored by the particular perspective of the <a>Evaluator</a>.
-      </p>
-    </section> <!-- evaluation report header -->
+    </section>
     <section>
       <h3>Criteria and Criterion</h3>
       <p>The term "criteria" is often treated as both a
@@ -1247,7 +1396,7 @@ evaluations of any DID Method for any legitimate use case.
                 did:peer has no intrinsic network. It can use any communications channel
                 between parties. Only those two parties are privy to the decisions made about
                 communications and recordation. The spec is openly developed on github by a
-                listed set of contributors and issues may be raised by anyone.
+                listed set of contributors and issues may be raised by anyone. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1268,7 +1417,7 @@ evaluations of any DID Method for any legitimate use case.
                 people. They do not have a public issues process. The spec is openly developed
                 on github by a listed set of contributors and issues may be raised by anyone.
                 Each registry is controlled by potentially unknown parties as negotiated in
-                "meatspace".
+                "meatspace". [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1288,7 +1437,7 @@ evaluations of any DID Method for any legitimate use case.
                 Changes to the bitcoin protocol are chaotic and uncertain. They use BIPs, but
                 the path to adoption is uncertain and the relative power of developers, miners,
                 and users is open to debate. The spec is openly developed on github by a
-                listed set of contributors and issues may be raised by anyone.
+                listed set of contributors and issues may be raised by anyone. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1306,7 +1455,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 The Sovrin Foundation has an open community governance model but has not yet
-                had open elections of trustees.
+                had open elections of trustees. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1326,7 +1475,7 @@ evaluations of any DID Method for any legitimate use case.
                 The network is Ethereum, which evolves through EIPs proposed by anyone,
                 discussed by "the community" and ultimately adopted by Ethereum core devs. The
                 spec is published on GitHub with issues open to the public. The smart contract
-                for the registry is immutable.
+                for the registry is immutable. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1346,7 +1495,7 @@ evaluations of any DID Method for any legitimate use case.
                 Jolocom's network is Ethereum. Decisions over Jolocom's smart contracts are
                 made by an unknown group within Jolocom. The specification (as listed in the
                 DID Method Registry [[DID-SPEC-REGISTRIES]]) is currently archived and not
-                open to public comment.
+                open to public comment. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -1429,7 +1578,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Rules for accepting changes to the business rules are bilaterally negotiated
-                between the peers, subject to conformance with the specification.
+                between the peers, subject to conformance with the specification. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1447,7 +1596,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 The controllers of the git repo are a limited set, but their decisions are
-                "meatspace protocol" and hence not explicitly transparent.
+                "meatspace protocol" and hence not explicitly transparent. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1467,7 +1616,7 @@ evaluations of any DID Method for any legitimate use case.
                 The spec is maintained by volunteers, operating in an open fashion but without
                 formal processes for announcements and meeting notes. The network and registry
                 are bitcoin, which has a fairly public but messy innovation process, without
-                formal meetings or votes.
+                formal meetings or votes. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1488,7 +1637,7 @@ evaluations of any DID Method for any legitimate use case.
                 governance discussions are public with a handful of exceptions for legal
                 reasons (e.g., HR actions, legal actions). See Section 9 of
                 <a href="https://sovrin.org/wp-content/uploads/Sovrin-Governing-Body-Policies-V1.pdf">
-                  Sovrin Governing Body Policies</a>.
+                  Sovrin Governing Body Policies</a>. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1506,6 +1655,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 The governance is controlled by a smart contract, which is immutable.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1523,7 +1673,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Jolocom does not expose the internal and/or customer conversations that drive
-                rulemaking.
+                rulemaking. [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -1604,6 +1754,7 @@ evaluations of any DID Method for any legitimate use case.
                 itself lists 14 contributors with actual commits. The network and registry
                 rules are ultimately decided by the parties participating in each did:peer
                 context (a closed set of peers).
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1624,6 +1775,7 @@ evaluations of any DID Method for any legitimate use case.
                 contributors with actual commits (although more are listed). The network is
                 git (controlled by an unknown population) and the registry is a particular
                 repo under the control of potentially unknown parties.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1643,6 +1795,7 @@ evaluations of any DID Method for any legitimate use case.
                 The spec lists 4 editors and the repo lists 4 committers. The network and
                 registry is bitcoin, which relies on an informal process of any number of
                 parties.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1662,6 +1815,7 @@ evaluations of any DID Method for any legitimate use case.
                 All three layers are ultimately under the control of the Sovrin Foundation,
                 which itself has a governance framework to coordinate input from multiple
                 parties.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1680,6 +1834,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 The specification is now under DIF control and the registry is immutable. The
                 network is Ethereum, which is controlled by Ethereum core devs.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1699,6 +1854,7 @@ evaluations of any DID Method for any legitimate use case.
                 The specification and registry are controlled by Jolocom, sometimes in
                 coordination with customers. The network is Ethereum, which is controlled by
                 Ethereum core devs.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -1782,6 +1938,7 @@ evaluations of any DID Method for any legitimate use case.
                 The specification was developed to demonstrate a way that anyone can use DIDs
                 without a distributed ledger. Each network and registry is established solely
                 for the benefit of each peer.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1803,6 +1960,7 @@ evaluations of any DID Method for any legitimate use case.
                 so anyone could have better software development practices. Any given registry
                 (each repo is a registry) is assumed to be established for the common good of
                 its controllers.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1822,6 +1980,7 @@ evaluations of any DID Method for any legitimate use case.
                 The specification was developed to demonstrate how you could use Bitcoin for
                 DIDs. The network and registry were created as a public benefit proof of
                 concept for decentralized digital cash.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1842,6 +2001,7 @@ evaluations of any DID Method for any legitimate use case.
                 501(c)4 the Sovrin foundation is a social welfare organization that must
                 operate primarily to further the common good and general welfare of the people
                 of its community.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1861,6 +2021,7 @@ evaluations of any DID Method for any legitimate use case.
                 The specification and registry were created by a private company (uPort) to
                 support their business. The smart contract is a common good and free to use.
                 However, the network, Ethereum, was created to create wealth for its creators.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1880,6 +2041,7 @@ evaluations of any DID Method for any legitimate use case.
                 The specification and registry were created by a private company (Jolocom) to
                 support their business, but are now available for anyone to use. Similarly,
                 the network, Ethereum, was created to create wealth for its creators.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -1961,6 +2123,7 @@ evaluations of any DID Method for any legitimate use case.
                 decision making takes time and requires expertise. The network and registry
                 are negotiated on a case-by-case basis, so participation could be anywhere on
                 the spectrum.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -1983,6 +2146,7 @@ evaluations of any DID Method for any legitimate use case.
                 expertise and is controlled by a handful of developers. Any given registry's
                 governance is, by design, a question of "meatspace" negotiations, which is
                 expensive and limited to the parties who control the repo.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2003,6 +2167,7 @@ evaluations of any DID Method for any legitimate use case.
                 decision making takes time and requires expertise. The network and registry
                 (bitcoin) are theoretically open to any participants, but influencing the
                 direction of bitcoin is notoriously expensive and unpredictable.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2019,7 +2184,7 @@ evaluations of any DID Method for any legitimate use case.
                 B
               </td>
               <td>
-                The did:sov: method together with 100% of the Sovrin ledger and Sovrin
+                The did:sov method together with 100% of the Sovrin ledger and Sovrin
                 infrastructure are governed by an open public non-profit organization that is
                 open to anyone to participate. The Sovrin Governance Framework Working Group
                 is an all-volunteer community-driven effort in which over 50 volunteers have
@@ -2028,6 +2193,7 @@ evaluations of any DID Method for any legitimate use case.
                   framework</a> on which anyone can comment and suggest improvements. The Sovrin
                 ledger operates on the Hyperledger Indy open source code base to which anyone
                 can contribute.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2048,6 +2214,7 @@ evaluations of any DID Method for any legitimate use case.
                 The network itself, Ethereum, is expensive and difficult to influence: not
                 impossible for an outsider, but expensive. Governance of the registry is not
                 accessible except with uPort's permission.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2070,6 +2237,7 @@ evaluations of any DID Method for any legitimate use case.
                 to customize the Method. The network itself, Ethereum, is expensive and
                 difficult to influence: not impossible for an outsider, but expensive. The
                 registry is immutable and therefore not open to participation.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2149,6 +2317,7 @@ evaluations of any DID Method for any legitimate use case.
                 By design, did:peer can use any communications channel and only the
                 participation of the participants is required. Unfortunately, for those
                 outside the peer context, the registry is inaccessible.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2164,6 +2333,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Git software is available to anyone. Participation and access is controlled by
                 the repo maintainers.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2178,6 +2348,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 The bitcoin network is open to anyone.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2193,6 +2364,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Sovrin foundation limits access to writing and consensus, but the network is
                 open to all for reading.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2207,6 +2379,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Ethereum is open to anyone. The registry is accessible to anyone.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2222,6 +2395,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Ethereum is open to anyone. The registry is accessible to anyone, although
                 some subregistries/subnetworks may have alternate rules.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2293,6 +2467,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 did:peer is agnostic regarding the software that implements it.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2310,6 +2485,7 @@ evaluations of any DID Method for any legitimate use case.
                 protocol that any software could implement. Although we know of no other
                 implementation in widespread use, we know of no limitations in the protocol
                 itself.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2324,6 +2500,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Bitcoin has no restrictions on the software used to access the network.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2338,6 +2515,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 did:sov: has no restrictions on any software that implements it.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2353,6 +2531,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Neither Ethereum nor the smart contract has any restrictions on the software
                 used to access them.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2368,6 +2547,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Neither Ethereum nor the smart contract has any restrictions on the software
                 used to access them.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2449,6 +2629,7 @@ evaluations of any DID Method for any legitimate use case.
                 including direct physical links. However, only those parties to the creation
                 of the DID can actually use it. The DIDs have no use outside that direct
                 peer-to-peer relationship.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2465,6 +2646,7 @@ evaluations of any DID Method for any legitimate use case.
                 Anyone can set up a git-based repo and use did:git. However, to interact with
                 a given repo, one must be aware of the repo, including which instance of it is
                 authoritative.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2479,6 +2661,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Open, permissionless, and globally resolvable.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2496,6 +2679,7 @@ evaluations of any DID Method for any legitimate use case.
                 may be written by any Transaction Author however for GDPR reasons personal
                 data may not currently be written to the Sovrin ledger. See
                 <a href="https://sovrin.org/data-protection/">Sovrin Data Protection</a>.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2510,6 +2694,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Open, permissionless, and globally resolvable.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2524,6 +2709,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Open, permissionless, and globally resolvable.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2596,6 +2782,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 The financials of both parties have no visibility.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2611,6 +2798,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 The financials of both parties have no visibility. However, the underlying git
                 software is free and open source.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2626,6 +2814,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Bitcoin is transparent, although operations are somewhat obscured by
                 pseudonymous transaction addresses.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2642,6 +2831,7 @@ evaluations of any DID Method for any legitimate use case.
                 The Sovrin Foundation publishes an annual report with details about overall
                 finances for their operation, and the books are required to be openly
                 available for inspection by anyone.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2657,6 +2847,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Ethereum is transparent, although operations are somewhat obscured by pseudonymous transaction
                 addresses.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2672,6 +2863,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Ethereum is transparent, although operations are somewhat obscured by
                 pseudonymous transaction addresses.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2748,7 +2940,8 @@ evaluations of any DID Method for any legitimate use case.
                 A
               </td>
               <td>
-
+                Resolution typically requires looking up a file in the file system, which
+                uses minimal RAM. [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -2765,6 +2958,7 @@ evaluations of any DID Method for any legitimate use case.
                 Git for Windows is just shy of 50 MB (please update if there are smaller
                 versions available). However, one must still download the entire repo
                 containing the registry material.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2779,6 +2973,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 To definitively resolve, one must operate a full node.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2795,6 +2990,7 @@ evaluations of any DID Method for any legitimate use case.
                 The Sovrin ledger is based on Hyperledger Indy which supports highly efficient
                 state proofs for cryptographic verification of resolution responses. A full
                 node is not required.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2810,6 +3006,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 A full ethereum node takes >100GB, but a light ethereum node can support this
                 method with less than 256kb.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2825,6 +3022,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 A full ethereum node takes >100GB, but a light ethereum node can support this
                 method with less than 256kb.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -2899,7 +3097,8 @@ evaluations of any DID Method for any legitimate use case.
                 A
               </td>
               <td>
-
+                Registration may require a few KB of RAM as a DID doc is written to disk.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -2916,6 +3115,7 @@ evaluations of any DID Method for any legitimate use case.
                 Git for Windows is just shy of 50 MB (please update if there are smaller
                 versions available). However, one must still download the entire repo
                 containing the registry material.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2932,6 +3132,7 @@ evaluations of any DID Method for any legitimate use case.
                 To register a DID, one must simply get a transaction on the ledger, unless you
                 choose to host a continuation DID Document elsewhere, which would require its
                 own resources.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2947,6 +3148,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Registration of a DID is a single transaction that can be performed by a thin
                 client.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2964,6 +3166,7 @@ evaluations of any DID Method for any legitimate use case.
                 without requiring registration. This means DIDs can even be created offline
                 with full usability. Only rotation and the registration of service endpoints
                 require network access.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -2980,6 +3183,7 @@ evaluations of any DID Method for any legitimate use case.
                 The smart contract used for did:ethr recognizes any valid public key as a DID,
                 without requiring registration. Only rotation and the registration of service
                 endpoints require network access.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -3106,6 +3310,7 @@ evaluations of any DID Method for any legitimate use case.
                 DID:peer maintains a cryptographic journal, but it is only available to the
                 peers and, technically, can be refused (each peer may suspend interactions at
                 any time).
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -3119,6 +3324,7 @@ evaluations of any DID Method for any legitimate use case.
                 <em>If</em> you have access to the authoritative git repo, you can see the
                 cryptographic journal. However, within the method specification, there is no
                 way to know if the repo you are inspecting is, in fact, definitive.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -3130,6 +3336,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Anyone can see everything.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -3141,6 +3348,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Anyone can see everything&mdash;the Sovrin ledger is completely public.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -3152,6 +3360,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Anyone can see updates and deletes. Creation is private.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
             <tr>
@@ -3163,6 +3372,7 @@ evaluations of any DID Method for any legitimate use case.
               </td>
               <td>
                 Anyone can see updates and deletes. Creation is private.
+                [<a href="#eval-1">eval-1</a>]
               </td>
             </tr>
           </table>
@@ -3387,6 +3597,7 @@ evaluations of any DID Method for any legitimate use case.
                 security; typical 2048-bit RSA offers 112 bits of security.
                 Access to IPFS via a web service API such as ipfs.io/api uses
                 TLS; spot-checking shows 2048-bit RSA certs.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3402,6 +3613,7 @@ evaluations of any DID Method for any legitimate use case.
                 accessing /.well-known over TLS. Thus, the security is tied
                 to certificate config. Most web server certificates use 2048-
                 bit RSA, which gives 112 bits of security.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3416,6 +3628,7 @@ evaluations of any DID Method for any legitimate use case.
                 security). Reads and writes to the Indy ledger use CurveZMQ
                 rather than TLS. This gives 128 bits of security in the
                 aggregate.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3479,6 +3692,7 @@ evaluations of any DID Method for any legitimate use case.
                   independent experts</a>. Its code is open source. It uses cryptographic
                 primitives that are well known (e.g., the Blake256-2b hash). It has
                 been running in production for years with no reported CVEs.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3491,6 +3705,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Git uses SHA-1 hashes to identify commits. This hash has known collision
                 attacks.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3556,6 +3771,7 @@ evaluations of any DID Method for any legitimate use case.
                 supports only the Ed25519 and RSA keytypes; upgrading these
                 would require a revised spec and re-implementation. (Score =
                 C).
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3570,6 +3786,7 @@ evaluations of any DID Method for any legitimate use case.
                 to any particular hash or key type. Representations of hashes
                 use multihash, allowing arbitrary upgrade without disruption.
                 Any implementation can begin using new key types at any time.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3634,6 +3851,7 @@ evaluations of any DID Method for any legitimate use case.
                 inception key. This guarantees a chain of custody even before it is
                 registered on a public VDR. The chain of custody cannot be broken
                 without invalidating the DID.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3648,6 +3866,7 @@ evaluations of any DID Method for any legitimate use case.
                 <code>#did-root-key</code> value. This guarantees a chain of custody for that
                 key. However, the DID doc may contain other keys at inception, which means that
                 they do not have the same chain of custody. This may or may not matter.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3663,6 +3882,7 @@ evaluations of any DID Method for any legitimate use case.
                 future. Within the lifespan of ownership of a domain, the DNS
                 record and <code>.well-known</code> data are not guaranteed to
                 provide a stable chain of custody for a DID, either.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3742,6 +3962,7 @@ evaluations of any DID Method for any legitimate use case.
                 and reviewed by security professionals. However, a determined
                 adversary might be able to reduce network write speed by submitting
                 many transactions in parallel, for a sustained period of time.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3756,6 +3977,7 @@ evaluations of any DID Method for any legitimate use case.
                 <a href="https://bitcoinist.com/better-sov-bitcoin-running-24x7-with-99-98-uptime-since-10-years/">
                   strong track record of uptime</a>, stretching back for well
                 over a decade, even in the face of motivated attack.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3901,6 +4123,7 @@ evaluations of any DID Method for any legitimate use case.
                 have responsible disclosure mechanisms for vulnerabilities,
                 and both have successfully handled vulnerabilities from
                 initial report to patch and public disclosure.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3916,6 +4139,7 @@ evaluations of any DID Method for any legitimate use case.
                 However, contributors are limited to a dozen developers,
                 activity is light, and there is no announced vulnerability
                 mechanism.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -3980,6 +4204,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 did:key is controlled by a single key. If aggregate control is desired,
                 these keys can be sharded, but that is outside the method's feature set.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -3993,6 +4218,7 @@ evaluations of any DID Method for any legitimate use case.
                 Dynamic peer DIDs explicitly define an m-of-n scheme that can be
                 used to authorize any evolution of state, or any verification
                 method supported by the DID.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -4059,6 +4285,7 @@ evaluations of any DID Method for any legitimate use case.
                 The did:twit method supports only Ed25519 keys, which are
                 not on the FIPS 186-4 approved curve list required by the
                 Australian government.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4075,6 +4302,7 @@ evaluations of any DID Method for any legitimate use case.
                 use the secp256r1 curve, but supporting the method broadly means
                 tolerating a variety of crypto algorithms that are not all
                 equally approved by Canada. None use the SM2 crypto system.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -4153,6 +4381,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 A did:tweet is created and updated by posting to a public
                 twitter feed; it is always completely public.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4166,6 +4395,7 @@ evaluations of any DID Method for any legitimate use case.
                 Nothing about the did:key method requires it to be published
                 anywhere. It is as private or as public as the mechanism used
                 to share it.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4179,6 +4409,7 @@ evaluations of any DID Method for any legitimate use case.
                 A did:trustbloc is public to all users of the Hyperledger Fabric
                 instance where it is published -- but that blockchain may be
                 permissioned and restricted to a private audience.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -4239,6 +4470,7 @@ evaluations of any DID Method for any legitimate use case.
                 Some of the blockchains used by did:pkh have Bitcoin-like traceability.
                 Others have Ethereum-like features, which include mixers or zkSNARKS/zkSTARKS.
                 However, none of them render a user completely anonymous.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4252,6 +4484,7 @@ evaluations of any DID Method for any legitimate use case.
                 If a did:keri uses a blockchain as a witness, it may acquire some privacy
                 characteristics from that blockchain. However, did:keri in and of itself
                 is not easy to correlate.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -4312,6 +4545,7 @@ evaluations of any DID Method for any legitimate use case.
                 required an expensive transaction. Finality also takes a significant
                 amount of time. This creates incentives to reuse a DID in multiple
                 contexts.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4324,6 +4558,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 The Sovrin ledger deliberately charges for ledger writes to discourage
                 its use for privacy-oriented identifiers.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4336,6 +4571,7 @@ evaluations of any DID Method for any legitimate use case.
               <td>
                 Creating a peer DIDs is free and nearly instantaneous. There are no
                 incentives for reuse.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
@@ -4412,6 +4648,7 @@ evaluations of any DID Method for any legitimate use case.
                 protocol includes a way to tell that party that the DID must be
                 deleted. Once deletion has occurred, nothing in the peer DID
                 mechanism preserves inappropriate data.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
             <tr>
@@ -4428,6 +4665,7 @@ evaluations of any DID Method for any legitimate use case.
                 individuals. However, it persists data to an immutable blockchain,
                 meaning that a deleted DID can be reconstructed outside the method,
                 using data that the method created.
+                [<a href="#eval-2">eval-2</a>]
               </td>
             </tr>
           </table>
