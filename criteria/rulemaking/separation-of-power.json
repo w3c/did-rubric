@@ -1,0 +1,67 @@
+{
+  "name": "Separation of Power",
+  "label": "1.3",
+  "question": {
+    "question": "What decision making bodies are involved in rulemaking?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Decision Making Body",
+        "type": "enhancedLetter",
+        "propertyRef": "decision making body"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": {
+    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+    "sourceSection": ""
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Rulemaking rarely occurs in simple structures. Identifying the different organizational entities that participate in setting rules allows evaluators to understand how rules get made. Understanding how rules get helps predict possible future developments."
+      }
+    ]
+  },
+  "relevance": "It is worth noting that all entities who are beholden to sovereign states, which is pretty much all corporations, non-profits, and individuals, have consequences for violating the laws, regulations, and lawful court orders within their jurisdiction. Some decentralized systems go to great lengths to minimize the impact of possible coercion, including actions by nation states. It is understood that any participant in the process may be subject to the rule of law from any number of jurisdictions, e.g., patent law, employment law, financial reporting laws, dumping laws, zoning, environmental regulations, etc. As a result, all decision making bodies are subject to the jurisdictions in which they operate.This complexity is true for all DID methods and, to our knowledge, most, if not all, DID methods have no intrinsic relationship to any particular jurisdiction. As such, we do not recommend including jurisdictional players, e.g., nation-states, cities, provinces, etc., as distinct operational layers, unless those players have a distinct role to play for that particular DID method.",
+  "id": "https://didcriteria.com/criteria/1",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-21",
+      "method": "https://w.rubric.cc/methods/18",
+      "decision making body": "Digital Bazaar",
+      "note": "Digital Bazaar created Veres One and is shepherding it through development to production.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-23",
+      "method": "https://w.rubric.cc/methods/19",
+      "decision making body": "Veres Foundation Board",
+      "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-22",
+      "method": "https://w.rubric.cc/methods/19",
+      "decision making body": "Veres One Community Group",
+      "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters.",
+      "evaluationCitation": "#eval-4"
+    }
+  ],
+  "category": "Rulemaking"
+}

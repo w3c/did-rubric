@@ -1,0 +1,157 @@
+{
+  "name": "Transparency",
+  "label": "1.2",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-2",
+  "source": null,
+  "question": {
+    "question": "How visible are rulemaking processes?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Agendas and participation details for all meetings are publicly announced, the meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+      },
+      {
+        "label": "B",
+        "meaning": "Minutes of meetings are reviewable by the public, including all votes and who cast them, but real-time observation may be limited."
+      },
+      {
+        "label": "C",
+        "meaning": "All current rules are publicly available."
+      },
+      {
+        "label": "D",
+        "meaning": "Rules may be changed without public notice."
+      }
+    ],
+    "possibleResponses[0]": {
+      "meaning": "Agendas and participation details for all governance discussions are publicly announced, any meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+    }
+  },
+  "relevance": "While participation measures active contribution, transparency measures the visibility of discussions affecting rule making. If such discussions are only visible to a limited group, it centralizes decision making in ways that Evaluators and users cannot easily see.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "1.1.0",
+  "exampleAssessments": [
+    {
+      "id": "a-11",
+      "method": "https://w.rubric.cc/methods/1",
+      "spec": "C",
+      "net": "n/a",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "Rules for accepting changes to the business rules are bilaterally negotiated between the peers, subject to conformance with the specification."
+    },
+    {
+      "id": "a-12",
+      "method": "https://w.rubric.cc/methods/2",
+      "spec": "C",
+      "net": "n/a",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "The controllers of the git repo are a limited set, but their decisions are \"meatspace protocol\" and hence not explicitly transparent."
+    },
+    {
+      "id": "a-13",
+      "method": "https://w.rubric.cc/methods/3",
+      "spec": "C",
+      "net": "C",
+      "reg": "C",
+      "evaluationCitation": "#eval-1",
+      "note": "The spec is maintained by volunteers, operating in an open fashion but without formal processes for announcements and meeting notes. The network and registry are bitcoin, which has a fairly public but messy innovation process, without formal meetings or votes."
+    },
+    {
+      "id": "a-14",
+      "method": "https://w.rubric.cc/methods/4",
+      "spec": "B",
+      "net": "B",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "The Sovrin Governance Framework actually requires all minutes of Sovrin governance discussions are public with a handful of exceptions for legal reasons (e.g., HR actions, legal actions). See Section 9 of Sovrin Governing Body Policies ."
+    },
+    {
+      "id": "a-17",
+      "method": "https://w.rubric.cc/methods/18",
+      "spec": "D",
+      "net": "D",
+      "reg": "D",
+      "note": "Spec (D), Net (D), and Reg (D): Operations are not yet transferred to the foundation. Neither a schedule of meetings nor minutes from past meetings were available from Foundation’s website.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-18",
+      "method": "https://w.rubric.cc/methods/19",
+      "spec": "A-",
+      "net": "A-",
+      "reg": "A-",
+      "note": "Spec (A-), Net (A-), and Reg (A-): Once the production network is launched, all rule making becomes a matter of public discourse via the Veres One CG. However, decisions about which rules to adopt remain the purview of the Foundation and it is unknown whether or not the Foundation will operate its meetings in as open a fashion as the CG.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-20",
+      "method": "https://w.rubric.cc/methods/20",
+      "spec": "A",
+      "net": "A-/A",
+      "reg": "A-/A",
+      "note": "Spec (A): method spec maintained by DIF, using open and transparent processes.\nNet (A-/A) and Reg (A-/A): It can be hard to track conversations about Bitcoin Improvement Proposals (BIPs) and decision processes differ for different BIPs, which can affect visibility (A-). IPFS has great support for realtime zoom participation and Notes(A)",
+      "evaluationCitation": "#eval-6"
+    },
+    {
+      "id": "a-19",
+      "method": "https://w.rubric.cc/methods/8",
+      "spec": "A-",
+      "net": "B-",
+      "reg": "D",
+      "note": "Spec (A-): The work occurs mostly in github issues, which are open to be public and retained in perpetuity. However, there are no regular meetings.\nNet (B-): Icann & IANA generally operate in public, although some discussion may be behind closed doors.\nReg (D): Only the website controller knows the rules they are applying.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-15",
+      "method": "https://w.rubric.cc/methods/5",
+      "spec": "C",
+      "net": "C",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "The governance is controlled by a smart contract, which is immutable."
+    },
+    {
+      "id": "a-16",
+      "method": "https://w.rubric.cc/methods/6",
+      "spec": "C",
+      "net": "C",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "Jolocom does not expose the internal and/or customer conversations that drive rulemaking."
+    }
+  ],
+  "category": "Rulemaking"
+}

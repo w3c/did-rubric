@@ -1,0 +1,93 @@
+{
+  "name": "Cost to introduce rule change",
+  "label": "1.5",
+  "question": {
+    "question": "How expensive is it to get a governance decision before each of the deliberating bodies?",
+    "instruction": "Evaluate this criteria for each decision making body from 1.3."
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Decision Making Body",
+        "type": "enhancedLetter",
+        "propertyRef": "decision making body"
+      },
+      {
+        "heading": "Cost",
+        "type": "enhancedLetter",
+        "propertyRef": "cost"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": {
+    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+    "sourceSection": ""
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Free to all"
+      },
+      {
+        "label": "B",
+        "meaning": "Inexpensive, but accessible"
+      },
+      {
+        "label": "C",
+        "meaning": "Modest cost for interested parties"
+      },
+      {
+        "label": "D",
+        "meaning": "Expensive and restricted"
+      },
+      {
+        "label": "E",
+        "meaning": "Not possible to participate because the rules are immutable"
+      }
+    ]
+  },
+  "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
+  "id": "https://didcriteria.com/criteria/3",
+  "structureCriteriaId": "https://didcriteria.com/criteria/1",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-27",
+      "method": "https://w.rubric.cc/methods/18",
+      "decision making body": "Digital Bazaar",
+      "cost": "D+",
+      "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-29",
+      "method": "https://w.rubric.cc/methods/19",
+      "decision making body": "Veres Foundation Board",
+      "cost": "C-",
+      "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-28",
+      "method": "https://w.rubric.cc/methods/19",
+      "decision making body": "Veres One Community Group",
+      "cost": "B",
+      "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
+      "evaluationCitation": "#eval-4"
+    }
+  ],
+  "category": "Rulemaking"
+}

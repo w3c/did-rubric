@@ -1,0 +1,139 @@
+{
+  "name": "Scope of Usage",
+  "label": "2.3",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-8",
+  "source": null,
+  "question": {
+    "question": "How widely can DIDs of this Method be used?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Universal: DIDs can only be created and used universally, between any number of parties."
+      },
+      {
+        "label": "B",
+        "meaning": "Contextual: DIDs can be created and used contextually, between any set of collaborating parties."
+      },
+      {
+        "label": "C",
+        "meaning": "Paired: DID can be created and used pairwise, between any two parties."
+      },
+      {
+        "label": "D",
+        "meaning": "Central: DIDs can only be created and used with a single, centralized party."
+      }
+    ]
+  },
+  "relevance": "Different Methods enable different scopes in which a DID might be considered usable or valid. Some DIDs are only resolvable within a limited context, others are suitable for global use. Contextual DIDs are a middle ground that allow a set of parties to use DIDs, while those outside that group cannot meaningfully do so. Finally, central DIDs use the DID syntax and DID Documents to establish secure communications, but authority to use these DIDs resides with the central party, who may revoke that ability at their discretion.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "1.1.0",
+  "exampleAssessments": [
+    {
+      "id": "a-56",
+      "method": "https://w.rubric.cc/methods/4",
+      "net": "A",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "Transactions on the Sovrin ledger are publicly readable by anyone. Transactions may be written by any Transaction Author however for GDPR reasons personal data may not currently be written to the Sovrin ledger. See Sovrin Data Protection ."
+    },
+    {
+      "id": "a-55",
+      "method": "https://w.rubric.cc/methods/3",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Open, permissionless, and globally resolvable."
+    },
+    {
+      "id": "a-54",
+      "method": "https://w.rubric.cc/methods/2",
+      "net": "A",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "Anyone can set up a git-based repo and use did:git. However, to interact with a given repo, one must be aware of the repo, including which instance of it is authoritative."
+    },
+    {
+      "id": "a-53",
+      "method": "https://w.rubric.cc/methods/1",
+      "net": "A+",
+      "reg": "C",
+      "evaluationCitation": "#eval-1",
+      "note": "Did:peer is communication-layer independent, so it can be used on any network, including direct physical links. However, only those parties to the creation of the DID can actually use it. The DIDs have no use outside that direct peer-to-peer relationship."
+    },
+    {
+      "id": "a-57",
+      "method": "https://w.rubric.cc/methods/5",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Open, permissionless, and globally resolvable."
+    },
+    {
+      "id": "a-58",
+      "method": "https://w.rubric.cc/methods/6",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Open, permissionless, and globally resolvable."
+    },
+    {
+      "id": "a-59",
+      "method": "https://w.rubric.cc/methods/18",
+      "net": "A",
+      "reg": "A",
+      "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-60",
+      "method": "https://w.rubric.cc/methods/19",
+      "net": "A",
+      "reg": "A",
+      "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-62",
+      "method": "https://w.rubric.cc/methods/20",
+      "net": "A",
+      "reg": "A",
+      "note": "A did:ion DID can be resolved by any observer.",
+      "evaluationCitation": "#eval-6"
+    },
+    {
+      "id": "a-61",
+      "method": "https://w.rubric.cc/methods/8",
+      "net": "A/B",
+      "reg": "A/B",
+      "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
+      "evaluationCitation": "#eval-5"
+    }
+  ],
+  "category": "Design"
+}
