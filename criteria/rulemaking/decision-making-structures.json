@@ -1,6 +1,7 @@
 {
   "name": "Decision Making Structures",
   "label": "1.4",
+  "order": 4,
   "question": {
     "question": "How is each decision making body structured?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."

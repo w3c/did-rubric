@@ -1,0 +1,14 @@
+{
+  "categories": [
+    {
+      "name": "Rulemaking",
+      "description": "Rulemaking criteria address who makes the rules and how. Output of rulemaking are the rules.",
+      "criteriaFolder": "rulemaking"
+    },
+    {
+      "name": "Design",
+      "description": "Criteria related to the design of the DID method.",
+      "criteriaFolder": "design"
+    }
+  ]
+}

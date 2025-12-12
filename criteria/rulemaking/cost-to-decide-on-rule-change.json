@@ -1,6 +1,7 @@
 {
   "name": "Cost to decide on rule changes",
   "label": "1.6",
+  "order": 6,
   "question": {
     "question": "How expensive is it to participate as a peer in a governance decision by the governing body?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."

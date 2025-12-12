@@ -1,6 +1,7 @@
 {
   "name": "Scope of Usage",
   "label": "2.3",
+  "order": 3,
   "id": "https://www.w3.org/TR/did-rubric#criteria-8",
   "source": null,
   "question": {

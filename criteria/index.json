@@ -1,0 +1,1128 @@
+{
+  "categories": [
+    {
+      "name": "Rulemaking",
+      "description": "Rulemaking criteria address who makes the rules and how. Output of rulemaking are the rules.",
+      "criteria": [
+        {
+          "name": "Open contribution (participation)",
+          "label": "1.1",
+          "order": 1,
+          "id": "https://www.w3.org/TR/did-rubric#criteria-1",
+          "source": null,
+          "question": {
+            "question": "How open is participation in governance decisions?"
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Anyone can participate in an open, fair process where all participants have equal opportunity to be heard and influence decisions."
+              },
+              {
+                "label": "B",
+                "meaning": "Anyone can comment and contribute to open debate, but decisions are ultimately made by a closed group."
+              },
+              {
+                "label": "C",
+                "meaning": "Debate is restricted to a selected but known group."
+              },
+              {
+                "label": "D",
+                "meaning": "Debate is conducted in secret by an unknown group."
+              }
+            ]
+          },
+          "relevance": "Governance determines how the rules of the underlying network are set and maintained. The more parties that are able to contribute to governance debates, the more decentralized the governance.",
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Spec.",
+                "type": "enhancedLetter",
+                "propertyRef": "spec"
+              },
+              {
+                "heading": "Net.",
+                "type": "enhancedLetter",
+                "propertyRef": "net"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "version": "1.1.0",
+          "exampleAssessments": [
+            {
+              "id": "a-2",
+              "method": "https://w.rubric.cc/methods/2",
+              "spec": "B",
+              "net": "C",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "The git network is the git source code, which is controlled (currently) by 16 people. They do not have a public issues process. The spec is openly developed on github by a listed set of contributors and issues may be raised by anyone. Each registry is controlled by potentially unknown parties as negotiated in \"meatspace\"."
+            },
+            {
+              "id": "a-5",
+              "method": "https://w.rubric.cc/methods/5",
+              "spec": "C",
+              "net": "B",
+              "reg": "n/a",
+              "evaluationCitation": "#eval-1",
+              "note": "The network is Ethereum, which evolves through EIPs proposed by anyone, discussed by \"the community\" and ultimately adopted by Ethereum core devs. The spec is published on GitHub with issues open to the public. The smart contract for the registry is immutable."
+            },
+            {
+              "id": "a-6",
+              "method": "https://w.rubric.cc/methods/6",
+              "spec": "D",
+              "net": "B",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "Jolocom's network is Ethereum. Decisions over Jolocom's smart contracts are made by an unknown group within Jolocom. The specification (as listed in the DID Method Registry [[DID-SPEC-REGISTRIES]]) is currently archived and not open to public comment."
+            },
+            {
+              "id": "a-8",
+              "method": "https://w.rubric.cc/methods/19",
+              "spec": "A-",
+              "net": "A-",
+              "reg": "A-",
+              "note": "Spec (A-), Net (A-), and Reg (A-): The Veres One Community Group is open to participation by anyone and it will be taking over control of the specification. However, the Veres Foundation, which will handle operational control, is likely to have a disproportionate voice in the evolution of the specification, network, and registry.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-7",
+              "method": "https://w.rubric.cc/methods/18",
+              "spec": "B",
+              "net": "B",
+              "reg": "B",
+              "note": "Spec (B) : Created by Digital Bazaar\nNet (B) and Reg (B) : Rules are managed by the Veres One Foundation\nGithub is open to the public and the spec is a CCG Work Item.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-9",
+              "method": "https://w.rubric.cc/methods/8",
+              "spec": "A",
+              "net": "B",
+              "reg": "C/D",
+              "note": "Spec (A): Owned by CCG at W3C, anyone can join.\rNet (B): Most of the network is controlled by public or private entities.\nReg: Controlled by the Domain Holder, which is a restricted set (C) and in some cases may not be known to the resolving party (D).",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-1",
+              "method": "https://w.rubric.cc/methods/1",
+              "spec": "B",
+              "net": "C",
+              "reg": "C",
+              "evaluationCitation": "#eval-1",
+              "note": "did:peer has no intrinsic network. It can use any communications channel between parties. Only those two parties are privy to the decisions made about communications and recordation. The spec is openly developed on github by a listed set of contributors and issues may be raised by anyone."
+            },
+            {
+              "id": "a-3",
+              "method": "https://w.rubric.cc/methods/3",
+              "spec": "B",
+              "net": "D",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "Changes to the bitcoin protocol are chaotic and uncertain. They use BIPs, but the path to adoption is uncertain and the relative power of developers, miners, and users is open to debate. The spec is openly developed on github by a listed set of contributors and issues may be raised by anyone."
+            },
+            {
+              "id": "a-10",
+              "method": "https://w.rubric.cc/methods/20",
+              "spec": "A-",
+              "net": "B",
+              "reg": "B",
+              "note": "Spec (A-): Large organizations pay a larger fee, while individuals participate for free. This affects both influence and accessibility.\nNet (B) and Reg (B): Bitcoin is mostly open, but core devs hold elevated power. IPFS is open source, run on github, but primarily funded, resourced, and managed by Protocol Labs.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-4",
+              "method": "https://w.rubric.cc/methods/4",
+              "spec": "B",
+              "net": "B",
+              "reg": "B",
+              "evaluationCitation": "#eval-1",
+              "note": "The Sovrin Foundation has an open community governance model but has not yet had open elections of trustees."
+            }
+          ],
+          "category": "Rulemaking"
+        },
+        {
+          "name": "Transparency",
+          "label": "1.2",
+          "order": 2,
+          "id": "https://www.w3.org/TR/did-rubric#criteria-2",
+          "source": null,
+          "question": {
+            "question": "How visible are rulemaking processes?"
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Agendas and participation details for all meetings are publicly announced, the meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+              },
+              {
+                "label": "B",
+                "meaning": "Minutes of meetings are reviewable by the public, including all votes and who cast them, but real-time observation may be limited."
+              },
+              {
+                "label": "C",
+                "meaning": "All current rules are publicly available."
+              },
+              {
+                "label": "D",
+                "meaning": "Rules may be changed without public notice."
+              }
+            ],
+            "possibleResponses[0]": {
+              "meaning": "Agendas and participation details for all governance discussions are publicly announced, any meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+            }
+          },
+          "relevance": "While participation measures active contribution, transparency measures the visibility of discussions affecting rule making. If such discussions are only visible to a limited group, it centralizes decision making in ways that Evaluators and users cannot easily see.",
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Spec.",
+                "type": "enhancedLetter",
+                "propertyRef": "spec"
+              },
+              {
+                "heading": "Net.",
+                "type": "enhancedLetter",
+                "propertyRef": "net"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "version": "1.1.0",
+          "exampleAssessments": [
+            {
+              "id": "a-11",
+              "method": "https://w.rubric.cc/methods/1",
+              "spec": "C",
+              "net": "n/a",
+              "reg": "B",
+              "evaluationCitation": "#eval-1",
+              "note": "Rules for accepting changes to the business rules are bilaterally negotiated between the peers, subject to conformance with the specification."
+            },
+            {
+              "id": "a-12",
+              "method": "https://w.rubric.cc/methods/2",
+              "spec": "C",
+              "net": "n/a",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "The controllers of the git repo are a limited set, but their decisions are \"meatspace protocol\" and hence not explicitly transparent."
+            },
+            {
+              "id": "a-13",
+              "method": "https://w.rubric.cc/methods/3",
+              "spec": "C",
+              "net": "C",
+              "reg": "C",
+              "evaluationCitation": "#eval-1",
+              "note": "The spec is maintained by volunteers, operating in an open fashion but without formal processes for announcements and meeting notes. The network and registry are bitcoin, which has a fairly public but messy innovation process, without formal meetings or votes."
+            },
+            {
+              "id": "a-14",
+              "method": "https://w.rubric.cc/methods/4",
+              "spec": "B",
+              "net": "B",
+              "reg": "B",
+              "evaluationCitation": "#eval-1",
+              "note": "The Sovrin Governance Framework actually requires all minutes of Sovrin governance discussions are public with a handful of exceptions for legal reasons (e.g., HR actions, legal actions). See Section 9 of Sovrin Governing Body Policies ."
+            },
+            {
+              "id": "a-17",
+              "method": "https://w.rubric.cc/methods/18",
+              "spec": "D",
+              "net": "D",
+              "reg": "D",
+              "note": "Spec (D), Net (D), and Reg (D): Operations are not yet transferred to the foundation. Neither a schedule of meetings nor minutes from past meetings were available from Foundation’s website.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-18",
+              "method": "https://w.rubric.cc/methods/19",
+              "spec": "A-",
+              "net": "A-",
+              "reg": "A-",
+              "note": "Spec (A-), Net (A-), and Reg (A-): Once the production network is launched, all rule making becomes a matter of public discourse via the Veres One CG. However, decisions about which rules to adopt remain the purview of the Foundation and it is unknown whether or not the Foundation will operate its meetings in as open a fashion as the CG.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-20",
+              "method": "https://w.rubric.cc/methods/20",
+              "spec": "A",
+              "net": "A-/A",
+              "reg": "A-/A",
+              "note": "Spec (A): method spec maintained by DIF, using open and transparent processes.\nNet (A-/A) and Reg (A-/A): It can be hard to track conversations about Bitcoin Improvement Proposals (BIPs) and decision processes differ for different BIPs, which can affect visibility (A-). IPFS has great support for realtime zoom participation and Notes(A)",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-19",
+              "method": "https://w.rubric.cc/methods/8",
+              "spec": "A-",
+              "net": "B-",
+              "reg": "D",
+              "note": "Spec (A-): The work occurs mostly in github issues, which are open to be public and retained in perpetuity. However, there are no regular meetings.\nNet (B-): Icann & IANA generally operate in public, although some discussion may be behind closed doors.\nReg (D): Only the website controller knows the rules they are applying.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-15",
+              "method": "https://w.rubric.cc/methods/5",
+              "spec": "C",
+              "net": "C",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "The governance is controlled by a smart contract, which is immutable."
+            },
+            {
+              "id": "a-16",
+              "method": "https://w.rubric.cc/methods/6",
+              "spec": "C",
+              "net": "C",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "Jolocom does not expose the internal and/or customer conversations that drive rulemaking."
+            }
+          ],
+          "category": "Rulemaking"
+        },
+        {
+          "name": "Separation of Power",
+          "label": "1.3",
+          "order": 3,
+          "question": {
+            "question": "What decision making bodies are involved in rulemaking?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Decision Making Body",
+                "type": "enhancedLetter",
+                "propertyRef": "decision making body"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "source": {
+            "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+            "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+            "sourceSection": ""
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Rulemaking rarely occurs in simple structures. Identifying the different organizational entities that participate in setting rules allows evaluators to understand how rules get made. Understanding how rules get helps predict possible future developments."
+              }
+            ]
+          },
+          "relevance": "It is worth noting that all entities who are beholden to sovereign states, which is pretty much all corporations, non-profits, and individuals, have consequences for violating the laws, regulations, and lawful court orders within their jurisdiction. Some decentralized systems go to great lengths to minimize the impact of possible coercion, including actions by nation states. It is understood that any participant in the process may be subject to the rule of law from any number of jurisdictions, e.g., patent law, employment law, financial reporting laws, dumping laws, zoning, environmental regulations, etc. As a result, all decision making bodies are subject to the jurisdictions in which they operate.This complexity is true for all DID methods and, to our knowledge, most, if not all, DID methods have no intrinsic relationship to any particular jurisdiction. As such, we do not recommend including jurisdictional players, e.g., nation-states, cities, provinces, etc., as distinct operational layers, unless those players have a distinct role to play for that particular DID method.",
+          "id": "https://didcriteria.com/criteria/1",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-21",
+              "method": "https://w.rubric.cc/methods/18",
+              "decision making body": "Digital Bazaar",
+              "note": "Digital Bazaar created Veres One and is shepherding it through development to production.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-23",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres Foundation Board",
+              "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-22",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres One Community Group",
+              "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters.",
+              "evaluationCitation": "#eval-4"
+            }
+          ],
+          "category": "Rulemaking"
+        },
+        {
+          "name": "Decision Making Structures",
+          "label": "1.4",
+          "order": 4,
+          "question": {
+            "question": "How is each decision making body structured?",
+            "instruction": "Evaluate this criteria for each decision making body from 1.3."
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Decision Making Body",
+                "type": "enhancedLetter",
+                "propertyRef": "decision making body"
+              },
+              {
+                "heading": "Governance Structure",
+                "type": "enhancedLetter",
+                "propertyRef": "governance structure"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "source": {
+            "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+            "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+            "sourceSection": ""
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Individual. Sole proprietorship"
+              },
+              {
+                "label": "B",
+                "meaning": "Informal Group. Unincorporated Partnership / Open Community"
+              },
+              {
+                "label": "C",
+                "meaning": "For-profit formal organization. For-profit Corporation / LLC / Partnership"
+              },
+              {
+                "label": "D",
+                "meaning": "Quasi not-for-profit formal organization. B-Corp https://bcorporation.net/  / CIC https://en.wikipedia.org/wiki/Community_interest_company"
+              },
+              {
+                "label": "E",
+                "meaning": "Recognized not-for-profit formal organization. Not-for-profit public benefit organization (NGOs, 501c(3/4/6), etc)"
+              },
+              {
+                "label": "F",
+                "meaning": "NGO"
+              },
+              {
+                "label": "G",
+                "meaning": "Trade Association"
+              },
+              {
+                "label": "H",
+                "meaning": "Charity"
+              },
+              {
+                "label": "I",
+                "meaning": "Public agency (federal, state, or local)"
+              },
+              {
+                "label": "J",
+                "meaning": "Other"
+              }
+            ]
+          },
+          "relevance": "Different governance structures have different implications for how decisions are made and who wields influence throughout the process.",
+          "id": "https://didcriteria.com/criteria/2",
+          "structureCriteriaId": "https://didcriteria.com/criteria/1",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-26",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres Foundation Board",
+              "governance structure": "E",
+              "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-24",
+              "method": "https://w.rubric.cc/methods/18",
+              "decision making body": "Digital Bazaar",
+              "governance structure": "C",
+              "note": "Digital Bazaar is a closely held startup with a seventeen year track record. (C)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-25",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres One Community Group",
+              "governance structure": "E",
+              "note": "The Veres One Community Group is a community group operating under the rules of the World Wide Web Consortium. Open to the public, self-elected leadership (E)",
+              "evaluationCitation": "#eval-4"
+            }
+          ],
+          "category": "Rulemaking"
+        },
+        {
+          "name": "Cost to introduce rule change",
+          "label": "1.5",
+          "order": 5,
+          "question": {
+            "question": "How expensive is it to get a governance decision before each of the deliberating bodies?",
+            "instruction": "Evaluate this criteria for each decision making body from 1.3."
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Decision Making Body",
+                "type": "enhancedLetter",
+                "propertyRef": "decision making body"
+              },
+              {
+                "heading": "Cost",
+                "type": "enhancedLetter",
+                "propertyRef": "cost"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "source": {
+            "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+            "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+            "sourceSection": ""
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Free to all"
+              },
+              {
+                "label": "B",
+                "meaning": "Inexpensive, but accessible"
+              },
+              {
+                "label": "C",
+                "meaning": "Modest cost for interested parties"
+              },
+              {
+                "label": "D",
+                "meaning": "Expensive and restricted"
+              },
+              {
+                "label": "E",
+                "meaning": "Not possible to participate because the rules are immutable"
+              }
+            ]
+          },
+          "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
+          "id": "https://didcriteria.com/criteria/3",
+          "structureCriteriaId": "https://didcriteria.com/criteria/1",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-27",
+              "method": "https://w.rubric.cc/methods/18",
+              "decision making body": "Digital Bazaar",
+              "cost": "D+",
+              "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-29",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres Foundation Board",
+              "cost": "C-",
+              "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-28",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres One Community Group",
+              "cost": "B",
+              "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
+              "evaluationCitation": "#eval-4"
+            }
+          ],
+          "category": "Rulemaking"
+        },
+        {
+          "name": "Cost to decide on rule changes",
+          "label": "1.6",
+          "order": 6,
+          "question": {
+            "question": "How expensive is it to participate as a peer in a governance decision by the governing body?",
+            "instruction": "Evaluate this criteria for each decision making body from 1.3."
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Decision Making Body",
+                "type": "enhancedLetter",
+                "propertyRef": "decision making body"
+              },
+              {
+                "heading": "Cost",
+                "type": "enhancedLetter",
+                "propertyRef": "cost"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "source": {
+            "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
+            "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
+            "sourceSection": ""
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Free to all"
+              },
+              {
+                "label": "B",
+                "meaning": "Inexpensive, but accessible"
+              },
+              {
+                "label": "C",
+                "meaning": "Modest cost for interested parties"
+              },
+              {
+                "label": "D",
+                "meaning": "Expensive and restricted"
+              },
+              {
+                "label": "E",
+                "meaning": "Not possible to participate because the rules are immutable"
+              }
+            ]
+          },
+          "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
+          "id": "https://didcriteria.com/criteria/4",
+          "structureCriteriaId": "https://didcriteria.com/criteria/1",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-30",
+              "method": "https://w.rubric.cc/methods/18",
+              "decision making body": "Digital Bazaar",
+              "cost": "D",
+              "note": "The most common way to be involved is by invitation from Digital Bazaar, either as an employee, subcontractor, or advisor. (D)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-31",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres One Community Group",
+              "cost": "B",
+              "note": "The largest cost is time to participate and a track record for credibility. (B)",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-32",
+              "method": "https://w.rubric.cc/methods/19",
+              "decision making body": "Veres Foundation Board",
+              "cost": "D",
+              "note": "Foundation leadership is initially selected by Digital Bazaar and self-selecting thereafter. (D)",
+              "evaluationCitation": "#eval-4"
+            }
+          ],
+          "category": "Rulemaking"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "description": "Criteria related to the design of the DID method.",
+      "criteria": [
+        {
+          "name": "Permissioned Operation",
+          "label": "2.1",
+          "order": 1,
+          "id": "https://www.w3.org/TR/did-rubric#criteria-6",
+          "source": null,
+          "question": {
+            "question": "Does one need permission to use the DID Method?"
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Anyone can participate fully (full read/write and participation in consensus)."
+              },
+              {
+                "label": "B",
+                "meaning": "Anyone can read/write, but consensus mechanism is permissioned."
+              },
+              {
+                "label": "C",
+                "meaning": "Anyone can read, but writing and consensus is permissioned."
+              },
+              {
+                "label": "D",
+                "meaning": "All participation is permissioned."
+              }
+            ]
+          },
+          "relevance": "Permissioned operation impacts the availability of the network to various participants, which can affect inclusivity with regard to underserved or vulnerable populations. Permissioned networks also expose the permission giver to legal or other attacks.",
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Net.",
+                "type": "enhancedLetter",
+                "propertyRef": "net"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "version": "1.1.0",
+          "exampleAssessments": [
+            {
+              "id": "a-41",
+              "method": "https://w.rubric.cc/methods/8",
+              "net": "B",
+              "reg": "B",
+              "note": "Net (B) and Reg (B) Every layer in the architecture requires the permission of those above., e.g., website owners need a hosting company. Those permissions can always be revoked.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-39",
+              "method": "https://w.rubric.cc/methods/18",
+              "net": "B+",
+              "reg": "B+",
+              "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-40",
+              "method": "https://w.rubric.cc/methods/19",
+              "net": "B+",
+              "reg": "B+",
+              "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-33",
+              "method": "https://w.rubric.cc/methods/1",
+              "net": "A",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "By design, did:peer can use any communications channel and only the participation of the participants is required. Unfortunately, for those outside the peer context, the registry is inaccessible."
+            },
+            {
+              "id": "a-34",
+              "method": "https://w.rubric.cc/methods/2",
+              "net": "A",
+              "reg": "D",
+              "evaluationCitation": "#eval-1",
+              "note": "Git software is available to anyone. Participation and access is controlled by the repo maintainers."
+            },
+            {
+              "id": "a-35",
+              "method": "https://w.rubric.cc/methods/3",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "The bitcoin network is open to anyone."
+            },
+            {
+              "id": "a-36",
+              "method": "https://w.rubric.cc/methods/4",
+              "net": "C",
+              "reg": "C",
+              "evaluationCitation": "#eval-1",
+              "note": "Sovrin foundation limits access to writing and consensus, but the network is open to all for reading."
+            },
+            {
+              "id": "a-37",
+              "method": "https://w.rubric.cc/methods/5",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Ethereum is open to anyone. The registry is accessible to anyone."
+            },
+            {
+              "id": "a-42",
+              "method": "https://w.rubric.cc/methods/20",
+              "net": "A",
+              "reg": "A",
+              "note": "Net (A) and Reg (A) Anyone can use did:ion; neither bitcoin nor IPFS are permissioned, anyone can stand up a node and participate fully.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-38",
+              "method": "https://w.rubric.cc/methods/6",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Ethereum is open to anyone. The registry is accessible to anyone, although some subregistries/subnetworks may have alternate rules."
+            }
+          ],
+          "category": "Design"
+        },
+        {
+          "name": "Interoperability",
+          "label": "2.2",
+          "order": 2,
+          "id": "https://www.w3.org/TR/did-rubric#criteria-7",
+          "source": null,
+          "question": {
+            "question": "Does the DID Method restrict access or functionality to particular client software implementations?"
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Any wallet can work with any resolver on any registry,"
+              },
+              {
+                "label": "B",
+                "meaning": "Any wallet can work with multiple resolvers and multiple registries,"
+              },
+              {
+                "label": "C",
+                "meaning": "Some implementations of some wallets can work with some resolvers,"
+              },
+              {
+                "label": "D",
+                "meaning": "There is a single combined suite of resolver, registry, and wallet."
+              }
+            ]
+          },
+          "relevance": "The ability to communicate with different (ideally all) resolvers and registries significantly increases the applicability of a decentralized identity layer / usability of a given wallet. Vice versa, limited capability to work with other Methods and registries restrict usage.",
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Spec",
+                "type": "enhancedLetter",
+                "propertyRef": "spec"
+              },
+              {
+                "heading": "Net.",
+                "type": "enhancedLetter",
+                "propertyRef": "net"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "version": "1.1.0",
+          "exampleAssessments": [
+            {
+              "id": "a-51",
+              "method": "https://w.rubric.cc/methods/8",
+              "spec": "A",
+              "net": "A-",
+              "reg": "A-",
+              "note": "Spec (A), Net (A-) and Reg (A-): Web-based wallets may have complications from CORS (cross-origin resource sharing), but in general any “wallet” is compatible. Although a given service (hosting or website, etc.) could add a layer of permissioned restrictions, the did:web Method does not require it. Similarly, nation-state level firewalls could restrict access at various layers, but, again, the Method does not require it.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-52",
+              "method": "https://w.rubric.cc/methods/20",
+              "spec": "A",
+              "net": "A",
+              "reg": "A",
+              "note": "Spec (A), Net (A) and Reg (A): Anyone can use did:ion; neither bitcoin nor IPFS are permissioned, anyone can stand up a node and participate fully.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-43",
+              "method": "https://w.rubric.cc/methods/1",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "did:peer is agnostic regarding the software that implements it."
+            },
+            {
+              "id": "a-44",
+              "method": "https://w.rubric.cc/methods/2",
+              "net": "A-",
+              "reg": "A-",
+              "evaluationCitation": "#eval-1",
+              "note": "did:git is predicated on using git software. However, git itself uses a protocol that any software could implement. Although we know of no other implementation in widespread use, we know of no limitations in the protocol itself."
+            },
+            {
+              "id": "a-45",
+              "method": "https://w.rubric.cc/methods/3",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Bitcoin has no restrictions on the software used to access the network."
+            },
+            {
+              "id": "a-46",
+              "method": "https://w.rubric.cc/methods/4",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "did:sov: has no restrictions on any software that implements it."
+            },
+            {
+              "id": "a-47",
+              "method": "https://w.rubric.cc/methods/5",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Neither Ethereum nor the smart contract has any restrictions on the software used to access them."
+            },
+            {
+              "id": "a-48",
+              "method": "https://w.rubric.cc/methods/6",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Neither Ethereum nor the smart contract has any restrictions on the software used to access them."
+            },
+            {
+              "id": "a-49",
+              "method": "https://w.rubric.cc/methods/18",
+              "spec": "A",
+              "net": "A",
+              "reg": "A",
+              "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-50",
+              "method": "https://w.rubric.cc/methods/19",
+              "spec": "A",
+              "net": "A",
+              "reg": "A",
+              "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
+              "evaluationCitation": "#eval-4"
+            }
+          ],
+          "category": "Design"
+        },
+        {
+          "name": "Scope of Usage",
+          "label": "2.3",
+          "order": 3,
+          "id": "https://www.w3.org/TR/did-rubric#criteria-8",
+          "source": null,
+          "question": {
+            "question": "How widely can DIDs of this Method be used?"
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Universal: DIDs can only be created and used universally, between any number of parties."
+              },
+              {
+                "label": "B",
+                "meaning": "Contextual: DIDs can be created and used contextually, between any set of collaborating parties."
+              },
+              {
+                "label": "C",
+                "meaning": "Paired: DID can be created and used pairwise, between any two parties."
+              },
+              {
+                "label": "D",
+                "meaning": "Central: DIDs can only be created and used with a single, centralized party."
+              }
+            ]
+          },
+          "relevance": "Different Methods enable different scopes in which a DID might be considered usable or valid. Some DIDs are only resolvable within a limited context, others are suitable for global use. Contextual DIDs are a middle ground that allow a set of parties to use DIDs, while those outside that group cannot meaningfully do so. Finally, central DIDs use the DID syntax and DID Documents to establish secure communications, but authority to use these DIDs resides with the central party, who may revoke that ability at their discretion.",
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Net.",
+                "type": "enhancedLetter",
+                "propertyRef": "net"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "version": "1.1.0",
+          "exampleAssessments": [
+            {
+              "id": "a-56",
+              "method": "https://w.rubric.cc/methods/4",
+              "net": "A",
+              "reg": "B",
+              "evaluationCitation": "#eval-1",
+              "note": "Transactions on the Sovrin ledger are publicly readable by anyone. Transactions may be written by any Transaction Author however for GDPR reasons personal data may not currently be written to the Sovrin ledger. See Sovrin Data Protection ."
+            },
+            {
+              "id": "a-55",
+              "method": "https://w.rubric.cc/methods/3",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Open, permissionless, and globally resolvable."
+            },
+            {
+              "id": "a-54",
+              "method": "https://w.rubric.cc/methods/2",
+              "net": "A",
+              "reg": "B",
+              "evaluationCitation": "#eval-1",
+              "note": "Anyone can set up a git-based repo and use did:git. However, to interact with a given repo, one must be aware of the repo, including which instance of it is authoritative."
+            },
+            {
+              "id": "a-53",
+              "method": "https://w.rubric.cc/methods/1",
+              "net": "A+",
+              "reg": "C",
+              "evaluationCitation": "#eval-1",
+              "note": "Did:peer is communication-layer independent, so it can be used on any network, including direct physical links. However, only those parties to the creation of the DID can actually use it. The DIDs have no use outside that direct peer-to-peer relationship."
+            },
+            {
+              "id": "a-57",
+              "method": "https://w.rubric.cc/methods/5",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Open, permissionless, and globally resolvable."
+            },
+            {
+              "id": "a-58",
+              "method": "https://w.rubric.cc/methods/6",
+              "net": "A",
+              "reg": "A",
+              "evaluationCitation": "#eval-1",
+              "note": "Open, permissionless, and globally resolvable."
+            },
+            {
+              "id": "a-59",
+              "method": "https://w.rubric.cc/methods/18",
+              "net": "A",
+              "reg": "A",
+              "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-60",
+              "method": "https://w.rubric.cc/methods/19",
+              "net": "A",
+              "reg": "A",
+              "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-62",
+              "method": "https://w.rubric.cc/methods/20",
+              "net": "A",
+              "reg": "A",
+              "note": "A did:ion DID can be resolved by any observer.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-61",
+              "method": "https://w.rubric.cc/methods/8",
+              "net": "A/B",
+              "reg": "A/B",
+              "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
+              "evaluationCitation": "#eval-5"
+            }
+          ],
+          "category": "Design"
+        }
+      ]
+    }
+  ]
+}

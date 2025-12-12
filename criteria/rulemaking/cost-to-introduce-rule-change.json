@@ -1,6 +1,7 @@
 {
   "name": "Cost to introduce rule change",
   "label": "1.5",
+  "order": 5,
   "question": {
     "question": "How expensive is it to get a governance decision before each of the deliberating bodies?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."

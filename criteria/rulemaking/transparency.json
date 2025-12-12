@@ -1,6 +1,7 @@
 {
   "name": "Transparency",
   "label": "1.2",
+  "order": 2,
   "id": "https://www.w3.org/TR/did-rubric#criteria-2",
   "source": null,
   "question": {

@@ -1,6 +1,7 @@
 {
   "name": "Interoperability",
   "label": "2.2",
+  "order": 2,
   "id": "https://www.w3.org/TR/did-rubric#criteria-7",
   "source": null,
   "question": {

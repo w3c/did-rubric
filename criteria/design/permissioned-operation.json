@@ -1,6 +1,7 @@
 {
   "name": "Permissioned Operation",
   "label": "2.1",
+  "order": 1,
   "id": "https://www.w3.org/TR/did-rubric#criteria-6",
   "source": null,
   "question": {

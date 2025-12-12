@@ -1,6 +1,7 @@
 {
   "name": "Open contribution (participation)",
   "label": "1.1",
+  "order": 1,
   "id": "https://www.w3.org/TR/did-rubric#criteria-1",
   "source": null,
   "question": {
