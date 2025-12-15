@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "name": "Rulemaking",
+      "description": "Rulemaking criteria address who makes the rules and how. Output of rulemaking are the rules.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-1",
+        "https://www.w3.org/TR/did-rubric#criteria-2",
+        "https://didcriteria.com/criteria/1",
+        "https://didcriteria.com/criteria/2",
+        "https://didcriteria.com/criteria/3",
+        "https://didcriteria.com/criteria/4"
+      ]
+    },
+    {
+      "name": "Design",
+      "description": "Design criteria addresses the method as designed. In other words, the output of the rulemaking: what rules apply to this DID method?",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-6",
+        "https://www.w3.org/TR/did-rubric#criteria-7",
+        "https://www.w3.org/TR/did-rubric#criteria-8",
+        "https://didcriteria.com/criteria/5",
+        "https://didcriteria.com/criteria/7",
+        "https://didcriteria.com/criteria/8",
+        "https://didcriteria.com/criteria/9",
+        "https://didcriteria.com/criteria/10",
+        "https://didcriteria.com/criteria/11"
+      ]
+      
+    }
+  ]
+}

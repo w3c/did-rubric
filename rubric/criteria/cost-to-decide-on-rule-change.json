@@ -1,7 +1,5 @@
 {
   "name": "Cost to decide on rule changes",
-  "label": "1.6",
-  "order": 6,
   "question": {
     "question": "How expensive is it to participate as a peer in a governance decision by the governing body?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -67,7 +65,7 @@
   "exampleAssessments": [
     {
       "id": "a-30",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "decision making body": "Digital Bazaar",
       "cost": "D",
       "note": "The most common way to be involved is by invitation from Digital Bazaar, either as an employee, subcontractor, or advisor. (D)",
@@ -75,7 +73,7 @@
     },
     {
       "id": "a-31",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres One Community Group",
       "cost": "B",
       "note": "The largest cost is time to participate and a track record for credibility. (B)",
@@ -83,12 +81,11 @@
     },
     {
       "id": "a-32",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres Foundation Board",
       "cost": "D",
       "note": "Foundation leadership is initially selected by Digital Bazaar and self-selecting thereafter. (D)",
       "evaluationCitation": "#eval-4"
     }
-  ],
-  "category": "Rulemaking"
+  ]
 }

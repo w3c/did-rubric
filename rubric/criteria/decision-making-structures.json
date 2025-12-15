@@ -1,7 +1,5 @@
 {
   "name": "Decision Making Structures",
-  "label": "1.4",
-  "order": 4,
   "question": {
     "question": "How is each decision making body structured?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -87,7 +85,7 @@
   "exampleAssessments": [
     {
       "id": "a-26",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres Foundation Board",
       "governance structure": "E",
       "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
@@ -95,7 +93,7 @@
     },
     {
       "id": "a-24",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "decision making body": "Digital Bazaar",
       "governance structure": "C",
       "note": "Digital Bazaar is a closely held startup with a seventeen year track record. (C)",
@@ -103,12 +101,11 @@
     },
     {
       "id": "a-25",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres One Community Group",
       "governance structure": "E",
       "note": "The Veres One Community Group is a community group operating under the rules of the World Wide Web Consortium. Open to the public, self-elected leadership (E)",
       "evaluationCitation": "#eval-4"
     }
-  ],
-  "category": "Rulemaking"
+  ]
 }

@@ -9,11 +9,11 @@ async function renderCategories() {
     return;
   }
 
-  const response = await fetch('../criteria/index.json');
-  const criteriaIndex = await response.json();
-  console.log('Criteria Index:', criteriaIndex);
+  const response = await fetch('../rubric/rubric.json');
+  const rubric = await response.json();
+  console.log('Rubric:', rubric);
 
-  let categoriesHtml = criteriaIndex.categories.map(category => {
+  let categoriesHtml = rubric.categories.map(category => {
     console.log('Rendering category:', category);
     return `<section class="category-section">
                 <h3>${category.name}</h3>
@@ -31,44 +31,48 @@ async function renderCategories() {
 
 function renderCriteria(criteria, isEvaluation = false) {
     console.log("Render Criteria", criteria);
+    
+    let criteriaIdFragment = criteria.id.split('#')[1];
     // TODO: Add ID to this html element so you can link to it.
     return `
     <section class="criteria">
-       <h3>${criteria.name}</h1>
+       <h4 id="${criteriaIdFragment}">${criteria.name}</h4>
+       <a href="#${criteriaIdFragment}">${criteria.id}</a>
+       <span>${criteria.version}</span>
 
         ${(criteria.source && criteria.source.sourceRef) ? `
             <div class="source">
-                <p>Source: ${criteria.source.sourceRef}</p>
+                <p>Source: <a href="${criteria.source.sourceRef}">${criteria.source.sourceRef}</a></p>
             </div>
         ` : ''}
 
-        </div>
-        <div class="question section">
-            <h4>QUESTION</h4>
-            <h1>${criteria.question.question}</p>
-            <p>${criteria.question.instruction ? criteria.question.instruction : ''}</p>
-        </div>
 
-        <div class="responses section">
-            <h4>RESPONSES</h4>
-            <div class="responses-list">
-                ${criteria.response && criteria.response.possibleResponses && criteria.response.possibleResponses.map(response => `
-                    <div class="response-item">
-                        <span class="response-label">${response.label}.</span>
-                        <span class="response-meaning">${response.meaning}</span>
-                    </div>
+        <section>
+            <h5>Question</h4>
+            <p>${criteria.question.question}</p>
+            ${criteria.question.instruction ? 
+                `<p><span>Instruction:</span>${criteria.question.instruction}</p>`
+            : ``}
+        </section>
+
+        <section>
+            <h5>Responses</h4>
+            <ol type="A">
+                ${criteria.response.possibleResponses.map(response => `
+                    <li>${response.meaning}</li>
                 `).join('')}
-            </div>
+            </ol>
 
-        </div>
 
-        <div class="relevance section">
-            <h4>RELEVANCE</h4>
+        </section>
+
+        <section>
+            <h5>Relevance</h4>
             <p>${criteria.relevance}</p>
-        </div>
+        </section>
 
-        <div class="assessments section">
-            <h4>${isEvaluation ? 'ASSESSMENTS' : 'EXAMPLE ASSESSMENTS'}</h4>
+        <section>
+            <h5>Examples</h4>
             <table>
             <thead>
                 <tr>
@@ -90,9 +94,8 @@ function renderCriteria(criteria, isEvaluation = false) {
                 `).join('')}
             </tbody>
             </table>
-        </div>
+        </section>
 
-    </div>
     </section>
     `
 

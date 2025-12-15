@@ -1,7 +1,5 @@
 {
   "name": "Interoperability",
-  "label": "2.2",
-  "order": 2,
   "id": "https://www.w3.org/TR/did-rubric#criteria-7",
   "source": null,
   "question": {
@@ -62,7 +60,7 @@
   "exampleAssessments": [
     {
       "id": "a-51",
-      "method": "https://w.rubric.cc/methods/8",
+      "method": "DID Web",
       "spec": "A",
       "net": "A-",
       "reg": "A-",
@@ -71,7 +69,7 @@
     },
     {
       "id": "a-52",
-      "method": "https://w.rubric.cc/methods/20",
+      "method": "DID Ion",
       "spec": "A",
       "net": "A",
       "reg": "A",
@@ -80,7 +78,7 @@
     },
     {
       "id": "a-43",
-      "method": "https://w.rubric.cc/methods/1",
+      "method": "did:peer",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -88,7 +86,7 @@
     },
     {
       "id": "a-44",
-      "method": "https://w.rubric.cc/methods/2",
+      "method": "did:git",
       "net": "A-",
       "reg": "A-",
       "evaluationCitation": "#eval-1",
@@ -96,7 +94,7 @@
     },
     {
       "id": "a-45",
-      "method": "https://w.rubric.cc/methods/3",
+      "method": "did:btcr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -104,7 +102,7 @@
     },
     {
       "id": "a-46",
-      "method": "https://w.rubric.cc/methods/4",
+      "method": "did:sov",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -112,7 +110,7 @@
     },
     {
       "id": "a-47",
-      "method": "https://w.rubric.cc/methods/5",
+      "method": "did:ethr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -120,7 +118,7 @@
     },
     {
       "id": "a-48",
-      "method": "https://w.rubric.cc/methods/6",
+      "method": "did:jolo",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -128,7 +126,7 @@
     },
     {
       "id": "a-49",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "spec": "A",
       "net": "A",
       "reg": "A",
@@ -137,13 +135,12 @@
     },
     {
       "id": "a-50",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "spec": "A",
       "net": "A",
       "reg": "A",
       "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
       "evaluationCitation": "#eval-4"
     }
-  ],
-  "category": "Design"
+  ]
 }

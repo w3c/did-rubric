@@ -6,8 +6,6 @@
       "criteria": [
         {
           "name": "Open contribution (participation)",
-          "label": "1.1",
-          "order": 1,
           "id": "https://www.w3.org/TR/did-rubric#criteria-1",
           "source": null,
           "question": {
@@ -68,7 +66,7 @@
           "exampleAssessments": [
             {
               "id": "a-2",
-              "method": "https://w.rubric.cc/methods/2",
+              "method": "did:git",
               "spec": "B",
               "net": "C",
               "reg": "D",
@@ -77,7 +75,7 @@
             },
             {
               "id": "a-5",
-              "method": "https://w.rubric.cc/methods/5",
+              "method": "did:ethr",
               "spec": "C",
               "net": "B",
               "reg": "n/a",
@@ -86,7 +84,7 @@
             },
             {
               "id": "a-6",
-              "method": "https://w.rubric.cc/methods/6",
+              "method": "did:jolo",
               "spec": "D",
               "net": "B",
               "reg": "D",
@@ -95,7 +93,7 @@
             },
             {
               "id": "a-8",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "spec": "A-",
               "net": "A-",
               "reg": "A-",
@@ -104,7 +102,7 @@
             },
             {
               "id": "a-7",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "spec": "B",
               "net": "B",
               "reg": "B",
@@ -113,7 +111,7 @@
             },
             {
               "id": "a-9",
-              "method": "https://w.rubric.cc/methods/8",
+              "method": "DID Web",
               "spec": "A",
               "net": "B",
               "reg": "C/D",
@@ -122,7 +120,7 @@
             },
             {
               "id": "a-1",
-              "method": "https://w.rubric.cc/methods/1",
+              "method": "did:peer",
               "spec": "B",
               "net": "C",
               "reg": "C",
@@ -131,7 +129,7 @@
             },
             {
               "id": "a-3",
-              "method": "https://w.rubric.cc/methods/3",
+              "method": "did:btcr",
               "spec": "B",
               "net": "D",
               "reg": "D",
@@ -140,7 +138,7 @@
             },
             {
               "id": "a-10",
-              "method": "https://w.rubric.cc/methods/20",
+              "method": "DID Ion",
               "spec": "A-",
               "net": "B",
               "reg": "B",
@@ -149,20 +147,17 @@
             },
             {
               "id": "a-4",
-              "method": "https://w.rubric.cc/methods/4",
+              "method": "did:sov",
               "spec": "B",
               "net": "B",
               "reg": "B",
               "evaluationCitation": "#eval-1",
               "note": "The Sovrin Foundation has an open community governance model but has not yet had open elections of trustees."
             }
-          ],
-          "category": "Rulemaking"
+          ]
         },
         {
           "name": "Transparency",
-          "label": "1.2",
-          "order": 2,
           "id": "https://www.w3.org/TR/did-rubric#criteria-2",
           "source": null,
           "question": {
@@ -226,7 +221,7 @@
           "exampleAssessments": [
             {
               "id": "a-11",
-              "method": "https://w.rubric.cc/methods/1",
+              "method": "did:peer",
               "spec": "C",
               "net": "n/a",
               "reg": "B",
@@ -235,7 +230,7 @@
             },
             {
               "id": "a-12",
-              "method": "https://w.rubric.cc/methods/2",
+              "method": "did:git",
               "spec": "C",
               "net": "n/a",
               "reg": "D",
@@ -244,7 +239,7 @@
             },
             {
               "id": "a-13",
-              "method": "https://w.rubric.cc/methods/3",
+              "method": "did:btcr",
               "spec": "C",
               "net": "C",
               "reg": "C",
@@ -253,7 +248,7 @@
             },
             {
               "id": "a-14",
-              "method": "https://w.rubric.cc/methods/4",
+              "method": "did:sov",
               "spec": "B",
               "net": "B",
               "reg": "B",
@@ -262,7 +257,7 @@
             },
             {
               "id": "a-17",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "spec": "D",
               "net": "D",
               "reg": "D",
@@ -271,7 +266,7 @@
             },
             {
               "id": "a-18",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "spec": "A-",
               "net": "A-",
               "reg": "A-",
@@ -280,7 +275,7 @@
             },
             {
               "id": "a-20",
-              "method": "https://w.rubric.cc/methods/20",
+              "method": "DID Ion",
               "spec": "A",
               "net": "A-/A",
               "reg": "A-/A",
@@ -289,7 +284,7 @@
             },
             {
               "id": "a-19",
-              "method": "https://w.rubric.cc/methods/8",
+              "method": "DID Web",
               "spec": "A-",
               "net": "B-",
               "reg": "D",
@@ -298,7 +293,7 @@
             },
             {
               "id": "a-15",
-              "method": "https://w.rubric.cc/methods/5",
+              "method": "did:ethr",
               "spec": "C",
               "net": "C",
               "reg": "D",
@@ -307,20 +302,17 @@
             },
             {
               "id": "a-16",
-              "method": "https://w.rubric.cc/methods/6",
+              "method": "did:jolo",
               "spec": "C",
               "net": "C",
               "reg": "D",
               "evaluationCitation": "#eval-1",
               "note": "Jolocom does not expose the internal and/or customer conversations that drive rulemaking."
             }
-          ],
-          "category": "Rulemaking"
+          ]
         },
         {
           "name": "Separation of Power",
-          "label": "1.3",
-          "order": 3,
           "question": {
             "question": "What decision making bodies are involved in rulemaking?"
           },
@@ -363,32 +355,29 @@
           "exampleAssessments": [
             {
               "id": "a-21",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "decision making body": "Digital Bazaar",
               "note": "Digital Bazaar created Veres One and is shepherding it through development to production.",
               "evaluationCitation": "#eval-4"
             },
             {
               "id": "a-23",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres Foundation Board",
               "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational.",
               "evaluationCitation": "#eval-4"
             },
             {
               "id": "a-22",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres One Community Group",
               "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters.",
               "evaluationCitation": "#eval-4"
             }
-          ],
-          "category": "Rulemaking"
+          ]
         },
         {
           "name": "Decision Making Structures",
-          "label": "1.4",
-          "order": 4,
           "question": {
             "question": "How is each decision making body structured?",
             "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -474,7 +463,7 @@
           "exampleAssessments": [
             {
               "id": "a-26",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres Foundation Board",
               "governance structure": "E",
               "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
@@ -482,7 +471,7 @@
             },
             {
               "id": "a-24",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "decision making body": "Digital Bazaar",
               "governance structure": "C",
               "note": "Digital Bazaar is a closely held startup with a seventeen year track record. (C)",
@@ -490,19 +479,16 @@
             },
             {
               "id": "a-25",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres One Community Group",
               "governance structure": "E",
               "note": "The Veres One Community Group is a community group operating under the rules of the World Wide Web Consortium. Open to the public, self-elected leadership (E)",
               "evaluationCitation": "#eval-4"
             }
-          ],
-          "category": "Rulemaking"
+          ]
         },
         {
           "name": "Cost to introduce rule change",
-          "label": "1.5",
-          "order": 5,
           "question": {
             "question": "How expensive is it to get a governance decision before each of the deliberating bodies?",
             "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -568,7 +554,7 @@
           "exampleAssessments": [
             {
               "id": "a-27",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "decision making body": "Digital Bazaar",
               "cost": "D+",
               "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
@@ -576,7 +562,7 @@
             },
             {
               "id": "a-29",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres Foundation Board",
               "cost": "C-",
               "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
@@ -584,19 +570,16 @@
             },
             {
               "id": "a-28",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres One Community Group",
               "cost": "B",
               "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
               "evaluationCitation": "#eval-4"
             }
-          ],
-          "category": "Rulemaking"
+          ]
         },
         {
           "name": "Cost to decide on rule changes",
-          "label": "1.6",
-          "order": 6,
           "question": {
             "question": "How expensive is it to participate as a peer in a governance decision by the governing body?",
             "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -662,7 +645,7 @@
           "exampleAssessments": [
             {
               "id": "a-30",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "decision making body": "Digital Bazaar",
               "cost": "D",
               "note": "The most common way to be involved is by invitation from Digital Bazaar, either as an employee, subcontractor, or advisor. (D)",
@@ -670,7 +653,7 @@
             },
             {
               "id": "a-31",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres One Community Group",
               "cost": "B",
               "note": "The largest cost is time to participate and a track record for credibility. (B)",
@@ -678,25 +661,22 @@
             },
             {
               "id": "a-32",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "decision making body": "Veres Foundation Board",
               "cost": "D",
               "note": "Foundation leadership is initially selected by Digital Bazaar and self-selecting thereafter. (D)",
               "evaluationCitation": "#eval-4"
             }
-          ],
-          "category": "Rulemaking"
+          ]
         }
       ]
     },
     {
       "name": "Design",
-      "description": "Criteria related to the design of the DID method.",
+      "description": "Design criteria addresses the method as designed. In other words, the output of the rulemaking: what rules apply to this DID method?",
       "criteria": [
         {
           "name": "Permissioned Operation",
-          "label": "2.1",
-          "order": 1,
           "id": "https://www.w3.org/TR/did-rubric#criteria-6",
           "source": null,
           "question": {
@@ -752,7 +732,7 @@
           "exampleAssessments": [
             {
               "id": "a-41",
-              "method": "https://w.rubric.cc/methods/8",
+              "method": "DID Web",
               "net": "B",
               "reg": "B",
               "note": "Net (B) and Reg (B) Every layer in the architecture requires the permission of those above., e.g., website owners need a hosting company. Those permissions can always be revoked.",
@@ -760,7 +740,7 @@
             },
             {
               "id": "a-39",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "net": "B+",
               "reg": "B+",
               "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
@@ -768,7 +748,7 @@
             },
             {
               "id": "a-40",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "net": "B+",
               "reg": "B+",
               "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
@@ -776,7 +756,7 @@
             },
             {
               "id": "a-33",
-              "method": "https://w.rubric.cc/methods/1",
+              "method": "did:peer",
               "net": "A",
               "reg": "D",
               "evaluationCitation": "#eval-1",
@@ -784,7 +764,7 @@
             },
             {
               "id": "a-34",
-              "method": "https://w.rubric.cc/methods/2",
+              "method": "did:git",
               "net": "A",
               "reg": "D",
               "evaluationCitation": "#eval-1",
@@ -792,7 +772,7 @@
             },
             {
               "id": "a-35",
-              "method": "https://w.rubric.cc/methods/3",
+              "method": "did:btcr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -800,7 +780,7 @@
             },
             {
               "id": "a-36",
-              "method": "https://w.rubric.cc/methods/4",
+              "method": "did:sov",
               "net": "C",
               "reg": "C",
               "evaluationCitation": "#eval-1",
@@ -808,7 +788,7 @@
             },
             {
               "id": "a-37",
-              "method": "https://w.rubric.cc/methods/5",
+              "method": "did:ethr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -816,7 +796,7 @@
             },
             {
               "id": "a-42",
-              "method": "https://w.rubric.cc/methods/20",
+              "method": "DID Ion",
               "net": "A",
               "reg": "A",
               "note": "Net (A) and Reg (A) Anyone can use did:ion; neither bitcoin nor IPFS are permissioned, anyone can stand up a node and participate fully.",
@@ -824,19 +804,16 @@
             },
             {
               "id": "a-38",
-              "method": "https://w.rubric.cc/methods/6",
+              "method": "did:jolo",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
               "note": "Ethereum is open to anyone. The registry is accessible to anyone, although some subregistries/subnetworks may have alternate rules."
             }
-          ],
-          "category": "Design"
+          ]
         },
         {
           "name": "Interoperability",
-          "label": "2.2",
-          "order": 2,
           "id": "https://www.w3.org/TR/did-rubric#criteria-7",
           "source": null,
           "question": {
@@ -897,7 +874,7 @@
           "exampleAssessments": [
             {
               "id": "a-51",
-              "method": "https://w.rubric.cc/methods/8",
+              "method": "DID Web",
               "spec": "A",
               "net": "A-",
               "reg": "A-",
@@ -906,7 +883,7 @@
             },
             {
               "id": "a-52",
-              "method": "https://w.rubric.cc/methods/20",
+              "method": "DID Ion",
               "spec": "A",
               "net": "A",
               "reg": "A",
@@ -915,7 +892,7 @@
             },
             {
               "id": "a-43",
-              "method": "https://w.rubric.cc/methods/1",
+              "method": "did:peer",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -923,7 +900,7 @@
             },
             {
               "id": "a-44",
-              "method": "https://w.rubric.cc/methods/2",
+              "method": "did:git",
               "net": "A-",
               "reg": "A-",
               "evaluationCitation": "#eval-1",
@@ -931,7 +908,7 @@
             },
             {
               "id": "a-45",
-              "method": "https://w.rubric.cc/methods/3",
+              "method": "did:btcr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -939,7 +916,7 @@
             },
             {
               "id": "a-46",
-              "method": "https://w.rubric.cc/methods/4",
+              "method": "did:sov",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -947,7 +924,7 @@
             },
             {
               "id": "a-47",
-              "method": "https://w.rubric.cc/methods/5",
+              "method": "did:ethr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -955,7 +932,7 @@
             },
             {
               "id": "a-48",
-              "method": "https://w.rubric.cc/methods/6",
+              "method": "did:jolo",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -963,7 +940,7 @@
             },
             {
               "id": "a-49",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "spec": "A",
               "net": "A",
               "reg": "A",
@@ -972,20 +949,17 @@
             },
             {
               "id": "a-50",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "spec": "A",
               "net": "A",
               "reg": "A",
               "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
               "evaluationCitation": "#eval-4"
             }
-          ],
-          "category": "Design"
+          ]
         },
         {
           "name": "Scope of Usage",
-          "label": "2.3",
-          "order": 3,
           "id": "https://www.w3.org/TR/did-rubric#criteria-8",
           "source": null,
           "question": {
@@ -1041,7 +1015,7 @@
           "exampleAssessments": [
             {
               "id": "a-56",
-              "method": "https://w.rubric.cc/methods/4",
+              "method": "did:sov",
               "net": "A",
               "reg": "B",
               "evaluationCitation": "#eval-1",
@@ -1049,7 +1023,7 @@
             },
             {
               "id": "a-55",
-              "method": "https://w.rubric.cc/methods/3",
+              "method": "did:btcr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -1057,7 +1031,7 @@
             },
             {
               "id": "a-54",
-              "method": "https://w.rubric.cc/methods/2",
+              "method": "did:git",
               "net": "A",
               "reg": "B",
               "evaluationCitation": "#eval-1",
@@ -1065,7 +1039,7 @@
             },
             {
               "id": "a-53",
-              "method": "https://w.rubric.cc/methods/1",
+              "method": "did:peer",
               "net": "A+",
               "reg": "C",
               "evaluationCitation": "#eval-1",
@@ -1073,7 +1047,7 @@
             },
             {
               "id": "a-57",
-              "method": "https://w.rubric.cc/methods/5",
+              "method": "did:ethr",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -1081,7 +1055,7 @@
             },
             {
               "id": "a-58",
-              "method": "https://w.rubric.cc/methods/6",
+              "method": "did:jolo",
               "net": "A",
               "reg": "A",
               "evaluationCitation": "#eval-1",
@@ -1089,7 +1063,7 @@
             },
             {
               "id": "a-59",
-              "method": "https://w.rubric.cc/methods/18",
+              "method": "Veres One testnet",
               "net": "A",
               "reg": "A",
               "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
@@ -1097,7 +1071,7 @@
             },
             {
               "id": "a-60",
-              "method": "https://w.rubric.cc/methods/19",
+              "method": "Veres One Production",
               "net": "A",
               "reg": "A",
               "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
@@ -1105,7 +1079,7 @@
             },
             {
               "id": "a-62",
-              "method": "https://w.rubric.cc/methods/20",
+              "method": "DID Ion",
               "net": "A",
               "reg": "A",
               "note": "A did:ion DID can be resolved by any observer.",
@@ -1113,14 +1087,511 @@
             },
             {
               "id": "a-61",
-              "method": "https://w.rubric.cc/methods/8",
+              "method": "DID Web",
               "net": "A/B",
               "reg": "A/B",
               "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
               "evaluationCitation": "#eval-5"
             }
-          ],
-          "category": "Design"
+          ]
+        },
+        {
+          "name": "Cryptocurrency",
+          "question": {
+            "question": "What cryptocurrency, if any, is required for Method operations?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Spec.",
+                "type": "enhancedLetter",
+                "propertyRef": "spec"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "None"
+              },
+              {
+                "label": "B",
+                "meaning": "At least one. [List the required crypto-currencies in the Notes]"
+              }
+            ]
+          },
+          "relevance": "The use of particular cryptocurrencies create a long term dependency on the viability of those currencies. Such dependency may be a deterrent for some applications. Similarly, if no cryptocurrency is used, there is likely a dependency elsewhere, such as on the organization managing consensus rules and operation.",
+          "id": "https://didcriteria.com/criteria/5",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-63",
+              "method": "Veres One testnet",
+              "spec": "A",
+              "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-64",
+              "method": "Veres One Production",
+              "spec": "A",
+              "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-65",
+              "method": "DID Web",
+              "spec": "A",
+              "note": "Spec (B): did:web, which is based on the World Wide Web and DNS does not rely on any cryptocurrency.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-66",
+              "method": "DID Ion",
+              "spec": "B",
+              "note": "Spec (B): One must use bitcoin. BTC is required for anchoring transactions. The IPFS layer does not require cryptocurrency, but the bitcoin layer is required for all operations.",
+              "evaluationCitation": "#eval-6"
+            }
+          ]
+        },
+        {
+          "name": "Offline creation",
+          "question": {
+            "question": "Does the Method require network communications to create a DID?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Spec.",
+                "type": "enhancedLetter",
+                "propertyRef": "spec"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "No. Creation is expected to be off-line. Only resolution, updates and deactivations require network or registry interaction"
+              },
+              {
+                "label": "B",
+                "meaning": "Yes. Creation requires network coordination with a single party to complete the DID creation"
+              },
+              {
+                "label": "C",
+                "meaning": "Yes. Creation requires network coordination with multiple parties in a known, constrained group to complete the DID creation"
+              },
+              {
+                "label": "D",
+                "meaning": "Yes. Creation requires network coordination with and acceptance by an open, global consensus system to complete DID creation"
+              }
+            ]
+          },
+          "relevance": "Communication is costly, with increasing costs the more parties are involved. This cost is not just in terms of the connection expense, but also the latency in processing transactions. The ability to create a DID without registering it on a global shared state greatly reduces the technical and financial cost of the method.",
+          "id": "https://didcriteria.com/criteria/7",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-69",
+              "method": "DID Web",
+              "spec": "B+",
+              "note": "The DID controller must be able to communicate with the web server that is hosting the DID Document. However, in some configurations, this may not mean accessing the global network. For example, if you are physically present at the hosting server, one can create the DID Document files directly without network access. To resolve the DID Document those files must be published at an accessible endpoint, but creation doesn’t need the network.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-70",
+              "method": "DID Ion",
+              "spec": "A",
+              "note": "All new did:ions start offline. Only updates need to be published.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-67",
+              "method": "Veres One testnet",
+              "spec": "A",
+              "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-68",
+              "method": "Veres One Production",
+              "spec": "A",
+              "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+              "evaluationCitation": "#eval-4"
+            }
+          ]
+        },
+        {
+          "name": "Update Scalability",
+          "question": {
+            "question": "Assuming an average of no more than 1 update per quarter, how many DIDs can this method support?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Greater than 5 billion"
+              },
+              {
+                "label": "B",
+                "meaning": "Greater than 1 billion"
+              },
+              {
+                "label": "C",
+                "meaning": "Greater than 500 million"
+              },
+              {
+                "label": "D",
+                "meaning": "Greater than 50 million"
+              },
+              {
+                "label": "E",
+                "meaning": "Greater than 5 million"
+              },
+              {
+                "label": "F",
+                "meaning": "Less than 5 million"
+              }
+            ]
+          },
+          "relevance": "Some DID methods may be able to support the world's population, others may be more suitable to a particular type of use where only a small number of DIDs need to be supported. This gives a rough idea of the population base you may expect a particular DID method to support.",
+          "id": "https://didcriteria.com/criteria/8",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-71",
+              "method": "Veres One testnet",
+              "reg": "C",
+              "note": "Veres One can handle ~750 million updates per quarter at the current architecture of 13 witnesses running stock amazon instances. Performance can be improved through a variety of approaches with different cost and engineering tradeoffs.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-72",
+              "method": "Veres One Production",
+              "reg": "C",
+              "note": "Veres One can handle ~750 million updates per quarter at the current architecture of 13 witnesses running stock amazon instances. Performance can be improved through a variety of approaches with different cost and engineering tradeoffs.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-73",
+              "method": "DID Web",
+              "reg": "A",
+              "note": "did:web is a partitioned namespace where any given partition could support billions of DIDs. The URL behind the DID could be hosted by a small hosting service that can only handle a limited # of DIDs, but the hosting of a given domain could also be scaled arbitrarily.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-74",
+              "method": "DID Ion",
+              "reg": "A",
+              "note": "A single did:ion node, which limits its operations to 10,000 ops per transaction, is capable of anchoring ~131 million DIDs, updated every quarter. However, any number of did:ion nodes can independently anchor different did:ion operations, making the capacity effectively limited only by the blocksize of bitcoin (and the impact from other transactions competing for space in each block).",
+              "evaluationCitation": "#eval-6"
+            }
+          ]
+        },
+        {
+          "name": "Creation Cost",
+          "question": {
+            "question": "How much does it cost a DID creator to create a DID?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Only operational costs of running the algorithm (no externalized expense)"
+              },
+              {
+                "label": "B",
+                "meaning": "Less than $0.01"
+              },
+              {
+                "label": "C",
+                "meaning": "Less than $0.10"
+              },
+              {
+                "label": "D",
+                "meaning": "Less than $1"
+              },
+              {
+                "label": "E",
+                "meaning": "Less than $10"
+              },
+              {
+                "label": "F",
+                "meaning": "$10 or greater"
+              }
+            ]
+          },
+          "relevance": "Almost all operations are sensitive to the cost of creating the underlying identifiers. If such costs are close to zero, broad use of ephemeral keys is possible. As costs increase, it becomes more and more necessary to limit the number of identifiers created in order to keep systems.",
+          "id": "https://didcriteria.com/criteria/9",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-76",
+              "method": "Veres One Production",
+              "reg": "A",
+              "note": "Creation is FREE",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-75",
+              "method": "Veres One testnet",
+              "reg": "A",
+              "note": "Creation is FREE",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-77",
+              "method": "DID Web",
+              "reg": "A",
+              "note": "Assuming you already have a hosting provider providing a website, this cost is essentially free. If you don’t, you may incur the cost of establishing a website (and perhaps a domain purchase or TLD application).",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-78",
+              "method": "DID Ion",
+              "reg": "A",
+              "note": "Offline creation has no network costs, just local computation.",
+              "evaluationCitation": "#eval-6"
+            }
+          ]
+        },
+        {
+          "name": "Update & Deletion Cost (Out-of-pocket)",
+          "question": {
+            "question": "How much does it cost*, out of pocket, to update or deactivate a DID Document? If the method has a tiered or variable cost structure, list all responses that apply and specify the cost structure in the Notes *This is the cost to the DID Document controller."
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Only operational costs of running the algorithm (no externalized expense)"
+              },
+              {
+                "label": "B",
+                "meaning": "Less than $0.01"
+              },
+              {
+                "label": "C",
+                "meaning": "Less than $0.10"
+              },
+              {
+                "label": "D",
+                "meaning": "Less than $1"
+              },
+              {
+                "label": "E",
+                "meaning": "Less than $10"
+              },
+              {
+                "label": "F",
+                "meaning": "$10 or greater"
+              }
+            ]
+          },
+          "relevance": "Depending on the method and governance, the price of updating and deleting a DID Document will inform the cost of doing business with the particular method. Depending on the use case in mind this can be used, along with the scalability questions, to estimate the cost of maintaining a network using this DID method.",
+          "id": "https://didcriteria.com/criteria/10",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-79",
+              "method": "Veres One testnet",
+              "reg": "n/a",
+              "note": "Veres One Test Net does not have pricing.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-81",
+              "method": "DID Web",
+              "reg": "A",
+              "note": "Assuming you already have a hosting provider providing a website, this cost is essentially free. If you don’t, you may incur the cost of establishing a website (and perhaps a domain purchase or TLD application).",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-82",
+              "method": "DID Ion",
+              "reg": "B/C",
+              "note": "Node operators who have staked ~$100,000 USD in BTC may update 10,000 DIDs in a single bitcoin transaction; at an average transaction fee of $3 (the current annualized average), that is $0.0003 per update. (B)\nNode operators who have not staked any BTC may update up to 100 DIDs in a single bitcoin transaction; at an average transaction fee of $3 (the current annualized average), that is $0.03 per update. (C)\nCost scales deterministically between these two ends of the price spectrum.",
+              "evaluationCitation": "#eval-6"
+            },
+            {
+              "id": "a-80",
+              "method": "Veres One Production",
+              "reg": "D/A",
+              "note": "Veres One updates target a retail cost of ~$0.25, which will be set based on operational costs of the Veres Foundation, for wholesale pricing. Accelerators may mark up these prices based on their business model and approach. The estimates for these costs are currently under evaluation. Prices will also vary based on the size of the update, with larger updates costing more. (D)\nThe costs and in-kind requirements will be managed by the Foundation based on market dynamics. (A)",
+              "evaluationCitation": "#eval-4"
+            }
+          ]
+        },
+        {
+          "name": "Update & Deletion Cost (in-kind)",
+          "question": {
+            "question": "How much does it cost to update or deactivate a DID Document using in-kind contributions?"
+          },
+          "assessmentTemplate": {
+            "columns": [
+              {
+                "heading": "Method",
+                "type": "method",
+                "propertyRef": "method"
+              },
+              {
+                "heading": "Reg.",
+                "type": "enhancedLetter",
+                "propertyRef": "reg"
+              },
+              {
+                "heading": "Notes",
+                "type": "note",
+                "propertyRef": "note"
+              }
+            ]
+          },
+          "response": {
+            "type": "multipleChoice",
+            "possibleResponses": [
+              {
+                "label": "A",
+                "meaning": "Only operational costs of running the algorithm (no externalized expense)"
+              },
+              {
+                "label": "B",
+                "meaning": "Less than $0.01"
+              },
+              {
+                "label": "C",
+                "meaning": "Less than $0.10"
+              },
+              {
+                "label": "D",
+                "meaning": "Less than $1"
+              },
+              {
+                "label": "E",
+                "meaning": "Less than $10"
+              },
+              {
+                "label": "F",
+                "meaning": "$10 or greater"
+              }
+            ]
+          },
+          "relevance": "Depending on the method and governance, there may be ways of reducing (or removing) the cost of Updating or Deleting a DID Document, such as volunteering with the governance body or doing a set of work the network needs done.",
+          "id": "https://didcriteria.com/criteria/11",
+          "version": "1.0.0",
+          "exampleAssessments": [
+            {
+              "id": "a-83",
+              "method": "Veres One testnet",
+              "reg": "n/a",
+              "note": "Veres One Testnet does not have pricing.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-84",
+              "method": "Veres One Production",
+              "reg": "B",
+              "note": "The Foundation-established cost can be earned by in-kind contributions, allowing hosted participants to post transactions without out-of-pocket expense. The amortized cost of this is expected to be less than “retail” but remain subject to several variables. For this evaluation, we estimate the in-kind costs for Veres One can be reduced to less than $0.01 per update, but ultimately this will be subject both to the Foundation’s in-kind rules as well as the marginal cost of satisfying those rules.",
+              "evaluationCitation": "#eval-4"
+            },
+            {
+              "id": "a-85",
+              "method": "DID Web",
+              "reg": "n/a",
+              "note": "The method itself does not provide for in-kind contributions.",
+              "evaluationCitation": "#eval-5"
+            },
+            {
+              "id": "a-86",
+              "method": "DID Ion",
+              "reg": "n/a",
+              "note": "The method does not provide for any kind of in-kind contributions. It is worth noting that some node operators are offering free updates to the public based on a modest Proof of Work.",
+              "evaluationCitation": "#eval-6"
+            }
+          ]
         }
       ]
     }

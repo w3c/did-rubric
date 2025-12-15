@@ -2,9 +2,11 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-const CRITERIA_ROOT = path.resolve(process.cwd(), "criteria");
-const TEMPLATE_FILE = path.join(CRITERIA_ROOT, "rubric-template.json"); // change if needed
-const OUTPUT_FILE = path.join(CRITERIA_ROOT, "index.json");
+const RUBRIC_ROOT = path.resolve(process.cwd(), "rubric");
+const CRITERIA_ROOT = path.resolve(RUBRIC_ROOT, "criteria");
+const TEMPLATE_FILE = path.join(RUBRIC_ROOT, "rubric-template.json"); // change if needed
+const CRITERIA_INDEX_FILE = path.join(RUBRIC_ROOT, "criteria-index.json");
+const OUTPUT_FILE = path.join(RUBRIC_ROOT, "rubric.json");
 
 function isJsonFile(name) {
   return name.toLowerCase().endsWith(".json");
@@ -33,15 +35,15 @@ function resolveCategoryDir(criteriaRef) {
   return path.resolve(CRITERIA_ROOT, stripped);
 }
 
-async function loadCriteriaFromDir(dirPath, categoryName) {
+async function loadAllCriteria(dirPath) {
   const entries = await fs.readdir(dirPath, { withFileTypes: true });
 
   const jsonFiles = entries
     .filter((e) => e.isFile() && isJsonFile(e.name))
-    .filter((e) => e.name !== "index.json" && e.name !== "rubric-template.json")
     .map((e) => e.name)
 
-  const items = [];
+  const index = Object.create(null);
+
   for (const filename of jsonFiles) {
     const fullPath = path.join(dirPath, filename);
     let parsed;
@@ -54,13 +56,23 @@ async function loadCriteriaFromDir(dirPath, categoryName) {
     if (typeof parsed !== "object" || parsed === null) {
       throw new Error(`Criteria file must contain a JSON object: ${fullPath}`);
     }
-    items.push(parsed);
+
+    if (typeof parsed.id !== "string" || !parsed.id.trim()) {
+      throw new Error(`Criteria file must have a non-empty "id" string: ${fullPath}`);
+    }
+
+    const id = parsed.id;
+    if (Object.prototype.hasOwnProperty.call(index, id)) {
+      throw new Error(`Duplicate criteria id "${id}" found in ${fullPath}`);
+    }
+
+    index[id] = parsed;
   }
 
-  return items;
+  return index;
 }
 
-async function buildHydratedIndex() {
+async function buildRubric(criteriaIndex) {
   const template = await readJson(TEMPLATE_FILE);
 
   if (!template || typeof template !== "object" || !Array.isArray(template.categories)) {
@@ -75,43 +87,63 @@ async function buildHydratedIndex() {
     if (typeof cat.name !== "string" || !cat.name.trim()) {
       throw new Error(`Each category must have a non-empty "name" string.`);
     }
-    if (typeof cat.criteriaFolder !== "string" || !cat.criteriaFolder.trim()) {
-      throw new Error(`Category "${cat.name}" must have "criteriaFolder" path string.`);
-    }
 
-    const criteriaDir = resolveCategoryDir(cat.criteriaFolder);
+    // Expect template to contain "criteria" as an array of criterion ids
+    const criteriaRefs = Array.isArray(cat.criteria) ? cat.criteria : Array.isArray(cat.criteriaIds) ? cat.criteriaIds : null;
 
-    // Ensure folder exists
-    try {
-      const stat = await fs.stat(criteriaDir);
-      if (!stat.isDirectory()) throw new Error("not a directory");
-    } catch {
+    if (!Array.isArray(criteriaRefs)) {
       throw new Error(
-        `Category "${cat.name}" criteria directory not found: ${criteriaDir} (from "${cat.criteria}")`
+        `Category "${cat.name}" must have a "criteria" array of criterion ids (e.g. ["crit-1", "crit-2"]).`
       );
     }
 
-    const criteriaItems = await loadCriteriaFromDir(criteriaDir, cat.name);
+    const hydratedCriteria = criteriaRefs.map((critId) => {
+      if (typeof critId !== "string" || !critId.trim()) {
+        throw new Error(`Invalid criterion id in category "${cat.name}": ${String(critId)}`);
+      }
+      const item = criteriaIndex[critId];
+      if (!item) {
+        throw new Error(
+          `Category "${cat.name}" references unknown criterion id "${critId}". Ensure "${critId}" exists in ${CRITERIA_ROOT}`
+        );
+      }
+      // shallow clone to avoid accidental shared references
+      return JSON.parse(JSON.stringify(item));
+    });
 
-    criteriaItems.sort((a, b) => a.order < b.order ? -1 : a.order > b.order ? 1 : 0);
-
-    // Replace criteria path with hydrated array
     hydratedCategories.push({
       name: cat.name,
       description: cat.description ?? "",
-      criteria: criteriaItems,
+      criteria: hydratedCriteria,
     });
+
+    console.log(`Built category "${cat.name}" with ${hydratedCriteria.length} criteria.`);
   }
 
   const hydrated = { categories: hydratedCategories };
 
   await fs.writeFile(OUTPUT_FILE, JSON.stringify(hydrated, null, 2) + "\n", "utf8");
   console.log(
-    `Wrote ${hydratedCategories.length} categories -> ${path.relative(process.cwd(), OUTPUT_FILE)}`
+    `Wrote hydrated rubric -> ${path.relative(process.cwd(), OUTPUT_FILE)}`
   );
 }
 
-buildHydratedIndex().catch((err) => {
+async function main() {
+  // Ensure criteria root exists
+  try {
+    const stat = await fs.stat(CRITERIA_ROOT);
+    if (!stat.isDirectory()) throw new Error("not a directory");
+  } catch {
+    throw new Error(`Criteria directory not found: ${CRITERIA_ROOT}`);
+  }
+
+  const criteriaIndex = await loadAllCriteria(CRITERIA_ROOT);
+
+  // Build rubric.json using template + index
+  await buildRubric(criteriaIndex);
+}
+
+main().catch((err) => {
   console.error(err.stack || err.message || err);
   process.exit(1);
 });

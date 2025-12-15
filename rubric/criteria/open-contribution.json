@@ -1,7 +1,5 @@
 {
   "name": "Open contribution (participation)",
-  "label": "1.1",
-  "order": 1,
   "id": "https://www.w3.org/TR/did-rubric#criteria-1",
   "source": null,
   "question": {
@@ -62,7 +60,7 @@
   "exampleAssessments": [
     {
       "id": "a-2",
-      "method": "https://w.rubric.cc/methods/2",
+      "method": "did:git",
       "spec": "B",
       "net": "C",
       "reg": "D",
@@ -71,7 +69,7 @@
     },
     {
       "id": "a-5",
-      "method": "https://w.rubric.cc/methods/5",
+      "method": "did:ethr",
       "spec": "C",
       "net": "B",
       "reg": "n/a",
@@ -80,7 +78,7 @@
     },
     {
       "id": "a-6",
-      "method": "https://w.rubric.cc/methods/6",
+      "method": "did:jolo",
       "spec": "D",
       "net": "B",
       "reg": "D",
@@ -89,7 +87,7 @@
     },
     {
       "id": "a-8",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "spec": "A-",
       "net": "A-",
       "reg": "A-",
@@ -98,7 +96,7 @@
     },
     {
       "id": "a-7",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "spec": "B",
       "net": "B",
       "reg": "B",
@@ -107,7 +105,7 @@
     },
     {
       "id": "a-9",
-      "method": "https://w.rubric.cc/methods/8",
+      "method": "DID Web",
       "spec": "A",
       "net": "B",
       "reg": "C/D",
@@ -116,7 +114,7 @@
     },
     {
       "id": "a-1",
-      "method": "https://w.rubric.cc/methods/1",
+      "method": "did:peer",
       "spec": "B",
       "net": "C",
       "reg": "C",
@@ -125,7 +123,7 @@
     },
     {
       "id": "a-3",
-      "method": "https://w.rubric.cc/methods/3",
+      "method": "did:btcr",
       "spec": "B",
       "net": "D",
       "reg": "D",
@@ -134,7 +132,7 @@
     },
     {
       "id": "a-10",
-      "method": "https://w.rubric.cc/methods/20",
+      "method": "DID Ion",
       "spec": "A-",
       "net": "B",
       "reg": "B",
@@ -143,13 +141,12 @@
     },
     {
       "id": "a-4",
-      "method": "https://w.rubric.cc/methods/4",
+      "method": "did:sov",
       "spec": "B",
       "net": "B",
       "reg": "B",
       "evaluationCitation": "#eval-1",
       "note": "The Sovrin Foundation has an open community governance model but has not yet had open elections of trustees."
     }
-  ],
-  "category": "Rulemaking"
+  ]
 }

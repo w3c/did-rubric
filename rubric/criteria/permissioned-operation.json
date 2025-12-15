@@ -1,7 +1,5 @@
 {
   "name": "Permissioned Operation",
-  "label": "2.1",
-  "order": 1,
   "id": "https://www.w3.org/TR/did-rubric#criteria-6",
   "source": null,
   "question": {
@@ -57,7 +55,7 @@
   "exampleAssessments": [
     {
       "id": "a-41",
-      "method": "https://w.rubric.cc/methods/8",
+      "method": "DID Web",
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B) Every layer in the architecture requires the permission of those above., e.g., website owners need a hosting company. Those permissions can always be revoked.",
@@ -65,7 +63,7 @@
     },
     {
       "id": "a-39",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "net": "B+",
       "reg": "B+",
       "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
@@ -73,7 +71,7 @@
     },
     {
       "id": "a-40",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "net": "B+",
       "reg": "B+",
       "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
@@ -81,7 +79,7 @@
     },
     {
       "id": "a-33",
-      "method": "https://w.rubric.cc/methods/1",
+      "method": "did:peer",
       "net": "A",
       "reg": "D",
       "evaluationCitation": "#eval-1",
@@ -89,7 +87,7 @@
     },
     {
       "id": "a-34",
-      "method": "https://w.rubric.cc/methods/2",
+      "method": "did:git",
       "net": "A",
       "reg": "D",
       "evaluationCitation": "#eval-1",
@@ -97,7 +95,7 @@
     },
     {
       "id": "a-35",
-      "method": "https://w.rubric.cc/methods/3",
+      "method": "did:btcr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -105,7 +103,7 @@
     },
     {
       "id": "a-36",
-      "method": "https://w.rubric.cc/methods/4",
+      "method": "did:sov",
       "net": "C",
       "reg": "C",
       "evaluationCitation": "#eval-1",
@@ -113,7 +111,7 @@
     },
     {
       "id": "a-37",
-      "method": "https://w.rubric.cc/methods/5",
+      "method": "did:ethr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -121,7 +119,7 @@
     },
     {
       "id": "a-42",
-      "method": "https://w.rubric.cc/methods/20",
+      "method": "DID Ion",
       "net": "A",
       "reg": "A",
       "note": "Net (A) and Reg (A) Anyone can use did:ion; neither bitcoin nor IPFS are permissioned, anyone can stand up a node and participate fully.",
@@ -129,12 +127,11 @@
     },
     {
       "id": "a-38",
-      "method": "https://w.rubric.cc/methods/6",
+      "method": "did:jolo",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
       "note": "Ethereum is open to anyone. The registry is accessible to anyone, although some subregistries/subnetworks may have alternate rules."
     }
-  ],
-  "category": "Design"
+  ]
 }

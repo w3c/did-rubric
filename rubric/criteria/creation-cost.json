@@ -1,0 +1,87 @@
+{
+  "name": "Creation Cost",
+  "question": {
+    "question": "How much does it cost a DID creator to create a DID?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Only operational costs of running the algorithm (no externalized expense)"
+      },
+      {
+        "label": "B",
+        "meaning": "Less than $0.01"
+      },
+      {
+        "label": "C",
+        "meaning": "Less than $0.10"
+      },
+      {
+        "label": "D",
+        "meaning": "Less than $1"
+      },
+      {
+        "label": "E",
+        "meaning": "Less than $10"
+      },
+      {
+        "label": "F",
+        "meaning": "$10 or greater"
+      }
+    ]
+  },
+  "relevance": "Almost all operations are sensitive to the cost of creating the underlying identifiers. If such costs are close to zero, broad use of ephemeral keys is possible. As costs increase, it becomes more and more necessary to limit the number of identifiers created in order to keep systems.",
+  "id": "https://didcriteria.com/criteria/9",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-76",
+      "method": "Veres One Production",
+      "reg": "A",
+      "note": "Creation is FREE",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-75",
+      "method": "Veres One testnet",
+      "reg": "A",
+      "note": "Creation is FREE",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-77",
+      "method": "DID Web",
+      "reg": "A",
+      "note": "Assuming you already have a hosting provider providing a website, this cost is essentially free. If you don’t, you may incur the cost of establishing a website (and perhaps a domain purchase or TLD application).",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-78",
+      "method": "DID Ion",
+      "reg": "A",
+      "note": "Offline creation has no network costs, just local computation.",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

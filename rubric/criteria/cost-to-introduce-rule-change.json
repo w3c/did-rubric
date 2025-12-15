@@ -1,7 +1,5 @@
 {
   "name": "Cost to introduce rule change",
-  "label": "1.5",
-  "order": 5,
   "question": {
     "question": "How expensive is it to get a governance decision before each of the deliberating bodies?",
     "instruction": "Evaluate this criteria for each decision making body from 1.3."
@@ -67,7 +65,7 @@
   "exampleAssessments": [
     {
       "id": "a-27",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "decision making body": "Digital Bazaar",
       "cost": "D+",
       "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
@@ -75,7 +73,7 @@
     },
     {
       "id": "a-29",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres Foundation Board",
       "cost": "C-",
       "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
@@ -83,12 +81,11 @@
     },
     {
       "id": "a-28",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "decision making body": "Veres One Community Group",
       "cost": "B",
       "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
       "evaluationCitation": "#eval-4"
     }
-  ],
-  "category": "Rulemaking"
+  ]
 }

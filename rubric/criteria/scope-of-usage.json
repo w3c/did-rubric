@@ -1,7 +1,5 @@
 {
   "name": "Scope of Usage",
-  "label": "2.3",
-  "order": 3,
   "id": "https://www.w3.org/TR/did-rubric#criteria-8",
   "source": null,
   "question": {
@@ -57,7 +55,7 @@
   "exampleAssessments": [
     {
       "id": "a-56",
-      "method": "https://w.rubric.cc/methods/4",
+      "method": "did:sov",
       "net": "A",
       "reg": "B",
       "evaluationCitation": "#eval-1",
@@ -65,7 +63,7 @@
     },
     {
       "id": "a-55",
-      "method": "https://w.rubric.cc/methods/3",
+      "method": "did:btcr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -73,7 +71,7 @@
     },
     {
       "id": "a-54",
-      "method": "https://w.rubric.cc/methods/2",
+      "method": "did:git",
       "net": "A",
       "reg": "B",
       "evaluationCitation": "#eval-1",
@@ -81,7 +79,7 @@
     },
     {
       "id": "a-53",
-      "method": "https://w.rubric.cc/methods/1",
+      "method": "did:peer",
       "net": "A+",
       "reg": "C",
       "evaluationCitation": "#eval-1",
@@ -89,7 +87,7 @@
     },
     {
       "id": "a-57",
-      "method": "https://w.rubric.cc/methods/5",
+      "method": "did:ethr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -97,7 +95,7 @@
     },
     {
       "id": "a-58",
-      "method": "https://w.rubric.cc/methods/6",
+      "method": "did:jolo",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
@@ -105,7 +103,7 @@
     },
     {
       "id": "a-59",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "net": "A",
       "reg": "A",
       "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
@@ -113,7 +111,7 @@
     },
     {
       "id": "a-60",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "net": "A",
       "reg": "A",
       "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
@@ -121,7 +119,7 @@
     },
     {
       "id": "a-62",
-      "method": "https://w.rubric.cc/methods/20",
+      "method": "DID Ion",
       "net": "A",
       "reg": "A",
       "note": "A did:ion DID can be resolved by any observer.",
@@ -129,12 +127,11 @@
     },
     {
       "id": "a-61",
-      "method": "https://w.rubric.cc/methods/8",
+      "method": "DID Web",
       "net": "A/B",
       "reg": "A/B",
       "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
       "evaluationCitation": "#eval-5"
     }
-  ],
-  "category": "Design"
+  ]
 }

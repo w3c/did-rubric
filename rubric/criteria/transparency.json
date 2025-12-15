@@ -1,7 +1,5 @@
 {
   "name": "Transparency",
-  "label": "1.2",
-  "order": 2,
   "id": "https://www.w3.org/TR/did-rubric#criteria-2",
   "source": null,
   "question": {
@@ -65,7 +63,7 @@
   "exampleAssessments": [
     {
       "id": "a-11",
-      "method": "https://w.rubric.cc/methods/1",
+      "method": "did:peer",
       "spec": "C",
       "net": "n/a",
       "reg": "B",
@@ -74,7 +72,7 @@
     },
     {
       "id": "a-12",
-      "method": "https://w.rubric.cc/methods/2",
+      "method": "did:git",
       "spec": "C",
       "net": "n/a",
       "reg": "D",
@@ -83,7 +81,7 @@
     },
     {
       "id": "a-13",
-      "method": "https://w.rubric.cc/methods/3",
+      "method": "did:btcr",
       "spec": "C",
       "net": "C",
       "reg": "C",
@@ -92,7 +90,7 @@
     },
     {
       "id": "a-14",
-      "method": "https://w.rubric.cc/methods/4",
+      "method": "did:sov",
       "spec": "B",
       "net": "B",
       "reg": "B",
@@ -101,7 +99,7 @@
     },
     {
       "id": "a-17",
-      "method": "https://w.rubric.cc/methods/18",
+      "method": "Veres One testnet",
       "spec": "D",
       "net": "D",
       "reg": "D",
@@ -110,7 +108,7 @@
     },
     {
       "id": "a-18",
-      "method": "https://w.rubric.cc/methods/19",
+      "method": "Veres One Production",
       "spec": "A-",
       "net": "A-",
       "reg": "A-",
@@ -119,7 +117,7 @@
     },
     {
       "id": "a-20",
-      "method": "https://w.rubric.cc/methods/20",
+      "method": "DID Ion",
       "spec": "A",
       "net": "A-/A",
       "reg": "A-/A",
@@ -128,7 +126,7 @@
     },
     {
       "id": "a-19",
-      "method": "https://w.rubric.cc/methods/8",
+      "method": "DID Web",
       "spec": "A-",
       "net": "B-",
       "reg": "D",
@@ -137,7 +135,7 @@
     },
     {
       "id": "a-15",
-      "method": "https://w.rubric.cc/methods/5",
+      "method": "did:ethr",
       "spec": "C",
       "net": "C",
       "reg": "D",
@@ -146,13 +144,12 @@
     },
     {
       "id": "a-16",
-      "method": "https://w.rubric.cc/methods/6",
+      "method": "did:jolo",
       "spec": "C",
       "net": "C",
       "reg": "D",
       "evaluationCitation": "#eval-1",
       "note": "Jolocom does not expose the internal and/or customer conversations that drive rulemaking."
     }
-  ],
-  "category": "Rulemaking"
+  ]
 }
