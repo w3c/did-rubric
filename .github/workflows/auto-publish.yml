@@ -6,10 +6,19 @@ on:
 jobs:
   main:
     name: Build, Validate and Deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: w3c/spec-prod@v2
+      - name: Checkout source...
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+      - name: Generate did rubric JSON
+        working-directory: ./tooling
+        run: node generate-did-rubric.js
+      - name: Begin W3C Spec Prod Deployment
+        uses: w3c/spec-prod@v2
         with:
           W3C_ECHIDNA_TOKEN: ${{ secrets.W3C_TR_TOKEN }}
           W3C_WG_DECISION_URL: https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-08-17-did#resolution2
