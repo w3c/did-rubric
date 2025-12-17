@@ -1,0 +1,90 @@
+{
+  "name": "Release Status",
+  "question": {
+    "question": "Can the method be used for production today?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Yes. A production system is available to the general population."
+      },
+      {
+        "label": "B",
+        "meaning": "No. A test network is operational."
+      },
+      {
+        "label": "C",
+        "meaning": "No. Only an internal developer network is operational."
+      },
+      {
+        "label": "D",
+        "meaning": "No. The software is not yet running on any network."
+      }
+    ]
+  },
+  "relevance": "Some errors only become apparent after sufficient time to test edge cases and performance boundaries.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-61",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-61",
+  "source": "https://didcriteria.com/criteria/27",
+  "exampleAssessments": [
+    {
+      "id": "a-115",
+      "method": "did:v1.testnet",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): The Veres One test network has been operational for over 3 years, in three major release iterations. It is not yet in production.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-116",
+      "method": "did:v1.production",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): The Veres One test network has been operational for over 3 years, in three major release iterations. It is not yet in production.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-117",
+      "method": "did:web",
+      "net": "A",
+      "reg": "A",
+      "note": "Net (A) and Reg (A): The web has been in general use for 30+ years. Multiple production deployments are in use today.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-118",
+      "method": "did:ion",
+      "net": "A",
+      "reg": "A",
+      "note": "Net (A) and Reg (A): All major components are in production and available to the public.",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

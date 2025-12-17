@@ -1,7 +1,7 @@
 {
   "name": "Transparency",
   "id": "https://www.w3.org/TR/did-rubric#criteria-2",
-  "source": null,
+  "source": ".",
   "question": {
     "question": "How visible are rulemaking processes?"
   },
@@ -59,28 +59,11 @@
       }
     ]
   },
-  "version": "1.1.0",
+  "version": "1.0.1",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-2",
   "exampleAssessments": [
     {
-      "id": "a-11",
-      "method": "did:peer",
-      "spec": "C",
-      "net": "n/a",
-      "reg": "B",
-      "evaluationCitation": "#eval-1",
-      "note": "Rules for accepting changes to the business rules are bilaterally negotiated between the peers, subject to conformance with the specification."
-    },
-    {
-      "id": "a-12",
-      "method": "did:git",
-      "spec": "C",
-      "net": "n/a",
-      "reg": "D",
-      "evaluationCitation": "#eval-1",
-      "note": "The controllers of the git repo are a limited set, but their decisions are \"meatspace protocol\" and hence not explicitly transparent."
-    },
-    {
-      "id": "a-13",
+      "id": "a-4",
       "method": "did:btcr",
       "spec": "C",
       "net": "C",
@@ -89,35 +72,8 @@
       "note": "The spec is maintained by volunteers, operating in an open fashion but without formal processes for announcements and meeting notes. The network and registry are bitcoin, which has a fairly public but messy innovation process, without formal meetings or votes."
     },
     {
-      "id": "a-14",
-      "method": "did:sov",
-      "spec": "B",
-      "net": "B",
-      "reg": "B",
-      "evaluationCitation": "#eval-1",
-      "note": "The Sovrin Governance Framework actually requires all minutes of Sovrin governance discussions are public with a handful of exceptions for legal reasons (e.g., HR actions, legal actions). See Section 9 of Sovrin Governing Body Policies ."
-    },
-    {
-      "id": "a-17",
-      "method": "Veres One testnet",
-      "spec": "D",
-      "net": "D",
-      "reg": "D",
-      "note": "Spec (D), Net (D), and Reg (D): Operations are not yet transferred to the foundation. Neither a schedule of meetings nor minutes from past meetings were available from Foundation’s website.",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-18",
-      "method": "Veres One Production",
-      "spec": "A-",
-      "net": "A-",
-      "reg": "A-",
-      "note": "Spec (A-), Net (A-), and Reg (A-): Once the production network is launched, all rule making becomes a matter of public discourse via the Veres One CG. However, decisions about which rules to adopt remain the purview of the Foundation and it is unknown whether or not the Foundation will operate its meetings in as open a fashion as the CG.",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-20",
-      "method": "DID Ion",
+      "id": "a-5",
+      "method": "did:ion",
       "spec": "A",
       "net": "A-/A",
       "reg": "A-/A",
@@ -125,31 +81,13 @@
       "evaluationCitation": "#eval-6"
     },
     {
-      "id": "a-19",
-      "method": "DID Web",
-      "spec": "A-",
-      "net": "B-",
-      "reg": "D",
-      "note": "Spec (A-): The work occurs mostly in github issues, which are open to be public and retained in perpetuity. However, there are no regular meetings.\nNet (B-): Icann & IANA generally operate in public, although some discussion may be behind closed doors.\nReg (D): Only the website controller knows the rules they are applying.",
-      "evaluationCitation": "#eval-5"
-    },
-    {
-      "id": "a-15",
-      "method": "did:ethr",
+      "id": "a-6",
+      "method": "did:peer",
       "spec": "C",
-      "net": "C",
-      "reg": "D",
+      "net": "n/a",
+      "reg": "B",
       "evaluationCitation": "#eval-1",
-      "note": "The governance is controlled by a smart contract, which is immutable."
-    },
-    {
-      "id": "a-16",
-      "method": "did:jolo",
-      "spec": "C",
-      "net": "C",
-      "reg": "D",
-      "evaluationCitation": "#eval-1",
-      "note": "Jolocom does not expose the internal and/or customer conversations that drive rulemaking."
+      "note": "Rules for accepting changes to the business rules are bilaterally negotiated between the peers, subject to conformance with the specification."
     }
   ]
 }

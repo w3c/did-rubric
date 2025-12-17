@@ -22,11 +22,7 @@
       }
     ]
   },
-  "source": {
-    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
-    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
-    "sourceSection": ""
-  },
+  "source": "https://didcriteria.com/criteria/1",
   "response": {
     "type": "multipleChoice",
     "possibleResponses": [
@@ -37,28 +33,29 @@
     ]
   },
   "relevance": "It is worth noting that all entities who are beholden to sovereign states, which is pretty much all corporations, non-profits, and individuals, have consequences for violating the laws, regulations, and lawful court orders within their jurisdiction. Some decentralized systems go to great lengths to minimize the impact of possible coercion, including actions by nation states. It is understood that any participant in the process may be subject to the rule of law from any number of jurisdictions, e.g., patent law, employment law, financial reporting laws, dumping laws, zoning, environmental regulations, etc. As a result, all decision making bodies are subject to the jurisdictions in which they operate.This complexity is true for all DID methods and, to our knowledge, most, if not all, DID methods have no intrinsic relationship to any particular jurisdiction. As such, we do not recommend including jurisdictional players, e.g., nation-states, cities, provinces, etc., as distinct operational layers, unless those players have a distinct role to play for that particular DID method.",
-  "id": "https://didcriteria.com/criteria/1",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-37",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-37",
   "exampleAssessments": [
     {
-      "id": "a-21",
-      "method": "Veres One testnet",
+      "id": "a-7",
+      "method": "did:v1.testnet",
       "decision making body": "Digital Bazaar",
       "note": "Digital Bazaar created Veres One and is shepherding it through development to production.",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-23",
-      "method": "Veres One Production",
-      "decision making body": "Veres Foundation Board",
-      "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational.",
+      "id": "a-8",
+      "method": "did:v1.production",
+      "decision making body": "Veres One Community Group",
+      "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters.",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-22",
-      "method": "Veres One Production",
-      "decision making body": "Veres One Community Group",
-      "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters.",
+      "id": "a-9",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational.",
       "evaluationCitation": "#eval-4"
     }
   ]

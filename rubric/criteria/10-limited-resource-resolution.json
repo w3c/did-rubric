@@ -1,0 +1,105 @@
+{
+  "name": "Limited resource resolution",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-10",
+  "source": ".",
+  "question": {
+    "question": "How much memory is required for DID resolution, without relying on authoritative intermediaries (e.g. blockchain explorer APIs)? We consider the amount of memory required to fully resolve a DID of the method, whether that memory is stored locally or processed ephemerally via communications."
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Minimal. Less than 1MB"
+      },
+      {
+        "label": "B",
+        "meaning": "Modest. 1MB to 1GB"
+      },
+      {
+        "label": "C",
+        "meaning": "Substantial. 1GB to 128 GB"
+      },
+      {
+        "label": "D",
+        "meaning": "Exceptional. Over 128GB in memory"
+      }
+    ]
+  },
+  "relevance": "Whether or not one can resolve a DID directly on a resource-constrained device affects the granularity at which smaller devices can be part of the ecosystem. If small edge devices, such as a smart watch, smart speaker, or even a mobile phone, are incapable of directly resolving a DID of the DID Method, then the method will lead to cloud-based services like blockchain explorer APIs, which themselves become a point of centralization. Many find this option an acceptable engineering trade-off. Others would prefer solutions that allow even the smallest devices to be fully capable of resolving DIDs in an authoritative manner.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-10",
+  "exampleAssessments": [
+    {
+      "id": "a-49",
+      "method": "did:peer",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "Resolution typically requires looking up a file in the file system, which uses minimal RAM."
+    },
+    {
+      "id": "a-50",
+      "method": "did:git",
+      "net": "B",
+      "reg": "varies",
+      "evaluationCitation": "#eval-1",
+      "note": "Git for Windows is just shy of 50 MB (please update if there are smaller versions available). However, one must still download the entire repo containing the registry material."
+    },
+    {
+      "id": "a-51",
+      "method": "did:btcr",
+      "net": "D",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "To definitively resolve, one must operate a full node."
+    },
+    {
+      "id": "a-52",
+      "method": "did:sov",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "The Sovrin ledger is based on Hyperledger Indy which supports highly efficient state proofs for cryptographic verification of resolution responses. A full node is not required."
+    },
+    {
+      "id": "a-53",
+      "method": "did:ethr",
+      "net": "B",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "A full ethereum node takes >100GB, but a light ethereum node can support this method with less than 256kb."
+    },
+    {
+      "id": "a-54",
+      "method": "did:jolo",
+      "net": "B",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "A full ethereum node takes >100GB, but a light ethereum node can support this method with less than 256kb."
+    }
+  ]
+}

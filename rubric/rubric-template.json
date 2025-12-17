@@ -6,10 +6,10 @@
       "criteria": [
         "https://www.w3.org/TR/did-rubric#criteria-1",
         "https://www.w3.org/TR/did-rubric#criteria-2",
-        "https://didcriteria.com/criteria/1",
-        "https://didcriteria.com/criteria/2",
-        "https://didcriteria.com/criteria/3",
-        "https://didcriteria.com/criteria/4"
+        "https://www.w3.org/TR/did-rubric#criteria-37",
+        "https://www.w3.org/TR/did-rubric#criteria-38",
+        "https://www.w3.org/TR/did-rubric#criteria-39",
+        "https://www.w3.org/TR/did-rubric#criteria-40"
       ]
     },
     {
@@ -19,14 +19,92 @@
         "https://www.w3.org/TR/did-rubric#criteria-6",
         "https://www.w3.org/TR/did-rubric#criteria-7",
         "https://www.w3.org/TR/did-rubric#criteria-8",
-        "https://didcriteria.com/criteria/5",
-        "https://didcriteria.com/criteria/7",
-        "https://didcriteria.com/criteria/8",
-        "https://didcriteria.com/criteria/9",
-        "https://didcriteria.com/criteria/10",
-        "https://didcriteria.com/criteria/11"
+        "https://www.w3.org/TR/did-rubric#criteria-41",
+        "https://www.w3.org/TR/did-rubric#criteria-42",
+        "https://www.w3.org/TR/did-rubric#criteria-43",
+        "https://www.w3.org/TR/did-rubric#criteria-44",
+        "https://www.w3.org/TR/did-rubric#criteria-45",
+        "https://www.w3.org/TR/did-rubric#criteria-46"
       ]
-      
+    },
+    {
+      "name": "Operation",
+      "description": "Operation criteria address how the rules are operationalized, ie., how are the rules embodied in a working system.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-9",
+        "https://www.w3.org/TR/did-rubric#criteria-10",
+        "https://www.w3.org/TR/did-rubric#criteria-11",
+        "https://www.w3.org/TR/did-rubric#criteria-47",
+        "https://www.w3.org/TR/did-rubric#criteria-48",
+        "https://www.w3.org/TR/did-rubric#criteria-49",
+        "https://www.w3.org/TR/did-rubric#criteria-50",
+        "https://www.w3.org/TR/did-rubric#criteria-51"
+      ]
+    },
+    {
+      "name": "Enforcement",
+      "description": "Criteria in this section deal with the design rules that enable maintaining the integrity of the verifiable data registry (VDR) and the means of applying those rules. Enforcement is the proper execution of the process of ensuring compliance with laws, regulations, rules, standards, and social norms. This includes how the rule of law is applied to entities involved in governance and operation of the method.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-12",
+        "https://www.w3.org/TR/did-rubric#criteria-52",
+        "https://www.w3.org/TR/did-rubric#criteria-53",
+        "https://www.w3.org/TR/did-rubric#criteria-54",
+        "https://www.w3.org/TR/did-rubric#criteria-55",
+        "https://www.w3.org/TR/did-rubric#criteria-56",
+        "https://www.w3.org/TR/did-rubric#criteria-57",
+        "https://www.w3.org/TR/did-rubric#criteria-58"
+      ]
+    },
+    {
+      "name": "Alternatives",
+      "description": "For each major software component (Wallet, Resolver, andRegistry), ask each of the following questions. In this section, because DIDs are so early in the development lifecycle, most DID methods in production have only one implementation and some have none. Therefore, we have not standardized the responses nor provided examples. Consider these open-ended essay questions for consideration. As the market matures, this subset of questions will improve.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-13",
+        "https://www.w3.org/TR/did-rubric#criteria-14",
+        "https://www.w3.org/TR/did-rubric#criteria-15",
+        "https://www.w3.org/TR/did-rubric#criteria-16",
+        "https://www.w3.org/TR/did-rubric#criteria-17",
+        "https://www.w3.org/TR/did-rubric#criteria-18"
+      ]
+    },
+    {
+      "name": "Adoption (and diversity)",
+      "description": "Adoption criteria address how widely the method and its implementations are used by various parties and systems.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-19",
+        "https://www.w3.org/TR/did-rubric#criteria-20",
+        "https://www.w3.org/TR/did-rubric#criteria-21",
+        "https://www.w3.org/TR/did-rubric#criteria-22",
+        "https://www.w3.org/TR/did-rubric#criteria-23",
+        "https://www.w3.org/TR/did-rubric#criteria-59",
+        "https://www.w3.org/TR/did-rubric#criteria-60",
+        "https://www.w3.org/TR/did-rubric#criteria-61",
+        "https://www.w3.org/TR/did-rubric#criteria-62"
+      ]
+    },
+    {
+      "name": "Security",
+      "description": "Security criteria address how the method is cryptographically secured.",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-24",
+        "https://www.w3.org/TR/did-rubric#criteria-28",
+        "https://www.w3.org/TR/did-rubric#criteria-30",
+        "https://www.w3.org/TR/did-rubric#criteria-31",
+        "https://www.w3.org/TR/did-rubric#criteria-25",
+        "https://www.w3.org/TR/did-rubric#criteria-63",
+        "https://www.w3.org/TR/did-rubric#criteria-29",
+        "https://www.w3.org/TR/did-rubric#criteria-64"
+      ]
+    },
+    {
+      "name": "Privacy",
+      "description": "Addresses the ability of a DID method to ensure various privacy mechanisms. When DIDs are used as identifiers for people, it becomes important to consider what tools a DID method offers to operate at different levels of privacy. Use cases that focus on IoT or institutions may not feel that this dimension is especially important (though institutional privacy may sometimes be desirable).",
+      "criteria": [
+        "https://www.w3.org/TR/did-rubric#criteria-33",
+        "https://www.w3.org/TR/did-rubric#criteria-34",
+        "https://www.w3.org/TR/did-rubric#criteria-35",
+        "https://www.w3.org/TR/did-rubric#criteria-36"
+      ]
     }
   ]
 }

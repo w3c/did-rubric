@@ -1,0 +1,13 @@
+{
+  "name": "Market share",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-14",
+  "source": ".",
+  "question": {
+    "question": "How large is the share of use by each of the top three implementations?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-14",
+  "exampleAssessments": []
+}

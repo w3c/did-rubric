@@ -1,0 +1,62 @@
+{
+  "name": "Revocation of Consent",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-36",
+  "source": ".",
+  "question": {
+    "question": "How does one revoke consent for the storage of a DID? (Note how this creates a tension with immutability, which may be valuable in 2.7.1 and elsewhere.)"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The VDR fully supports removal of data that no longer has consent. Once something is removed, nothing internal to the system allows it to be recovered, and the system no longer qualifies as a data controller."
+      },
+      {
+        "label": "B",
+        "meaning": "The DID method only supports a current view, and the state of an identifier in its VDR can be updated to a deleted or removed state. Thus, the identifier ceases to resolve. However, a permanent record of the previous state of the identifier remains, and could be used to reconstruct historical data. The VDR thus remains a data controller for deleted identifiers, at least in concept."
+      },
+      {
+        "label": "C",
+        "meaning": "The DID method supports both current and previous views of an identifier. While deletes are possible, the old state of an identifier is a fully supported feature, so adding the identifier to the VDR is irrevocable."
+      }
+    ]
+  },
+  "relevance": "Some legal authorities may require that individuals have redress when they are not satisfied with the actions of a data controller. This might include but go beyond the so-called \"right to be forgotten,\" encompassing geographical or jurisdictional limitations, limits on processing, and so forth. Seethis legal analysisfor one view, but note that this is not a well settled legal question.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-36",
+  "exampleAssessments": [
+    {
+      "id": "a-151",
+      "method": "did:peer",
+      "score": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "A peer DID is designed to be shared only with the party that has direct need to process it. That party is a single legal entity that can be held responsible for their behavior. The peer DID protocol includes a way to tell that party that the DID must be deleted. Once deletion has occurred, nothing in the peer DID mechanism preserves inappropriate data."
+    },
+    {
+      "id": "a-152",
+      "method": "did:jlinc",
+      "score": "B",
+      "evaluationCitation": "#eval-2",
+      "note": "The `did:jlinc` method supports deletion, and refuses to resolve DIDs that have been deleted. It is also predicated on sophisticated data-sharing agreements that can provide substantial protection for individuals. However, it persists data to an immutable blockchain, meaning that a deleted DID can be reconstructed outside the method, using data that the method created."
+    }
+  ]
+}

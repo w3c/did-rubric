@@ -1,0 +1,13 @@
+{
+  "name": "Rogue risk",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-17",
+  "source": ".",
+  "question": {
+    "question": "If there is one dominant implementation, how many programmers would need to be compromised to get a back-door into distribution?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-17",
+  "exampleAssessments": []
+}

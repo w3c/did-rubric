@@ -1,0 +1,87 @@
+{
+  "name": "Layer Diversity",
+  "question": {
+    "question": "How many operational components need to be compromised to compromise the verifiable data registry (evaluate for each operational component)?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Layer",
+        "type": "enhancedLetter",
+        "propertyRef": "layer"
+      },
+      {
+        "heading": "Response",
+        "type": "enhancedLetter",
+        "propertyRef": "response"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/22",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Open ended, unknown, or unknowable."
+      },
+      {
+        "label": "B",
+        "meaning": "Capped. [State upper and lower bounds in Notes]"
+      },
+      {
+        "label": "C",
+        "meaning": "One"
+      }
+    ]
+  },
+  "relevance": "Along with the type of consensus algorithm, the number of nodes that can participate in consensus has implications towards network security and reliability.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-56",
+  "structureCriteriaId": "https://didcriteria.com/criteria/21",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-56",
+  "exampleAssessments": [
+    {
+      "id": "a-99",
+      "method": "did:v1.testnet",
+      "layer": "Witnesses",
+      "response": "B [4]",
+      "note": "Veres One’s consensus requires 9 of 13 Witness nodes to agree, as such if more than 4 were compromised the network may cease to function. (B)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-100",
+      "method": "did:v1.testnet",
+      "layer": "Peers",
+      "response": "A",
+      "note": "Peer nodes are not directly involved in maintaining the verifiable data registry and only propagate state. As such compromising any number of Peer nodes does not compromise the network. (A)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-101",
+      "method": "did:v1.production",
+      "layer": "Witnesses",
+      "response": "B [4]",
+      "note": "Veres One’s consensus requires 9 of 13 Witness nodes to agree, as such if more than 4 were compromised the network may cease to function. (B)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-102",
+      "method": "did:v1.production",
+      "layer": "Peers",
+      "response": "A",
+      "note": "Peer nodes are not directly involved in maintaining the verifiable data registry and only propagate state. As such compromising any number of Peer nodes does not compromise the network. (A)",
+      "evaluationCitation": "#eval-4"
+    }
+  ]
+}

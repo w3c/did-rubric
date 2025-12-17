@@ -1,0 +1,90 @@
+{
+  "name": "Interoperability",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-7",
+  "source": ".",
+  "question": {
+    "question": "Does the DID Method restrict access or functionality to particular client software implementations?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Any wallet can work with any resolver on any registry,"
+      },
+      {
+        "label": "B",
+        "meaning": "Any wallet can work with multiple resolvers and multiple registries,"
+      },
+      {
+        "label": "C",
+        "meaning": "Some implementations of some wallets can work with some resolvers,"
+      },
+      {
+        "label": "D",
+        "meaning": "There is a single combined suite of resolver, registry, and wallet."
+      }
+    ]
+  },
+  "relevance": "The ability to communicate with different (ideally all) resolvers and registries significantly increases the applicability of a decentralized identity layer / usability of a given wallet. Vice versa, limited capability to work with other Methods and registries restrict usage.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "2.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-7",
+  "exampleAssessments": [
+    {
+      "id": "a-78",
+      "method": "did:v1.production",
+      "spec": "A",
+      "net": "A",
+      "reg": "A",
+      "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-39",
+      "method": "did:btcr",
+      "spec": "A",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Bitcoin has no restrictions on the software used to access the network."
+    },
+    {
+      "id": "a-79",
+      "method": "did:web",
+      "spec": "A",
+      "net": "A-",
+      "reg": "A-",
+      "note": "Spec (A), Net (A-) and Reg (A-): Web-based wallets may have complications from CORS (cross-origin resource sharing), but in general any “wallet” is compatible. Although a given service (hosting or website, etc.) could add a layer of permissioned restrictions, the did:web Method does not require it. Similarly, nation-state level firewalls could restrict access at various layers, but, again, the Method does not require it.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

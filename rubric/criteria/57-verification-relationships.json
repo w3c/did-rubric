@@ -1,0 +1,97 @@
+{
+  "name": "Verification Relationships",
+  "question": {
+    "question": "What verification relationships are supported by the method per specification?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "None"
+      },
+      {
+        "label": "B",
+        "meaning": "Authentication"
+      },
+      {
+        "label": "C",
+        "meaning": "AssertionMethod"
+      },
+      {
+        "label": "D",
+        "meaning": "Key Agreement"
+      },
+      {
+        "label": "E",
+        "meaning": "CapabilityInvocation"
+      },
+      {
+        "label": "F",
+        "meaning": "CapabilityDelegation"
+      },
+      {
+        "label": "G",
+        "meaning": "Other"
+      },
+      {
+        "label": "H",
+        "meaning": "Any"
+      }
+    ]
+  },
+  "relevance": "The verification relationships a method supports inform the ways in which DIDs of the method can be used. See section 5.3 of the DID-Core specification for details on verification relationships. https://www.w3.org/TR/did-core/#verification-relationships",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-57",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-57",
+  "source": "https://didcriteria.com/criteria/23",
+  "exampleAssessments": [
+    {
+      "id": "a-103",
+      "method": "did:v1.testnet",
+      "spec": "H",
+      "note": "The did.v1 specification does not have any restrictions to the Verification Relationships supported.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-104",
+      "method": "did:v1.production",
+      "spec": "H",
+      "note": "The did.v1 specification does not have any restrictions to the Verification Relationships supported.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-105",
+      "method": "did:web",
+      "spec": "H",
+      "note": "The did:web specification does not restrict Verification Relationships.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-106",
+      "method": "did:ion",
+      "spec": "B,C,D,E,F",
+      "note": "The did:ion specification only enumerates the Verification Relationships as they appear at the time of this assessment in the did-core specification.",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

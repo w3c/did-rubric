@@ -28,11 +28,7 @@
       }
     ]
   },
-  "source": {
-    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
-    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
-    "sourceSection": ""
-  },
+  "source": "https://didcriteria.com/criteria/2",
   "response": {
     "type": "multipleChoice",
     "possibleResponses": [
@@ -79,32 +75,33 @@
     ]
   },
   "relevance": "Different governance structures have different implications for how decisions are made and who wields influence throughout the process.",
-  "id": "https://didcriteria.com/criteria/2",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-38",
   "structureCriteriaId": "https://didcriteria.com/criteria/1",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-38",
   "exampleAssessments": [
     {
-      "id": "a-26",
-      "method": "Veres One Production",
-      "decision making body": "Veres Foundation Board",
-      "governance structure": "E",
-      "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-24",
-      "method": "Veres One testnet",
+      "id": "a-10",
+      "method": "did:v1.testnet",
       "decision making body": "Digital Bazaar",
       "governance structure": "C",
       "note": "Digital Bazaar is a closely held startup with a seventeen year track record. (C)",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-25",
-      "method": "Veres One Production",
+      "id": "a-11",
+      "method": "did:v1.production",
       "decision making body": "Veres One Community Group",
       "governance structure": "E",
       "note": "The Veres One Community Group is a community group operating under the rules of the World Wide Web Consortium. Open to the public, self-elected leadership (E)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-12",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "governance structure": "E",
+      "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
       "evaluationCitation": "#eval-4"
     }
   ]

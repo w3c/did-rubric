@@ -58,9 +58,9 @@ function renderCriteria(criteria, isEvaluation = false) {
         <section>
             <h5>Responses</h4>
             <ol type="A">
-                ${criteria.response.possibleResponses.map(response => `
+                ${criteria.response && criteria.response.possibleResponses ? criteria.response.possibleResponses.map(response => `
                     <li>${response.meaning}</li>
-                `).join('')}
+                `).join('') : ''}
             </ol>
 
 

@@ -52,36 +52,38 @@
     ]
   },
   "relevance": "Depending on the method and governance, the price of updating and deleting a DID Document will inform the cost of doing business with the particular method. Depending on the use case in mind this can be used, along with the scalability questions, to estimate the cost of maintaining a network using this DID method.",
-  "id": "https://didcriteria.com/criteria/10",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-45",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-45",
+  "source": "https://didcriteria.com/criteria/10",
   "exampleAssessments": [
     {
-      "id": "a-79",
-      "method": "Veres One testnet",
+      "id": "a-41",
+      "method": "did:v1.testnet",
       "reg": "n/a",
       "note": "Veres One Test Net does not have pricing.",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-81",
-      "method": "DID Web",
+      "id": "a-42",
+      "method": "did:v1.production",
+      "reg": "D/A",
+      "note": "Veres One updates target a retail cost of ~$0.25, which will be set based on operational costs of the Veres Foundation, for wholesale pricing. Accelerators may mark up these prices based on their business model and approach. The estimates for these costs are currently under evaluation. Prices will also vary based on the size of the update, with larger updates costing more. (D)\nThe costs and in-kind requirements will be managed by the Foundation based on market dynamics. (A)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-43",
+      "method": "did:web",
       "reg": "A",
       "note": "Assuming you already have a hosting provider providing a website, this cost is essentially free. If you don’t, you may incur the cost of establishing a website (and perhaps a domain purchase or TLD application).",
       "evaluationCitation": "#eval-5"
     },
     {
-      "id": "a-82",
-      "method": "DID Ion",
+      "id": "a-44",
+      "method": "did:ion",
       "reg": "B/C",
       "note": "Node operators who have staked ~$100,000 USD in BTC may update 10,000 DIDs in a single bitcoin transaction; at an average transaction fee of $3 (the current annualized average), that is $0.0003 per update. (B)\nNode operators who have not staked any BTC may update up to 100 DIDs in a single bitcoin transaction; at an average transaction fee of $3 (the current annualized average), that is $0.03 per update. (C)\nCost scales deterministically between these two ends of the price spectrum.",
       "evaluationCitation": "#eval-6"
-    },
-    {
-      "id": "a-80",
-      "method": "Veres One Production",
-      "reg": "D/A",
-      "note": "Veres One updates target a retail cost of ~$0.25, which will be set based on operational costs of the Veres Foundation, for wholesale pricing. Accelerators may mark up these prices based on their business model and approach. The estimates for these costs are currently under evaluation. Prices will also vary based on the size of the update, with larger updates costing more. (D)\nThe costs and in-kind requirements will be managed by the Foundation based on market dynamics. (A)",
-      "evaluationCitation": "#eval-4"
     }
   ]
 }

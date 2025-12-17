@@ -1,0 +1,105 @@
+{
+  "name": "Limited resource registration",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-11",
+  "source": ".",
+  "question": {
+    "question": "What are the minimum resources required to create a trusted DID without relying on intermediaries?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Minimal. Less than 1MB"
+      },
+      {
+        "label": "B",
+        "meaning": "Modest. 1MB to 1GB"
+      },
+      {
+        "label": "C",
+        "meaning": "Substantial. 1GB to 128 GB"
+      },
+      {
+        "label": "D",
+        "meaning": "Exceptional. Over 128GB in memory"
+      }
+    ]
+  },
+  "relevance": "Being able to create a DID in constrained situations enables certain types of decentralized applications that otherwise are not possible. On the edge, many devices rely on gateways to manage compute-, memory-, and bandwidth- intensive tasks. For example, while a smart lightbulb might use ZigBee or 6LowPAN, it will typically use a hub to connect to the Internet, even for access from devices within the local IP network. The more resources it takes for small devices to participate in registration, the greater the percentage of those that will need to rely on centralizing factors like hubs and gateways.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-11",
+  "exampleAssessments": [
+    {
+      "id": "a-55",
+      "method": "did:peer",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "Registration may require a few KB of RAM as a DID doc is written to disk."
+    },
+    {
+      "id": "a-56",
+      "method": "did:git",
+      "net": "B",
+      "reg": "varies",
+      "evaluationCitation": "#eval-1",
+      "note": "Git for Windows is just shy of 50 MB (please update if there are smaller versions available). However, one must still download the entire repo containing the registry material."
+    },
+    {
+      "id": "a-57",
+      "method": "did:btcr",
+      "net": "A-",
+      "reg": "A-",
+      "evaluationCitation": "#eval-1",
+      "note": "To register a DID, one must simply get a transaction on the ledger, unless you choose to host a continuation DID Document elsewhere, which would require its own resources."
+    },
+    {
+      "id": "a-58",
+      "method": "did:sov",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Registration of a DID is a single transaction that can be performed by a thin client."
+    },
+    {
+      "id": "a-59",
+      "method": "did:ethr",
+      "net": "A+",
+      "reg": "A+",
+      "evaluationCitation": "#eval-1",
+      "note": "The smart contract used for did:ethr recognizes any valid public key as a DID, without requiring registration. This means DIDs can even be created offline with full usability. Only rotation and the registration of service endpoints require network access."
+    },
+    {
+      "id": "a-60",
+      "method": "did:jolo",
+      "net": "A+",
+      "reg": "A+",
+      "evaluationCitation": "#eval-1",
+      "note": "The smart contract used for did:ethr recognizes any valid public key as a DID, without requiring registration. Only rotation and the registration of service endpoints require network access."
+    }
+  ]
+}

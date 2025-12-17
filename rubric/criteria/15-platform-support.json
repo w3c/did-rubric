@@ -1,0 +1,13 @@
+{
+  "name": "Platform support",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-15",
+  "source": ".",
+  "question": {
+    "question": "Which platforms have implementations?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-15",
+  "exampleAssessments": []
+}

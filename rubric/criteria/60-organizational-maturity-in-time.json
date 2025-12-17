@@ -1,0 +1,107 @@
+{
+  "name": "Organizational Maturity in Time",
+  "question": {
+    "question": "How long has the organization(s) behind the Method been operational?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Over 20 years"
+      },
+      {
+        "label": "B",
+        "meaning": "Over 10 years"
+      },
+      {
+        "label": "C",
+        "meaning": "Over 5 years"
+      },
+      {
+        "label": "D",
+        "meaning": "Over 1 year"
+      },
+      {
+        "label": "E",
+        "meaning": "Less than 1 year"
+      },
+      {
+        "label": "F",
+        "meaning": "There is no organization per se"
+      }
+    ]
+  },
+  "relevance": "The age of the organization(s) behind a Method can be used to give an idea into organizational maturity. It is not a sole indicator and should be taken as a data point in evaluating the Method organization’s current state.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-60",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-60",
+  "source": "https://didcriteria.com/criteria/26",
+  "exampleAssessments": [
+    {
+      "id": "a-111",
+      "method": "did:v1.testnet",
+      "spec": "B",
+      "net": "D",
+      "reg": "D",
+      "note": "Spec: Digital Bazaar, the team behind the spec has been in business for over 17 years. (B)\nNet (D) and Reg (D): The Veres One Foundation was founded in 2019.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-112",
+      "method": "did:v1.production",
+      "spec": "B",
+      "net": "D",
+      "reg": "D",
+      "note": "Spec: Digital Bazaar, the team behind the spec has been in business for over 17 years. (B)\nNet (D) and Reg (D): The Veres One Foundation was founded in 2019.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-113",
+      "method": "did:web",
+      "spec": "F",
+      "net": "A",
+      "reg": "*",
+      "note": "Spec (F): did:web specification development began in earnest in 2019 by a variety of interested parties.\nNet (A): The Internet and the World Wide Web have been around for over 20 years.\nReg (*): The individual web servers that might be used depend on the organizational maturity of the hosting company and the website operator.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-114",
+      "method": "did:ion",
+      "spec": "A/D",
+      "net": "C",
+      "reg": "C",
+      "note": "Spec: The major organizations behind the did:ion specification are DIF (D) and Microsoft (A). DIF is also the organization driving the Sidetree specification, which did:ion is based on.\nNet (C) and Reg (C): Are based on bitcoin and IPFS\nMicrosoft has existed for more than 20 years. DIF and Protocol Labs (the organization behind IPFS) are younger, but each have existed for at least five years. Bitcoin started in 2009, but really has no formal organization.",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

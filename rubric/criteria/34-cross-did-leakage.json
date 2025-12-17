@@ -1,0 +1,62 @@
+{
+  "name": "Cross-DID Leakage",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-34",
+  "source": ".",
+  "question": {
+    "question": "How possible is it to control multiple DIDs, without having an observer of one DID be able to deduce that another DID has the same controller?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Each DID is entirely isolated; there is no practical way to infer relationships of common control between them."
+      },
+      {
+        "label": "B",
+        "meaning": "It may be possible to infer relationships of common control based on timing and the IP address of clients, but not based on data persisted in the VDR itself. Inference is expensive or impractical."
+      },
+      {
+        "label": "C",
+        "meaning": "It is possible to infer relationships based on data persisted in the VDR itself, and the inference is easy."
+      }
+    ]
+  },
+  "relevance": "Inferring relationships between Bitcoin addresses allowed law enforcement to track down the operators of Silk Road, even though those operators believed they had privacy.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-34",
+  "exampleAssessments": [
+    {
+      "id": "a-146",
+      "method": "did:pkh",
+      "score": "B or C",
+      "evaluationCitation": "#eval-2",
+      "note": "Some of the blockchains used by did:pkh have Bitcoin-like traceability. Others have Ethereum-like features, which include mixers or zkSNARKS/zkSTARKS. However, none of them render a user completely anonymous."
+    },
+    {
+      "id": "a-147",
+      "method": "did:keri",
+      "score": "B",
+      "evaluationCitation": "#eval-2",
+      "note": "If a did:keri uses a blockchain as a witness, it may acquire some privacy characteristics from that blockchain. However, did:keri in and of itself is not easy to correlate."
+    }
+  ]
+}

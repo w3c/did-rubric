@@ -1,0 +1,69 @@
+{
+  "name": "Per-DID constraints on visibility",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-33",
+  "source": ".",
+  "question": {
+    "question": "What provisions are made for restricting visibility of DIDs to audiences other than the general public?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Fully private is possible."
+      },
+      {
+        "label": "B",
+        "meaning": "VDR is visible to \"all\", but \"all\" is a restricted audience with enforced terms of service or other disincentives to abuse."
+      },
+      {
+        "label": "C",
+        "meaning": "VDR is fully public with no constraints."
+      }
+    ]
+  },
+  "relevance": "Restricting the audience for a DID is a way to discourage crawling and secondary, possibly abusive publication. However, no mechanism can completely prevent this; creating disincentives, accountability, and/or costs that encourage the DID owner's wishes to be respected is the best we can hope for.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-33",
+  "exampleAssessments": [
+    {
+      "id": "a-143",
+      "method": "did:twit",
+      "score": "C",
+      "evaluationCitation": "#eval-2",
+      "note": "A did:tweet is created and updated by posting to a public twitter feed; it is always completely public."
+    },
+    {
+      "id": "a-144",
+      "method": "did:key",
+      "score": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "Nothing about the did:key method requires it to be published anywhere. It is as private or as public as the mechanism used to share it."
+    },
+    {
+      "id": "a-145",
+      "method": "did:trustbloc",
+      "score": "B",
+      "evaluationCitation": "#eval-2",
+      "note": "A did:trustbloc is public to all users of the Hyperledger Fabric instance where it is published -- but that blockchain may be permissioned and restricted to a private audience."
+    }
+  ]
+}

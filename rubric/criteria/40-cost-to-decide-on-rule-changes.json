@@ -28,11 +28,7 @@
       }
     ]
   },
-  "source": {
-    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
-    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
-    "sourceSection": ""
-  },
+  "source": "https://didcriteria.com/criteria/4",
   "response": {
     "type": "multipleChoice",
     "possibleResponses": [
@@ -59,29 +55,30 @@
     ]
   },
   "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
-  "id": "https://didcriteria.com/criteria/4",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-40",
   "structureCriteriaId": "https://didcriteria.com/criteria/1",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-40",
   "exampleAssessments": [
     {
-      "id": "a-30",
-      "method": "Veres One testnet",
+      "id": "a-16",
+      "method": "did:v1.testnet",
       "decision making body": "Digital Bazaar",
       "cost": "D",
       "note": "The most common way to be involved is by invitation from Digital Bazaar, either as an employee, subcontractor, or advisor. (D)",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-31",
-      "method": "Veres One Production",
+      "id": "a-17",
+      "method": "did:v1.production",
       "decision making body": "Veres One Community Group",
       "cost": "B",
       "note": "The largest cost is time to participate and a track record for credibility. (B)",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-32",
-      "method": "Veres One Production",
+      "id": "a-18",
+      "method": "did:v1.production",
       "decision making body": "Veres Foundation Board",
       "cost": "D",
       "note": "Foundation leadership is initially selected by Digital Bazaar and self-selecting thereafter. (D)",

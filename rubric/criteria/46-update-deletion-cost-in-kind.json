@@ -52,33 +52,35 @@
     ]
   },
   "relevance": "Depending on the method and governance, there may be ways of reducing (or removing) the cost of Updating or Deleting a DID Document, such as volunteering with the governance body or doing a set of work the network needs done.",
-  "id": "https://didcriteria.com/criteria/11",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-46",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-46",
+  "source": "https://didcriteria.com/criteria/11",
   "exampleAssessments": [
     {
-      "id": "a-83",
-      "method": "Veres One testnet",
+      "id": "a-45",
+      "method": "did:v1.testnet",
       "reg": "n/a",
       "note": "Veres One Testnet does not have pricing.",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-84",
-      "method": "Veres One Production",
+      "id": "a-46",
+      "method": "did:v1.production",
       "reg": "B",
       "note": "The Foundation-established cost can be earned by in-kind contributions, allowing hosted participants to post transactions without out-of-pocket expense. The amortized cost of this is expected to be less than “retail” but remain subject to several variables. For this evaluation, we estimate the in-kind costs for Veres One can be reduced to less than $0.01 per update, but ultimately this will be subject both to the Foundation’s in-kind rules as well as the marginal cost of satisfying those rules.",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-85",
-      "method": "DID Web",
+      "id": "a-47",
+      "method": "did:web",
       "reg": "n/a",
       "note": "The method itself does not provide for in-kind contributions.",
       "evaluationCitation": "#eval-5"
     },
     {
-      "id": "a-86",
-      "method": "DID Ion",
+      "id": "a-48",
+      "method": "did:ion",
       "reg": "n/a",
       "note": "The method does not provide for any kind of in-kind contributions. It is worth noting that some node operators are offering free updates to the public based on a modest Proof of Work.",
       "evaluationCitation": "#eval-6"

@@ -1,0 +1,70 @@
+{
+  "name": "Operational Layers",
+  "question": {
+    "question": "What layers of operational components establish and maintain integrity of the Verifiable Data Registry?",
+    "instruction": "For each layer, evaluate criteria 4.6, 3.5, and 3.6."
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Layer",
+        "type": "enhancedLetter",
+        "propertyRef": "layer"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "List each layer"
+      }
+    ]
+  },
+  "relevance": "The manner in which a Verifiable Data Registry (VDR) manages integrity defines how that integrity might be compromised. To understand how the VDR of a given Method maintains integrity, this criteria identifies the operational components of the VDR for further evaluation in other criteria, namely 4.6, 3.5, and 3.6.Unfortunately, network topology inevitably introduces parties that may be able to disrupt or compromise network interactions. For example, DNS servers--often under the control of the user’s ISP or the corporate IT department--can return “fake” IP addresses; corporate firewalls can prevent traffic to or from certain addresses; corporate system administrators may prevent users from configuring alternative Certificate Authorities, even international internet traffic can be restricted or denied, purely at the network layer.Because nearly every DID method known at this point depends on Internet-based networking, every DID method faces these same problems. As such, we don’t recommend specifying common network components as distinct layers unless those layers have specific roles unique to the particular DID method.For this criteria, we are talking about the operational components that have specific, unique, or privileged roles with regard to the evaluated DID Method(s). The parties which fulfill said roles should be considered when evaluating the fitness of the given method(s).",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-55",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-55",
+  "source": "https://didcriteria.com/criteria/21",
+  "exampleAssessments": [
+    {
+      "id": "a-95",
+      "method": "did:v1.testnet",
+      "layer": "Witnesses",
+      "note": "In the test net the number of peer nodes is limited but the same number of witness nodes are used as in production.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-96",
+      "method": "did:v1.testnet",
+      "layer": "Peers",
+      "note": "",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-97",
+      "method": "did:v1.production",
+      "layer": "Witnesses",
+      "note": "In production the number of peer nodes is expected to increase greatly.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-98",
+      "method": "did:v1.production",
+      "layer": "Peers",
+      "note": "",
+      "evaluationCitation": "#eval-4"
+    }
+  ]
+}

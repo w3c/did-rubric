@@ -1,0 +1,84 @@
+{
+  "name": "Robust Crypto",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-24",
+  "source": ".",
+  "question": {
+    "question": "What is the lowest security level (“bits of security”) allowed in the processes that ensure integrity of the verifiable data registry?",
+    "instruction": "Evaluate the security level according to https://en.wikipedia.org/wiki/Security_level"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "No combination of required features produces a profile with less than 256 bits of security."
+      },
+      {
+        "label": "B",
+        "meaning": "Between 128 and 256 bits. (Conventional wisdom — NIST recommendation — says that this level of security is adequate until the next revolutionary breakthrough.)"
+      },
+      {
+        "label": "C",
+        "meaning": "Less than 128 bits. (NIST recommends replacing this security by 2030.)"
+      },
+      {
+        "label": "D",
+        "meaning": "Less than 112 bits. (Security is obsolete today.)"
+      }
+    ],
+    "possibleResponses[1]": {
+      "meaning": "Between 128 and 256 bits"
+    },
+    "possibleResponses[2]": {
+      "meaning": "Less than 128 bits"
+    },
+    "possibleResponses[3]": {
+      "meaning": "Less than 64 bits"
+    }
+  },
+  "relevance": "A DID method that requires implementations to support something weak (e.g., 1024-bit RSA) is guaranteeing that its users will cooperate by default with encryption that's relatively easy to crack, with hashing that's not adequately collision-resistant, etc.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "2.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-24",
+  "exampleAssessments": [
+    {
+      "id": "a-74",
+      "method": "did:web",
+      "reg": "C",
+      "evaluationCitation": "#eval-2",
+      "note": "Although the DNS subsystem that supports did:web does not provide strong security, control of a DID is proved by accessing /.well-known over TLS. Thus, the security is tied to certificate config. Most web server certificates use 2048- bit RSA, which gives 112 bits of security."
+    },
+    {
+      "id": "a-75",
+      "method": "did:indy",
+      "reg": "B",
+      "evaluationCitation": "#eval-2",
+      "note": "Hashes are SHA2-256. Keys are Ed25519/Curve25519 (128 bits of security). Reads and writes to the Indy ledger use CurveZMQ rather than TLS. This gives 128 bits of security in the aggregate."
+    },
+    {
+      "id": "a-251",
+      "method": "did:ion",
+      "reg": "B-",
+      "note": "Secp256k1 theoretically guarantees 128 bit security. However, some theoretical attacks have shown a reduction of approximately 5 bits. (B-)",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

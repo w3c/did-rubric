@@ -1,0 +1,24 @@
+{
+  "name": "Authentication Model",
+  "question": {
+    "question": "How does the method authenticate a given DID operation as coming from the legitimate DID controller?",
+    "instruction": "Include as many as apply to this Method."
+  },
+  "assessmentTemplate": {
+    "columns": null
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Method"
+      }
+    ]
+  },
+  "id": "https://www.w3.org/TR/did-rubric#criteria-58",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-58",
+  "source": "https://didcriteria.com/criteria/24",
+  "exampleAssessments": []
+}

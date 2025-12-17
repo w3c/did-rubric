@@ -1,0 +1,94 @@
+{
+  "name": "Operational Security",
+  "question": {
+    "question": "How many operational components may be compromised without compromising the network?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Layer",
+        "type": "enhancedLetter",
+        "propertyRef": "layer"
+      },
+      {
+        "heading": "Response",
+        "type": "enhancedLetter",
+        "propertyRef": "response"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/17",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Equation based on the consensus algorithm"
+      },
+      {
+        "label": "B",
+        "meaning": "Known number"
+      },
+      {
+        "label": "C",
+        "meaning": "Percentage"
+      },
+      {
+        "label": "D",
+        "meaning": "Unknown"
+      },
+      {
+        "label": "E",
+        "meaning": "N/A -- If the algorithm isn’t dependent on the particular layer"
+      }
+    ]
+  },
+  "relevance": "Informs how easy it may be to orchestrate a take over of the network and get false transactions accepted by the consensus mechanism.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-51",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-51",
+  "exampleAssessments": [
+    {
+      "id": "a-77",
+      "method": "did:v1.testnet",
+      "layer": "Witnesses",
+      "response": "4",
+      "note": "Since a supermajority of 9/13 witness nodes is needed for consensus to be reached, compromising more than 4 of these nodes means an attacker could halt consensus formulation.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-78",
+      "method": "did:v1.testnet",
+      "layer": "Peers",
+      "response": "N/A",
+      "note": "Peers being compromised does not lead to network failure.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-79",
+      "method": "did:v1.production",
+      "layer": "Witnesses",
+      "response": "4",
+      "note": "Since a supermajority of 9/13 witness nodes is needed for consensus to be reached, compromising more than 4 of these nodes means an attacker could halt consensus formulation.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-80",
+      "method": "did:v1.production",
+      "layer": "Peers",
+      "response": "N/A",
+      "note": "Peers being compromised does not lead to network failure.",
+      "evaluationCitation": "#eval-4"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "In which countries?",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-22",
+  "source": ".",
+  "question": {
+    "question": "Which countries have significant usage?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-22",
+  "exampleAssessments": []
+}

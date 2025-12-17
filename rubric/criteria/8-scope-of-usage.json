@@ -1,7 +1,7 @@
 {
   "name": "Scope of Usage",
   "id": "https://www.w3.org/TR/did-rubric#criteria-8",
-  "source": null,
+  "source": ".",
   "question": {
     "question": "How widely can DIDs of this Method be used?"
   },
@@ -51,34 +51,11 @@
       }
     ]
   },
-  "version": "1.1.0",
+  "version": "1.0.1",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-8",
   "exampleAssessments": [
     {
-      "id": "a-56",
-      "method": "did:sov",
-      "net": "A",
-      "reg": "B",
-      "evaluationCitation": "#eval-1",
-      "note": "Transactions on the Sovrin ledger are publicly readable by anyone. Transactions may be written by any Transaction Author however for GDPR reasons personal data may not currently be written to the Sovrin ledger. See Sovrin Data Protection ."
-    },
-    {
-      "id": "a-55",
-      "method": "did:btcr",
-      "net": "A",
-      "reg": "A",
-      "evaluationCitation": "#eval-1",
-      "note": "Open, permissionless, and globally resolvable."
-    },
-    {
-      "id": "a-54",
-      "method": "did:git",
-      "net": "A",
-      "reg": "B",
-      "evaluationCitation": "#eval-1",
-      "note": "Anyone can set up a git-based repo and use did:git. However, to interact with a given repo, one must be aware of the repo, including which instance of it is authoritative."
-    },
-    {
-      "id": "a-53",
+      "id": "a-22",
       "method": "did:peer",
       "net": "A+",
       "reg": "C",
@@ -86,52 +63,20 @@
       "note": "Did:peer is communication-layer independent, so it can be used on any network, including direct physical links. However, only those parties to the creation of the DID can actually use it. The DIDs have no use outside that direct peer-to-peer relationship."
     },
     {
-      "id": "a-57",
+      "id": "a-23",
+      "method": "did:web",
+      "net": "A/B",
+      "reg": "A/B",
+      "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-24",
       "method": "did:ethr",
       "net": "A",
       "reg": "A",
       "evaluationCitation": "#eval-1",
       "note": "Open, permissionless, and globally resolvable."
-    },
-    {
-      "id": "a-58",
-      "method": "did:jolo",
-      "net": "A",
-      "reg": "A",
-      "evaluationCitation": "#eval-1",
-      "note": "Open, permissionless, and globally resolvable."
-    },
-    {
-      "id": "a-59",
-      "method": "Veres One testnet",
-      "net": "A",
-      "reg": "A",
-      "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-60",
-      "method": "Veres One Production",
-      "net": "A",
-      "reg": "A",
-      "note": "Veres One DIDs are globally resolvable, without restriction, regardless of context.",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-62",
-      "method": "DID Ion",
-      "net": "A",
-      "reg": "A",
-      "note": "A did:ion DID can be resolved by any observer.",
-      "evaluationCitation": "#eval-6"
-    },
-    {
-      "id": "a-61",
-      "method": "DID Web",
-      "net": "A/B",
-      "reg": "A/B",
-      "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
-      "evaluationCitation": "#eval-5"
     }
   ]
 }

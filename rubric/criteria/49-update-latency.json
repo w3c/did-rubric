@@ -1,0 +1,106 @@
+{
+  "name": "Update Latency",
+  "question": {
+    "question": "How much time does it take for an update to become globally available after submission by the DID controller?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Less than 1 second"
+      },
+      {
+        "label": "B",
+        "meaning": "1 to < 60 seconds"
+      },
+      {
+        "label": "C",
+        "meaning": "1 to < 10 min"
+      },
+      {
+        "label": "D",
+        "meaning": "10 min to < 1 hour"
+      },
+      {
+        "label": "E",
+        "meaning": "1 hour to < 1 day"
+      },
+      {
+        "label": "F",
+        "meaning": "1 day to 2 weeks"
+      },
+      {
+        "label": "G",
+        "meaning": "Greater than two weeks"
+      },
+      {
+        "label": "H",
+        "meaning": "Updates not guaranteed"
+      }
+    ]
+  },
+  "relevance": "Different registry mechanisms have different guarantees for some notion of finality. The longer one has to wait for confirmation, the greater the latency for high security transactions. The shorter the duration, the more one has to critically validate the race conditions that may be present in determining finality. Depending on the algorithm, there are likely trade-offs between the stability of consensus and the speed at which consensus is pursued.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-49",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-49",
+  "source": "https://didcriteria.com/criteria/15",
+  "exampleAssessments": [
+    {
+      "id": "a-69",
+      "method": "did:v1.testnet",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B):Provable Finality for Veres One updates ranged from 1 to 60 seconds in testing (1-3 seconds in a single data center)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-70",
+      "method": "did:v1.production",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B):Provable Finality for Veres One updates ranged from 1 to 60 seconds in testing (1-3 seconds in a single data center)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-71",
+      "method": "did:web",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): Depends on your network (and network configuration), but generally, did:web document updates are as fast as updates to any web resource.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-72",
+      "method": "did:ion",
+      "net": "D/H",
+      "reg": "D/H",
+      "note": "Net and Reg:Updates to did:ion DIDs are ultimately anchored on BTC, which averages one block per every ten minutes. Some nodes may batch the BTC anchor operation, which could add to the delay, but this is not a requirement of the method. (D and D)\nSimilarly, due to the dynamically adjusting market for bitcoin transactions, it is possible for a controller to submit a transaction to the ION node and for it to go un-anchored because the ION node is not configured with a competitively priced bitcoin transaction fee. (H and H)",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

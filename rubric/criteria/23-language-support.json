@@ -1,0 +1,13 @@
+{
+  "name": "Language support",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-23",
+  "source": ".",
+  "question": {
+    "question": "How many (human) languages are supported?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-23",
+  "exampleAssessments": []
+}

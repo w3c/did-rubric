@@ -1,0 +1,97 @@
+{
+  "name": "Registry Consensus",
+  "question": {
+    "question": "What type of integrity mechanism is used by the method’s Verifiable Data Registry?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Proof of Work"
+      },
+      {
+        "label": "B",
+        "meaning": "Proof of Stake"
+      },
+      {
+        "label": "C",
+        "meaning": "BFT algorithm based"
+      },
+      {
+        "label": "D",
+        "meaning": "Electoral ‒ Select parties vote with thresholds"
+      },
+      {
+        "label": "E",
+        "meaning": "Unanimous ‒ All parties countersign"
+      },
+      {
+        "label": "F",
+        "meaning": "Unilateral ‒ Latest signed version defined as authentic"
+      },
+      {
+        "label": "G",
+        "meaning": "Standards-based specifications determined by institutional authority, used by anyone"
+      },
+      {
+        "label": "H",
+        "meaning": "Other ‒ Add your own"
+      }
+    ]
+  },
+  "relevance": "The consensus mechanism used by the method registry has implications for scalability, speed of operations, security and possibly environmental impact.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-54",
+  "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-54",
+  "source": "https://didcriteria.com/criteria/20",
+  "exampleAssessments": [
+    {
+      "id": "a-91",
+      "method": "did:v1.testnet",
+      "reg": "C",
+      "note": "There Veres One registry consensus algorithm uses a BFT algorithm which formulates consensus through a super majority of witness nodes with any number of peer nodes allowed to participate in the gossip network.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-92",
+      "method": "did:v1.production",
+      "reg": "C",
+      "note": "There Veres One registry consensus algorithm uses a BFT algorithm which formulates consensus through a super majority of 13 witness nodes with any number of peer nodes allowed to participate in the gossip network.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-93",
+      "method": "did:web",
+      "reg": "F/G",
+      "note": "ICANN sets the specification for consensus (F). DNS works by participants agreeing that ICANN’s rules determine global state.",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-94",
+      "method": "did:ion",
+      "reg": "A",
+      "note": "The VDR for did:ion is Bitcoin, which is Proof of Work",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
+}

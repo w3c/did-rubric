@@ -1,0 +1,66 @@
+{
+  "name": "Many Eyes",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-30",
+  "source": ".",
+  "question": {
+    "question": "Is the code of the method published, does it have many contributors, and does it have a published vulnerability reporting (responsible disclosure) mechanism?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The code is public. It has hundreds of contributors. CVEs or similar reports have been published and handled appropriately."
+      },
+      {
+        "label": "B",
+        "meaning": "The code is public, but the list of contributors is small. No vulnerability reporting mechanism has been announced, or it's been announced but has no demonstrable track record."
+      },
+      {
+        "label": "C",
+        "meaning": "The code is partly private."
+      },
+      {
+        "label": "D",
+        "meaning": "The code is entirely private."
+      }
+    ]
+  },
+  "relevance": "Security vulnerabilities tend to be found and fixed best in code that has many active contributions and a strong history of correctly handled responsible disclosure.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-30",
+  "exampleAssessments": [
+    {
+      "id": "a-123",
+      "method": "did:sov",
+      "score": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "The most prominent codebases that implement this method, github.com/hyperledger/indy-* have over 1000 forks, about 200 unique contributors from over a dozen organizations, spanning 5 years and about 25000 commits as of 2021. Sovrin's Technical Governance Board, which vets some aspects of the design, is composed of numerous independent experts, and meets regularly. Both Hyperledger and Sovrin Foundation have responsible disclosure mechanisms for vulnerabilities, and both have successfully handled vulnerabilities from initial report to patch and public disclosure."
+    },
+    {
+      "id": "a-124",
+      "method": "did:peer",
+      "score": "B",
+      "evaluationCitation": "#eval-2",
+      "note": "The spec and implementations of code are entirely public, with incubation through DIF's identifiers WG. However, contributors are limited to a dozen developers, activity is light, and there is no announced vulnerability mechanism."
+    }
+  ]
+}

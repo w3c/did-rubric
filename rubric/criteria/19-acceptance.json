@@ -1,0 +1,13 @@
+{
+  "name": "Acceptance",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-19",
+  "source": ".",
+  "question": {
+    "question": "How many relying parties accept DIDs of this Method?"
+  },
+  "response": {},
+  "relevance": null,
+  "assessmentTemplate": {},
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-19",
+  "exampleAssessments": []
+}

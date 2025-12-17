@@ -44,36 +44,38 @@
     ]
   },
   "relevance": "Communication is costly, with increasing costs the more parties are involved. This cost is not just in terms of the connection expense, but also the latency in processing transactions. The ability to create a DID without registering it on a global shared state greatly reduces the technical and financial cost of the method.",
-  "id": "https://didcriteria.com/criteria/7",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-42",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-42",
+  "source": "https://didcriteria.com/criteria/7",
   "exampleAssessments": [
     {
-      "id": "a-69",
-      "method": "DID Web",
+      "id": "a-29",
+      "method": "did:v1.testnet",
+      "spec": "A",
+      "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-30",
+      "method": "did:v1.production",
+      "spec": "A",
+      "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-31",
+      "method": "did:web",
       "spec": "B+",
       "note": "The DID controller must be able to communicate with the web server that is hosting the DID Document. However, in some configurations, this may not mean accessing the global network. For example, if you are physically present at the hosting server, one can create the DID Document files directly without network access. To resolve the DID Document those files must be published at an accessible endpoint, but creation doesn’t need the network.",
       "evaluationCitation": "#eval-5"
     },
     {
-      "id": "a-70",
-      "method": "DID Ion",
+      "id": "a-32",
+      "method": "did:ion",
       "spec": "A",
       "note": "All new did:ions start offline. Only updates need to be published.",
       "evaluationCitation": "#eval-6"
-    },
-    {
-      "id": "a-67",
-      "method": "Veres One testnet",
-      "spec": "A",
-      "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-68",
-      "method": "Veres One Production",
-      "spec": "A",
-      "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
     }
   ]
 }

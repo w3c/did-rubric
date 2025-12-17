@@ -28,11 +28,7 @@
       }
     ]
   },
-  "source": {
-    "sectionRef": "New synthesis, in part from DID Method Rubric v1.0.0 (draft) ",
-    "sourceRef": "https://www.w3.org/TR/did-rubric#criteria-5",
-    "sourceSection": ""
-  },
+  "source": "https://didcriteria.com/criteria/3",
   "response": {
     "type": "multipleChoice",
     "possibleResponses": [
@@ -59,32 +55,33 @@
     ]
   },
   "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
-  "id": "https://didcriteria.com/criteria/3",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-39",
   "structureCriteriaId": "https://didcriteria.com/criteria/1",
   "version": "1.0.0",
+  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-39",
   "exampleAssessments": [
     {
-      "id": "a-27",
-      "method": "Veres One testnet",
+      "id": "a-13",
+      "method": "did:v1.testnet",
       "decision making body": "Digital Bazaar",
       "cost": "D+",
       "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
       "evaluationCitation": "#eval-4"
     },
     {
-      "id": "a-29",
-      "method": "Veres One Production",
-      "decision making body": "Veres Foundation Board",
-      "cost": "C-",
-      "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
-      "evaluationCitation": "#eval-4"
-    },
-    {
-      "id": "a-28",
-      "method": "Veres One Production",
+      "id": "a-14",
+      "method": "did:v1.production",
       "decision making body": "Veres One Community Group",
       "cost": "B",
       "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-15",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "cost": "C-",
+      "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
       "evaluationCitation": "#eval-4"
     }
   ]
