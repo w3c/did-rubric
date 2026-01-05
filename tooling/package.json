@@ -1,0 +1,17 @@
+{
+    "name": "did-rubric-tooling",
+    "version": "0.0.1",
+    "description": "DID Rubrics",
+    "private": true,
+    "dependencies": {
+      "ajv": "^8.6.3",
+      "js-yaml": "^4.1.0"
+    },
+    "type": "module",
+    "scripts": {
+      "generate-rubric": "node ./generate-rubric.js",
+      "validate-rubric": "node ./validate-rubric.js"
+    },
+    "author": "Will Abramson <will@legreq.com>",
+    "license": "W3C"
+  }

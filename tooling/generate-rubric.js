@@ -1,76 +1,8 @@
 #!/usr/bin/env node
-import { promises as fs } from "node:fs";
-import path from "node:path";
+import { promises as fs } from "fs";
+import path from "path";
+import { CRITERIA_ROOT, TEMPLATE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./common.js";
 
-const RUBRIC_ROOT = path.resolve(process.cwd(), "rubric");
-const CRITERIA_ROOT = path.resolve(RUBRIC_ROOT, "criteria");
-const TEMPLATE_FILE = path.join(RUBRIC_ROOT, "rubric-template.json"); // change if needed
-const CRITERIA_INDEX_FILE = path.join(RUBRIC_ROOT, "criteria-index.json");
-const OUTPUT_FILE = path.join(RUBRIC_ROOT, "rubric.json");
-
-function isJsonFile(name) {
-  return name.toLowerCase().endsWith(".json");
-}
-
-async function readJson(filePath) {
-  const raw = await fs.readFile(filePath, "utf8");
-  return JSON.parse(raw);
-}
-
-/**
- * Resolve "./rulemaking" (from template) relative to CRITERIA_ROOT.
- * Also supports "rulemaking" or "criteria/rulemaking" etc.
- */
-function resolveCategoryDir(criteriaRef) {
-  if (typeof criteriaRef !== "string") {
-    throw new Error(`category.criteriaFolder must be a string path; got ${typeof criteriaRef}`);
-  }
-
-  // Normalize things like "./rulemaking" -> "rulemaking"
-  const ref = criteriaRef.replace(/^[.][/\\]/, "");
-
-  // If they accidentally include "criteria/...", strip it
-  const stripped = ref.replace(/^criteria[/\\]/, "");
-
-  return path.resolve(CRITERIA_ROOT, stripped);
-}
-
-async function loadAllCriteria(dirPath) {
-  const entries = await fs.readdir(dirPath, { withFileTypes: true });
-
-  const jsonFiles = entries
-    .filter((e) => e.isFile() && isJsonFile(e.name))
-    .map((e) => e.name)
-
-  const index = Object.create(null);
-
-  for (const filename of jsonFiles) {
-    const fullPath = path.join(dirPath, filename);
-    let parsed;
-    try {
-      parsed = await readJson(fullPath);
-    } catch (e) {
-      throw new Error(`Failed to read/parse JSON: ${fullPath}\n${e.message}`);
-    }
-
-    if (typeof parsed !== "object" || parsed === null) {
-      throw new Error(`Criteria file must contain a JSON object: ${fullPath}`);
-    }
-
-    if (typeof parsed.id !== "string" || !parsed.id.trim()) {
-      throw new Error(`Criteria file must have a non-empty "id" string: ${fullPath}`);
-    }
-
-    const id = parsed.id;
-    if (Object.prototype.hasOwnProperty.call(index, id)) {
-      throw new Error(`Duplicate criteria id "${id}" found in ${fullPath}`);
-    }
-
-    index[id] = parsed;
-  }
-
-  return index;
-}
 
 async function buildRubric(criteriaIndex) {
   const template = await readJson(TEMPLATE_FILE);

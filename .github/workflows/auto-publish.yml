@@ -14,9 +14,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-      - name: Generate did rubric JSON
-        working-directory: ./tooling
-        run: node generate-did-rubric.js
+      - name: Install did-rubric tooling...
+        working-directory: tooling
+        run: npm i
+      - name: Validate did-rubric template and criteria
+        working-directory: tooling
+        run: npm run validate-rubric
+      - name: Generate did rubric JSON from template and criteria
+        working-directory: tooling
+        run: npm run generate-rubric
       - name: Begin W3C Spec Prod Deployment
         uses: w3c/spec-prod@v2
         with:
