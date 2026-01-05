@@ -2,6 +2,7 @@
   "name": "Incentives for Multicontext DIDs",
   "id": "https://www.w3.org/TR/did-rubric#criteria-35",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "To what extent does the method incentivize (due to cost, hassle, etc.) a DID to be reused in multiple contexts?"
   },

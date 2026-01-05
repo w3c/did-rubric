@@ -2,6 +2,7 @@
   "name": "Open contribution (participation)",
   "id": "https://www.w3.org/TR/did-rubric#criteria-1",
   "source": ".",
+  "version": "1.0.1",
   "question": {
     "question": "How open is participation in governance decisions?"
   },

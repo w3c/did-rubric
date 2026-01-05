@@ -2,6 +2,7 @@
   "name": "Many Eyes",
   "id": "https://www.w3.org/TR/did-rubric#criteria-30",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "Is the code of the method published, does it have many contributors, and does it have a published vulnerability reporting (responsible disclosure) mechanism?"
   },

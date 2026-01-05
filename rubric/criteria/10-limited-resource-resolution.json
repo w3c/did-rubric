@@ -2,6 +2,7 @@
   "name": "Limited resource resolution",
   "id": "https://www.w3.org/TR/did-rubric#criteria-10",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "How much memory is required for DID resolution, without relying on authoritative intermediaries (e.g. blockchain explorer APIs)? We consider the amount of memory required to fully resolve a DID of the method, whether that memory is stored locally or processed ephemerally via communications."
   },

@@ -2,11 +2,12 @@
   "name": "Users",
   "id": "https://www.w3.org/TR/did-rubric#criteria-20",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "How many daily active users use this Method?"
   },
   "response": {},
-  "relevance": null,
+  "relevance": "",
   "assessmentTemplate": {},
   "w3cId": "https://www.w3.org/TR/did-rubric#criteria-20",
   "exampleAssessments": []

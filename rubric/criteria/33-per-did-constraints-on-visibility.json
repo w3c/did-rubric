@@ -2,6 +2,7 @@
   "name": "Per-DID constraints on visibility",
   "id": "https://www.w3.org/TR/did-rubric#criteria-33",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "What provisions are made for restricting visibility of DIDs to audiences other than the general public?"
   },

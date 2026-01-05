@@ -2,11 +2,12 @@
   "name": "International adoption",
   "id": "https://www.w3.org/TR/did-rubric#criteria-21",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "How many different countries have significant usage?"
   },
   "response": {},
-  "relevance": null,
+  "relevance": "",
   "assessmentTemplate": {},
   "w3cId": "https://www.w3.org/TR/did-rubric#criteria-21",
   "exampleAssessments": []

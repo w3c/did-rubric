@@ -2,6 +2,7 @@
   "name": "Cross-DID Leakage",
   "id": "https://www.w3.org/TR/did-rubric#criteria-34",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "How possible is it to control multiple DIDs, without having an observer of one DID be able to deduce that another DID has the same controller?"
   },

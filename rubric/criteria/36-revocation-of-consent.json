@@ -2,6 +2,7 @@
   "name": "Revocation of Consent",
   "id": "https://www.w3.org/TR/did-rubric#criteria-36",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "How does one revoke consent for the storage of a DID? (Note how this creates a tension with immutability, which may be valuable in 2.7.1 and elsewhere.)"
   },

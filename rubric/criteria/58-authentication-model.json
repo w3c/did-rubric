@@ -12,13 +12,66 @@
     "possibleResponses": [
       {
         "label": "A",
-        "meaning": "Method"
+        "meaning": "None"
+      },
+      {
+        "label": "B",
+        "meaning": "Cryptographically signed transactions"
+      },
+      {
+        "label": "C",
+        "meaning": "Cryptographic challenge string & signed response"
+      },
+      {
+        "label": "D",
+        "meaning": "Authenticator App"
+      },
+      {
+        "label": "E",
+        "meaning": "Biometrics"
+      },
+      {
+        "label": "F",
+        "meaning": "Email"
+      },
+      {
+        "label": "G",
+        "meaning": "DNS Record"
+      },
+      {
+        "label": "H",
+        "meaning": "HTML over HTTP"
+      },
+      {
+        "label": "I",
+        "meaning": "SMS/MMS"
+      },
+      {
+        "label": "J",
+        "meaning": "DID document update"
+      },
+      {
+        "label": "K",
+        "meaning": "Other"
+      },
+      {
+        "label": "L",
+        "meaning": "Any"
       }
     ]
   },
+  "relevance": "The way in which DID updates are authenticated can have implications on not only the trustworthiness of the method but also informs someone who wants to use the method what they may need to implement technologically to properly make use of the method.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-58",
   "version": "1.0.0",
   "w3cId": "https://www.w3.org/TR/did-rubric#criteria-58",
   "source": "https://didcriteria.com/criteria/24",
-  "exampleAssessments": []
+  "exampleAssessments": [
+    {
+      "id": "a-64",
+      "method": "did:ion",
+      "response": "B",
+      "note": "ION uses JWK and JWS to ensure that DID operations are properly authorized.",
+      "evaluationCitation": "#eval-6"
+    }
+  ]
 }

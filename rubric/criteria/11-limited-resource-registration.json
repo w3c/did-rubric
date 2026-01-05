@@ -2,6 +2,7 @@
   "name": "Limited resource registration",
   "id": "https://www.w3.org/TR/did-rubric#criteria-11",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "What are the minimum resources required to create a trusted DID without relying on intermediaries?"
   },

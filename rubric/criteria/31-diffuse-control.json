@@ -2,6 +2,7 @@
   "name": "Diffuse Control",
   "id": "https://www.w3.org/TR/did-rubric#criteria-31",
   "source": ".",
+  "version": "1.0.0",
   "question": {
     "question": "To what extent does the system support mechanisms where DID control is distributed across multiple parties (m-of-n control, threshold signatures, etc.)?"
   },
