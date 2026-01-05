@@ -5,7 +5,23 @@
     "instruction": "Include as many as apply to this Method."
   },
   "assessmentTemplate": {
-    "columns": null
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Response",
+        "type": "multipleChoice",
+        "propertyRef": "response"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
   },
   "response": {
     "type": "multipleChoice",
