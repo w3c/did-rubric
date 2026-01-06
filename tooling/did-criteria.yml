@@ -77,7 +77,6 @@ properties:
         description: Array of column definitions for the assessment table
         type:
           - array
-          - "null"
         items:
           type: object
           additionalProperties: false

@@ -84,12 +84,11 @@ function renderCriteria(criteria, isEvaluation = false) {
                 ${isEvaluation ? criteria.exampleAssessments.map(assessment => `
                     <tr>
                         <!-- <td>${assessment.id}</td> -->
-                        ${criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
+                        ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
                     </tr>
                 `).join('') : criteria.exampleAssessments.map(assessment => `
                     <tr>
-                        <!-- <td>${assessment.id}</td> -->
-                        ${criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
+                        ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
                     </tr>
                 `).join('')}
             </tbody>

@@ -1,5 +1,5 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
+import { promises as fs } from "fs";
+import path from "path";
 
 export const RUBRIC_ROOT = path.resolve(process.cwd(), "../rubric");
 export const CRITERIA_ROOT = path.resolve(RUBRIC_ROOT, "criteria");
