@@ -8,9 +8,9 @@ async function renderCategories() {
     console.warn('No criteria section found');
     return;
   }
+    
+  const rubric = rubricJson;
 
-  const response = await fetch('../rubric/rubric.json');
-  const rubric = await response.json();
   console.log('Rubric:', rubric);
 
   let categoriesHtml = rubric.categories.map(category => {
