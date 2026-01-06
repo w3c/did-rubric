@@ -4,7 +4,7 @@ import path from "node:path";
 export const RUBRIC_ROOT = path.resolve(process.cwd(), "../rubric");
 export const CRITERIA_ROOT = path.resolve(RUBRIC_ROOT, "criteria");
 export const TEMPLATE_FILE = path.join(RUBRIC_ROOT, "rubric-template.json");
-export const OUTPUT_FILE = path.join(RUBRIC_ROOT, "rubric.json");
+export const OUTPUT_FILE = path.join(RUBRIC_ROOT, "rubric.js");
 
 export function isJsonFile(name) {
   return name.toLowerCase().endsWith(".json");
