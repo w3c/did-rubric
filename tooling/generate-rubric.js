@@ -54,8 +54,12 @@ async function buildRubric(criteriaIndex) {
 
   const hydrated = { categories: hydratedCategories };
 
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(hydrated, null, 2) + "\n", "utf8");
-  console.log(
+
+  // Target file has prefix to set up rubricJson variable in valid javascript
+  const outputContent = `var rubricJson = ${JSON.stringify(hydrated, null, 2)}`
+  await fs.writeFile(OUTPUT_FILE, outputContent + "\n", "utf8");
+
+   console.log(
     `Wrote hydrated rubric -> ${path.relative(process.cwd(), OUTPUT_FILE)}`
   );
 }
