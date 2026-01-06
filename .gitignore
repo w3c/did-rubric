@@ -1,3 +1,4 @@
 .idea
-rubric/rubric.json
+.history
+rubric/rubric.js
 node_modules/
