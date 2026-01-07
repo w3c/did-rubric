@@ -36,6 +36,9 @@ jobs:
     name: Build PR Preview
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -67,5 +70,5 @@ jobs:
         with:
           path: site
       - name: Deploy preview
+        id: deployment
         uses: actions/deploy-pages@v4
-
