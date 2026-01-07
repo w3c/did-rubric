@@ -8,7 +8,11 @@ async function renderCategories() {
     console.warn('No criteria section found');
     return;
   }
-    
+
+  if (!rubricJson) {
+    console.error('No rubricJSON variable found, have you run npm run generate-rubric?');
+    return;
+  }
   const rubric = rubricJson;
 
   console.log('Rubric:', rubric);
