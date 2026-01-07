@@ -24,6 +24,7 @@ jobs:
         working-directory: tooling
         run: npm run generate-rubric
       - name: Begin W3C Spec Prod Deployment
+        if: github.event_name == 'push'
         uses: w3c/spec-prod@v2
         with:
           W3C_ECHIDNA_TOKEN: ${{ secrets.W3C_TR_TOKEN }}
@@ -31,3 +32,40 @@ jobs:
           W3C_BUILD_OVERRIDE: |
             shortName: did-rubric
             specStatus: NOTE
+  pr_preview:
+    name: Build PR Preview
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout source...
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+      - name: Install did-rubric tooling...
+        working-directory: tooling
+        run: npm i
+      - name: Validate did-rubric template and criteria
+        working-directory: tooling
+        run: npm run validate-rubric
+      - name: Generate did rubric JSON from template and criteria
+        working-directory: tooling
+        run: npm run generate-rubric
+      - name: Stage preview site
+        run: |
+          mkdir -p site/rubric site/tooling
+          cp index.html common.js site/
+          cp rubric/rubric.js site/rubric/
+          cp tooling/render-criteria.js site/tooling/
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy preview
+        uses: actions/deploy-pages@v4
+
