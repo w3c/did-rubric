@@ -42,7 +42,7 @@ function renderCriteria(criteria) {
     <section class="criteria">
        <h4 id="${criteriaIdFragment}">${criteria.name}</h4>
        <a href="#${criteriaIdFragment}">${criteria.id}</a>
-       <span>${criteria.version}</span>
+       <span>v${criteria.version}</span>
 
         ${(criteria.source && criteria.source.sourceRef) ? `
             <div class="source">
