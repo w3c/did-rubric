@@ -77,6 +77,7 @@ function renderCriteria(criteria) {
 
         <section>
             <h5>Examples</h4>
+            ${criteria.exampleAssessments && criteria.exampleAssessments.length > 0 ? `
             <table>
             <thead>
                 <tr>
@@ -92,7 +93,8 @@ function renderCriteria(criteria) {
                     </tr>
                 `).join('')}
             </tbody>
-            </table>
+            </table>`
+            : ''}
         </section>
 
     </section>
