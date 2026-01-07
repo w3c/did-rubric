@@ -3,7 +3,7 @@ import { promises as fs } from "node:fs";
 import path from "path";
 import Ajv from "ajv";
 import yaml from "js-yaml";
-import { CRITERIA_ROOT, TEMPLATE_FILE, loadAllCriteria, readJson } from "./common.js";
+import { CRITERIA_ROOT, TEMPLATE_FILE, loadAllCriteria, readJson } from "./utils.js";
 
 async function validateRubric() {
   // Ensure criteria root exists

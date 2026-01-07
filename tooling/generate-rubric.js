@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from "fs";
 import path from "path";
-import { CRITERIA_ROOT, TEMPLATE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./common.js";
+import { CRITERIA_ROOT, TEMPLATE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./utils.js";
 
 
 async function buildRubric(criteriaIndex) {
