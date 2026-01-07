@@ -22,7 +22,7 @@ async function renderCategories() {
     return `<section class="category-section">
                 <h3>${category.name}</h3>
                 <p>${category.description}</p>
-                ${(category.criteria || []).map(criteria => renderCriteria(criteria, true)).join('')}
+                ${(category.criteria || []).map(criteria => renderCriteria(criteria)).join('')}
             </section>`
   }).join('');
 
@@ -33,7 +33,7 @@ async function renderCategories() {
 
 
 
-function renderCriteria(criteria, isEvaluation = false) {
+function renderCriteria(criteria) {
     console.log("Render Criteria", criteria);
     
     let criteriaIdFragment = criteria.id.split('#')[1];
@@ -85,13 +85,9 @@ function renderCriteria(criteria, isEvaluation = false) {
                 </tr>
             </thead>
             <tbody>
-                ${isEvaluation ? criteria.exampleAssessments.map(assessment => `
+                ${criteria.exampleAssessments && criteria.exampleAssessments.map(assessment => `
                     <tr>
                         <!-- <td>${assessment.id}</td> -->
-                        ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
-                    </tr>
-                `).join('') : criteria.exampleAssessments.map(assessment => `
-                    <tr>
                         ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
                     </tr>
                 `).join('')}
