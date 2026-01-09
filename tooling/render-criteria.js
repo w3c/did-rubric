@@ -15,10 +15,7 @@ async function renderCategories() {
   }
   const rubric = rubricJson;
 
-  console.log('Rubric:', rubric);
-
   let categoriesHtml = rubric.categories.map(category => {
-    console.log('Rendering category:', category);
     return `<section class="category-section">
                 <h3>${category.name}</h3>
                 <p>${category.description}</p>
@@ -34,8 +31,7 @@ async function renderCategories() {
 
 
 function renderCriteria(criteria) {
-    console.log("Render Criteria", criteria);
-    
+
     let criteriaIdFragment = criteria.id.split('#')[1];
     // TODO: Add ID to this html element so you can link to it.
     return `
@@ -54,7 +50,7 @@ function renderCriteria(criteria) {
         <section>
             <h5>Question</h4>
             <p>${criteria.question.question}</p>
-            ${criteria.question.instruction ? 
+            ${criteria.question.instruction ?
                 `<p><span>Instruction:</span>${criteria.question.instruction}</p>`
             : ``}
         </section>
