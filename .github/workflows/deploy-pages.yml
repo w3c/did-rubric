@@ -1,0 +1,49 @@
+name: Deploy GitHub Pages
+on:
+  push:
+    branches: [lr-jsonify]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build and Deploy Pages
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+      - name: Install tooling dependencies
+        working-directory: tooling
+        run: npm i
+      - name: Validate rubric
+        working-directory: tooling
+        run: npm run validate-rubric
+      - name: Generate rubric JS
+        working-directory: tooling
+        run: npm run generate-rubric
+      - name: Prepare site bundle
+        run: |
+          mkdir -p site/rubric site/tooling
+          cp index.html common.js site/
+          cp rubric/rubric.js site/rubric/
+          cp tooling/render-criteria.js site/tooling/
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
