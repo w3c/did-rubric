@@ -85,7 +85,16 @@ function renderCriteria(criteria) {
                 ${criteria.exampleAssessments && criteria.exampleAssessments.map(assessment => `
                     <tr>
                         <!-- <td>${assessment.id}</td> -->
-                        ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => `<td>${assessment[column.propertyRef]}</td>`).join('')}
+                        ${criteria.assessmentTemplate.columns && criteria.assessmentTemplate.columns.map(column => {
+                            let contents = assessment[column.propertyRef];
+                            if (column.propertyRef === 'note') {
+                                let evalCitation = `[<a href="${assessment.evaluationCitation}">${assessment.evaluationCitation.slice(1)}</a>]`
+
+                                contents += ` ${evalCitation}`;
+                            }
+
+                            return `<td>${contents}</td>`;
+                        }).join('')}
                     </tr>
                 `).join('')}
             </tbody>
