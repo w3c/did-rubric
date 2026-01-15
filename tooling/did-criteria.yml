@@ -109,6 +109,7 @@ properties:
       required:
         - id
         - method
+        - evaluationCitation
       properties:
         id:
           description: Unique identifier for this example assessment
