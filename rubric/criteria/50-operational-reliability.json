@@ -63,7 +63,7 @@
       "layer": "Witnesses",
       "response": "4",
       "note": "The BFT consensus algorithm used by Veres One requires a supermajority of 9/13 witness nodes to formulate consensus.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-74",
@@ -71,7 +71,7 @@
       "layer": "Peers",
       "response": "N/A",
       "note": "Peer nodes are not needed in the formulation of consensus.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-75",
@@ -79,7 +79,7 @@
       "layer": "Witnesses",
       "response": "4",
       "note": "The BFT consensus algorithm used by Veres One requires a supermajority of 9/13 witness nodes to formulate consensus.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-76",
@@ -87,7 +87,7 @@
       "layer": "Peers",
       "response": "N/A",
       "note": "Peer nodes are not needed in the formulation of consensus.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     }
   ]
 }

@@ -64,7 +64,7 @@
       "decision making body": "Digital Bazaar",
       "cost": "D+",
       "note": "Digital Bazaar is a small development team working with select customers to define Veres One. There is no explicit mechanism for outside participation, however, the governance framework has been developed with high transparency through github and the W3C Veres One Community Group. (D+)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-14",
@@ -72,7 +72,7 @@
       "decision making body": "Veres One Community Group",
       "cost": "B",
       "note": "Community group is open to the public. Any member of the community group can propose changes to the method. Group consensus then determines which proposals advance to the Veres Foundation. (B)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-15",
@@ -80,7 +80,7 @@
       "decision making body": "Veres Foundation Board",
       "cost": "C-",
       "note": "For technical decisions, the Foundation strongly prefers proposals to reach consensus in the community group. For operational, financial, and legal decisions, the board will likely reserve the right to make decisions independent of the community group. Board bylaws are under development as of this evaluation. (C-)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     }
   ]
 }

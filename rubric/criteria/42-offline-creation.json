@@ -53,28 +53,28 @@
       "method": "did:v1.testnet",
       "spec": "A",
       "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-30",
       "method": "did:v1.production",
       "spec": "A",
       "note": "Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-31",
       "method": "did:web",
       "spec": "B+",
       "note": "The DID controller must be able to communicate with the web server that is hosting the DID Document. However, in some configurations, this may not mean accessing the global network. For example, if you are physically present at the hosting server, one can create the DID Document files directly without network access. To resolve the DID Document those files must be published at an accessible endpoint, but creation doesn’t need the network.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-32",
       "method": "did:ion",
       "spec": "A",
       "note": "All new did:ions start offline. Only updates need to be published.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

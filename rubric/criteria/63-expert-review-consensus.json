@@ -59,7 +59,7 @@
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B): Mathematical proofs have been peer reviewed for publication in a not-yet-published book on consensus algorithms and as a special IEEE journal publication on network consensus algorithms.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-132",
@@ -67,7 +67,7 @@
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B): Mathematical proofs have been peer reviewed for publication in a not-yet-published book on consensus algorithms and as a special IEEE journal publication on network consensus algorithms.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-133",
@@ -75,7 +75,7 @@
       "net": "A",
       "reg": "n/a",
       "note": "Net (A): The DNS and TLS systems have been thoroughly reviewed in academic literature in research about the Internet and the World Wide Web.\nReg (n/a) : The method provides no consensus mechanism with regard to the https server itself. The entity controlling the server operates independently. (n/a)",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-134",
@@ -83,7 +83,7 @@
       "net": "A",
       "reg": "A",
       "note": "Net (A) and Reg (A): Bitcoin’s proof of work consensus algorithm has been thoroughly reviewed. IPFS uses a Kademlia hash table algorithm, which has also undergone thorough academic review since publication in 2002. However, compromising the hash table would not compromise the content of a DID Document; rather it would affect the ability to resolve the DID to that DID Document. IPFS’s content-hash addressing is based on multihash, and did:ion requires using the SHA-256 variant of multihash. SHA-256 is extremely well reviewed.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

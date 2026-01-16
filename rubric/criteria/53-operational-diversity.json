@@ -53,28 +53,28 @@
       "method": "did:v1.testnet",
       "reg": "B [13]",
       "note": "Veres One is designed for 13 Witnesses; only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of nine Witnesses.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-88",
       "method": "did:v1.production",
       "reg": "B [13]",
       "note": "Veres One is designed for 13 Witnesses; only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of nine Witnesses.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-89",
       "method": "did:web",
       "reg": "C",
       "note": "Any of the layers could be compromised by that particular party.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-90",
       "method": "did:ion",
       "reg": "A",
       "note": "Bitcoin and IPFS allow any number of legal entities to participate in consensus.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

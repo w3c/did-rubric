@@ -61,28 +61,28 @@
       "method": "did:v1.testnet",
       "reg": "C",
       "note": "Veres One can handle ~750 million updates per quarter at the current architecture of 13 witnesses running stock amazon instances. Performance can be improved through a variety of approaches with different cost and engineering tradeoffs.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-34",
       "method": "did:v1.production",
       "reg": "C",
       "note": "Veres One can handle ~750 million updates per quarter at the current architecture of 13 witnesses running stock amazon instances. Performance can be improved through a variety of approaches with different cost and engineering tradeoffs.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-35",
       "method": "did:web",
       "reg": "A",
       "note": "did:web is a partitioned namespace where any given partition could support billions of DIDs. The URL behind the DID could be hosted by a small hosting service that can only handle a limited # of DIDs, but the hosting of a given domain could also be scaled arbitrarily.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-36",
       "method": "did:ion",
       "reg": "A",
       "note": "A single did:ion node, which limits its operations to 10,000 ops per transaction, is capable of anchoring ~131 million DIDs, updated every quarter. However, any number of did:ion nodes can independently anchor different did:ion operations, making the capacity effectively limited only by the blocksize of bitcoin (and the impact from other transactions competing for space in each block).",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

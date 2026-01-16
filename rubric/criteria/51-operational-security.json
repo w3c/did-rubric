@@ -63,7 +63,7 @@
       "layer": "Witnesses",
       "response": "4",
       "note": "Since a supermajority of 9/13 witness nodes is needed for consensus to be reached, compromising more than 4 of these nodes means an attacker could halt consensus formulation.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-78",
@@ -71,7 +71,7 @@
       "layer": "Peers",
       "response": "N/A",
       "note": "Peers being compromised does not lead to network failure.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-79",
@@ -79,7 +79,7 @@
       "layer": "Witnesses",
       "response": "4",
       "note": "Since a supermajority of 9/13 witness nodes is needed for consensus to be reached, compromising more than 4 of these nodes means an attacker could halt consensus formulation.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-80",
@@ -87,7 +87,7 @@
       "layer": "Peers",
       "response": "N/A",
       "note": "Peers being compromised does not lead to network failure.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     }
   ]
 }

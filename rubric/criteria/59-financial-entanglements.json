@@ -81,7 +81,7 @@
       "net": "D",
       "reg": "D",
       "note": "Spec (D), Net (D), and Reg (D): did:v1 was funded by Digital Bazaar through internal operational budgets",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-108",
@@ -90,7 +90,7 @@
       "net": "D",
       "reg": "D",
       "note": "Spec (D), Net (D), and Reg (D): did:v1 was funded by Digital Bazaar through internal operational budgets",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-109",
@@ -99,7 +99,7 @@
       "net": "A/B/C/D/G",
       "reg": "H",
       "note": "Spec (D): Specification was developed largely by independent firms using operational budgets .\nNet: The web was funded initially by the US Department of Defense and national TLD Administrators are funded by nation-states (A). Network infrastructure of TLD Administrators, hosting services, etc., have largely been funded by non-profits (B), private firms using either private equity (C), operational budgets (D), or public equity offerings (G).\nReg (H): Individual websites and network services have been funded in just about every way imaginable.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-110",
@@ -108,7 +108,7 @@
       "net": "E/C/D",
       "reg": "E/C/D",
       "note": "Spec (D): Specification was developed largely by independent firms using operational budgets\nNet and Reg: Bitcoin is a self-funding cryptocurrency (E), IPFS was developed by Protocol Labs, using some combination of private equity and operating budget (C/D).",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

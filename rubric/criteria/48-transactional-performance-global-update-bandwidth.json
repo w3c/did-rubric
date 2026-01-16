@@ -61,28 +61,28 @@
       "method": "did:v1.testnet",
       "reg": "C",
       "note": "Updates on Veres One have been demonstrated at >100 TPS. This could go considerably higher with various technical trade-offs.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-66",
       "method": "did:v1.production",
       "reg": "C",
       "note": "Updates on Veres One have been demonstrated at >100 TPS. This could go considerably higher with various technical trade-offs.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-67",
       "method": "did:web",
       "reg": "A",
       "note": "DID:web update performance is highly sensitive to both implementation choices (http server, database, etc.) and network latency.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-68",
       "method": "did:ion",
       "reg": "B",
       "note": "Assuming 500 bytes per BTC tx, 1 MB block size, and 1 block per 10 minutes, if ALL transactions in a BTC block contain updates, there could be as many as 35,000 updates per second with did:ion.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

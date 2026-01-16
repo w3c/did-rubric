@@ -45,28 +45,28 @@
       "method": "did:v1.testnet",
       "spec": "A",
       "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-26",
       "method": "did:v1.production",
       "spec": "A",
       "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-27",
       "method": "did:web",
       "spec": "A",
       "note": "Spec (B): did:web, which is based on the World Wide Web and DNS does not rely on any cryptocurrency.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-28",
       "method": "did:ion",
       "spec": "B",
       "note": "Spec (B): One must use bitcoin. BTC is required for anchoring transactions. The IPFS layer does not require cryptocurrency, but the bitcoin layer is required for all operations.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

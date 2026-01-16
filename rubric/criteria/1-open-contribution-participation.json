@@ -65,7 +65,7 @@
       "net": "B",
       "reg": "C/D",
       "note": "Spec (A): Owned by CCG at W3C, anyone can join.\rNet (B): Most of the network is controlled by public or private entities.\nReg: Controlled by the Domain Holder, which is a restricted set (C) and in some cases may not be known to the resolving party (D).",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-2",

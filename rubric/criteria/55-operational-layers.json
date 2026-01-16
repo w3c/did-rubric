@@ -42,28 +42,28 @@
       "method": "did:v1.testnet",
       "layer": "Witnesses",
       "note": "In the test net the number of peer nodes is limited but the same number of witness nodes are used as in production.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-96",
       "method": "did:v1.testnet",
       "layer": "Peers",
       "note": "",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-97",
       "method": "did:v1.production",
       "layer": "Witnesses",
       "note": "In production the number of peer nodes is expected to increase greatly.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-98",
       "method": "did:v1.production",
       "layer": "Peers",
       "note": "",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     }
   ]
 }

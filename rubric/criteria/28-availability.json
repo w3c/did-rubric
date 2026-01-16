@@ -56,14 +56,14 @@
       "method": "did:v1.production",
       "reg": "B",
       "note": "Veres One is operated by known parties; if all such parties are attacked, especially via legal means, the network could be shut down or additional rules applied. However, no single party can deny the consensus process. Like any publicly accessible service, Veres One is subject to distributed denial of service attacks. Counter measures are in place, but cannot be 100% ameliorated. (B)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-262",
       "method": "did:web",
       "reg": "C",
       "note": "There are a number of attack vectors for each layer in the system; however, each layer also has its own mechanisms for addressing disruption. (C)",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     }
   ]
 }

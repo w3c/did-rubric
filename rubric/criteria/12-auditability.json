@@ -67,7 +67,7 @@
       "method": "did:web",
       "reg": "D",
       "note": "The web server hosting the DID Document has no requirement to preserve cryptographic history.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     }
   ]
 }

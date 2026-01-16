@@ -75,7 +75,7 @@
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B):Provable Finality for Veres One updates ranged from 1 to 60 seconds in testing (1-3 seconds in a single data center)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-70",
@@ -83,7 +83,7 @@
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B):Provable Finality for Veres One updates ranged from 1 to 60 seconds in testing (1-3 seconds in a single data center)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-71",
@@ -91,7 +91,7 @@
       "net": "B",
       "reg": "B",
       "note": "Net (B) and Reg (B): Depends on your network (and network configuration), but generally, did:web document updates are as fast as updates to any web resource.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-72",
@@ -99,7 +99,7 @@
       "net": "D/H",
       "reg": "D/H",
       "note": "Net and Reg:Updates to did:ion DIDs are ultimately anchored on BTC, which averages one block per every ten minutes. Some nodes may batch the BTC anchor operation, which could add to the delay, but this is not a requirement of the method. (D and D)\nSimilarly, due to the dynamically adjusting market for bitcoin transactions, it is possible for a controller to submit a transaction to the ION node and for it to go un-anchored because the ION node is not configured with a competitively priced bitcoin transaction fee. (H and H)",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

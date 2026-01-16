@@ -61,28 +61,28 @@
       "method": "did:v1.testnet",
       "reg": "A",
       "note": "Creation is FREE",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-38",
       "method": "did:v1.production",
       "reg": "A",
       "note": "Creation is FREE",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-39",
       "method": "did:web",
       "reg": "A",
       "note": "Assuming you already have a hosting provider providing a website, this cost is essentially free. If you don’t, you may incur the cost of establishing a website (and perhaps a domain purchase or TLD application).",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-40",
       "method": "did:ion",
       "reg": "A",
       "note": "Offline creation has no network costs, just local computation.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

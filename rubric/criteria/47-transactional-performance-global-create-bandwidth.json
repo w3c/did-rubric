@@ -75,7 +75,7 @@
       "net": "n/a",
       "reg": "n/a",
       "note": "Net (n/a) and Reg (n/a): Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-62",
@@ -83,7 +83,7 @@
       "net": "n/a",
       "reg": "n/a",
       "note": "Net (n/a) and Reg (n/a): Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-63",
@@ -91,7 +91,7 @@
       "net": "A",
       "reg": "A",
       "note": "Net (A) and Reg (A): Architecturally, the World Wide Web can easily handle +1,000,000 transactions per second. Thanks to the way domain names can be routed to specific servers in a round-robin fashion, a given domain could, theoretically, reach 1,000,000 TPS. However, we know of no single domain currently engineered to handle that scale.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-64",
@@ -99,7 +99,7 @@
       "net": "n/a",
       "reg": "n/a",
       "note": "Net (n/a) and Reg (n/a): Creation is offline, so there is effectively no limit.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

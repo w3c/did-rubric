@@ -55,7 +55,7 @@
       "layer": "Witnesses",
       "response": "B [4]",
       "note": "Veres One’s consensus requires 9 of 13 Witness nodes to agree, as such if more than 4 were compromised the network may cease to function. (B)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-100",
@@ -63,7 +63,7 @@
       "layer": "Peers",
       "response": "A",
       "note": "Peer nodes are not directly involved in maintaining the verifiable data registry and only propagate state. As such compromising any number of Peer nodes does not compromise the network. (A)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-101",
@@ -71,7 +71,7 @@
       "layer": "Witnesses",
       "response": "B [4]",
       "note": "Veres One’s consensus requires 9 of 13 Witness nodes to agree, as such if more than 4 were compromised the network may cease to function. (B)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-102",
@@ -79,7 +79,7 @@
       "layer": "Peers",
       "response": "A",
       "note": "Peer nodes are not directly involved in maintaining the verifiable data registry and only propagate state. As such compromising any number of Peer nodes does not compromise the network. (A)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     }
   ]
 }

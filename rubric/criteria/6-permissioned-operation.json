@@ -67,7 +67,7 @@
       "net": "B+",
       "reg": "B+",
       "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-21",

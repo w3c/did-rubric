@@ -63,7 +63,7 @@
       "net": "C",
       "reg": "C",
       "note": "Net (C) and Reg (C): The Veres One test network has been operational for over 3 years in three major release iterations.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-120",
@@ -71,7 +71,7 @@
       "net": "E",
       "reg": "E",
       "note": "Net (E) and Reg (E): The Veres One production network has not yet been released.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-121",
@@ -79,7 +79,7 @@
       "net": "A",
       "reg": "D",
       "note": "Net (A): The web has been around since 1991.\nReg (D): We know of no websites that have operationalized did:web earlier than July 2021.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-122",
@@ -87,7 +87,7 @@
       "net": "D/A/B",
       "reg": "D/A/B",
       "note": "Net and Reg: did:ion entered production on Jan 22, 2021 (less than one year at the point of this Evaluation) (D). Bitcoin has been in operation since 2009 (A) and IPFS since 2015 (B).",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

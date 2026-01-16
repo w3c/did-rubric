@@ -67,7 +67,7 @@
       "net": "A/B",
       "reg": "A/B",
       "note": "In general, did:web DIDs can be used for anything, by anyone (A). However, some implementers believe did:web should only be used to represent institutional entities (who tend to already have good systemic controls over web infrastructure). (B)",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-24",

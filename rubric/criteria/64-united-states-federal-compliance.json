@@ -61,7 +61,7 @@
       "net": "A",
       "reg": "A",
       "note": "Spec (A), Net (A), and Reg (A): did:v1 was written to be compatible with all NIST requirements, including those specified in the Relevance section (6.8.3)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-140",
@@ -70,7 +70,7 @@
       "net": "A",
       "reg": "A",
       "note": "Spec (A), Net (A), and Reg (A): did:v1 was written to be compatible with all NIST requirements, including those specified in the Relevance section (6.8.3)",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-141",
@@ -79,7 +79,7 @@
       "net": "A",
       "reg": "A",
       "note": "Spec (A), Net (A), and Reg (A): Due to the flexibility of the underlying web architecture, any layer *might* be non-compliant; However, the web is a mature platform with many years of solutions that do, in fact, meet US federal requirements.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-142",
@@ -88,7 +88,7 @@
       "net": "B",
       "reg": "B",
       "note": "Spec (B), Net (B), and Reg (B): Bitcoin is likely not NIST compliant thanks to the adoption of Schnorr signatures (with the taproot extension), which are not yet NIST approved. However, recent signals from NIST suggest that (1) bitcoin use of cryptography is not prima facie out of compliance and (2) NIST’s previous evaluations of Schnorr hinged on patent concerns; now that those patents are expired, many are optimistic that Schnoor will be given serious consideration in future evaluations. IPFS allows non-approved hash algorithms through multihash, however did:ion adds the requirement that all hashes be SHA-256, which is NIST compliant.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

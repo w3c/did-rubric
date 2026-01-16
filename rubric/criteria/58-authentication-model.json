@@ -86,7 +86,7 @@
       "method": "did:ion",
       "response": "B",
       "note": "ION uses JWK and JWS to ensure that DID operations are properly authorized.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

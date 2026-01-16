@@ -65,7 +65,7 @@
       "net": "A",
       "reg": "A",
       "note": "Spec (A), Net (A) and Reg (A): Veres One uses 100% W3C conformant representations, without regard to which wallet implementation is used.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-39",
@@ -83,7 +83,7 @@
       "net": "A-",
       "reg": "A-",
       "note": "Spec (A), Net (A-) and Reg (A-): Web-based wallets may have complications from CORS (cross-origin resource sharing), but in general any “wallet” is compatible. Although a given service (hosting or website, etc.) could add a layer of permissioned restrictions, the did:web Method does not require it. Similarly, nation-state level firewalls could restrict access at various layers, but, again, the Method does not require it.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     }
   ]
 }

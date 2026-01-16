@@ -53,28 +53,28 @@
       "method": "did:v1.testnet",
       "reg": "A",
       "note": "All document updates are recorded in a non-repudiable manner on the Veres One Ledger.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-136",
       "method": "did:v1.production",
       "reg": "A",
       "note": "All document updates are recorded in a non-repudiable manner on the Veres One Ledger.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-137",
       "method": "did:web",
       "reg": "D",
       "note": "The method does not require the website serving the DID Document to demonstrate any form of provenance.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-138",
       "method": "did:ion",
       "reg": "B",
       "note": "As long as the IPFS-based transaction bundles are available (either via IPFS or somewhere else), the provenance of each DID Document is independently validatable. Similarly, if bitcoin state is lost, it would be impossible to verify the provenance of did:ion DID Documents. In both cases, it is relatively straightforward to address this by retaining your own copy of the state information, e.g., running your own bitcoin node and hosting the did:ion transaction bundles on your own IPFS node. In addition, late publishing https://identity.foundation/sidetree/spec/#late-publishing could allow multiple versions of DID Documents to be simultaneously seen as canonical.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

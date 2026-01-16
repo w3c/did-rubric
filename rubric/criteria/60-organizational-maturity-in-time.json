@@ -73,7 +73,7 @@
       "net": "D",
       "reg": "D",
       "note": "Spec: Digital Bazaar, the team behind the spec has been in business for over 17 years. (B)\nNet (D) and Reg (D): The Veres One Foundation was founded in 2019.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-112",
@@ -82,7 +82,7 @@
       "net": "D",
       "reg": "D",
       "note": "Spec: Digital Bazaar, the team behind the spec has been in business for over 17 years. (B)\nNet (D) and Reg (D): The Veres One Foundation was founded in 2019.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-113",
@@ -91,7 +91,7 @@
       "net": "A",
       "reg": "*",
       "note": "Spec (F): did:web specification development began in earnest in 2019 by a variety of interested parties.\nNet (A): The Internet and the World Wide Web have been around for over 20 years.\nReg (*): The individual web servers that might be used depend on the organizational maturity of the hosting company and the website operator.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-114",
@@ -100,7 +100,7 @@
       "net": "C",
       "reg": "C",
       "note": "Spec: The major organizations behind the did:ion specification are DIF (D) and Microsoft (A). DIF is also the organization driving the Sidetree specification, which did:ion is based on.\nNet (C) and Reg (C): Are based on bitcoin and IPFS\nMicrosoft has existed for more than 20 years. DIF and Protocol Labs (the organization behind IPFS) are younger, but each have existed for at least five years. Bitcoin started in 2009, but really has no formal organization.",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }

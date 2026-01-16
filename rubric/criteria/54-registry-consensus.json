@@ -69,28 +69,28 @@
       "method": "did:v1.testnet",
       "reg": "C",
       "note": "There Veres One registry consensus algorithm uses a BFT algorithm which formulates consensus through a super majority of witness nodes with any number of peer nodes allowed to participate in the gossip network.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-92",
       "method": "did:v1.production",
       "reg": "C",
       "note": "There Veres One registry consensus algorithm uses a BFT algorithm which formulates consensus through a super majority of 13 witness nodes with any number of peer nodes allowed to participate in the gossip network.",
-      "evaluationCitation": "#eval-4"
+      "evaluationCitation": "#eval-3"
     },
     {
       "id": "a-93",
       "method": "did:web",
       "reg": "F/G",
       "note": "ICANN sets the specification for consensus (F). DNS works by participants agreeing that ICANN’s rules determine global state.",
-      "evaluationCitation": "#eval-5"
+      "evaluationCitation": "#eval-4"
     },
     {
       "id": "a-94",
       "method": "did:ion",
       "reg": "A",
       "note": "The VDR for did:ion is Bitcoin, which is Proof of Work",
-      "evaluationCitation": "#eval-6"
+      "evaluationCitation": "#eval-5"
     }
   ]
 }
