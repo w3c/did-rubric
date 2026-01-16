@@ -54,7 +54,6 @@
   "relevance": "Some DID methods may be able to support the world's population, others may be more suitable to a particular type of use where only a small number of DIDs need to be supported. This gives a rough idea of the population base you may expect a particular DID method to support.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-43",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-43",
   "source": "https://didcriteria.com/criteria/8",
   "exampleAssessments": [
     {

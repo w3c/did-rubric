@@ -56,7 +56,6 @@
   "relevance": "Informs how easy it may be to orchestrate a take over of the network and get false transactions accepted by the consensus mechanism.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-51",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-51",
   "exampleAssessments": [
     {
       "id": "a-77",

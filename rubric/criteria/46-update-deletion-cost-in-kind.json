@@ -54,7 +54,6 @@
   "relevance": "Depending on the method and governance, there may be ways of reducing (or removing) the cost of Updating or Deleting a DID Document, such as volunteering with the governance body or doing a set of work the network needs done.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-46",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-46",
   "source": "https://didcriteria.com/criteria/11",
   "exampleAssessments": [
     {

@@ -47,7 +47,6 @@
   "relevance": "It's possible to tamper with systems that don't actively prove the correctness of their current state. Such tampering is not easy to discover.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-29",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-29",
   "exampleAssessments": [
     {
       "id": "a-135",

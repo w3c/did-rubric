@@ -55,7 +55,6 @@
   "relevance": "Some errors only become apparent after sufficient time to test edge cases and performance boundaries.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-62",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-62",
   "source": "https://didcriteria.com/criteria/28",
   "exampleAssessments": [
     {

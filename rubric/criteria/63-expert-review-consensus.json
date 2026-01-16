@@ -51,7 +51,6 @@
   "relevance": "Decentralized systems are notoriously difficult to get right. Consensus ordering, in particular, is known to be a hard problem solved by distributed ledgers. Even simpler registries may trade off provable finality with probabilistic finality. It is vital that the Method used for high-value or life-critical application be rigorously evaluated for potential flaws.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-63",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-63",
   "source": "https://didcriteria.com/criteria/29",
   "exampleAssessments": [
     {

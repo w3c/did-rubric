@@ -64,7 +64,6 @@
   "relevance": "The age of the organization(s) behind a Method can be used to give an idea into organizational maturity. It is not a sole indicator and should be taken as a data point in evaluating the Method organization’s current state.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-60",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-60",
   "source": "https://didcriteria.com/criteria/26",
   "exampleAssessments": [
     {

@@ -62,7 +62,6 @@
   "relevance": "The verification relationships a method supports inform the ways in which DIDs of the method can be used. See section 5.3 of the DID-Core specification for details on verification relationships. https://www.w3.org/TR/did-core/#verification-relationships",
   "id": "https://www.w3.org/TR/did-rubric#criteria-57",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-57",
   "source": "https://didcriteria.com/criteria/23",
   "exampleAssessments": [
     {

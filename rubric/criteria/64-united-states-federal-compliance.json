@@ -52,7 +52,6 @@
   "relevance": "Many US Federal programs and projects require use of cryptography according to standards set by the National Institute of Standards and Technology (NIST), such as:FIPS 186-5 (https://csrc.nist.gov/publications/detail/fips/186/5/draft)NIST 800-131Ar2 (https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final)SP 800-186 (https://csrc.nist.gov/publications/detail/sp/800-186/draft)NIST FIPS 186-4 https://csrc.nist.gov/publications/detail/fips/186/4/final)NIST 800-38D (https://csrc.nist.gov/publications/detail/sp/800-38d/final)NIST 800-38F (https://csrc.nist.gov/publications/detail/sp/800-38f/final)FIPS 180-4 (https://csrc.nist.gov/publications/detail/fips/180/4/final)FIPS 800-107r1. (https://csrc.nist.gov/publications/detail/sp/800-107/rev-1/final)",
   "id": "https://www.w3.org/TR/did-rubric#criteria-64",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-64",
   "source": "https://didcriteria.com/criteria/30",
   "exampleAssessments": [
     {

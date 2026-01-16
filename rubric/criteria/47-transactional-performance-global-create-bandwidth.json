@@ -67,7 +67,6 @@
   "relevance": "The number of new DIDs that can be created in a second inform the scalability of the network in regards to onboarding new users and allowing for new uses by existing users.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-47",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-47",
   "source": "https://didcriteria.com/criteria/13",
   "exampleAssessments": [
     {

@@ -54,7 +54,6 @@
   "relevance": "Almost all operations are sensitive to the cost of creating the underlying identifiers. If such costs are close to zero, broad use of ephemeral keys is possible. As costs increase, it becomes more and more necessary to limit the number of identifiers created in order to keep systems.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-44",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-44",
   "source": "https://didcriteria.com/criteria/9",
   "exampleAssessments": [
     {

@@ -46,7 +46,6 @@
   "relevance": "Singular--or small numbers of--entities controlling the consensus of a network can orchestrate malicious attacks.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-53",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-53",
   "source": "https://didcriteria.com/criteria/19",
   "exampleAssessments": [
     {

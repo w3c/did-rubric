@@ -56,7 +56,6 @@
   "relevance": "Along with the type of consensus algorithm the number of offline nodes has both security--i.e. DDOS attacks--and reliability implications.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-50",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-50",
   "exampleAssessments": [
     {
       "id": "a-73",

@@ -51,7 +51,6 @@
   "relevance": "Exotic crypto and other security mechanisms without expert review and a production track record is likely to contain hidden risks.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-25",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-25",
   "exampleAssessments": [
     {
       "id": "a-127",

@@ -67,7 +67,6 @@
   "relevance": "Different registry mechanisms have different guarantees for some notion of finality. The longer one has to wait for confirmation, the greater the latency for high security transactions. The shorter the duration, the more one has to critically validate the race conditions that may be present in determining finality. Depending on the algorithm, there are likely trade-offs between the stability of consensus and the speed at which consensus is pursued.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-49",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-49",
   "source": "https://didcriteria.com/criteria/15",
   "exampleAssessments": [
     {

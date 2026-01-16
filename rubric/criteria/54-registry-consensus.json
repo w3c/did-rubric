@@ -62,7 +62,6 @@
   "relevance": "The consensus mechanism used by the method registry has implications for scalability, speed of operations, security and possibly environmental impact.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-54",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-54",
   "source": "https://didcriteria.com/criteria/20",
   "exampleAssessments": [
     {

@@ -46,7 +46,6 @@
   "relevance": "Communication is costly, with increasing costs the more parties are involved. This cost is not just in terms of the connection expense, but also the latency in processing transactions. The ability to create a DID without registering it on a global shared state greatly reduces the technical and financial cost of the method.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-42",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-42",
   "source": "https://didcriteria.com/criteria/7",
   "exampleAssessments": [
     {

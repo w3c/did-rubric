@@ -54,7 +54,6 @@
   "relevance": "Depending on the method and governance, the price of updating and deleting a DID Document will inform the cost of doing business with the particular method. Depending on the use case in mind this can be used, along with the scalability questions, to estimate the cost of maintaining a network using this DID method.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-45",
   "version": "1.0.0",
-  "w3cId": "https://www.w3.org/TR/did-rubric#criteria-45",
   "source": "https://didcriteria.com/criteria/10",
   "exampleAssessments": [
     {
