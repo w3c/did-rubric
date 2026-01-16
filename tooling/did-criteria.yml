@@ -94,12 +94,6 @@ properties:
             propertyRef:
               description: The property reference for this column (e.g., "method", "spec", "net", "reg", "note", "score")
               type: string
-  structureCriteriaId:
-    description: The ID of the structure criteria whose answers determine the possible responses for this criteria
-    type: string
-  w3cId:
-    description: The W3C identifier for the criteria, typically a URL
-    type: string
   exampleAssessments:
     description: Example assessments demonstrating how different DID methods score on this criteria
     type: array
