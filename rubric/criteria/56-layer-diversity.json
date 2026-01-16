@@ -47,7 +47,6 @@
   },
   "relevance": "Along with the type of consensus algorithm, the number of nodes that can participate in consensus has implications towards network security and reliability.",
   "id": "https://www.w3.org/TR/did-rubric#criteria-56",
-  "structureCriteriaId": "https://didcriteria.com/criteria/21",
   "version": "1.0.0",
   "exampleAssessments": [
     {

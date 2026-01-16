@@ -2,7 +2,7 @@
   "name": "Decision Making Structures",
   "question": {
     "question": "How is each decision making body structured?",
-    "instruction": "Evaluate this criteria for each decision making body from 1.3."
+    "instruction": "Evaluate this criteria for each decision making body from https://www.w3.org/TR/did-rubric#criteria-37."
   },
   "assessmentTemplate": {
     "columns": [
