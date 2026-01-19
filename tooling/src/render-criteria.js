@@ -55,9 +55,9 @@ function renderCriteria(criteria) {
             : ``}
         </section>
 
-        ${criteria.response && criteria.response.possibleResponses  &&
+        ${criteria.response && criteria.response.possibleResponses ?
             `<section>
-                <h5>Responses</h4>
+                <h5>Responses</h5>
                 <ol type="A">
                     ${criteria.response.possibleResponses.map(response => `
                         <li>${response.meaning}</li>
@@ -65,16 +65,16 @@ function renderCriteria(criteria) {
                 </ol>
 
 
+            </section>` : ''}
+
+        ${criteria.relevance &&
+            `<section>
+                <h5>Relevance</h5>
+                <p>${criteria.relevance}</p>
             </section>`}
 
-        <section>
-            <h5>Relevance</h4>
-            <p>${criteria.relevance}</p>
-        </section>
-
-        <section>
-            <h5>Examples</h4>
-            ${criteria.exampleAssessments && criteria.exampleAssessments.length > 0 ? `
+        ${criteria.exampleAssessments && criteria.exampleAssessments.length > 0 ? `<section>
+            <h5>Examples</h5>
             <table>
             <thead>
                 <tr>
@@ -99,9 +99,9 @@ function renderCriteria(criteria) {
                     </tr>
                 `).join('')}
             </tbody>
-            </table>`
-            : ''}
-        </section>
+            </table>
+
+        </section>` : ''}
 
     </section>
     `
