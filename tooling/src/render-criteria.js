@@ -40,9 +40,9 @@ function renderCriteria(criteria) {
        <a href="#${criteriaIdFragment}">${criteria.id}</a>
        <span>v${criteria.version}</span>
 
-        ${(criteria.source && criteria.source.sourceRef) ? `
+        ${(criteria.source && criteria.source !== ".") ? `
             <div class="source">
-                <p>Source: <a href="${criteria.source.sourceRef}">${criteria.source.sourceRef}</a></p>
+                <p>Source: <a href="${criteria.source}">${criteria.source}</a></p>
             </div>
         ` : ''}
 
@@ -55,16 +55,17 @@ function renderCriteria(criteria) {
             : ``}
         </section>
 
-        <section>
-            <h5>Responses</h4>
-            <ol type="A">
-                ${criteria.response && criteria.response.possibleResponses ? criteria.response.possibleResponses.map(response => `
-                    <li>${response.meaning}</li>
-                `).join('') : ''}
-            </ol>
+        ${criteria.response && criteria.response.possibleResponses  &&
+            `<section>
+                <h5>Responses</h4>
+                <ol type="A">
+                    ${criteria.response.possibleResponses.map(response => `
+                        <li>${response.meaning}</li>
+                    `).join('')}
+                </ol>
 
 
-        </section>
+            </section>`}
 
         <section>
             <h5>Relevance</h4>
