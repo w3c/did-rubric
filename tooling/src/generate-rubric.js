@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 import { promises as fs } from "fs";
 import path from "path";
-import { CRITERIA_ROOT, TEMPLATE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./utils.js";
+import { CRITERIA_ROOT, RUBRIC_OUTLINE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./utils.js";
 
 
 async function buildRubric(criteriaIndex) {
-  const template = await readJson(TEMPLATE_FILE);
+  const outline = await readJson(RUBRIC_OUTLINE_FILE);
 
-  if (!template || typeof template !== "object" || !Array.isArray(template.categories)) {
-    throw new Error(`Template must be an object with "categories": [] at ${TEMPLATE_FILE}`);
+  if (!outline || typeof outline !== "object" || !Array.isArray(outline.categories)) {
+    throw new Error(`Rubric outline must be an object with "categories": [] at ${RUBRIC_OUTLINE_FILE}`);
   }
 
   const hydratedCategories = [];
-  for (const cat of template.categories) {
+  for (const cat of outline.categories) {
     if (!cat || typeof cat !== "object") {
       throw new Error(`Each category must be an object. Got: ${JSON.stringify(cat)}`);
     }
@@ -20,7 +20,7 @@ async function buildRubric(criteriaIndex) {
       throw new Error(`Each category must have a non-empty "name" string.`);
     }
 
-    // Expect template to contain "criteria" as an array of criterion ids
+    // Expect outline to contain "criteria" as an array of criterion ids
     const criteriaRefs = Array.isArray(cat.criteria) ? cat.criteria : Array.isArray(cat.criteriaIds) ? cat.criteriaIds : null;
 
     if (!Array.isArray(criteriaRefs)) {
@@ -75,7 +75,7 @@ async function main() {
 
   const criteriaIndex = await loadAllCriteria(CRITERIA_ROOT);
 
-  // Build rubric.json using template + index
+  // Build rubric.json using outline + index
   await buildRubric(criteriaIndex);
 }
 

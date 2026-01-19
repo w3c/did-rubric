@@ -9,8 +9,8 @@
     },
     "type": "module",
     "scripts": {
-      "generate-rubric": "node ./generate-rubric.js",
-      "validate-rubric": "node ./validate-rubric.js"
+      "generate-rubric": "node ./src/generate-rubric.js",
+      "validate-rubric": "node ./src/validate-rubric.js"
     },
     "author": "Will Abramson <will@legreq.com>",
     "license": "W3C"

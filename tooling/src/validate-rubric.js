@@ -3,7 +3,7 @@ import { promises as fs } from "node:fs";
 import path from "path";
 import Ajv from "ajv";
 import yaml from "js-yaml";
-import { CRITERIA_ROOT, TEMPLATE_FILE, loadAllCriteria, readJson } from "./utils.js";
+import { CRITERIA_ROOT, RUBRIC_OUTLINE_FILE, loadAllCriteria, readJson } from "./utils.js";
 
 async function validateRubric() {
   // Ensure criteria root exists
@@ -15,7 +15,7 @@ async function validateRubric() {
   }
 
   // Load schema
-  const schemaPath = path.join(process.cwd(), "did-criteria.yml");
+  const schemaPath = path.join(process.cwd(), "src/did-criteria.yml");
   const schemaYaml = await fs.readFile(schemaPath, "utf8");
   const schema = yaml.load(schemaYaml);
   const ajv = new Ajv({ strict: false });
@@ -48,9 +48,9 @@ async function validateRubric() {
   console.log(`✅ Schema validation passed: All ${Object.keys(criteriaIndex).length} criteria are valid.`);
 
   // Load template
-  const template = await readJson(TEMPLATE_FILE);
+  const template = await readJson(RUBRIC_OUTLINE_FILE);
   if (!template || typeof template !== "object" || !Array.isArray(template.categories)) {
-    throw new Error(`Template must be an object with "categories": [] at ${TEMPLATE_FILE}`);
+    throw new Error(`Template must be an object with "categories": [] at ${RUBRIC_OUTLINE_FILE}`);
   }
 
   // Collect all referenced criteria IDs
