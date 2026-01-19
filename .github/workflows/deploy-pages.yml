@@ -34,10 +34,10 @@ jobs:
         run: npm run generate-rubric
       - name: Prepare site bundle
         run: |
-          mkdir -p site/rubric site/tooling
+          mkdir -p site/rubric site/tooling/src
           cp index.html common.js site/
           cp rubric/rubric.js site/rubric/
-          cp tooling/render-criteria.js site/tooling/
+          cp tooling/src/render-criteria.js site/tooling/src/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
