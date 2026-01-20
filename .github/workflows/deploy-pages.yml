@@ -1,21 +1,17 @@
 name: Deploy GitHub Pages
 on:
   push:
-    branches: [lr-jsonify]
+    branches:
+      - "**"
   workflow_dispatch: {}
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   build:
     name: Build and Deploy Pages
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -38,12 +34,17 @@ jobs:
           cp index.html common.js site/
           cp rubric/rubric.js site/rubric/
           cp tooling/src/render-criteria.js site/tooling/src/
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
+      - name: Select deploy target folder
+        id: deploy_target
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "target=" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
       - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          target-folder: ${{ steps.deploy_target.outputs.target }}
