@@ -5,6 +5,18 @@
 
 This is the repository of the W3C’s note on DID Method Rubric v1.0, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/). The editors’ draft of the specification can also be [read directly](https://w3c.github.io/did-rubric/).
 
+## Generate the DID Rubric from JSON
+
+Follow these steps to generate the DID Rubric `rubric.js` file from the
+`rubric-outline.json` and `criteria` under the `rubric` folder.
+
+1. `cd tooling`
+2. `npm install`
+3. `npm run validate-rubric`
+4. `npm run generate-rubric`
+5. Open the `index.html` file in browser
+
+
 ## Contributing to the Repository
 
 Use the standard fork, branch, and pull request workflow to propose changes to the specification. Please make branch names informative—by including the issue or bug number for example.
@@ -25,3 +37,4 @@ W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 * [W3C Decentralized Characteristics Rubric v1.0](https://github.com/w3c/did-rubric)
 * [Decentralized Identifier Use Cases v1.0](https://github.com/w3c/did-use-cases)
 * [W3C DID Test Suite and Implementation Report](https://github.com/w3c/did-test-suite)
+
