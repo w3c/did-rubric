@@ -188,23 +188,6 @@ function assessmentsTable(criteria) {
   `
 }
 
-// function assessmentRow(assessment, index, columns) {
-//   var retval = `
-//   <tr>
-//   `;
-
-//   var assessments = columns.map(
-//     function (column) {
-//       retval += makeColumn(assessment, column);
-//     });
-  
-//   retval += `
-//   </tr>
-//   `
-//   return retval;
-
-// }
-
 function assessmentRow(assessment, index, columns) {
   var retval = `
   <tr>
