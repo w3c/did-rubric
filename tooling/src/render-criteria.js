@@ -160,12 +160,15 @@ function assessmentsRow(criteria) {
     (criteria.exampleAssessments.length === 0)) {
     return '';
   } else {
-    return `
+    var retval = `
   <div class="assessments-row">
     Example Assessments
   </div>
-  ${assessmentsTable(criteria)}
+  <div>
+    ${assessmentsTable(criteria)}
+  </div>
   `;
+    return retval;
   }
 }
 
@@ -178,20 +181,50 @@ function assessmentsTable(criteria) {
       </tr>
     </thead>
     <tbody>
-      ${criteria.exampleAssessments.map(assessmentRow)};
+      ${criteria.exampleAssessments.map(
+    function (assessment, index) { return assessmentRow(assessment, index, criteria.assessmentTemplate.columns) }).join('')}
     </tbody >
   </table >
   `
 }
 
-function assessmentRow(assessment, index) {
+// function assessmentRow(assessment, index, columns) {
+//   var retval = `
+//   <tr>
+//   `;
+
+//   var assessments = columns.map(
+//     function (column) {
+//       retval += makeColumn(assessment, column);
+//     });
+  
+//   retval += `
+//   </tr>
+//   `
+//   return retval;
+
+// }
+
+function assessmentRow(assessment, index, columns) {
+  var retval = `
+  <tr>
+    ${columns.map(function (column) {
+      return makeColumn(assessment, column);
+    }).join('')}
+  </tr>
+  `
+  return retval;
+
+}
+
+
+
+function makeColumn(assessment, column) {
   return `
-    <tr>
-      <td>
-      Assessment ${assessment} ${index}
-      </td>
-    </tr>
-    `
+  <td>
+    ${assessment[column.propertyRef]}
+  </td>
+  `;
 }
 //       let contents = assessment[column.propertyRef] || '';
 //       if (column.propertyRef === 'note' && assessment.evaluationCitation) {
