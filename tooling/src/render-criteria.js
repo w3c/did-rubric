@@ -50,13 +50,12 @@ function renderCriteria(criteria) {
 }
 
 function nameHeading(criteria) {
-  return `<h4 class="hide-heading">${criteria.name}</h4>`;
+  return `
+  <h4 class="hide-heading">${criteria.name}</h4>`;
 }
 function nameRow(criteria) {
-
   return `
-<h4 class="name-row" >${criteria.name}</h4> 
-    `;
+  <h4 class="name-row" >${criteria.name}</h4>`;
 }
 
 function idRow(criteria) {
@@ -80,15 +79,13 @@ function versionRow(criteria) {
 
 function sourceRow(criteria) {
   if ((typeof criteria.source === "undefined") ||
-    criteria.source === ".") {
+    criteria.source === ".") 
     return ``;
-  } else
-    return `
-    <div class="source-row">
-        <span class="label">Source:</span>
-        <a href="${criteria.source}">${criteria.source}</a>
-    </div>
-    `;
+  return `
+  <div class="source-row">
+    <span class="label">Source:</span>
+    <a href="${criteria.source}">${criteria.source}</a></div>
+`;
 }
 
 function questionRow(criteria) {
@@ -101,9 +98,10 @@ function questionRow(criteria) {
 
 function instructionRow(criteria) {
   if ((typeof criteria.question.instruction === 'undefined') ||
-    criteria.question.instruction === "") {
+    criteria.question.instruction === "") 
     return ``;
-  } else return `
+  
+  return `
     <div class="instructions-row">
         <span class="label">Instructions</span>
         <span class="instruction">${criteria.question.instruction}</span>
@@ -155,19 +153,17 @@ function relevanceRow(criteria) {
 
 function assessmentsRow(criteria) {
   if ((typeof criteria.exampleAssessments === "undefined") ||
-    (criteria.exampleAssessments.length === 0)) {
+    (criteria.exampleAssessments.length === 0)) 
     return '';
-  } else {
-    var returnValue = `
-  <div class="assessments-row">
-    Example Assessments
-  </div>
-  <div>
-    ${assessmentsTable(criteria)}
-  </div>
-  `;
-    return returnValue;
-  }
+
+  return `
+<div class="assessments-row">
+  Example Assessments
+</div>
+<div>
+  ${assessmentsTable(criteria)}
+</div>
+`;
 }
 
 function assessmentsTable(criteria) {
@@ -187,15 +183,13 @@ function assessmentsTable(criteria) {
 }
 
 function assessmentRow(assessment, index, columns) {
-  var returnValue = `
+  return `
   <tr>
     ${columns.map(function (column) {
-      return makeColumn(assessment, column);
-    }).join('')}
+    return makeColumn(assessment, column);
+  }).join('')}
   </tr>
-  `
-  return returnValue;
-
+  `;
 }
 
 function makeColumn(assessment, column) {
