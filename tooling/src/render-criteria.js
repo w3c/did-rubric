@@ -32,7 +32,7 @@ async function renderCategories() {
 
 function renderCriteria(criteria) {
   let criteriaIdFragment = criteria.id.split('#')[1];
-  console.log(`rendering ${criteriaIdFragment}`);
+
   return `
       <section id="${criteriaIdFragment}" class="criterion">
       ${nameRow(criteria)}
@@ -114,31 +114,29 @@ function instructionRow(criteria) {
 
 function responsesRow(criteria) {
 
-  var retval;
-
   if ((typeof criteria.response === "undefined") ||
-    (typeof criteria.response.possibleResponses === "undefined")) {
+    (typeof criteria.response.possibleResponses === "undefined")) 
     return '';
-  } else {
-    retval = `<div class="responses-row">
+
+  var returnValue = `<div class="responses-row">
     <div class="response-title">Responses</div>
     <table class="responses">`;
 
-    retval += criteria.response.possibleResponses.map(
+  returnValue += criteria.response.possibleResponses.map(
       (possibleResponse, index) => criteriaResponse(possibleResponse, index)).join('');
-  }
 
-  retval += `</table></div>`;
+  returnValue += `</table></div>`; // end the .responses table
 
-  return retval;
+  return returnValue;
 }
 
 function criteriaResponse(possibleResponse, index) {
-  console.log("index", index);
   return `
   <tr class="possibleResponse">
     <td class="label ${index ? '' : 'first'}">${possibleResponse.label}:</td> 
-    <td class="meaning  ${index ? '' : 'first'}">${possibleResponse.meaning || ''}</td>
+    <td class="meaning  ${index ? '' : 'first'}">${possibleResponse.meaning || ''}
+  
+    </td>
   </tr>
   `;
 }
@@ -160,7 +158,7 @@ function assessmentsRow(criteria) {
     (criteria.exampleAssessments.length === 0)) {
     return '';
   } else {
-    var retval = `
+    var returnValue = `
   <div class="assessments-row">
     Example Assessments
   </div>
@@ -168,7 +166,7 @@ function assessmentsRow(criteria) {
     ${assessmentsTable(criteria)}
   </div>
   `;
-    return retval;
+    return returnValue;
   }
 }
 
@@ -189,45 +187,32 @@ function assessmentsTable(criteria) {
 }
 
 function assessmentRow(assessment, index, columns) {
-  var retval = `
+  var returnValue = `
   <tr>
     ${columns.map(function (column) {
       return makeColumn(assessment, column);
     }).join('')}
   </tr>
   `
-  return retval;
+  return returnValue;
 
 }
-
-
 
 function makeColumn(assessment, column) {
   return `
   <td>
     ${assessment[column.propertyRef]}
+    ${citeEvaluation(assessment, column)}
   </td>
-  `;
+  `;   /// citeEvaluation only returns something if column = notes
 }
-//       let contents = assessment[column.propertyRef] || '';
-//       if (column.propertyRef === 'note' && assessment.evaluationCitation) {
-//         let evalCitation = `[<a href="${assessment.evaluationCitation}">${assessment.evaluationCitation.slice(1)}</a>]`
 
-//         contents += ` ${evalCitation}`;
-//       }
+function citeEvaluation(assessment, column) {
+  if (column.propertyRef != 'note')
+    return '';
 
-//       return `<td>${contents}</td>`;
-//     }).join('') : ''}
-//                 </tr>
-//                 `).join('')}
-//             </tbody>
-//             </table>
-
-//             </section>` : ''}
-
-//         </section>
-//         `
-
-// }
+  return `[<a href="${assessment.evaluationCitation}">${assessment.evaluationCitation.slice(1)}</a>]`;
+    
+}
 
 window.renderCategories = renderCategories;
