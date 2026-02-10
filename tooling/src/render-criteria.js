@@ -1,5 +1,4 @@
 
-
 async function renderCategories() {
   const { document } = window;
   const criteriaSection = document.getElementById('criteria');
@@ -112,8 +111,7 @@ function instructionRow(criteria) {
 
 function responsesRow(criteria) {
 
-  if ((typeof criteria.response === "undefined") ||
-    (typeof criteria.response.possibleResponses === "undefined")) 
+  if (criteria.response?.possibleResponses === undefined)
     return '';
 
   var returnValue = `<div class="responses-row">
