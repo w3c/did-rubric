@@ -40,7 +40,7 @@ jobs:
           if [ "${{ github.ref_name }}" = "main" ]; then
             echo "target=" >> "$GITHUB_OUTPUT"
           else
-            echo "target=.branch/${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+            echo "target=branch/${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
           fi
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
