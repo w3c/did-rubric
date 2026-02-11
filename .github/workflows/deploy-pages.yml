@@ -31,7 +31,7 @@ jobs:
       - name: Prepare site bundle
         run: |
           mkdir -p site/rubric site/tooling/src
-          cp index.html common.js site/
+          cp index.html common.js rubric.css site/
           cp rubric/rubric.js site/rubric/
           cp tooling/src/render-criteria.js site/tooling/src/
       - name: Select deploy target folder
@@ -40,7 +40,7 @@ jobs:
           if [ "${{ github.ref_name }}" = "main" ]; then
             echo "target=" >> "$GITHUB_OUTPUT"
           else
-            echo "target=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+            echo "target=/.branch/${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
           fi
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
