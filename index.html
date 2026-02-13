@@ -9,7 +9,10 @@
   <script class='remove' src="./common.js"></script>
   <script src="./tooling/src/render-criteria.js"
     class="remove"></script>
+  <script src="./tooling/src/render-retired.js"
+    class="remove"></script>
   <script src="./rubric/rubric.js"></script>
+  <script src="./rubric/retired-criteria.js"></script>
   <link rel="stylesheet" href="rubric.css">
 
   <script class='remove'>
@@ -41,7 +44,7 @@
 
       // extend the bibliography entries
       localBiblio: ccg.localBiblio,
-      preProcess: [window.renderCategories],
+      preProcess: [window.renderCategories, window.renderRetired],
 
       github: {
         repoURL: "https://github.com/w3c/did-rubric/",
@@ -1655,6 +1658,12 @@
 
 
   </section> <!-- criteria -->
+  <section id="retired">
+    <h2>Retired criteria</h2>
+
+
+  </section>
+
   <section>
     <h2>Conclusion</h2>
     <p>
