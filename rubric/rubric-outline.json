@@ -59,11 +59,6 @@
       "name": "Adoption (and diversity)",
       "description": "Adoption criteria address how widely the method and its implementations are used by various parties and systems.",
       "criteria": [
-        "https://www.w3.org/TR/did-rubric#criteria-19",
-        "https://www.w3.org/TR/did-rubric#criteria-20",
-        "https://www.w3.org/TR/did-rubric#criteria-21",
-        "https://www.w3.org/TR/did-rubric#criteria-22",
-        "https://www.w3.org/TR/did-rubric#criteria-23",
         "https://www.w3.org/TR/did-rubric#criteria-59",
         "https://www.w3.org/TR/did-rubric#criteria-60",
         "https://www.w3.org/TR/did-rubric#criteria-61",
