@@ -3,7 +3,7 @@
 function renderRetired() {
     const { document } = window;
     const retiredSection = document.getElementById('retired');
-    // this section must already exist in the document, 
+    // this section must already exist in the document,
     // inside  a <section> element.
 
     if (!retiredSection) {
@@ -19,7 +19,7 @@ function renderRetired() {
 
 
     let retiredHtml = `<table>
-        <thead><tr><th>Criteria ID</th><th>Permalink</th></tr>
+        <thead><tr><th>Permalink</th></tr>
         ${retiredCriteria.map(criteria => renderRetiredRow(criteria)).join('')}
     </table>`;
 
@@ -30,7 +30,6 @@ function renderRetired() {
 function renderRetiredRow(criteria) {
     let criteriaIdFragment = criteria.id.split('#')[1];
     return `<tr id="${criteriaIdFragment}">
-        <td>${criteria.id}</td>
         <td><a href="${criteria.permalink}">${criteria.permalink}</a></td>
     </tr>`;
 }
