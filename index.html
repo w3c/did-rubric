@@ -11,12 +11,13 @@
     class="remove"></script>
   <script src="./tooling/src/render-retired.js"
     class="remove"></script>
+  <script src="./tooling/src/render-evaluations.js"
+    class="remove"></script>
   <script src="./rubric/rubric.js"></script>
-  <script src="./rubric/retired-criteria.js"></script>
   <link rel="stylesheet" href="rubric.css">
 
   <script class='remove'>
-   
+
     // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
     var respecConfig = {
       // the W3C WG and public mailing list
@@ -44,7 +45,7 @@
 
       // extend the bibliography entries
       localBiblio: ccg.localBiblio,
-      preProcess: [window.renderCategories, window.renderRetired],
+      preProcess: [window.renderCategories, window.renderRetired, window.renderEvaluations],
 
       github: {
         repoURL: "https://github.com/w3c/did-rubric/",
@@ -542,85 +543,9 @@
         that flow into the registry should include a section that
         documents their source
         with an additional row in the table.</p>
-      <table class="simple">
-        <tr>
-          <th>Relative ID</th>
-          <th>Citation</th>
-          <th>Note</th>
-        </tr>
-        <tr id="eval-1">
-          <td>eval-1</td>
-          <td>DID Method Rubric</td>
-          <td>Evaluations written by Joe Andrieu, for this rubric. Not
-            explicitly funded.</td>
-        </tr>
-        <tr id="eval-2">
-          <td>eval-2</td>
-          <td>DID Method Rubric</td>
-          <td>Evaluations written by Daniel Hardman, to illustrate
-            this rubric. Not explicitly funded.</td>
-        </tr>
-        <tr id="eval-3">
-          <td>eval-3</td>
-          <td>VeresOne Rubric Evaluation</td>
-          <td>Funded by Digital Bazaar under DHS SVIP contract
-            70RSAT20T00000029.
-            Available at <a
-              href="https://didevaluations.com/evals/v1.2022.03.01.pdf">https://didevaluations.com/evals/v1.2022.03.01.pdf</a>.
-          </td>
-        </tr>
-        <tr id="eval-4">
-          <td>eval-4</td>
-          <td>DID Web Rubric Evaluation</td>
-          <td>Funded by Digital Bazaar under DHS SVIP contract
-            70RSAT20T00000029.
-            Available at <a
-              href="https://didevaluations.com/evals/web.2022.03.01.pdf">https://didevaluations.com/evals/web.2022.03.01.pdf</a>.
-          </td>
-        </tr>
-        <tr id="eval-5">
-          <td>eval-5</td>
-          <td>DID Ion Rubric Evaluation</td>
-          <td>Funded by Digital Bazaar under DHS SVIP contract
-            70RSAT20T00000029.
-            Available at <a
-              href="https://didevaluations.com/evals/ion.2022.03.01.pdf">https://didevaluations.com/evals/ion.2022.03.01.pdf</a>.
-          </td>
-        </tr>
-      </table>
+      <div id="evaluations-cited"></div>
     </section>
-    <section>
-      <h3>Use Cases Referenced</h3>
-      <table class="simple">
-        <tr>
-          <th>Relative ID</th>
-          <th>Citation</th>
-          <th>Note</th>
-        </tr>
-        <tr id="usecase-1">
-          <td style="width:8em">usecase-1</td>
-          <td>Long term verifiable credentials</td>
-          <td>The use of DIDs as subject
-            identifiers for long term (life-long) verifiable
-            credentials such as earned
-            academic degrees.</td>
-        </tr>
-        <tr id="usecase-2">
-          <td>usecase-2</td>
-          <td>User authentication</td>
-          <td>The use of DIDs for authenticating users
-            for access to system services.</td>
-        </tr>
-        <tr id="usecase-3">
-          <td>usecase-3</td>
-          <td>Verifiable software development</td>
-          <td>The signing of commits by
-            developers and their verification to ensure that source
-            code in a particular
-            git repository is authentic.</td>
-        </tr>
-      </table>
-    </section>
+
     <section>
       <h3>Methods Considered</h3>
       <table class="simple">
