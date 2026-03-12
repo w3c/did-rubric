@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from "fs";
 import path from "path";
-import { CRITERIA_ROOT, RUBRIC_OUTLINE_FILE, OUTPUT_FILE, loadAllCriteria, readJson } from "./utils.js";
+import { CRITERIA_ROOT, EVALUATIONS_ROOT, RUBRIC_OUTLINE_FILE, OUTPUT_FILE, EVALUATIONS_OUTPUT_FILE, loadAllCriteria, readJson, isJsonFile } from "./utils.js";
 
 
 async function buildRubric(criteriaIndex) {
@@ -64,6 +64,28 @@ async function buildRubric(criteriaIndex) {
   );
 }
 
+async function buildEvaluations() {
+  const entries = await fs.readdir(EVALUATIONS_ROOT, { withFileTypes: true });
+  const jsonFiles = entries
+    .filter((e) => e.isFile() && isJsonFile(e.name))
+    .map((e) => e.name)
+    .sort();
+
+  const evaluations = [];
+  for (const filename of jsonFiles) {
+    const fullPath = path.join(EVALUATIONS_ROOT, filename);
+    const parsed = await readJson(fullPath);
+    evaluations.push(parsed);
+  }
+
+  const outputContent = `var evaluationsJson = ${JSON.stringify(evaluations, null, 2)}`;
+  await fs.writeFile(EVALUATIONS_OUTPUT_FILE, outputContent + "\n", "utf8");
+
+  console.log(
+    `Wrote evaluations (${evaluations.length}) -> ${path.relative(process.cwd(), EVALUATIONS_OUTPUT_FILE)}`
+  );
+}
+
 async function main() {
   // Ensure criteria root exists
   try {
@@ -77,6 +99,9 @@ async function main() {
 
   // Build rubric.json using outline + index
   await buildRubric(criteriaIndex);
+
+  // Build evaluations.js
+  await buildEvaluations();
 }
 
 main().catch((err) => {
