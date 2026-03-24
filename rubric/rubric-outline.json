@@ -56,26 +56,9 @@
       ]
     },
     {
-      "name": "Alternatives",
-      "description": "For each major software component (Wallet, Resolver, andRegistry), ask each of the following questions. In this section, because DIDs are so early in the development lifecycle, most DID methods in production have only one implementation and some have none. Therefore, we have not standardized the responses nor provided examples. Consider these open-ended essay questions for consideration. As the market matures, this subset of questions will improve.",
-      "criteria": [
-        "https://www.w3.org/TR/did-rubric#criteria-13",
-        "https://www.w3.org/TR/did-rubric#criteria-14",
-        "https://www.w3.org/TR/did-rubric#criteria-15",
-        "https://www.w3.org/TR/did-rubric#criteria-16",
-        "https://www.w3.org/TR/did-rubric#criteria-17",
-        "https://www.w3.org/TR/did-rubric#criteria-18"
-      ]
-    },
-    {
       "name": "Adoption (and diversity)",
       "description": "Adoption criteria address how widely the method and its implementations are used by various parties and systems.",
       "criteria": [
-        "https://www.w3.org/TR/did-rubric#criteria-19",
-        "https://www.w3.org/TR/did-rubric#criteria-20",
-        "https://www.w3.org/TR/did-rubric#criteria-21",
-        "https://www.w3.org/TR/did-rubric#criteria-22",
-        "https://www.w3.org/TR/did-rubric#criteria-23",
         "https://www.w3.org/TR/did-rubric#criteria-59",
         "https://www.w3.org/TR/did-rubric#criteria-60",
         "https://www.w3.org/TR/did-rubric#criteria-61",
