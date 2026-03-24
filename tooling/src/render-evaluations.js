@@ -22,8 +22,8 @@ async function renderEvaluations() {
         <th>Relative ID</th>
         <th>Title</th>
         <th>Evaluator(s)</th>
-        <th>Date</th>
-        <th>URL</th>
+        <th>Evaluation Date</th>
+        <th>Evaluation URL</th>
       </tr>
     </thead>
     <tbody>
