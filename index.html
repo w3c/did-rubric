@@ -950,11 +950,11 @@
       <p>The primary components managed by this registry are criteria
         for
         evaluating DID Methods, with as many as eight
-        subcomponents: name, id, version, question, responses,
-        relevance,
-        examples, and, optionally, a source. In addition, the
-        DID Method Rubric maintains a list of cited references: DID
-        methods, and evaluations. The criteria are
+        subcomponents: name, id, version, question, assessmentTemplate,
+        response, relevance, exampleAssessments,
+        and, optionally, a source. In addition, the
+        DID Method Rubric maintains a list of cited DID
+        methods and evaluations. The criteria are
         independently identified and versioned (see those sections for
         details) while references cited in the criteria
         themselves link to their full citation in the appropriate
@@ -967,18 +967,37 @@
           </li>
           <li>Proposed criteria without at least three independent
             example
-            evaluations MUST have the word “PROVISIONAL” as the last
+            assessments MUST have the word “PROVISIONAL” as the last
             term in its name. Once at least three independent example
-            evaluations exist, the word “PROVISIONAL” SHOULD be
+            assessments exist, the word “PROVISIONAL” SHOULD be
             removed.
           </li>
           <li>Accepted (non-provisional) criteria MUST have at least
-            three example evaluations, and generally SHOULD have no
+            three example assessments, and generally SHOULD have no
             more example
-            evaluations than there are possible responses to its
+            assessments than there are possible responses to its
             question. Each example should distinctly illustrate one
             possible response to the
             criteria's question.
+          </li>
+          <li>
+            DID Method Rubric criteria can be proposed by submitting a pull
+            request that defines the criteria in a file under the
+            <code>rubric/criteria/</code> directory. The file name MUST be
+            the criteria's number (from its <code>id</code>, e.g.,
+            <code>1</code> for <code>criteria-1</code>) followed by a
+            kebab-case slug of the criteria name and the
+            <code>.json</code> file extension (e.g.,
+            <code>1-open-contribution-participation.json</code>).
+          </li>
+          <li>
+            The pull request MUST also add the criteria's
+            <code>id</code> to the appropriate category in
+            <code>rubric/rubric-outline.json</code>. The rubric
+            outline determines the organization and ordering of
+            criteria within the rendered document. A criteria file
+            that is not referenced in the outline will not appear
+            in the Rubric.
           </li>
           <li>To be considered, criteria MUST have the following
             subcomponents:
@@ -996,13 +1015,16 @@
                 Question
               </li>
               <li>
-                Possible Responses
+                Assessment Template
+              </li>
+              <li>
+                Response
               </li>
               <li>
                 Relevance
               </li>
               <li>
-                Example Evaluations
+                Example Assessments
               </li>
             </ol>
           </li>
@@ -1016,6 +1038,72 @@
             </ol>
           </li>
         </ol>
+        <p>The following is an example of a complete criteria
+          JSON file:</p>
+        <pre class="example" title="Example Criteria JSON">
+{
+  "name": "Offline creation",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-42",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/7",
+  "question": {
+    "question": "Does the Method require network communications to create a DID?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "No. Creation is expected to be off-line."
+      },
+      {
+        "label": "B",
+        "meaning": "Yes. Creation requires network coordination with a single party."
+      },
+      {
+        "label": "C",
+        "meaning": "Yes. Creation requires network coordination with multiple parties."
+      }
+    ]
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "relevance": "Communication is costly, with increasing costs the more parties are involved.",
+  "exampleAssessments": [
+    {
+      "id": "a-29",
+      "method": "did:v1.testnet",
+      "spec": "A",
+      "note": "Veres One DID creation is a local cryptographic process.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-31",
+      "method": "did:web",
+      "spec": "B+",
+      "note": "The DID controller must be able to communicate with the web server.",
+      "evaluationCitation": "#eval-4"
+    }
+  ]
+}
+        </pre>
       </section> <!-- criteria -->
       <section>
         <h4>Criteria.Name</h4>
@@ -1027,7 +1115,9 @@
       <section>
         <h4>Criteria.Id</h4>
         <p>The criteria id must be explicit, unique, and persistent.
-          See the section on Identifiers for details.
+          See the section on Identifiers for details. Criteria ids
+          under the DID Method Rubric namespace will be assigned
+          by the rubric maintainers.
         </p>
       </section> <!-- Criteria.Id -->
       <section>
@@ -1040,37 +1130,146 @@
       </section> <!-- Criteria.Version -->
       <section>
         <h4>Criteria.Question</h4>
-        <p>This subcomponent presents the key question for evaluating
-          the
-          criteria. The question MUST be a single inquiry that gets to
-          the heart of the criteria. It should be reasonably clear to
-          a
-          competent professional skilled in the art how to resolve
-          the question into one of the possible responses.</p>
+        <p>
+          This subcomponent is an object that presents the key question
+          for evaluating the criteria. The question MUST be a single inquiry
+          that gets to the heart of the criteria. It should be reasonably
+          clear to a competent professional skilled in the art how to
+          resolve the question into one of the possible responses.
+        </p>
+
+        <section>
+          <h4>Criteria.Question.Question</h4>
+          <p>
+        The key question for evaluating the criteria. This property is REQUIRED.
+          </p>
+        </section>
+
+        <section>
+          <h4>Criteria.Question.Instruction</h4>
+          <p>
+        Any additional instructions for how
+        the evaluator should interpret or apply the question when making
+        their assessment. This property is OPTIONAL.
+          </p>
+        </section>
+
       </section> <!-- Criteria.Question -->
+
       <section>
-        <h4>Criteria.Responses</h4>
-        <p>This subcomponent lists the expected responses to the
-          question.</p>
-        <ol>
-          <li>
-            Responses are either labeled or open ended.
-          </li>
-          <li>
-            Labeled responses MUST include a label and a meaning for
-            that
-            label.
-          </li>
-          <li>
-            Labels for a response MUST start with “A” in each criteria
-            and progress sequentially through the English alphabet.
-          </li>
-          <li>
-            Open ended responses specify how an evaluator should fill
-            in the response.
-          </li>
-        </ol>
-      </section> <!-- Criteria.Responses -->
+        <h4>Criteria.AssessmentTemplate</h4>
+        <p>
+          This subcomponent defines the structure of assessments for
+          the criteria. It specifies the columns that make up the
+          assessment table, determining what information evaluators
+          provide and how it is presented.
+        </p>
+
+        <section>
+          <h4>Criteria.AssessmentTemplate.Columns</h4>
+          <p>
+            An ordered array of column definitions. Each column
+            specifies a heading, a type, and a property reference.
+            This property is REQUIRED. The columns array MUST include
+            a column with a type of <code>method</code> as the first
+            entry, which identifies the specific DID method being
+            assessed.
+          </p>
+
+          <section>
+            <h4>Criteria.AssessmentTemplate.Columns.Heading</h4>
+            <p>
+              The display label for the column in the assessment
+              table. This property is REQUIRED.
+            </p>
+          </section>
+
+          <section>
+            <h4>Criteria.AssessmentTemplate.Columns.Type</h4>
+            <p>
+              The type of data expected in this column. This
+              property is REQUIRED. The following types are currently
+              defined, but additional types MAY be introduced as
+              needed:
+            </p>
+            <dl>
+              <dt><code>method</code></dt>
+              <dd>The DID method being assessed. Every assessment
+                template MUST include a column of this type.</dd>
+              <dt><code>enhancedLetter</code></dt>
+              <dd>A letter response from the possible responses,
+                optionally enhanced with modifiers (e.g.,
+                "A-", "C/D").</dd>
+              <dt><code>multipleChoice</code></dt>
+              <dd>A response selected from the defined possible
+                responses.</dd>
+              <dt><code>note</code></dt>
+              <dd>Free-text notes providing context for the
+                assessment.</dd>
+            </dl>
+          </section>
+
+          <section>
+            <h4>Criteria.AssessmentTemplate.Columns.PropertyRef</h4>
+            <p>
+              The property name used in example assessments to
+              provide the value for this column. This property
+              is REQUIRED.
+            </p>
+          </section>
+
+        </section> <!-- Criteria.AssessmentTemplate.Columns -->
+
+      </section> <!-- Criteria.AssessmentTemplate -->
+
+      <section>
+        <h4>Criteria.Response</h4>
+        <p>
+          This subcomponent defines the options an evaluator has for
+          responding to the criteria's question.
+        </p>
+
+        <section>
+          <h4>Criteria.Response.Type</h4>
+          <p>
+            The type of response expected from evaluators. This
+            property is REQUIRED. Currently defined types include:
+          </p>
+          <dl>
+            <dt><code>multipleChoice</code></dt>
+            <dd>The evaluator selects from a predefined set of
+              labeled responses.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h4>Criteria.Response.PossibleResponses</h4>
+          <p>
+            An ordered array of the possible responses available to
+            evaluators. This property is REQUIRED when the response
+            type is <code>multipleChoice</code>.
+          </p>
+
+          <section>
+            <h4>Criteria.Response.PossibleResponses.Label</h4>
+            <p>
+              A short identifier for the response. Labels MUST start
+              with “A” and progress sequentially through the English
+              alphabet. This property is REQUIRED.
+            </p>
+          </section>
+
+          <section>
+            <h4>Criteria.Response.PossibleResponses.Meaning</h4>
+            <p>
+              A description of what the label represents. This
+              property is REQUIRED.
+            </p>
+          </section>
+
+        </section> <!-- Criteria.Response.PossibleResponses -->
+
+      </section> <!-- Criteria.Response -->
       <section>
         <h4>Criteria.Relevance</h4>
         <p>This subcomponent explains why this criteria is useful.
@@ -1080,188 +1279,76 @@
         </p>
       </section> <!-- Criteria.Relevance -->
       <section>
-        <h4>Criteria.Examples</h4>
-        <p>This section lists example evaluations of different DID
-          methods
-          using this criteria, presented as a table for easy
-          correlation between evaluations of different methods using
-          the
-          same criteria.
+        <h4>Criteria.ExampleAssessments</h4>
+        <p>
+          This subcomponent lists example assessments of different
+          DID methods against this criteria. Each example assessment
+          is an evaluation of a specific DID method, structured
+          according to the criteria’s
+          <a href=”#criteriaassessmenttemplate”>assessmentTemplate</a>.
+          The set of example assessments is presented as a table for
+          easy comparison across methods.
         </p>
         <ol>
-          <li>Each example must have the following entries, each as
-            its own column(s) in the examples table.
-            <ol type="a">
-              <li>Method</li>
-              <li>Responses (on column for each element)</li>
-              <li>Notes</li>
-            </ol>
+          <li>
+            Each example assessment MUST conform to the column
+            structure defined in the criteria’s assessmentTemplate,
+            providing a value for each column’s
+            <code>propertyRef</code>.
           </li>
           <li>
-            Some criteria MAY require an additional "Referent" entry,
-            in its
-            own column in the examples table.
+            Each example assessment MUST include an
+            <code>evaluationCitation</code> that references the
+            evaluation from which it is drawn, using a relative
+            reference to the evaluation’s entry in the Evaluations
+            Cited section of the Rubric (e.g.,
+            <code>”#eval-1”</code>).
           </li>
-          <li>Example Evaluations for a given criteria SHOULD
-            highlight
-            distinct responses. That is, each evaluation should have a
-            different set of responses from the other example
-            evaluations.
-            The point of the examples is to illustrate how different
-            DID methods score differently.</li>
-          <li>The editors will curate the list of proposed examples to
-            provide a best effort illustration of each criteria, with
-            consideration to highlighting a broad corpus of methods.
+          <li>
+            The DID method assessed MUST have a corresponding entry
+            in the Methods Evaluated section of the Rubric.
           </li>
-          <li>Criteria with fewer than 3 example evaluations MUST be
-            marked “PROVISIONAL”</li>
-          <li>Criteria SHOULD have no more example evaluations than
-            there
-            are possible responses.</li>
+          <li>Example assessments for a given criteria SHOULD
+            highlight distinct responses. That is, each assessment
+            should have a different set of responses from the other
+            example assessments. The point of the examples is to
+            illustrate how different DID methods score differently.
+          </li>
+          <li>The editors will curate the list of proposed examples
+            to provide a best effort illustration of each criteria,
+            with consideration to highlighting a broad corpus of
+            methods.
+          </li>
+          <li>Criteria with fewer than 3 example assessments MUST be
+            marked “PROVISIONAL”.</li>
+          <li>Criteria SHOULD have no more example assessments than
+            there are possible responses.</li>
         </ol>
-        <section>
-          <h4>Criteria.Examples.Method</h4>
-          <ol>
-            <li>Example evaluations MUST specify the evaluated method
-              in
-              the first column, using a relative link to the method’s
-              entry
-              in the Methods Evaluated section. The entry in the
-              Methods
-              Evaluated table MUST conform to the requirements in that
-              section.
-            </li>
-            <li>The title of this column MUST be “Method”.
-            </li>
-            <li>The Method entry MUST uniquely identify a specific
-              DID Method specification suitable for evaluation,
-              including any specified variant such as testnet,
-              mainnet,
-              etc.
-            </li>
-          </ol>
-        </section><!-- Criteria.Examples.Method-->
-        <section>
-          <h4>Criteria.Examples.Referent</h4>
-          <ol>
-            <li>Evaluations MAY refer to open ended responses from
-              other
-              evaluations. If present, this referent MUST be listed as
-              a
-              possible response in another criteria’s evaluation. In
-              this
-              manner, a first criteria can elicit structural elements
-              to
-              be separately evaluated in subsequent criteria. This
-              “structure-variable” pattern allows the Rubric to
-              support
-              criteria that matches the structural complexity of the
-              Method in question.
-            </li>
-            <li>If present, the Referent MUST be in the second column
-            </li>
-            <li>The column title MUST be appropriate for the referred
-              structure, e.g., “Layer” or “Governing body”, as
-              understood
-              by the criteria which establishes the structural
-              elements.
-            </li>
-          </ol>
-        </section><!-- Criteria.Examples.Referent-->
-        <section>
-          <h4>Criteria.Examples.Responses</h4>
-          <ol>
-            <li>Example evaluations MUST include at least one
-              response,
-              and may include multiple columns when appropriate. Each
-              column allows for responses to particular system
-              elements
-              such as “Specification”, “Network”, and “Registry”.
-            </li>
-            <li>
-              Column names such as "Specification", "Network", and
-              "Registry" may be abbreviated as "Spec.", "Net.", and
-              "Reg."
-            </li>
-            <li>
-              The number and labels for response columns MUST be
-              proposed
-              by the initial PR and will be finalized when the
-              criteria
-              moves from PROVISIONAL to accepted.
-            </li>
-            <li>Each column MUST contain an entry that communicates
-              the
-              evaluator’s judgment of the best response to the
-              question for
-              this method for that element (Spec, Reg, Net).
-            </li>
-            <li>For improved comparability across different methods,
-              responses SHOULD be based on the possible responses
-              listed
-              in the criteria. However, evaluators MAY provide any
-              appropriate response, based on their own judgment
-            </li>
-            <li>
-              Responses MAY be a variant of the Possible Responses, to
-              capture a nuance beyond those listed. For example, one
-              might
-              append a “+” or a “-”, e.g., A+, or even provide two
-              different responses when different situations merit a
-              distinction, e.g., A/D. The reasoning behind these
-              variants
-              &nbps;
-              SHOULD be explained in the Notes column.
-            </li>
-            <li>A response of “n/a” (short for Not Applicable) SHOULD
-              be
-              used if the criteria doesn’t apply to the evaluated
-              method.
-            </li>
-          </ol>
-        </section><!-- Criteria.Examples.Responses-->
-        <section>
-          <h4>Criteria.Examples.Notes</h4>
-          <ol>
-            <li>This entry SHOULD include any details that help
-              explain
-              why that particular response was chosen.It MAY be blank.
-              However, the column MUST be included.</li>
-            <li>
-              The Notes entry MUST identify a published evaluation by
-              reference to an entry in the Evaluations Cited section
-              of
-              the Rubric, using the label from that section.
-              <ol>
-                <li>
-                  The evaluation label MUST be delimited by square
-                  brackets.
-                </li>
-                <li>
-                  The label text itself must be a hyperlink to the
-                  entry
-                  in the Evaluations Cited section, for example [eval-1]
-                  where “eval-1” will be linked by the renderer links to “#eval-1” in the current
-                  document.
-                </li>
-              </ol>
-            </li>
-          </ol>
-        </section><!-- Criteria.Examples.Notes-->
-      </section> <!-- Criteria.Examples -->
+      </section> <!-- Criteria.ExampleAssessments -->
       <section>
         <h4>Criteria.Source</h4>
-        <p>This subcomponent, if present, MUST list the specific
-          external source of the criteria, if any, by referring to its
-          entry in the Rubric’s list of Sources Cited. Source entries
-          should include both the name (or title) of the source as
-          well as
-          a URL. When possible, sources should specify the precise
-          page,
-          section, and/or anchor that points to the specific criteria
-          in the source document. Each source listed in the criteria
-          MUST
-          also be listed in the Sources Cited section.
+        <p>
+          This OPTIONAL subcomponent tracks the provenance of the
+          criteria. Criteria in the Rubric may be independently
+          versioned and developed externally under their own
+          identifiers. When such iterations are folded back into the
+          Rubric, the source MUST point to the external origin so
+          that the versioning history is preserved.
+        </p>
+        <p>
+          The value MUST be either:
+        </p>
+        <dl>
+          <dt><code>"."</code></dt>
+          <dd>The criteria originated in this document.</dd>
+          <dt>A URL</dt>
+          <dd>The criteria was developed externally. The URL
+            SHOULD point to the specific criteria at its
+            external source.</dd>
+        </dl>
+        <p>
+          If no source is provided, the default value is
+          <code>"."</code>.
         </p>
       </section> <!-- Criteria.Source -->
     </section> <!-- Component Requirements -->
