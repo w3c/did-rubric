@@ -1,2081 +1,2020 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DID Method Rubric v2.0</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer" class="remove"></script>
+    <script class='remove' src="./common.js"></script>
+    <script src="./tooling/src/render-criteria.js"
+      class="remove"></script>
+    <script src="./tooling/src/render-retired.js"
+      class="remove"></script>
+    <script src="./tooling/src/render-evaluations.js"
+      class="remove"></script>
+    <script src="./rubric/rubric.js"></script>
+    <script src="./rubric/retired-criteria.js"></script>
+    <script src="./rubric/evaluations.js"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>DID Method Rubric v2.0</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c"
-    defer="defer" class="remove"></script>
-  <script class='remove' src="./common.js"></script>
-  <script src="./tooling/src/render-criteria.js"
-    class="remove"></script>
-  <script src="./tooling/src/render-retired.js"
-    class="remove"></script>
-  <script src="./tooling/src/render-evaluations.js"
-    class="remove"></script>
-  <script src="./rubric/rubric.js"></script>
-  <script src="./rubric/retired-criteria.js"></script>
-  <script src="./rubric/evaluations.js"></script>
-  <link rel="stylesheet" href="rubric.css">
+    <link rel="stylesheet" href="rubric.css">
 
-  <script class='remove'>
+    <script class='remove'>
+      // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
+      var respecConfig = {
+        // the W3C WG and public mailing list
+        group: "did",
+        wgPublicList: "public-did-wg",
 
-    // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
-    var respecConfig = {
-      // the W3C WG and public mailing list
-      group: "did",
-      wgPublicList: "public-did-wg",
+        // the specification's short name, as in http://www.w3.org/TR/short-name/
+        shortName: "did-rubric",
 
-      // the specification's short name, as in http://www.w3.org/TR/short-name/
-      shortName: "did-rubric",
+        // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
+        specStatus: "NOTE",
 
-      // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
-      specStatus: "NOTE",
+        // Editor's Draft URL
+        edDraftURI: "https://w3c.github.io/did-rubric/",
 
-      // Editor's Draft URL
-      edDraftURI: "https://w3c.github.io/did-rubric/",
+        // subtitle for the spec
+        // subtitle: "A reproducible method for evaluating DID Methods",
 
-      // subtitle for the spec
-      // subtitle: "A reproducible method for evaluating DID Methods",
+        // if you wish the publication date to be other than today, set this
+        //publishDate: "2021-08-26",
+        //previousMaturity: "ED",
 
-      // if you wish the publication date to be other than today, set this
-      //publishDate: "2021-08-26",
-      //previousMaturity: "ED",
+        // automatically allow term pluralization
+        pluralize: true,
 
-      // automatically allow term pluralization
-      pluralize: true,
+        // extend the bibliography entries
+        localBiblio: ccg.localBiblio,
+        preProcess: [window.renderCategories, window.renderRetired, window.renderEvaluations],
 
-      // extend the bibliography entries
-      localBiblio: ccg.localBiblio,
-      preProcess: [window.renderCategories, window.renderRetired, window.renderEvaluations],
+        github: {
+          repoURL: "https://github.com/w3c/did-rubric/",
+          branch: "main"
+        },
+        includePermaLInks: false,
+        noRecTrack: "true",
+        maxTocLevel: 3,
 
-      github: {
-        repoURL: "https://github.com/w3c/did-rubric/",
-        branch: "main"
-      },
-      includePermaLInks: false,
-      noRecTrack: "true",
-      maxTocLevel: 3,
+        // list of specification editors
+        editors: [{
+          name: "Joe Andrieu",
+          mailto: "joe@legreq.com",
+          company: "Legendary Requirements",
+          companyUrl: "http://legreq.com",
+          w3cid: 97261
+        }],
 
-      // list of specification editors
-      editors: [{
-        name: "Joe Andrieu",
-        mailto: "joe@legreq.com",
-        company: "Legendary Requirements",
-        companyUrl: "http://legreq.com",
-        w3cid: 97261
-      }],
+        // list of specification authors
+        authors: [{
+          name: "Joe Andrieu",
+          mailto: "joe@legreq.com",
+          company: "Legendary Requirements",
+          companyUrl: "http://legreq.com",
+          w3cid: 97261
+        }, {
+          name: "Ryan Grant",
+          companyUrl: "https://contract.design/",
+          company: "Digital Contract Design",
+          w3cid: 129181
+        },
+        {
+          name: "Daniel Hardman",
+          url: "https://www.linkedin.com/in/danielhardman/",
+          company: "Invited Expert",
+          w3cid: 108790
+        },
+        {
+          name: "Shannon Appelcline"
+        },
+        {
+          name: "Amy Guy"
+        },
+        {
+          name: "Joachim Lohkamp"
+        },
+        {
+          name: "Drummond Reed",
+          url: "https://www.linkedin.com/in/drummondreed/",
+          company: "Evernym",
+          companyURL: "https://www.evernym.com/",
+          w3cid: 3096
+        },
+        {
+          name: "Markus Sabadello",
+          url: "https://www.linkedin.com/in/markus-sabadello-353a0821",
+          company: "Danube Tech",
+          companyURL: "https://danubetech.com/",
+          w3cid: 46729
+        },
+        {
+          name: "Oliver Terbu"
+        }
+        ]
+      };
+    </script>
+  </head>
 
-      // list of specification authors
-      authors: [{
-        name: "Joe Andrieu",
-        mailto: "joe@legreq.com",
-        company: "Legendary Requirements",
-        companyUrl: "http://legreq.com",
-        w3cid: 97261
-      }, {
-        name: "Ryan Grant",
-        companyUrl: "https://contract.design/",
-        company: "Digital Contract Design",
-        w3cid: 129181
-      },
-      {
-        name: "Daniel Hardman",
-        url: "https://www.linkedin.com/in/danielhardman/",
-        company: "Invited Expert",
-        w3cid: 108790
-      },
-      {
-        name: "Shannon Appelcline"
-      },
-      {
-        name: "Amy Guy"
-      },
-      {
-        name: "Joachim Lohkamp"
-      },
-      {
-        name: "Drummond Reed",
-        url: "https://www.linkedin.com/in/drummondreed/",
-        company: "Evernym",
-        companyURL: "https://www.evernym.com/",
-        w3cid: 3096
-      },
-      {
-        name: "Markus Sabadello",
-        url: "https://www.linkedin.com/in/markus-sabadello-353a0821",
-        company: "Danube Tech",
-        companyURL: "https://danubetech.com/",
-        w3cid: 46729
-      },
-      {
-        name: "Oliver Terbu"
-      }
-      ]
-    };
-  </script>
-</head>
-
-<body>
-  <section id="abstract">
-    <p>
-      The communities behind Decentralized Identifiers (DIDs) bring
-      together a
-      diverse group of contributors who have decidedly different
-      notions of exactly
-      what "decentralization" means.
-    </p>
-    <p>
-      Rather than attempting to resolve this potentially unresolvable
-      question, we
-      propose a rubric &mdash; a scoring guide used to evaluate
-      performance, a
-      product, or a project &mdash; that teaches how to evaluate a
-      given DID Method
-      according to one's own requirements.
-    </p>
-    <p>
-      This rubric presents a set of criteria which an <a>Evaluator</a>
-      can apply to
-      any DID Method based on the use cases most relevant to them. We
-      avoid reducing
-      the Evaluation to a single number because the criteria tend to
-      be multidimensional
-      and many of the possible responses are not necessarily good or
-      bad. It is up
-      to the <a>Evaluator</a> to understand how each response in each
-      criteria might
-      illuminate favorable or unfavorable consequences for their
-      needs.
-    </p>
-    <p>
-      This rubric is a collection of criteria for creating Evaluation
-      Reports that assist people in choosing a DID Method.
-
-      While this rubric assists in the evaluation of many aspects of a
-      DID Method, it is not exhaustive.
-    </p>
-  </section>
-
-  <section id="sotd">
-  </section>
-
-  <section class="informative">
-    <h2>Introduction</h2>
-
-    <section>
-      <h3>Background</h3>
+  <body>
+    <section id="abstract">
       <p>
-        A rubric is a tool used in academia to communicate
-        expectations and evaluate
-        performance. It consists of a set of criteria to be evaluated,
-        possible
-        responses for each criteria, and a scoring guide explaining
-        both how to
-        choose and interpret each response. The act of evaluating a
-        rubric, which we
-        call an Evaluation, provides basis for self-evaluation,
-        procurement decisions,
-        or even marketing points. Written records of
-        an evaluation, which we'll call an <a>Evaluation Report</a>,
-        document how a
-        particular subject is measured against the criteria. For
-        students, a rubric
-        helps to clarify how their work will be evaluated by others.
-        For
-        <a>Evaluator</a>s, a rubric provides a consistent framework
-        for investigating
-        and documenting the performance of a subject against a
-        particular set of
-        criteria.
+        The decentralized nature of DIDs has inspired a wide range of
+        DID methods, as different innovators document novel approaches
+        for using DIDs with different Verifiable Data Registries. This
+        proliferation&mdash;today, there are 226 methods listed in the
+        W3C extensions registry and countless others in use, but not
+        registered&mdash;means that implementers are faced with the
+        challenge of choosing which methods to support. This is true
+        not only for components like resolvers, which necessarily
+        process method-specific features, but also for issuers and
+        verifiers, who must decide independently with method meets
+        their business needs for features like revocation, provenance,
+        and cost.
       </p>
       <p>
-        We were inspired to develop a rubric for
-        decentralization when discussions about the requirements for
-        decentralized
-        identifiers, aka DIDs, led to intractable disagreement. It
-        became clear that
-        no single definition of "decentralized" would suffice for all
-        of the
-        motivations that inspired developers of DID Methods to work on
-        a new
-        decentralized approach to identity. Despite this challenge,
-        two facts remained
-        clear:
-      </p>
-      <ol>
-        <li>
-          the people invested in this work shared a common goal of
-          reversing the
-          problems with centralized identity systems and
-        </li>
-        <li>
-          they also had numerous, distinct reasons for doing so.
-        </li>
-      </ol>
-      <p>
-        Rather than attempt to force a definition of "decentralized"
-        that might work
-        for many but would alienate others, the group set out to
-        capture the
-        measurable factors that could enable <a>Evaluator</a>s to
-        judge the
-        decentralization of DID Methods based on their own independent
-        requirements,
-        with minimal embedded bias.
-      </p>
-    </section> <!-- background -->
-
-    <section>
-      <h3>How to apply this rubric</h3>
-      <p>
-        Pick the most important criteria for your use, ask each
-        question, and select the
-        most appropriate response. Do this for all of the DID
-        Methods under consideration.
+        How do implementers decide which methods are suitable for
+        their use?
       </p>
       <p>
-        Each <a>Evaluation</a> should start with an explicit framing
-        of the use under
-        consideration. Are you evaluating the Method for use in
-        Internet-of-Things
-        (IoT)? For school childrens' extra-curricular activities? For
-        international
-        travel? The use, or set of uses, will directly affect how some
-        of the
-        questions are answered.
+        Applying the DID Method Rubric is one answer to that question.
+        This document defines a coherent way to evaluate multiple DID
+        methods on a feature-to-feature basis, tailored to the
+        business context addressed by implementers.
       </p>
       <p>
-        Where a given Method offers variability, such as multiple
-        networks for the
-        same Method, then evaluate each variant. For example, did:ethr
-        supports
-        Ethereum mainnet, multiple testnets and permissioned
-        EVM-compliant networks
-        such as Quorum. To apply a criteria to did:ethr, you will
-        evaluate it against
-        all the variations that matter <em>to you</em>. Each variation
-        should get its
-        own <a>Evaluation</a>. This applies to Level 2 Networks that
-        can operate on
-        multiple Level 1 Networks as well as DID Methods that directly
-        offer support
-        for multiple underlying DID registries.
+        The rubric presents a set of criteria which an Evaluator can
+        apply to any DID Method based on the use cases most relevant
+        to them. Rather than reducing this Evaluation to a single
+        number, the rubric retains the sensibility that requirements
+        for use tend to be multidimensional and many of the possible
+        responses are not necessarily good or bad. It is up to the
+        Evaluator to understand how each response in each criteria
+        might illuminate favorable or unfavorable consequences for
+        their needs.
       </p>
       <p>
-        When creating an <a>Evaluation Report</a>, we recommend noting
-        both the
-        <a>Evaluator</a> and the date of the <a>Evaluation</a>. Many
-        of the criteria
-        are subjective and all of them may evolve. Tracking who
-        made the <a>Evaluation</a> and when they made it will help
-        readers better
-        understand any biases or timeliness issues that may affect the
-        applicability
-        of the <a>Evaluation</a>.
+        While this rubric assists in the evaluation of many aspects of
+        a DID Method, it is not intended to be exhaustive. Evaluators
+        are encouraged to extend the framework to incorporate their
+        own criteria (and hopefully share those criteria back to the
+        community when possible).
       </p>
-      <p>
-        Be selective and acknowledge the subjective.
-        <a>Evaluations</a> do not need to
-        be exhaustive. There is no requirement to answer all the
-        questions. Simply
-        answer the ones most relevant to the use contemplated.
-        Similarly, understand
-        that any recorded <a>Evaluation</a> is going to represent the
-        biases of the
-        <a>Evaluator</a> in the context of their target use. Even the
-        same
-        <a>Evaluator</a>, evaluating the same Method for a different
-        use, may come up
-        with slightly different answers&mdash;for example, that which
-        is economically
-        accessible for small businesses might not be cost-effective
-        for refugees, and
-        that could affect how well-suited a given Method is for a
-        specific use.
-      </p>
-      <p>
-        Finally, note that this particular rubric is about
-        decentralization. It
-        doesn't cover all of the other criteria that might be relevant
-        to evaluating a
-        given DID Method. There are security, privacy, and economic
-        concerns that
-        should be considered. We look forward to working with the
-        community to develop
-        additional rubrics for these other areas and encourage
-        <a>Evaluator</a>s to
-        use this rubric as a starting point for their own work rather
-        than the final
-        say in the merit of any given Method.
-      </p>
-      <p>
-        In short, use this rubric to help understand if a given DID
-        Method is
-        decentralized enough for your needs.
-      </p>
-
-    </section> <!-- how to apply -->
-
-    <section>
-      <h3>Evaluation reports</h3>
-      <p>
-        To record and report an <a>Evaluation</a>, we recommend two
-        possible formats,
-        either comprehensive or comparative.
-      </p>
-      <p>
-        A comprehensive <a>Evaluation</a> applies a single set of
-        criteria to just one
-        Method. This set is chosen by the <a>Evaluator</a>; it need
-        not be all
-        possible criteria, but it is all relevant criteria as judged
-        by the
-        <a>Evaluator</a>.
-      </p>
-      <p>
-        A comparative <a>Evaluation</a> includes multiple Methods in
-        the same table to
-        easily compare and contrast two or more different Methods.
-        This may include
-        any number of criteria. These are the type of reports we use
-        as examples
-        throughout the criteria list.
-      </p>
-      <p>
-        In addition to the selected criteria, we recommend each report
-        specify
-      </p>
-      <ol>
-        <li>
-          The Method(s) being evaluated
-        </li>
-        <li>
-          A link to the Method specification
-        </li>
-        <li>
-          The <a>Evaluator</a>(s)
-        </li>
-        <li>
-          The date of the <a>Evaluation</a>
-        </li>
-        <li>
-          A description of the use case(s) for which the Method is
-          being evaluated
-        </li>
-        <li>
-          The rubric used for the <a>Evaluation</a>, along with
-          reference to the
-          specific version.
-        </li>
-        <li>
-          Optionally, a URL for retrieving the report.
-        </li>
-      </ol>
-    </section> <!-- evaluation -->
-
-    <section>
-      <h3>Categories of criteria</h3>
-      <p>
-        We have grouped our criteria into several categories:
-      </p>
-      <ol>
-        <li>
-          Rulemaking
-        </li>
-        <li>
-          Design
-        </li>
-        <li>
-          Operations
-        </li>
-        <li>
-          Enforcement
-        </li>
-        <li>
-          Alternatives
-        </li>
-        <li>
-          Adoption & Diversity
-        </li>
-        <li>
-          Security
-        </li>
-        <li>
-          Privacy</li>
-      </ol>
-
-      <p>
-        <a>Evaluator</a>s should consider criteria from all groups, as
-        best fits
-        your use cases.
-      </p>
-      <p>
-        Three categories cover how a given Method is governed:
-        Rulemaking, Operations, and Enforcement.
-        Our approach parallels the same separation of
-        authority embodied in the United States Constitution.
-      </p>
-      <p>
-        <strong>Rulemaking</strong> addresses who makes the rules and
-        how. (This is
-        the legislative branch in the US.)
-      </p>
-      <p>
-        <strong>Operations</strong> addresses how those rules are
-        executed and how
-        everyone knows that they are carried out. (This is the
-        executive branch in the
-        US.)
-      </p>
-      <p>
-        <strong>Enforcement</strong> addresses how we find and respond
-        to rule
-        breaking. (This is the judicial branch in the US.)
-      </p>
-      <p>
-        This mental model is key to understanding the criteria of each
-        section as well
-        as why we included some criteria and not others.
-      </p>
-      <p>The remaining categories each covers different areas worth
-        considering
-        when evaluating DID Methods.</p>
-      <p>
-        <strong>Design</strong> addresses the method <em>as
-          designed</em>. In other words, the output of the rulemaking:
-        what rules apply
-        to this DID method?
-      </p>
-      <p>
-        <strong>Alternatives</strong> address the availability and
-        quality
-        of different implementation choices.
-      </p>
-      <p>
-        <strong>Adoption & Diversity</strong> covers questions related
-        to how widely a
-        DID Method is used.
-      </p>
-      <p>
-        <strong>Security</strong> influences overall trust in the
-        ecosystem. Different DID methods offer different security
-        guarantees, or guarantees of different strengths.
-      </p>
-      <p>
-        <strong>Privacy</strong> addresses the ability of a DID method
-        to
-        ensure various privacy mechanisms. When DIDs are used as
-        identifiers for people, it becomes important to consider what
-        tools a DID method offers to operate at different levels
-        of privacy.
-      </p>
-    </section> <!-- categories -->
-
-    <section>
-      <h3>The architecture</h3>
-      <p>
-        ​When evaluating the governance of DID Methods, three
-        potentially independent
-        layers should be considered: the specification, the network,
-        and the registry.
-      </p>
-      <ul>
-        <li>
-          The <strong>specification</strong> is the governing document
-          for the Method
-          that outlines how that particular Method implements the
-          required and any
-          optional components of the DID Core specification
-          [[DID-CORE]].
-        </li>
-        <li>
-          The <strong>network</strong> is the underlying
-          communications layer, i.e., how
-          users of the Method communicate with others to invoke the
-          operations of the
-          Method.
-        </li>
-        <li>
-          The <strong>registry</strong> is a given instance of
-          recorded state changes,
-          managed according to the specification, using the
-          communications channel.
-        </li>
-      </ul>
-      <p>
-        For Rulemaking, the criteria should be evaluated against all
-        three of the
-        above layers.
-      </p>
-      <p>
-        For Operations, the criteria should be evaluated against the
-        network and the
-        registry. The specification is taken as a given (it is the
-        core output of
-        Rulemaking).
-      </p>
-      <p>
-        For Adoption, the criteria should be evaluated for each major
-        software
-        component: wallet, resolver, and registry.
-      </p>
-      <p>
-        For Alternatives, the criteria should be evaluated against the
-        particular DID
-        Method.
-      </p>
-      <p>
-        For the examples in the rest of this document we refer to a
-        set of Methods
-        that are familiar to the authors and exhibit interesting
-        characteristics for
-        <a>Evaluation</a>. See the tables below.
-      </p>
-    </section> <!-- architecture -->
-
-    <section>
-      <h3>DID Evaluations Cited</h3>
-      <p>The following sources provided example evaluations for this
-        rubric. These are
-        not presented as objective fact, but rather as attempts by
-        contributors to illustrate
-        noteworthy differences using their subjective judgement.
-        Additional contributions
-        that flow into the registry should include a section that
-        documents their source
-        with an additional row in the table.</p>
-      <div id="evaluations-cited"></div>
     </section>
 
-    <section>
-      <h3>Methods Considered</h3>
-      <table class="simple">
-        <tr>
-          <th>
-            Method
-          </th>
-          <th>
-            Specification
-          </th>
-          <th>
-            Network
-          </th>
-          <th>
-            Registry
-          </th>
-        </tr>
-        <tr id="did:peer">
-          <td>
-            did:peer
-          </td>
-          <td>
-            <a
-              href="https://identity.foundation/peer-did-method-spec/index.html">Peer
-              DID
-              Method Spec</a>
-          </td>
-          <td>
-            n/a (communications can flow over any agreeable channel)
-          </td>
-          <td>
-            Held by each peer
-          </td>
-        </tr>
-        <tr id="did:git">
-          <td>
-            did:git
-          </td>
-          <td>
-            <a
-              href="https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md">
-              DID git Spec</a>
-          </td>
-          <td>
-            <a href="https://git-scm.com/">git</a> (an open source
-            version control system)
-          </td>
-          <td>
-            Any Method-compliant git repository
-          </td>
-        </tr>
-        <tr id="did:btcr">
-          <td>
-            did:btcr
-          </td>
-          <td>
-            <a href="https://w3c-ccg.github.io/didm-btcr/">DID Method
-              BTCR</a>
-          </td>
-          <td>
-            Bitcoin
-          </td>
-          <td>
-            Bitcoin
-          </td>
-        </tr>
-        <tr id="did:sov">
-          <td>
-            did:sov
-          </td>
-          <td>
-            <a
-              href="https://github.com/sovrin-foundation/sovrin/blob/master/spec/did-method-spec-template.html">
-              Sovrin DID Method Spec</a>
-          </td>
-          <td>
-            Hyperledger Indy
-          </td>
-          <td>
-            A particular instance of Hyperledger Indy
-          </td>
-        </tr>
-        <tr id="did:ethr">
-          <td>
-            did:ethr
-          </td>
-          <td>
-            <a
-              href="https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md">
-              ethr DID Method Spec</a>
-          </td>
-          <td>
-            Ethereum
-          </td>
-          <td>
-            Specific smart contracts for each network.
-          </td>
-        </tr>
-        <tr id="did:jolo">
-          <td>
-            did:jolo
-          </td>
-          <td>
-            <a
-              href="https://github.com/jolocom/jolocom-did-driver/blob/master/jolocom-did-method-specification.md">
-              Jolocom DID Method Specification</a>
-          </td>
-          <td>
-            Ethereum
-          </td>
-          <td>
-            Specific smart contracts for different networks and
-            subnetworks.
-          </td>
-        </tr>
-        <tr id="did:ipid">
-          <td>
-            did:ipid
-          </td>
-          <td>
-            <a href="https://did-ipid.github.io/ipid-did-method/">
-              IPID DID Method</a>
-          </td>
-          <td>
-            @johnnycrunch
-          </td>
-          <td>
-            DIDs persisted to IPFS.
-          </td>
-        </tr>
-        <tr id="did:web">
-          <td>
-            did:web
-          </td>
-          <td>
-            <a href="https://w3c-ccg.github.io/did-method-web/">
-              did:web Method Specification</a>
-          </td>
-          <td>
-            CCG work item
-          </td>
-          <td>
-            DIDs associated with control of a domain name (DNS).
-          </td>
-        </tr>
-        <tr id="did:indy">
-          <td>
-            did:indy
-          </td>
-          <td>
-            <a href="https://github.com/hyperledger/indy-did-method">
-              did:indy Method Spec</a>
-          </td>
-          <td>
-            Hyperledger Indy community
-          </td>
-          <td>
-            Supersedes did:sov to service all Indy-based ledgers.
-          </td>
-        </tr>
-        <tr id="did:iota">
-          <td>
-            did:iota
-          </td>
-          <td>
-            <a
-              href="https://github.com/iotaledger/identity.rs/blob/main/docs/specs/iota_did_method_spec.md">
-              IOTA DID Method Spec</a>
-          </td>
-          <td>
-            IOTA Foundation
-          </td>
-          <td>
-            DIDs persisted to the IOTA tangle.
-          </td>
-        </tr>
-        <tr id="did:keri">
-          <td>
-            did:keri
-          </td>
-          <td>
-            <a href="https://identity.foundation/keri/did_methods/">
-              The did:keri Method 0.1</a>
-          </td>
-          <td>
-            Sam Smith, et al.
-          </td>
-          <td>
-            DIDs that can migrate from one blockchain to another, or
-            use no blockchain at all.
-          </td>
-        </tr>
-        <tr id="did:hedera">
-          <td>
-            did:hedera
-          </td>
-          <td>
-            <a
-              href="https://github.com/hashgraph/did-method/blob/master/did-method-specification.md">
-              Hedera Hashgraph DID Method Specification</a>
-          </td>
-          <td>
-            Hashgraph, Inc
-          </td>
-          <td>
-            DIDs written to a ledger that uses Hashgraph consensus as
-            an alternative to traditional blockchain.
-          </td>
-        </tr>
-        <tr id="did:key">
-          <td>
-            did:key
-          </td>
-          <td>
-            <a href="https://w3c-ccg.github.io/did-method-key/">
-              The did:key Method v0.7</a>
-          </td>
-          <td>
-            CCG work item
-          </td>
-          <td>
-            Use a keypair as a DID.
-          </td>
-        </tr>
-        <tr id="did:twit">
-          <td>
-            did:twit
-          </td>
-          <td>
-            <a
-              href="https://github.com/did-twit/did-twit/blob/master/spec/index.md">
-              Twit DID method specification</a>
-          </td>
-          <td>
-            Gabe Cohen
-          </td>
-          <td>
-            Publish a DID via Twitter feed.
-          </td>
-        </tr>
-        <tr id="did:pkh">
-          <td>
-            did:pkh
-          </td>
-          <td>
-            <a
-              href="https://github.com/spruceid/ssi/blob/9ecc25cb4082709d146206b779cf8e8442f9eaf3/did-pkh/did-pkh-method-draft.md">
-              did:pkh Method Specification</a>
-          </td>
-          <td>
-            Spruce ID
-          </td>
-          <td>
-            Wrap an identifier (e.g., payment address) from one of
-            many existing blockchains in did format.
-          </td>
-        </tr>
-        <tr id="did:trustbloc">
-          <td>
-            did:trustbloc
-          </td>
-          <td>
-            <a
-              href="https://github.com/trustbloc/trustbloc-did-method/blob/main/docs/spec/trustbloc-did-method.md">
-              TrustBloc DID Method Specification 0.1</a>
-          </td>
-          <td>
-            Trustbloc
-          </td>
-          <td>
-            Persist DIDs via Sidetree wrapper around a permissioned
-            ledger.
-          </td>
-        </tr>
-        <tr id="did:jlinc">
-          <td>
-            did:jlinc
-          </td>
-          <td>
-            <a href="https://did-spec.jlinc.org/">
-              JLINC DID Method Specification</a>
-          </td>
-          <td>
-            JLincLabs
-          </td>
-          <td>
-            Register DIDs over the JLinc protocol for sharing data
-            with terms and conditions.
-          </td>
-        </tr>
-      </table>
+    <section id="sotd">
     </section>
-    <section>
-      <h3>Criteria and Criterion</h3>
-      <p>The term "criteria" is often treated as both a
-        singular and a plural noun. In the singular, we say "The most
-        important criteria is the buyer's age". This singular use of
-        criteria has been in use for over half a century <a
-          href="https://www.merriam-webster.com/dictionary/criterion#usage-1">https://www.merriam-webster.com/dictionary/criterion#usage-1</a>
-        In the plural we say "That proposal doesn't meet all of the
-        criteria." Sometimes people use both in the same sentence:
-        "Select
-        one criteria from the list of criteria."
-      </p>
-      <p>However, for formal use, "criteria" is more broadly accepted
-        as
-        plural while "criterion" is singular. By this style rule, the
-        last
-        sentence in the previous paragraph <em>should</em> be "Select
-        one
-        criterion from the list of criteria." </p>
-      <p>As editors of a Note published by the World Wide Web
-        Consortium,
-        we are torn. We would prefer to use
-        rigorous grammar and be consistent in doing so. At the same
-        time,
-        we find attempts to enforce the formal rule sometimes leads
-        people
-        to using the inverse, such as "Select a criteria from the list
-        of
-        criterion." This is the exact opposite of our desired outcome.
-      </p>
-      <p>In our own work with implementers and developers of the DID
-        Core specification, we have found that the singular "criteria"
-        is
-        readily accepted and understood and leads to no confusion when
-        used, even alongside plural usage. Since the DID Method Rubric
-        is, at its core, a set of criteria with ample reason to refer
-        to,
-        for example, "Criteria #23", we find the combined singular and
-        plural use is cleaner (just stick with "criteria"), less
-        confusing, and more aligned with common usage among our
-        audience.</p>
-      <p>As such, throughout the DID Method Rubric, we use the term
-        "criteria" to refer to both singular instances of
-        criteria and plural sets of criteria.</p>
-    </section> <!-- criteria v criterion -->
-  </section> <!-- introduction -->
-  <section>
-    <h2>Registration Process</h2>
-    This registry &mdash; the DID Method Rubric Registry &mdash;
-    provides a public vehicle for publishing updated DID Method Rubric
-    criteria. In order to add or update a criteria, a submitter MUST
-    submit a modification request for this registry, as a
-    pull request on the repository where this registry is hosted,
-    where the modification request adheres to the following
-    policies:</p>
-    <section>
-      <h3>General Requirements</h3>
-      <ol>
-        <li>If there are copyright, trademark, or intellectual
-          property
-          rights concerns, the addition and use MUST be authorized
-          in writing by the intellectual property rights holder under
-          a F/RAND
-          license. For example, criteria that use trademarked brand
-          names, use the titles or excerpts from copyrighted works, or
-          require patented technology to perform the evaluation.
-        </li>
-        <li>Additions MUST NOT create unreasonable legal, security,
-          moral, or privacy issues that may result in direct or
-          indirect harm to others, including violations of the W3C
-          Code Of
-          Ethics And Professional Conduct <a
-            href="https://www.w3.org/Consortium/cepc/">
-            https://www.w3.org/Consortium/cepc/</a>
-          Examples of unacceptable additions include
-          any containing hate speech, unprofessional or
-          unethical attacks, proprietary information, and any personal
-          data or
-          personally identifiable information (excepting
-          identification details of the submitter).
-        </li>
-        <li>All criteria MUST be uniquely identified and versioned to
-          ensure
-          permanent linkability with version trackability. Those
-          identifiers MUST be present as an `href` anchor in the HTML
-          for the
-          criteria itself. See the sections below on identifiers
-          and versioning. Subcomponents, such as questions, responses,
-          relevance, and examples, are not separately versioned; any
-          change to a subcomponent triggers an appropriate version
-          change to
-          its primary component.
-        </li>
-        <li>Methods, and evaluations cited within a criteria MUST
-          include a local link to a full citation in
-          the relevant citation section:
-          Methods Evaluated and Evaluations Cited, respectively.
-        </li>
-        <li>Rubric criteria and associated metadata in the DID Method
-          Rubric Registry MAY be updated or removed at the editors’
-          discretion, including the addition or removal of categories
-          of
-          metadata such as <em>Evaluations Cited</em>.</li>
-      </ol>
-    </section>
-    <section>
-      <h3>Component Requirements</h3>
-      <p>The primary components managed by this registry are criteria
-        for
-        evaluating DID Methods, with as many as eight
-        subcomponents: name, id, version, question, assessmentTemplate,
-        response, relevance, exampleAssessments,
-        and, optionally, a source. In addition, the
-        DID Method Rubric maintains a list of cited DID
-        methods and evaluations. The criteria are
-        independently identified and versioned (see those sections for
-        details) while references cited in the criteria
-        themselves link to their full citation in the appropriate
-        list.</p>
-      <section>
-        <h4>Criteria</h4>
+
+    <section id="introduction" class="informative">
+      <h2>Introduction</h2>
+
+      <section id="background">
+        <h3>Background</h3>
+        <p>
+          A rubric is a tool used in academia to communicate
+          expectations and evaluate performance. It consists of a set
+          of criteria to be evaluated, possible responses for each
+          criteria, and a scoring guide explaining how to both choose
+          and interpret each response. The act of evaluating a rubric,
+          which we call an Evaluation, provides basis for
+          self-evaluation, procurement decisions, or even marketing
+          points. Written records of an evaluation, which we'll call
+          an <a>Evaluation Report</a>, document how a particular
+          subject is measured against the criteria. For students, a
+          rubric helps to clarify how their work will be evaluated by
+          others. For <a>Evaluator</a>s, a rubric provides a
+          consistent framework for investigating and documenting the
+          performance of a subject against a particular set of
+          criteria.
+        </p>
+        <p>
+          We were inspired to develop a rubric for decentralization
+          when discussions about the requirements for decentralized
+          identifiers, aka DIDs, led to intractable disagreement. It
+          became clear that no single definition of "decentralized"
+          would suffice for all of the motivations that inspired
+          developers of DID Methods to work on a new decentralized
+          approach to identity. Despite this challenge, two facts
+          remained clear:
+        </p>
         <ol>
-          <li>Updates to criteria MUST follow the following versioning
-            guidelines.
-          </li>
-          <li>Proposed criteria without at least three independent
-            example
-            assessments MUST have the word “PROVISIONAL” as the last
-            term in its name. Once at least three independent example
-            assessments exist, the word “PROVISIONAL” SHOULD be
-            removed.
-          </li>
-          <li>Accepted (non-provisional) criteria MUST have at least
-            three example assessments, and generally SHOULD have no
-            more example
-            assessments than there are possible responses to its
-            question. Each example should distinctly illustrate one
-            possible response to the
-            criteria's question.
+          <li>
+            the people invested in this work shared a common goal of
+            reversing the problems with centralized identity systems
+            and
           </li>
           <li>
-            DID Method Rubric criteria can be proposed by submitting a pull
-            request that defines the criteria in a file under the
-            <code>rubric/criteria/</code> directory. The file name MUST be
-            the criteria's number (from its <code>id</code>, e.g.,
-            <code>1</code> for <code>criteria-1</code>) followed by a
-            kebab-case slug of the criteria name and the
-            <code>.json</code> file extension (e.g.,
-            <code>1-open-contribution-participation.json</code>).
-          </li>
-          <li>
-            The pull request MUST also add the criteria's
-            <code>id</code> to the appropriate category in
-            <code>rubric/rubric-outline.json</code>. The rubric
-            outline determines the organization and ordering of
-            criteria within the rendered document. A criteria file
-            that is not referenced in the outline will not appear
-            in the Rubric.
-          </li>
-          <li>To be considered, criteria MUST have the following
-            subcomponents:
-            <ol type="a">
-              <li>
-                Name
-              </li>
-              <li>
-                Identifier
-              </li>
-              <li>
-                Version
-              </li>
-              <li>
-                Question
-              </li>
-              <li>
-                Assessment Template
-              </li>
-              <li>
-                Response
-              </li>
-              <li>
-                Relevance
-              </li>
-              <li>
-                Example Assessments
-              </li>
-            </ol>
-          </li>
-          <li>
-            Additionally, criteria MAY have the following optional
-            subcomponents:
-            <ol type="a">
-              <li>
-                Source
-              </li>
-            </ol>
+            they also had numerous, distinct reasons for doing so.
           </li>
         </ol>
-        <p>The following is an example of a complete criteria
-          JSON file:</p>
-        <pre class="example" title="Example Criteria JSON">
-{
-  "name": "Offline creation",
-  "id": "https://www.w3.org/TR/did-rubric#criteria-42",
-  "version": "1.0.0",
-  "source": "https://didcriteria.com/criteria/7",
-  "question": {
-    "question": "Does the Method require network communications to create a DID?"
-  },
-  "response": {
-    "type": "multipleChoice",
-    "possibleResponses": [
-      {
-        "label": "A",
-        "meaning": "No. Creation is expected to be off-line."
-      },
-      {
-        "label": "B",
-        "meaning": "Yes. Creation requires network coordination with a single party."
-      },
-      {
-        "label": "C",
-        "meaning": "Yes. Creation requires network coordination with multiple parties."
-      }
-    ]
-  },
-  "assessmentTemplate": {
-    "columns": [
-      {
-        "heading": "Method",
-        "type": "method",
-        "propertyRef": "method"
-      },
-      {
-        "heading": "Spec.",
-        "type": "enhancedLetter",
-        "propertyRef": "spec"
-      },
-      {
-        "heading": "Notes",
-        "type": "note",
-        "propertyRef": "note"
-      }
-    ]
-  },
-  "relevance": "Communication is costly, with increasing costs the more parties are involved.",
-  "exampleAssessments": [
-    {
-      "id": "a-29",
-      "method": "did:v1.testnet",
-      "spec": "A",
-      "note": "Veres One DID creation is a local cryptographic process.",
-      "evaluationCitation": "#eval-3"
+        <p>
+          Rather than attempt to force a definition of "decentralized"
+          that might work for many but would alienate others, the
+          group set out to capture the measurable factors that could
+          enable <a>Evaluator</a>s to judge the decentralization of
+          DID Methods based on their own independent requirements,
+          with minimal embedded bias.
+        </p>
+        <p>
+          This approach identified several useful criteria about
+          methods that have nothing to do with decentralization.
+          Rather than create a separate rubric for these criteria, the
+          DID WG extended the scope of the rubric to include any
+          criteria that might be useful for evaluators.
+        </p>
+      </section> <!-- background -->
+
+      <section id="how-to-apply-this-rubric">
+        <h3>How to apply this rubric</h3>
+        <p>
+          Pick the most important criteria for your use, ask each
+          question, and select the most appropriate response. Do this
+          for all of the DID Methods under consideration.
+        </p>
+        <p>
+          Each <a>Evaluation</a> should start with an explicit framing
+          of the use under consideration. Are you evaluating the
+          Method for use in Internet-of-Things (IoT)? For school
+          childrens' extra-curricular activities? For international
+          travel? The use, or set of uses, will directly affect how
+          some of the questions are answered.
+        </p>
+        <p>
+          Where a given Method offers variability, such as multiple
+          networks for the same Method, then evaluate each variant.
+          For example, did:ethr supports Ethereum mainnet, multiple
+          testnets and permissioned EVM-compliant networks such as
+          Quorum. To apply a criteria to did:ethr, you will evaluate
+          it against all the variations that matter <em>to you</em>.
+          Each variation should get its own <a>Evaluation</a>. This
+          applies to Level 2 Networks that can operate on multiple
+          Level 1 Networks as well as DID Methods that directly offer
+          support for multiple underlying DID registries.
+        </p>
+        <p>
+          When creating an <a>Evaluation Report</a>, we recommend
+          noting both the <a>Evaluator</a> and the date of the
+          <a>Evaluation</a>. Many of the criteria are subjective and
+          all of them may evolve. Tracking who made the
+          <a>Evaluation</a> and when they made it will help readers
+          better understand any biases or timeliness issues that may
+          affect the applicability of the <a>Evaluation</a>.
+        </p>
+        <p>
+          Be selective and acknowledge the subjective.
+          <a>Evaluations</a> do not need to be exhaustive. There is no
+          requirement to answer all the questions. Simply answer the
+          ones most relevant to the use contemplated. Similarly,
+          understand that any recorded <a>Evaluation</a> is going to
+          represent the biases of the <a>Evaluator</a> in the context
+          of their target use. Even the same <a>Evaluator</a>,
+          evaluating the same Method for a different use, may come up
+          with slightly different answers&mdash;for example, that
+          which is economically accessible for small businesses might
+          not be cost-effective for refugees, and that could affect
+          how well-suited a given Method is for a specific use.
+        </p>
+        <p>
+          Finally, note that the rubric is not just about
+          decentralization. There are security, privacy, and economic
+          concerns that are considered. However, no such list of
+          criteria could ever be exhaustive and none should be
+          considered "complete". We encourage <a>Evaluator</a>s to use
+          this rubric as a starting point for their own work rather
+          than the final say in the merit of any given Method.
+        </p>
+        <p>
+          In short, use this rubric to help understand if a given DID
+          Method is appropriate for your needs, whatever your use
+          cases may be.
+        </p>
+
+      </section> <!-- how to apply -->
+
+      <section id="evaluation-reports">
+        <h3>Evaluation reports</h3>
+        <p>
+          To record and report an <a>Evaluation</a>, we recommend two
+          possible formats, either comprehensive or comparative.
+        </p>
+        <p>
+          A comprehensive <a>Evaluation</a> applies a single set of
+          criteria to just one Method. This set is chosen by the
+          <a>Evaluator</a>; it need not be all possible criteria, but
+          it is all relevant criteria as judged by the
+          <a>Evaluator</a>.
+        </p>
+        <p>
+          A comparative <a>Evaluation</a> includes multiple Methods in
+          the same table to easily compare and contrast two or more
+          different Methods. This may include any number of criteria.
+        </p>
+        <p>
+          In addition to the selected criteria, we recommend each
+          report specify
+        </p>
+        <ol>
+          <li>
+            The Method(s) being evaluated
+          </li>
+          <li>
+            A link to the evaluated Methods' specification(s)
+          </li>
+          <li>
+            The <a>Evaluator</a>(s)
+          </li>
+          <li>
+            The date of the <a>Evaluation</a>
+          </li>
+          <li>
+            A description of the use case(s) for which the Method is
+            being evaluated
+          </li>
+          <li>
+            The rubric used for the <a>Evaluation</a>, along with
+            reference to the specific version.
+          </li>
+          <li>
+            Optionally, a URL for retrieving the report.
+          </li>
+        </ol>
+      </section> <!-- evaluation -->
+
+      <section id="categories-of-criteria">
+        <h3>Categories of criteria</h3>
+        <p>
+          We have grouped our criteria into several categories:
+        </p>
+        <ol>
+          <li>
+            Rulemaking
+          </li>
+          <li>
+            Design
+          </li>
+          <li>
+            Operations
+          </li>
+          <li>
+            Enforcement
+          </li>
+          <li>
+            Alternatives
+          </li>
+          <li>
+            Adoption & Diversity
+          </li>
+          <li>
+            Security
+          </li>
+          <li>
+            Privacy</li>
+        </ol>
+
+        <p>
+          <a>Evaluator</a>s should consider criteria from all groups, as
+          best fits your use cases.
+        </p>
+        <p>
+          Three categories cover how a given Method is governed:
+          Rulemaking, Operations, and Enforcement. Our approach
+          parallels the same separation of authority embodied in the
+          tripartite governments.
+        </p>
+        <p>
+          <strong>Rulemaking</strong> addresses who makes the rules and
+          how. (This is the legislative branch.)
+        </p>
+        <p>
+          <strong>Operations</strong> addresses how those rules are
+          executed and how everyone knows that they are carried out.
+          (This is the executive branch.)
+        </p>
+        <p>
+          <strong>Enforcement</strong> addresses how we find and
+          respond to rule breaking. (This is the judicial branch in
+          the US.)
+        </p>
+        <p>
+          This mental model is key to understanding the criteria of
+          each section as well as why we included some criteria and
+          not others.
+        </p>
+        <p>
+          The remaining categories each covers different areas worth
+          considering when evaluating DID Methods.
+        </p>
+        <p>
+          <strong>Design</strong> addresses the method <em>as
+          designed</em>. In other words, the output of the rulemaking:
+          what rules apply to this DID method?
+        </p>
+        <p>
+          <strong>Alternatives</strong> address the availability and
+          quality of different implementation choices.
+        </p>
+        <p>
+          <strong>Adoption & Diversity</strong> covers questions
+          related to how widely a DID Method is used.
+        </p>
+        <p>
+          <strong>Security</strong> influences overall trust in the
+          ecosystem. Different DID methods offer different security
+          guarantees, or guarantees of different strengths.
+        </p>
+        <p>
+          <strong>Privacy</strong> addresses the ability of a DID
+          method to ensure various privacy mechanisms. When DIDs are
+          used as identifiers for people, it becomes important to
+          consider what tools a DID method offers to operate at
+          different levels of privacy.
+        </p>
+      </section> <!-- categories -->
+
+      <section id="architecture">
+        <h3>The architecture</h3>
+        <p>
+          When evaluating the governance of DID Methods, three
+          potentially independent layers should be considered: the
+          specification, the network, and the registry.
+        </p>
+        <ul>
+          <li>
+            The <strong>specification</strong> is the governing
+            document for the Method that outlines how that particular
+            Method implements the required and any optional components
+            of the DID Core specification [[DID-CORE]].
+          </li>
+          <li>
+            The <strong>network</strong> is the underlying
+            communications layer, i.e., how users of the Method
+            communicate with others to invoke the operations of the
+            Method.
+          </li>
+          <li>
+            The <strong>registry</strong> is a given instance of
+            recorded state changes, managed according to the
+            specification, using the communications channel.
+          </li>
+        </ul>
+        <p>
+          For Rulemaking, the criteria should be evaluated against all
+          three of the above layers.
+        </p>
+        <p>
+          For Operations, the criteria should be evaluated against the
+          network and the registry. The specification is taken as a
+          given (it is the core output of Rulemaking).
+        </p>
+        <p>
+          For Adoption, the criteria should be evaluated for each major
+          software component: wallet, resolver, and registry.
+        </p>
+        <p>
+          For Alternatives, the criteria should be evaluated against
+          the particular DID Method.
+        </p>
+        <p>
+          For the examples in the rest of this document we refer to a
+          set of Methods that are familiar to the authors and exhibit
+          interesting characteristics for <a>Evaluation</a>. See the
+          tables below.
+        </p>
+      </section> <!-- architecture -->
+
+      <section id="did-evaluations-cited">
+        <h3>DID Evaluations Cited</h3>
+        <p>
+          The following sources provided example evaluations for this
+          rubric. These are not presented as objective fact, but
+          rather as attempts by contributors to illustrate noteworthy
+          differences using their subjective judgement. Additional
+          contributions that flow into the registry should include a
+          section that documents their source with an additional row
+          in the table.
+        </p>
+        <div id="evaluations-cited"></div>
+      </section>
+
+      <section id="methods-considered">
+        <h3>Methods Considered</h3>
+        <table class="simple">
+          <tr>
+            <th>
+              Method
+            </th>
+            <th>
+              Specification
+            </th>
+            <th>
+              Network
+            </th>
+            <th>
+              Registry
+            </th>
+          </tr>
+          <tr id="did:peer">
+            <td>
+              did:peer
+            </td>
+            <td>
+              <a
+                href="https://identity.foundation/peer-did-method-spec/index.html">Peer
+                DID
+                Method Spec</a>
+            </td>
+            <td>
+              n/a (communications can flow over any agreeable channel)
+            </td>
+            <td>
+              Held by each peer
+            </td>
+          </tr>
+          <tr id="did:git">
+            <td>
+              did:git
+            </td>
+            <td>
+              <a
+                href="https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md">
+                DID git Spec</a>
+            </td>
+            <td>
+              <a href="https://git-scm.com/">git</a> (an open source
+              version control system)
+            </td>
+            <td>
+              Any Method-compliant git repository
+            </td>
+          </tr>
+          <tr id="did:btcr">
+            <td>
+              did:btcr
+            </td>
+            <td>
+              <a href="https://w3c-ccg.github.io/didm-btcr/">DID Method
+                BTCR</a>
+            </td>
+            <td>
+              Bitcoin
+            </td>
+            <td>
+              Bitcoin
+            </td>
+          </tr>
+          <tr id="did:sov">
+            <td>
+              did:sov
+            </td>
+            <td>
+              <a
+                href="https://github.com/sovrin-foundation/sovrin/blob/master/spec/did-method-spec-template.html">
+                Sovrin DID Method Spec</a>
+            </td>
+            <td>
+              Hyperledger Indy
+            </td>
+            <td>
+              A particular instance of Hyperledger Indy
+            </td>
+          </tr>
+          <tr id="did:ethr">
+            <td>
+              did:ethr
+            </td>
+            <td>
+              <a
+                href="https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md">
+                ethr DID Method Spec</a>
+            </td>
+            <td>
+              Ethereum
+            </td>
+            <td>
+              Specific smart contracts for each network.
+            </td>
+          </tr>
+          <tr id="did:jolo">
+            <td>
+              did:jolo
+            </td>
+            <td>
+              <a
+                href="https://github.com/jolocom/jolocom-did-driver/blob/master/jolocom-did-method-specification.md">
+                Jolocom DID Method Specification</a>
+            </td>
+            <td>
+              Ethereum
+            </td>
+            <td>
+              Specific smart contracts for different networks and
+              subnetworks.
+            </td>
+          </tr>
+          <tr id="did:ipid">
+            <td>
+              did:ipid
+            </td>
+            <td>
+              <a href="https://did-ipid.github.io/ipid-did-method/">
+                IPID DID Method</a>
+            </td>
+            <td>
+              @johnnycrunch
+            </td>
+            <td>
+              DIDs persisted to IPFS.
+            </td>
+          </tr>
+          <tr id="did:web">
+            <td>
+              did:web
+            </td>
+            <td>
+              <a href="https://w3c-ccg.github.io/did-method-web/">
+                did:web Method Specification</a>
+            </td>
+            <td>
+              CCG work item
+            </td>
+            <td>
+              DIDs associated with control of a domain name (DNS).
+            </td>
+          </tr>
+          <tr id="did:indy">
+            <td>
+              did:indy
+            </td>
+            <td>
+              <a href="https://github.com/hyperledger/indy-did-method">
+                did:indy Method Spec</a>
+            </td>
+            <td>
+              Hyperledger Indy community
+            </td>
+            <td>
+              Supersedes did:sov to service all Indy-based ledgers.
+            </td>
+          </tr>
+          <tr id="did:iota">
+            <td>
+              did:iota
+            </td>
+            <td>
+              <a
+                href="https://github.com/iotaledger/identity.rs/blob/main/docs/specs/iota_did_method_spec.md">
+                IOTA DID Method Spec</a>
+            </td>
+            <td>
+              IOTA Foundation
+            </td>
+            <td>
+              DIDs persisted to the IOTA tangle.
+            </td>
+          </tr>
+          <tr id="did:keri">
+            <td>
+              did:keri
+            </td>
+            <td>
+              <a href="https://identity.foundation/keri/did_methods/">
+                The did:keri Method 0.1</a>
+            </td>
+            <td>
+              Sam Smith, et al.
+            </td>
+            <td>
+              DIDs that can migrate from one blockchain to another, or
+              use no blockchain at all.
+            </td>
+          </tr>
+          <tr id="did:hedera">
+            <td>
+              did:hedera
+            </td>
+            <td>
+              <a
+                href="https://github.com/hashgraph/did-method/blob/master/did-method-specification.md">
+                Hedera Hashgraph DID Method Specification</a>
+            </td>
+            <td>
+              Hashgraph, Inc
+            </td>
+            <td>
+              DIDs written to a ledger that uses Hashgraph consensus as
+              an alternative to traditional blockchain.
+            </td>
+          </tr>
+          <tr id="did:key">
+            <td>
+              did:key
+            </td>
+            <td>
+              <a href="https://w3c-ccg.github.io/did-method-key/">
+                The did:key Method v0.7</a>
+            </td>
+            <td>
+              CCG work item
+            </td>
+            <td>
+              Use a keypair as a DID.
+            </td>
+          </tr>
+          <tr id="did:twit">
+            <td>
+              did:twit
+            </td>
+            <td>
+              <a
+                href="https://github.com/did-twit/did-twit/blob/master/spec/index.md">
+                Twit DID method specification</a>
+            </td>
+            <td>
+              Gabe Cohen
+            </td>
+            <td>
+              Publish a DID via Twitter feed.
+            </td>
+          </tr>
+          <tr id="did:pkh">
+            <td>
+              did:pkh
+            </td>
+            <td>
+              <a
+                href="https://github.com/spruceid/ssi/blob/9ecc25cb4082709d146206b779cf8e8442f9eaf3/did-pkh/did-pkh-method-draft.md">
+                did:pkh Method Specification</a>
+            </td>
+            <td>
+              Spruce ID
+            </td>
+            <td>
+              Wrap an identifier (e.g., payment address) from one of
+              many existing blockchains in did format.
+            </td>
+          </tr>
+          <tr id="did:trustbloc">
+            <td>
+              did:trustbloc
+            </td>
+            <td>
+              <a
+                href="https://github.com/trustbloc/trustbloc-did-method/blob/main/docs/spec/trustbloc-did-method.md">
+                TrustBloc DID Method Specification 0.1</a>
+            </td>
+            <td>
+              Trustbloc
+            </td>
+            <td>
+              Persist DIDs via Sidetree wrapper around a permissioned
+              ledger.
+            </td>
+          </tr>
+          <tr id="did:jlinc">
+            <td>
+              did:jlinc
+            </td>
+            <td>
+              <a href="https://did-spec.jlinc.org/">
+                JLINC DID Method Specification</a>
+            </td>
+            <td>
+              JLincLabs
+            </td>
+            <td>
+              Register DIDs over the JLinc protocol for sharing data
+              with terms and conditions.
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="criteria-and-criterion">
+        <h3>Criteria and Criterion</h3>
+        <p>
+          The term "criteria" is often treated as both a singular and
+          a plural noun. In the singular, we say "The most important
+          criteria is the buyer's age". This singular use of criteria
+          has been in use for over half a century <a
+          href="https://www.merriam-webster.com/dictionary/criterion#usage-1">https://www.merriam-webster.com/dictionary/criterion#usage-1</a>
+          In the plural we say "That proposal doesn't meet all of the
+          criteria." Sometimes people use both in the same sentence:
+          "Select one criteria from the list of criteria."
+        </p>
+        <p>
+          However, for formal use, "criteria" is more broadly accepted
+          as plural while "criterion" is singular. By this style rule,
+          the last sentence in the previous paragraph <em>should</em>
+          be "Select one criterion from the list of criteria."
+        </p>
+        <p>
+          As editors of a Note published by the World Wide Web
+          Consortium, we are torn. We would prefer to use rigorous
+          grammar and be consistent in doing so. At the same time, we
+          find attempts to enforce the formal rule sometimes leads
+          people to using the inverse, such as "Select a criteria from
+          the list of criterion." This is the exact opposite of our
+          desired outcome.
+        </p>
+        <p>
+          In our own work with implementers and developers of the DID
+          Core specification, we have found that the singular
+          "criteria" is readily accepted and understood and leads to
+          no confusion when used, even alongside plural usage. Since
+          the DID Method Rubric is, at its core, a set of criteria
+          with ample reason to refer to, for example, "Criteria #23",
+          we find the combined singular and plural use is cleaner
+          (just stick with "criteria"), less confusing, and more
+          aligned with common usage among our audience.
+        </p>
+        <p>
+          As such, throughout the DID Method Rubric, we use the term
+          "criteria" to refer to both singular instances of criteria
+          and plural sets of criteria.
+        </p>
+      </section> <!-- criteria v criterion -->
+    </section> <!-- introduction -->
+    <section id="registration-process">
+      <h2>Registration Process</h2>
+      <p>
+        This registry &mdash; the DID Method Rubric Registry &mdash;
+        provides a public vehicle for publishing updated DID Method
+        Rubric criteria. In order to add or update a criteria, a
+        submitter MUST submit a modification request for this
+        registry, as a pull request on the repository where this
+        registry is hosted, where the modification request adheres to
+        the following policies:
+      </p>
+      <section id="general-requirements">
+        <h3>General Requirements</h3>
+        <ol>
+          <li>
+            If there are copyright, trademark, or intellectual
+            property rights concerns, the addition and use MUST be
+            authorized in writing by the intellectual property rights
+            holder under a F/RAND license. For example, criteria that
+            use trademarked brand names, use the titles or excerpts
+            from copyrighted works, or require patented technology to
+            perform the evaluation.
+          </li>
+          <li>
+            Additions MUST NOT create unreasonable legal, security,
+            moral, or privacy issues that may result in direct or
+            indirect harm to others, including violations of the W3C
+            Code Of Ethics And Professional Conduct <a
+            href="https://www.w3.org/Consortium/cepc/">
+              https://www.w3.org/Consortium/cepc/</a>
+            Examples of unacceptable additions include any containing
+            hate speech, unprofessional or unethical attacks,
+            proprietary information, and any personal data or
+            personally identifiable information (excepting
+            identification details of the submitter).
+          </li>
+          <li>
+            All criteria MUST be uniquely identified and versioned to
+            ensure permanent linkability with version trackability.
+            Those identifiers MUST be present as an `href` anchor in
+            the HTML for the criteria itself. See the sections below
+            on identifiers and versioning. Subcomponents, such as
+            questions, responses, relevance, and examples, are not
+            separately versioned; any change to a subcomponent
+            triggers an appropriate version change to its primary
+            component.
+          </li>
+          <li>
+            Methods, and evaluations cited within a criteria MUST
+            include a local link to a full citation in the relevant
+            citation section: Methods Evaluated and Evaluations Cited,
+            respectively.
+          </li>
+          <li>
+            Rubric criteria and associated metadata in the DID Method
+            Rubric Registry MAY be updated or removed at the editors'
+            discretion, including the addition or removal of
+            categories of metadata such as <em>Evaluations Cited</em>.
+            </li>
+        </ol>
+      </section>
+      <section id="component-requirements">
+        <h3>Component Requirements</h3>
+        <p>
+          The primary components managed by this registry are criteria
+          for evaluating DID Methods, with as many as eight
+          subcomponents: name, id, version, question,
+          assessmentTemplate, response, relevance, exampleAssessments,
+          and, optionally, a source. In addition, the DID Method
+          Rubric maintains a list of cited DID methods and
+          evaluations. The criteria are independently identified and
+          versioned (see those sections for details) while references
+          cited in the criteria themselves link to their full citation
+          in the appropriate list.
+        </p>
+        <section id="criteria">
+          <h4>Criteria</h4>
+          <ol>
+            <li>
+              Updates to criteria MUST follow the following versioning
+              guidelines.
+            </li>
+            <li>
+              Accepted (non-provisional) criteria MUST have at least
+              three example assessments, and generally SHOULD have no
+              more example assessments than there are possible
+              responses to its question. Each example should
+              distinctly illustrate one possible response to the
+              criteria's question.
+            </li>
+            <li>
+              DID Method Rubric criteria can be proposed by submitting
+              a pull request that defines the criteria in a file under
+              the <code>rubric/criteria/</code> directory. The file
+              name MUST be the criteria's number (from its
+              <code>id</code>, e.g., <code>1</code> for <code>criteria-1</code>) followed by a
+              kebab-case slug of the criteria name and the
+              <code>.json</code> file extension (e.g.,
+              <code>1-open-contribution-participation.json</code>).
+            </li>
+            <li>
+              The pull request MUST also add the criteria's
+              <code>id</code> to the appropriate category in
+              <code>rubric/rubric-outline.json</code>. The rubric
+              outline determines the organization and ordering of
+              criteria within the rendered document. A criteria file
+              that is not referenced in the outline will not appear
+              in the Rubric.
+            </li>
+            <li>To be considered, criteria MUST have the following
+              subcomponents:
+              <ol type="a">
+                <li>
+                  Name
+                </li>
+                <li>
+                  Identifier
+                </li>
+                <li>
+                  Version
+                </li>
+                <li>
+                  Question
+                </li>
+                <li>
+                  Assessment Template
+                </li>
+                <li>
+                  Response
+                </li>
+                <li>
+                  Relevance
+                </li>
+                <li>
+                  Example Assessments
+                </li>
+              </ol>
+            </li>
+            <li>
+              Additionally, criteria MAY have the following optional
+              subcomponents:
+              <ol type="a">
+                <li>
+                  Source
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <p>The following is an example of a complete criteria
+            JSON file:</p>
+          <pre class="example" title="Example Criteria JSON">
+  {
+    "name": "Offline creation",
+    "id": "https://www.w3.org/TR/did-rubric#criteria-42",
+    "version": "1.0.0",
+    "source": "https://didcriteria.com/criteria/7",
+    "question": {
+      "question": "Does the Method require network communications to create a DID?"
     },
-    {
-      "id": "a-31",
-      "method": "did:web",
-      "spec": "B+",
-      "note": "The DID controller must be able to communicate with the web server.",
-      "evaluationCitation": "#eval-4"
-    }
-  ]
-}
-        </pre>
-      </section> <!-- criteria -->
-      <section>
-        <h4>Criteria.Name</h4>
-        <p>Each criteria needs a human-friendly, short, descriptive
-          name
-          that captures the essence of the criteria as concisely as
-          possible.</p>
-      </section> <!-- Criteria.Name -->
-      <section>
-        <h4>Criteria.Id</h4>
-        <p>The criteria id must be explicit, unique, and persistent.
-          See the section on Identifiers for details. Criteria ids
-          under the DID Method Rubric namespace will be assigned
-          by the rubric maintainers.
-        </p>
-      </section> <!-- Criteria.Id -->
-      <section>
-        <h4>Criteria.Version</h4>
-        <p>The criteria version must increment, as appropriate, any
-          time
-          the criteria, or any of its subcomponents, is updated. See
-          the section on <a href="#versioning">Versioning</a> for
-          details.</p>
-      </section> <!-- Criteria.Version -->
-      <section>
-        <h4>Criteria.Question</h4>
-        <p>
-          This subcomponent is an object that presents the key question
-          for evaluating the criteria. The question MUST be a single inquiry
-          that gets to the heart of the criteria. It should be reasonably
-          clear to a competent professional skilled in the art how to
-          resolve the question into one of the possible responses.
-        </p>
-
-        <section>
-          <h4>Criteria.Question.Question</h4>
+    "response": {
+      "type": "multipleChoice",
+      "possibleResponses": [
+        {
+          "label": "A",
+          "meaning": "No. Creation is expected to be off-line."
+        },
+        {
+          "label": "B",
+          "meaning": "Yes. Creation requires network coordination with a single party."
+        },
+        {
+          "label": "C",
+          "meaning": "Yes. Creation requires network coordination with multiple parties."
+        }
+      ]
+    },
+    "assessmentTemplate": {
+      "columns": [
+        {
+          "heading": "Method",
+          "type": "method",
+          "propertyRef": "method"
+        },
+        {
+          "heading": "Spec.",
+          "type": "enhancedLetter",
+          "propertyRef": "spec"
+        },
+        {
+          "heading": "Notes",
+          "type": "note",
+          "propertyRef": "note"
+        }
+      ]
+    },
+    "relevance": "Communication is costly, with increasing costs the more parties are involved.",
+    "exampleAssessments": [
+      {
+        "id": "a-29",
+        "method": "did:v1.testnet",
+        "spec": "A",
+        "note": "Veres One DID creation is a local cryptographic process.",
+        "evaluationCitation": "#eval-3"
+      },
+      {
+        "id": "a-31",
+        "method": "did:web",
+        "spec": "B+",
+        "note": "The DID controller must be able to communicate with the web server.",
+        "evaluationCitation": "#eval-4"
+      }
+    ]
+  }
+          </pre>
+        </section> <!-- criteria -->
+        <section id="criteria-name">
+          <h4>Criteria.Name</h4>
           <p>
-        The key question for evaluating the criteria. This property is REQUIRED.
+            Each criteria needs a human-friendly, short, descriptive
+            name that captures the essence of the criteria as
+            concisely as possible.
           </p>
-        </section>
-
-        <section>
-          <h4>Criteria.Question.Instruction</h4>
+        </section> <!-- Criteria.Name -->
+        <section id="criteria.id">
+          <h4>Criteria.Id</h4>
           <p>
-        Any additional instructions for how
-        the evaluator should interpret or apply the question when making
-        their assessment. This property is OPTIONAL.
+            The criteria id must be explicit, unique, and persistent.
+            See the section on Identifiers for details. Criteria ids
+            under the DID Method Rubric namespace will be assigned by
+            the rubric maintainers.
           </p>
-        </section>
-
-      </section> <!-- Criteria.Question -->
-
-      <section>
-        <h4>Criteria.AssessmentTemplate</h4>
-        <p>
-          This subcomponent defines the structure of assessments for
-          the criteria. It specifies the columns that make up the
-          assessment table, determining what information evaluators
-          provide and how it is presented.
-        </p>
-
-        <section>
-          <h4>Criteria.AssessmentTemplate.Columns</h4>
+        </section> <!-- Criteria.Id -->
+        <section id="criteria.version">
+          <h4>Criteria.Version</h4>
           <p>
-            An ordered array of column definitions. Each column
-            specifies a heading, a type, and a property reference.
-            This property is REQUIRED. The columns array MUST include
-            a column with a type of <code>method</code> as the first
-            entry, which identifies the specific DID method being
-            assessed.
+            The criteria version must increment, as appropriate, any
+            time the criteria, or any of its subcomponents, is
+            updated. See the section on <a
+            href="#versioning">Versioning</a> for details.
           </p>
+        </section> <!-- Criteria.Version -->
+        <section id="criteria-question">
+          <h4>Criteria.Question</h4>
 
-          <section>
-            <h4>Criteria.AssessmentTemplate.Columns.Heading</h4>
+          <section id="criteria-question-question">
+            <h4>Criteria.Question.Question</h4>
             <p>
-              The display label for the column in the assessment
-              table. This property is REQUIRED.
-            </p>
-          </section>
-
-          <section>
-            <h4>Criteria.AssessmentTemplate.Columns.Type</h4>
-            <p>
-              The type of data expected in this column. This
-              property is REQUIRED. The following types are currently
-              defined, but additional types MAY be introduced as
-              needed:
-            </p>
-            <dl>
-              <dt><code>method</code></dt>
-              <dd>The DID method being assessed. Every assessment
-                template MUST include a column of this type.</dd>
-              <dt><code>enhancedLetter</code></dt>
-              <dd>A letter response from the possible responses,
-                optionally enhanced with modifiers (e.g.,
-                "A-", "C/D").</dd>
-              <dt><code>multipleChoice</code></dt>
-              <dd>A response selected from the defined possible
-                responses.</dd>
-              <dt><code>note</code></dt>
-              <dd>Free-text notes providing context for the
-                assessment.</dd>
-            </dl>
-          </section>
-
-          <section>
-            <h4>Criteria.AssessmentTemplate.Columns.PropertyRef</h4>
-            <p>
-              The property name used in example assessments to
-              provide the value for this column. This property
-              is REQUIRED.
-            </p>
-          </section>
-
-        </section> <!-- Criteria.AssessmentTemplate.Columns -->
-
-      </section> <!-- Criteria.AssessmentTemplate -->
-
-      <section>
-        <h4>Criteria.Response</h4>
-        <p>
-          This subcomponent defines the options an evaluator has for
-          responding to the criteria's question.
-        </p>
-
-        <section>
-          <h4>Criteria.Response.Type</h4>
-          <p>
-            The type of response expected from evaluators. This
-            property is REQUIRED. Currently defined types include:
-          </p>
-          <dl>
-            <dt><code>multipleChoice</code></dt>
-            <dd>The evaluator selects from a predefined set of
-              labeled responses.</dd>
-          </dl>
-        </section>
-
-        <section>
-          <h4>Criteria.Response.PossibleResponses</h4>
-          <p>
-            An ordered array of the possible responses available to
-            evaluators. This property is REQUIRED when the response
-            type is <code>multipleChoice</code>.
-          </p>
-
-          <section>
-            <h4>Criteria.Response.PossibleResponses.Label</h4>
-            <p>
-              A short identifier for the response. Labels MUST start
-              with “A” and progress sequentially through the English
-              alphabet. This property is REQUIRED.
-            </p>
-          </section>
-
-          <section>
-            <h4>Criteria.Response.PossibleResponses.Meaning</h4>
-            <p>
-              A description of what the label represents. This
+              The key question for evaluating the criteria. This
               property is REQUIRED.
             </p>
           </section>
 
-        </section> <!-- Criteria.Response.PossibleResponses -->
+          <section id="criteria-question-instruction">
+            <h4>Criteria.Question.Instruction</h4>
+            <p>
+              Any additional instructions for how the evaluator should
+              interpret or apply the question when making their
+              assessment. This property is OPTIONAL.
+            </p>
+          </section>
 
-      </section> <!-- Criteria.Response -->
-      <section>
-        <h4>Criteria.Relevance</h4>
-        <p>This subcomponent explains why this criteria is useful.
-          Readers
-          should be able to understand the extent to which this
-          particular criteria is applicable to their situation.
-        </p>
-      </section> <!-- Criteria.Relevance -->
-      <section>
-        <h4>Criteria.ExampleAssessments</h4>
-        <p>
-          This subcomponent lists example assessments of different
-          DID methods against this criteria. Each example assessment
-          is an evaluation of a specific DID method, structured
-          according to the criteria’s
-          <a href=”#criteriaassessmenttemplate”>assessmentTemplate</a>.
-          The set of example assessments is presented as a table for
-          easy comparison across methods.
-        </p>
-        <ol>
-          <li>
-            Each example assessment MUST conform to the column
-            structure defined in the criteria’s assessmentTemplate,
-            providing a value for each column’s
-            <code>propertyRef</code>.
-          </li>
-          <li>
-            Each example assessment MUST include an
-            <code>evaluationCitation</code> that references the
-            evaluation from which it is drawn, using a relative
-            reference to the evaluation’s entry in the Evaluations
-            Cited section of the Rubric (e.g.,
-            <code>”#eval-1”</code>).
-          </li>
-          <li>
-            The DID method assessed MUST have a corresponding entry
-            in the Methods Evaluated section of the Rubric.
-          </li>
-          <li>Example assessments for a given criteria SHOULD
-            highlight distinct responses. That is, each assessment
-            should have a different set of responses from the other
-            example assessments. The point of the examples is to
-            illustrate how different DID methods score differently.
-          </li>
-          <li>The editors will curate the list of proposed examples
-            to provide a best effort illustration of each criteria,
-            with consideration to highlighting a broad corpus of
-            methods.
-          </li>
-          <li>Criteria with fewer than 3 example assessments MUST be
-            marked “PROVISIONAL”.</li>
-          <li>Criteria SHOULD have no more example assessments than
-            there are possible responses.</li>
-        </ol>
-      </section> <!-- Criteria.ExampleAssessments -->
-      <section>
-        <h4>Criteria.Source</h4>
-        <p>
-          This OPTIONAL subcomponent tracks the provenance of the
-          criteria. Criteria in the Rubric may be independently
-          versioned and developed externally under their own
-          identifiers. When such iterations are folded back into the
-          Rubric, the source MUST point to the external origin so
-          that the versioning history is preserved.
-        </p>
-        <p>
-          The value MUST be either:
-        </p>
-        <dl>
-          <dt><code>"."</code></dt>
-          <dd>The criteria originated in this document.</dd>
-          <dt>A URL</dt>
-          <dd>The criteria was developed externally. The URL
-            SHOULD point to the specific criteria at its
-            external source.</dd>
-        </dl>
-        <p>
-          If no source is provided, the default value is
-          <code>"."</code>.
-        </p>
-      </section> <!-- Criteria.Source -->
-    </section> <!-- Component Requirements -->
-    <section>
-      <h3>Identifiers</h3>
-      <p>Each criteria must be explicitly, uniquely, and persistently
-        identified using incremental numbers. New criteria should
-        use the next available increment based on the highest numbered
-        identifier in the current publication.</p>
-      <p>Previous numbered identifiers MUST NOT be re-used, even if
-        the
-        criteria so identified are no longer published; this
-        maintains the persistent linkability of previously published
-        versions. Such “retired” criteria MAY be listed in a Prior
-        Criteria section linking directly to the latest published
-        Rubric
-        containing the retired criteria; this Prior Criteria
-        section MUST also contain an anchor with the canonical id.</p>
-      <p>The registry shall maintain an entry with the “next
-        available”
-        number. Additions should use the “next available”
-        number to construct an identifier for the new criteria, and
-        update
-        the “next available” entry at the same time. Editors
-        will manage any sequencing errors when accepting PRs.</p>
+        </section> <!-- Criteria.Question -->
 
-      <p>Identifiers must be constructed by appending that numerical
-        value
-        to the string “criteria-” and incorporated in the ID
-        of the heading element for that criteria, which when placed in
-        the
-        Rubric appears as something like (note the version in
-        its own span after the permalink):
-      <pre class="example nohighlight"
-        title="Example criteria numbering">
-      &lt;h4 id="criteria-1"&gt;Open contribution (participation)&lt;/h4&gt;
-      &lt;a href="#criteria-1"&gt;https://www.w3.org/TR/did-rubric#criteria-1&lt;/a&gt; &lt;span&gt;1.0.0&lt;/span&gt;
-      </pre>
-      This allows permanent links to citations based on the
-      publication
-      date of a given Rubric:
-      <a
-        href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a>
-      as well as version-free links that resolve to the
-      latest version of the criteria, and if retired, to an entry in
-      the
-      Prior Criteria list which itself links to the last
-      valid presentation of the criteria, so that, for example, <a
-        href="https://www.w3.org/TR/did-rubric/#criteria-32">https://www.w3.org/TR/did-rubric/#criteria-32</a>
-      points to the
-      current criteria-32 in the latest published document. When that
-      criteria is retired, that same URL points to the entry
-      in the Prior Criteria list, which links to its last versioned
-      publication, e.g.,
-      <a
-        href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a>
-    </section> <!-- Identifiers -->
-    <section>
-      <h3 id="versioning">Versioning</h3>
-      <p>Criteria versions allow for incremental improvements while
-        retaining long-term referenceability.</p>
-      <ol>
-        <li>Versions contain a Major, Minor, and Patch number, based
-          on
-          SemVer 2.0
-        </li>
-        <li>Every new criteria has a version of 1.0.0, even if
-          PROVISIONAL.
-        </li>
-        <li>Updates to criteria must increment the appropriate version
-          number based on the scope of change:
-          <ol type="a">
-            <li><strong>Major</strong> number MUST increment if,
-              <em>and only if</em>,
-              the criteria is fundamentally changed in a way that
-              invalidates
-              existing
-              evaluations. This could be a material change to any
-              subcomponent
-              of the criteria, including removing or changing
-              Possible Responses.
+        <section id="criteria-assessment-template">
+          <h4>Criteria.AssessmentTemplate</h4>
+
+          <section id="criteria-assessment-template-columns">
+            <h4>Criteria.AssessmentTemplate.Columns</h4>
+            <p>
+              An ordered array of column definitions. Each column
+              specifies a heading, a type, and a property reference.
+              This property is REQUIRED. The columns array MUST
+              include a column with a type of <code>method</code> as
+              the first entry, which identifies the specific DID
+              method being assessed.
+            </p>
+
+            <section id="criteria-assessment-template-columns-heading">
+              <h4>Criteria.AssessmentTemplate.Columns.Heading</h4>
+              <p>
+                The display label for the column in the assessment
+                table. This property is REQUIRED.
+              </p>
+            </section>
+
+            <section id="criteria-assessment-template.columns.type">
+              <h4>Criteria.AssessmentTemplate.Columns.Type</h4>
+              <p>
+                The type of data expected in this column. This
+                property is REQUIRED. The following types are
+                currently defined, but additional types MAY be
+                introduced as needed:
+              </p>
+              <dl>
+                <dt>
+                  <code>method</code>
+                </dt>
+                <dd>
+                  The DID method being assessed. Every assessment
+                  template MUST include a column of this type.
+                  </dd>
+                <dt>
+                  <code>enhancedLetter</code>
+                </dt>
+                <dd>
+                  A letter response from the possible responses,
+                  optionally enhanced with modifiers (e.g., "A-",
+                  "C/D").
+                </dd>
+                <dt>
+                  <code>multipleChoice</code>
+                </dt>
+                <dd>
+                  A response selected from the defined possible
+                  responses.
+                </dd>
+                <dt>
+                  <code>note</code>
+                </dt>
+                <dd>
+                  Free-text notes providing context for the
+                  assessment.
+                </dd>
+              </dl>
+            </section>
+
+            <section id="criteria-assessment-template.columns.propertyRef">
+              <h4>Criteria.AssessmentTemplate.Columns.PropertyRef</h4>
+              <p>
+                The property name used in example assessments to
+                provide the value for this column. This property
+                is REQUIRED.
+              </p>
+            </section>
+
+          </section> <!-- Criteria.AssessmentTemplate.Columns -->
+
+        </section> <!-- Criteria.AssessmentTemplate -->
+
+        <section id="criteria-response">
+          <h4>Criteria.Response</h4>
+          <p>
+            This subcomponent defines the options an evaluator has for
+            responding to the criteria's question.
+          </p>
+
+          <section id="criteria-response-type">
+            <h4>Criteria.Response.Type</h4>
+            <p>
+              The type of response expected from evaluators. This
+              property is REQUIRED. Currently defined types include:
+            </p>
+            <dl>
+              <dt>
+                <code>multipleChoice</code>
+              </dt>
+              <dd>
+                The evaluator selects from a predefined set of
+                labeled responses.
+              </dd>
+            </dl>
+          </section>
+
+          <section id="criteria-response-possible-responses">
+            <h4>Criteria.Response.PossibleResponses</h4>
+            <p>
+              An ordered array of the possible responses available to
+              evaluators. This property is REQUIRED when the response
+              type is <code>multipleChoice</code>.
+            </p>
+
+            <section id="criteria-response-possible-responses-label">
+              <h4>Criteria.Response.PossibleResponses.Label</h4>
+              <p>
+                A short identifier for the response. Labels MUST start
+                with "A" and progress sequentially through the English
+                alphabet. This property is REQUIRED.
+              </p>
+            </section>
+
+            <section id="criteria-response-possible-responses-meaning">
+              <h4>Criteria.Response.PossibleResponses.Meaning</h4>
+              <p>
+                A description of what the label represents. This
+                property is REQUIRED.
+              </p>
+            </section>
+
+          </section> <!-- Criteria.Response.PossibleResponses -->
+
+        </section> <!-- Criteria.Response -->
+        <section id="criteria-relevance">
+          <h4>Criteria.Relevance</h4>
+          <p>
+            This subcomponent explains why this criteria is useful.
+            Readers should be able to understand the extent to which
+            this particular criteria is applicable to their situation.
+          </p>
+        </section> <!-- Criteria.Relevance -->
+        <section id="criteria-example-assessments">
+          <h4>Criteria.ExampleAssessments</h4>
+          <p>
+            This subcomponent lists example assessments of different
+            DID methods against this criteria. Each example assessment
+            is an evaluation of a specific DID method, structured
+            according to the criteria's <a
+            href="#criteriaassessmenttemplate">assessmentTemplate</a>.
+            The set of example assessments is presented as a table for
+            easy comparison across methods.
+          </p>
+          <ol>
+            <li>
+              Example assessments for a given criteria SHOULD
+              highlight distinct responses. That is, each assessment
+              should have a different set of responses from the other
+              example assessments. The point of the examples is to
+              illustrate how different DID methods score differently.
             </li>
-            <li><strong>Minor</strong> number MUST increment if,
-              <em>and only
-                if</em>, new responses are added, without invalidating
-              existing
-              responses. It’s understood that an evaluator of an
-              existing
-              evaluation may desire to choose the new response if they
-              were
-              evaluating the criteria anew; however, as long as prior
-              evaluations
-              remain valid, a Minor increment SHOULD be applied.
+            <li>
+              The editors will curate the list of proposed examples
+              to provide a best effort illustration of each criteria,
+              with consideration to highlighting a broad corpus of
+              methods.
             </li>
-            <li><strong>Patch</strong> number MUST increment if,
-              <em>and only
-                if</em>, the change to the question is “editorial”,
-              defined by
-              clarifying the original intent of the criteria WITHOUT
-              invalidating existing evaluations.
+            <li>
+              Criteria with fewer than 3 example assessments MUST be
+              marked "PROVISIONAL".
             </li>
+            <li>Criteria SHOULD have no more example assessments than
+              there are possible responses.</li>
           </ol>
-        </li>
-        <li>
-          As long as a given criteria is an evolution of essentially
-          the same
-          consideration, it retains the original identifier,
-          even as its version is updated throughout its lifetime.
-        </li>
-        <li>
-          Criteria that address fundamentally different considerations
-          MUST be assigned a new criteria number rather than
-          iterating an existing version number.
-        </li>
-      </ol>
-    </section>
-    <section>
-      <h3>Metadata Tables</h3>
-      The registry maintains several tables of metadata, which
-      aggregate references cited in Criteria. Each table presents an
-      internally referencable label, anchor tag, and the necessary
-      details for the contents of each.
-      <section>
-        <h3>Evaluations Cited</h3>
-        <p>Every example evaluation cited in the Notes entry in an
-          evaluation MUST link to a proper citation in this section.
+        </section> <!-- Criteria.ExampleAssessments -->
+        <section id="criteria-source">
+          <h4>Criteria.Source</h4>
+          <p>
+            This OPTIONAL subcomponent tracks the provenance of the
+            criteria. Criteria in the Rubric may be independently
+            versioned and developed externally under their own
+            identifiers. When such iterations are folded back into the
+            Rubric, the source MUST point to the external origin so
+            that the versioning history is preserved.
+          </p>
+          <p>
+            The value MUST be either:
+          </p>
+          <dl>
+            <dt>
+              <code>"."</code>
+            </dt>
+            <dd>
+              The criteria originated in this document.
+            </dd>
+            <dt>
+              A URL
+            </dt>
+            <dd>
+              The criteria was developed externally. The URL
+              SHOULD point to the specific criteria at its
+              external source.
+            </dd>
+          </dl>
+          <p>
+            If no source is provided, the default value is
+            <code>"."</code>.
+          </p>
+        </section> <!-- Criteria.Source -->
+      </section> <!-- Component Requirements -->
+      <section id="identifiers">
+        <h3>Identifiers</h3>
+        <p>
+          Each criteria must be explicitly, uniquely, and persistently
+          identified using incremental numbers. New criteria should
+          use the next available increment based on the highest
+          numbered identifier in the current publication.
         </p>
-        <p>This is not a comprehensive listing of DID Method Rubric
-          evaluations. It is expected that such evaluations are
-          developed and published elsewhere, in support of various
-          methods and use cases. Only those evaluations cited as
-          Example Assessments in current criteria will be listed.
+        <p>
+          Previous numbered identifiers MUST NOT be re-used, even if
+          the criteria so identified are no longer published; this
+          maintains the persistent linkability of previously published
+          versions. Such "retired" criteria MAY be listed in a Prior
+          Criteria section linking directly to the latest published
+          Rubric containing the retired criteria; this Prior Criteria
+          section MUST also contain an anchor with the canonical id.
         </p>
-        <p>Evaluation entries defined by creating a JSON file under the
-          <code>rubric/evaluationCitations</code> folder in the
-          <a href="https://github.com/w3c/did-rubric">github repository</a>.
-          This JSON file MUST include:</p>
+        <p>
+          The registry shall maintain an entry with the "next
+          available" number. Additions should use the "next available"
+          number to construct an identifier for the new criteria, and
+          update the "next available" entry at the same time. Editors
+          will manage any sequencing errors when accepting PRs.
+        </p>
+        <p>
+          Identifiers must be constructed by appending that numerical
+          value to the string "criteria-" and incorporated in the ID
+          of the heading element for that criteria, which when placed
+          in the Rubric appears as something like (note the version in
+          its own span after the permalink):
+        </p>
+        <pre class="example nohighlight"
+          title="Example criteria numbering">
+        &lt;h4 id="criteria-1"&gt;Open contribution (participation)&lt;/h4&gt;
+        &lt;a href="#criteria-1"&gt;https://www.w3.org/TR/did-rubric#criteria-1&lt;/a&gt; &lt;span&gt;1.0.0&lt;/span&gt;
+        </pre>
+        <p>
+          This allows permanent links to citations based on the
+          publication date of a given Rubric:
+          <a
+          href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a>
+          as well as version-free links that resolve to the latest
+          version of the criteria, and if retired, to an entry in the
+          Prior Criteria list which itself links to the last valid
+          presentation of the criteria. So that, for example, <a
+          href="https://www.w3.org/TR/did-rubric/#criteria-32">https://www.w3.org/TR/did-rubric/#criteria-32</a>
+          points to the current criteria-32 in the latest published
+          document. When that criteria is retired, that same URL
+          points to the entry in the Prior Criteria list, which links
+          to its last versioned publication, e.g.,
+        <a
+        href="https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32">https://www.w3.org/TR/2021/NOTE-did-rubric-20210826/#criteria-32</a>
+        </p>
+      </section> <!-- Identifiers -->
+      <section id="versioning">
+        <h3 id="versioning">Versioning</h3>
+        <p>
+          Criteria versions allow for incremental improvements while
+          retaining long-term referenceability.
+        </p>
         <ol>
-          <li><strong>ID</strong> A identifier for the
-            evaluation, that can be used as a relative reference
-            to cite the evaluation throughout the DID Method rubric.
-          </li>
-          <li><strong>Title</strong> A short, descriptive title for the
-            evaluation.</li>
-          <li><strong>Evaluators</strong> The names of the individuals
-            accepting responsibility for the evaluation.
-          </li>
-          <li><strong>Evaluation Date</strong> The performance date of
-            the evaluation.
-          </li>
-          <li><strong>Evaluation URL</strong> A permalink where readers
-            can read or download the published evaluation for additional details including use cases, funding, and contact information.
-          </li>
-        </ol>
-
-      </section> <!-- Evaluations Cited -->
-      <section>
-        <h3>Methods Evaluated</h3>
-        <p>Every DID method cited in the Example Evaluations MUST link
-          to a proper citation in this section.
-        </p>
-        <p>This is not a comprehensive list (see the <a
-            href="https://www.w3.org/TR/did-spec-registries/">DID
-            Specification Registries</a> for a current list of
-          registered Methods). Rather, this section aggregates the
-          methods used in example evaluations of current criteria for
-          easy reference.</p>
-        <p>Each entry in the
-          table SHOULD contain the following:</p>
-        <ol>
-          <li>A label for the DID method within the registry
-          </li>
-          <li>An anchor tag so that the entry in the table can be
-            linked by
-            fragment from example evaluations.
+          <li>
+            Versions contain a Major, Minor, and Patch number, based
+            on SemVer 2.0
           </li>
           <li>
-            Columns for the Specification, the Network, and the
-            Registry (SNR)
-            evaluated with this label.
+            Every new criteria has a version of 1.0.0, even if
+            PROVISIONAL.
           </li>
           <li>
-            In the case that all three SNR entries would be identical
-            for
-            different rows in the same table, subsequent entries MAY
-            refer to
-            the prior entry by Method (with link), along with a
-            description of
-            the difference, in a single column spanning all three SNR
-            columns.
-          </li>
-          <li>Each SNR entry should uniquely describe the component
-            evaluated.
+            Updates to criteria must increment the appropriate version
+            number based on the scope of change:
             <ol type="a">
-              <li><strong>Specification</strong> identifies the DID
-                Method
-                specification under evaluation, with a hyperlink to
-                the
-                specification (at the time of the evaluation).</li>
-              <li><strong>Network</strong> identifies the
-                communications
-                mechanism through which DID operations (create, read,
-                update,
-                and deactivate) are communicated.</li>
-              <li><strong>Registry</strong> should unambiguously
-                identify the
-                state management substrate of the method’s Verifiable
-                Data
-                Registry.</li>
+              <li>
+                <strong>Major</strong> number MUST increment if,
+                <em>and only if</em>, the criteria is fundamentally
+                changed in a way that invalidates existing evaluations.
+                This could be a material change to any subcomponent of
+                the criteria, including removing or changing Possible
+                Responses.
+              </li>
+              <li>
+                <strong>Minor</strong> number MUST increment if,
+                <em>and only if</em>, new responses are added, without
+                invalidating existing responses. It's understood that
+                an evaluator of an existing evaluation may desire to
+                choose the new response if they were evaluating the
+                criteria anew; however, as long as prior evaluations
+                remain valid, a Minor increment SHOULD be applied.
+              </li>
+              <li>
+                <strong>Patch</strong> number MUST increment if,
+                <em>and only if</em>, the change to the question is
+                "editorial", defined by clarifying the original intent
+                of the criteria WITHOUT invalidating existing
+                evaluations.
+              </li>
             </ol>
           </li>
-          <li>Each SNR entry SHOULD include a hyperlinked URL when
-            additional details are available.
+          <li>
+            As long as a given criteria is an evolution of essentially
+            the same consideration, it retains the original
+            identifier, even as its version is updated throughout its
+            lifetime.
+          </li>
+          <li>
+            Criteria that address fundamentally different
+            considerations MUST be assigned a new criteria number
+            rather than iterating an existing version number.
           </li>
         </ol>
-      </section><!-- Methods Evaluated -->
-    </section><!-- Metadata Tables -->
-    <section>
-      <h3>Editorial Acceptance & Publication</h3>
-      <p>The Editors of the DID Method Rubric Registry MUST consider
-        all of the
-        policies above when reviewing additions to the registry and
-        MUST reject
-        registry entries if they violate any of the policies in this
-        section.
-        Entities registering additions can challenge rejections first
-        with the W3C
-        DID Working Group and then, if they are not satisfied with the
-        outcome,
-        with the W3C Staff. W3C Staff need not be consulted on changes
-        to the DID
-        Method Rubric Registry, but do have the final authority on
-        registry
-        contents. This is to ensure that W3C can adequately respond to
-        time
-        sensitive legal, privacy, security, moral, or other pressing
-        concerns
-        without putting an undue operational burden on W3C Staff.
+      </section>
+      <section id="metadata-tables">
+        <h3>Metadata Tables</h3>
+        The registry maintains several tables of metadata, which
+        aggregate references cited in Criteria. Each table presents an
+        internally referenceable label, anchor tag, and the necessary
+        details for the contents of each.
+        </p>
+        <section id="evaluations-cited">
+          <h3>Evaluations Cited</h3>
+          <p>
+            Every example evaluation cited in the Notes entry in an evaluation MUST link to a proper citation in this section.
+          </p>
+          <p>
+            This is not a comprehensive listing of DID Method Rubric evaluations. It is expected that such evaluations are developed and published elsewhere, in support of various methods and use cases. Only those evaluations cited as Example Assessments in current criteria will be listed.
+          </p>
+          <p>
+            Evaluation entries defined by creating a JSON file under the <code>rubric/evaluationCitations</code> folder in the <a href="https://github.com/w3c/did-rubric">github repository</a>. This JSON file MUST include:
+          </p>
+          <ol>
+            <li>
+              <strong>ID</strong> A identifier for the
+              evaluation, that can be used as a relative reference
+              to cite the evaluation throughout the DID Method rubric.
+            </li>
+            <li>
+              <strong>Title</strong> A short, descriptive title for the
+              evaluation.</li>
+            <li>
+              <strong>Evaluators</strong> The names of the individuals
+              accepting responsibility for the evaluation.
+            </li>
+            <li>
+              <strong>Evaluation Date</strong> The performance date of
+              the evaluation.
+            </li>
+            <li>
+              <strong>Evaluation URL</strong> A permalink where
+              readers can read or download the published evaluation
+              for additional details including use cases, funding, and
+              contact information.
+            </li>
+          </ol>
+
+        </section> <!-- Evaluations Cited -->
+        <section id="methods-evaluated">
+          <h3>Methods Evaluated</h3>
+          <p>
+            Every DID method cited in the Example Evaluations MUST
+            link to a proper citation in this section.
+          </p>
+          <p>
+            This is not a comprehensive list (see the <a
+            href="https://www.w3.org/TR/did-spec-registries/">DID
+            Specification Registries</a> for a current list of
+            registered Methods). Rather, this section aggregates the
+            methods used in example evaluations of current criteria
+            for easy reference.
+          </p>
+          <p>
+            Each entry in the table SHOULD contain the following:
+          </p>
+          <ol>
+            <li>
+              A label for the DID method within the registry
+            </li>
+            <li>
+              An anchor tag so that the entry in the table can be
+              linked by fragment from example evaluations.
+            </li>
+            <li>
+              Columns for the Specification, the Network, and the
+              Registry (SNR) evaluated with this label.
+            </li>
+            <li>
+              In the case that all three SNR entries would be
+              identical for different rows in the same table,
+              subsequent entries MAY refer to the prior entry by
+              Method (with link), along with a description of the
+              difference, in a single column spanning all three SNR
+              columns.
+            </li>
+            <li>
+              Each SNR entry should uniquely describe the component
+              evaluated.
+              <ol type="a">
+                <li>
+                  <strong>Specification</strong> identifies the DID
+                  Method specification under evaluation, with a
+                  hyperlink to the specification (at the time of the
+                  evaluation).
+                </li>
+                <li>
+                  <strong>Network</strong> identifies the communications
+                  mechanism through which DID operations (create, read,
+                  update, and deactivate) are communicated.
+                </li>
+                <li>
+                  <strong>Registry</strong> should unambiguously
+                  identify the state management substrate of the
+                  method's Verifiable Data Registry.
+                </li>
+              </ol>
+            </li>
+            <li>
+              Each SNR entry SHOULD include a hyperlinked URL when
+              additional details are available.
+            </li>
+          </ol>
+        </section><!-- Methods Evaluated -->
+      </section><!-- Metadata Tables -->
+      <section id="registration-process-editorial-acceptance">
+        <h3>Editorial Acceptance & Publication</h3>
+        <p>
+          The Editors of the DID Method Rubric Registry MUST consider
+          all of the policies above when reviewing additions to the
+          registry and MUST reject registry entries if they violate
+          any of the policies in this section. Entities registering
+          additions can challenge rejections first with the W3C DID
+          Working Group and then, if they are not satisfied with the
+          outcome, with the W3C Staff. W3C Staff need not be consulted
+          on changes to the DID Method Rubric Registry, but do have
+          the final authority on registry contents. This is to ensure
+          that W3C can adequately respond to time sensitive legal,
+          privacy, security, moral, or other pressing concerns without
+          putting an undue operational burden on W3C Staff.
+        </p>
+        <p>
+          Submissions to the registry that meet all the criteria
+          listed above will be considered for inclusion, however the
+          editors retain the responsibility of curating the content to
+          ensure the broadest applicability of the DID Method Rubric
+          with the goal of enabling effective evaluations of any DID
+          Method for any legitimate use case.
+        </p>
+      </section>
+    </section> <!-- Registration Process -->
+
+
+
+    <section id="criteria">
+      <h2>The criteria</h2>
+
+
+    </section> <!-- criteria -->
+    <section id="retired">
+      <h2>Retired criteria</h2>
+      <p>
+        The following criteria have been retired. We link to their
+        last canonical publication for historical provenance. Many of
+        these criteria have evolved into newer criteria, others have
+        simply been removed from this Rubric for lack of completeness,
+        currency and/or relevance.
       </p>
-      <p>Submissions to the registry that meet all the criteria listed
-        above
-        will be considered for inclusion, however the editors retain
-        the
-        responsibility of curating the content to ensure the broadest
-        applicability of the DID Method Rubric with the goal of
-        enabling effective
-        evaluations of any DID Method for any legitimate use case.
-      </p>
+
     </section>
-  </section> <!-- Registration Process -->
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        This DID Method Rubric one framework for evaluating DID
+        Methods. It offers a set of criteria which can be used
+        selectively by
+        <a>Evaluator</a>s to better understand and document their
+        considerations when deciding to support or adopt a given DID
+        Method.
+      </p>
+    </section> <!-- conclusion -->
 
 
+    <section id="terminology" class="appendix">
+      <h2>Terminology</h2>
+      <dl>
+        <dt>
+          <dfn data-lt="Evaluator">
+            Evaluator
+          </dfn>
+        </dt>
+        <dd>
+          The individual or organization applying this rubric to
+          evaluate a DID Method.
+        </dd>
 
-  <section id="criteria">
-    <h2>The criteria</h2>
+        <dt>
+          <dfn data-lt="evaluation">
+            Evaluation
+          </dfn>
+        </dt>
+        <dd>
+          The process of and analysis from answering the question in
+          each selected criteria for a given DID Method. Evaluation
+          could refer to deciding the answer to a single criteria or
+          to a "complete" set, where completeness is in the judgment
+          of the <a>Evaluator</a>.
+        </dd>
 
+        <dt>
+          <dfn data-lt="evaluation report">
+            Evaluation Report
+          </dfn>
+        </dt>
+        <dd>
+          The output of an <a>Evaluation</a>. The written
+          documentation of the result of evaluating one or more DID
+          Methods against this rubric. In practice, this is a
+          completed report template, with answers for all of the
+          criteria selected by the
+          <a>Evaluator</a>.
+        </dd>
 
-  </section> <!-- criteria -->
-  <section id="retired">
-    <h2>Retired criteria</h2>
-<p>The following criteria have been retired. We link to their last canonical publication for historical provenance. Many of these criteria have evolved into newer criteria, others have simply been removed from this Rubric for lack of completeness, currency and/or relevance.
-</p>
+        <dt>
+          <dfn data-lt="network">
+            Network
+          </dfn>
+        </dt>
+        <dd>
+          the channel that enables communication of DID Method
+          operations, .e.g, for BTCR, any of the main bitcoin networks
+          can be used (mainnet, testnet, etc.). For did:ethr, the
+          network is any EVM-compliant network (each DID specifies one
+          and only one such network).
+        </dd>
 
-  </section>
+        <dt>
+          <dfn data-lt="registry">
+            Registry
+          </dfn>
+        </dt>
+        <dd>
+          the instantiated storage and integrated business logic that
+          record the effect of DID Method operations. In did:ethr, the
+          registry is a smart contract. In did:btcr, the registry is
+          the specific bitcoin network (the network and the registry
+          are the same).
+        </dd>
 
-  <section>
-    <h2>Conclusion</h2>
-    <p>
-      This DID Method Rubric one framework for evaluating DID Methods.
-      It offers a set of criteria which can be used selectively by
-      <a>Evaluator</a>s to better understand and document their
-      considerations when deciding to support or adopt
-      a given DID Method.
-    </p>
-  </section> <!-- conclusion -->
+        <dt>
+          <dfn data-lt="you">
+            you
+          </dfn>
+        </dt>
+        <dd>
+          Throughout this document we use the second-person pronoun
+          "you" to refer to <a>Evaluator</a>s of a DID Method applying
+          this Rubric.
+        </dd>
+      </dl>
+    </section> <!-- appendix terminology -->
 
+    <section id="possible-additional-criteria" class="appendix">
+      <h2>Possible additional criteria</h2>
+      <section id="maturity">
+        <h3>Maturity</h3>
+        <ol>
+          <li>
+            How long has the specification been published?
+            <ol type="A">
+              <li>
+                Just a concept sketch
+              </li>
+              <li>
+                A complete draft...
+              </li>
+              <li>
+                ...
+              </li>
+              <li>
+                Published as a fixed, recommended specification
+              </li>
+              <li>
+                [Published for X years]
+              </li>
+            </ol>
+          </li>
+          <li>
+            How mature is the entity who controls the specification?
+          </li>
+          <li>
+            How long has the specification been in live usage?
+          </li>
+        </ol>
+      </section> <!-- maturity -->
 
-  <section class="appendix">
-    <h2>Terminology</h2>
-    <dl>
-      <dt><dfn data-lt="Evaluator">
-          Evaluator
-        </dfn></dt>
-      <dd>
-        The individual or organization applying this rubric to
-        evaluate a DID Method.
-      </dd>
+      <section id="cryptography">
+        <h3>Cryptography</h3>
+        <ol>
+          <li>
+            Can the individual use their own cryptographic material
+            for key generation without sharing secrets?
+          </li>
+          <li>
+            Can DID Controllers specify their own cryptographic suite
+            for key generation / signing / hashing / etc.?
+          </li>
+          <li>
+            Can DID Controllers specify ANY cryptographic suite for
+            key generation / signing / hashing / etc.?
+          </li>
+          <li>
+            Do DID Controllers have cryptographically provable control
+            over DID Documents?
+          </li>
+          <li>
+            Are all registry transactions publicly inspectable and
+            cryptographically verifiable?Does the Method support
+            specific cryptographic capabilities?
+            <ol type="A">
+              <li>
+                Multi-sig
+              </li>
+              <li>
+                Shamir secret sharing
+              </li>
+              <li>
+                HD Keys
+              </li>
+              <li>
+                Object capabilities
+              </li>
+            </ol>
+            
+          </li>
+          <li>
+            Does the Method provide a cryptographic DID, or does it
+            try to provide a human-readable name?
+          </li>
+          <li>
+            Do DIDs with a few random substitutions result in
+            different valid DIDs, or is there cryptographic error
+            correction to identify transmission errors and
+            typosquatting?
+          </li>
+          <li>
+            Can the Method-specific-id be generated without the use of
+            a per-Method centralized registry service (as required in
+            the DID specification [[DID-CORE]])?
+          </li>
+        </ol>
+      </section> <!-- cryptography -->
 
-      <dt><dfn data-lt="evaluation">
-          Evaluation
-        </dfn></dt>
-      <dd>
-        The process of and analysis from answering the question in
-        each selected
-        criteria for a given DID Method. Evaluation could refer to
-        deciding the answer
-        to a single criteria or to a "complete" set, where
-        completeness is in the
-        judgment of the <a>Evaluator</a>.
-      </dd>
+      <section id="fiduciary-commitments">
+        <h3>Fiduciary commitments</h3>
+        <ol>
+          <li>
+            Do operators of resolvers accept fiduciary responsibility
+            to users? 
+          </li>
+          <li>
+            Do operators of registry nodes accept fiduciary
+            responsibility to users? 
+          </li>
+          <li>
+            Do the parties in charge of governance accept fiduciary
+            responsibility to users? 
+          </li>
+          <li>
+            Do wallet creators & maintainers accept fiduciary
+            responsibility to users? 
+          </li>
+        </ol>
+      </section> <!-- fiduciary -->
 
-      <dt><dfn data-lt="evaluation report">
-          Evaluation Report
-        </dfn></dt>
-      <dd>
-        The output of an <a>Evaluation</a>. The written documentation
-        of the result of
-        evaluating one or more DID Methods against this rubric. In
-        practice, this is a
-        completed report template, with answers for all of the
-        criteria selected by
-        the <a>Evaluator</a>.
-      </dd>
+      <section id="reliable-recovery">
+        <h3>Reliable recovery</h3>
+        <ol>
+          <li>
+            Are there mechanisms to recover from key loss?
+          </li>
+          <li>
+            Are there non-administrative mechanisms to recover from
+            key loss?
+          </li>
+          <li>
+            Are there cryptographically robust mechanisms for key
+            recovery that allow individuals to select specific
+            advocates or stewards?
+          </li>
+        </ol>
+      </section> <!-- reliable recovery -->
 
-      <dt><dfn data-lt="network">
-          Network
-        </dfn></dt>
-      <dd>
-        the channel that enables communication of DID Method
-        operations, .e.g, for
-        BTCR, any of the main bitcoin networks can be used (mainnet,
-        testnet, etc.).
-        For did:ethr, the network is any EVM-compliant network (each
-        DID specifies one
-        and only one such network).
-      </dd>
+      <section id="substitutability">
+        <h3>Substitutability</h3>
+        <ol>
+          <li>
+            Are the DIDs portable to other Methods?
+          </li>
+          <li>
+            Are the DIDs portable to multiple registries?
+          </li>
+          <li>
+            Does the Method allow DID Controllers to specify where the
+            DID Document resides?
+          </li>
+          <li>
+            Does the Method allow DID Controllers to specify wherever
+            they want the DID Document to reside?
+          </li>
+        </ol>
+      </section> <!-- substitutability -->
 
-      <dt><dfn data-lt="registry">
-          Registry
-        </dfn></dt>
-      <dd>
-        the instantiated storage and integrated business logic that
-        record the effect
-        of DID Method operations. In did:ethr, the registry is a smart
-        contract. In
-        did:btcr, the registry is the specific bitcoin network (the
-        network and the
-        registry are the same).
-      </dd>
+      <section id="revocation-deactivation-deletion">
+        <h3>Revocation / deactivation / deletion</h3>
+        <ol>
+          <li>
+            Is it possible to provably remove a DID from the system
+            (and all nodes)?
+          </li>
+          <li>
+            Is it possible to provably remove a DID Document from the
+            system (and all nodes)?
+          </li>
+          <li>
+            Are revocations and deactivations provably documented?
+          </li>
+          <li>
+            Do revocations and deactivations allow for publicly
+            visible explanations?
+          </li>
+          <li>
+            Can cryptographic material be selectively revoked or
+            rotated?
+          </li>
+          <li>
+            Resolution
+          </li>
+          <li>
+            Are all DIDs globally resolvable to a definitive, provably
+            current DID Document?
+          </li>
+          <li>
+            Are private DIDs (which are NOT globally resolvable)
+            supported?
+          </li>
+          <li>
+            Can access to DID Documents be limited to authorized
+            parties?
+          </li>
+          <li>
+            Can you get older versions by version number and by
+            timestamp?
+          </li>
+          <li>
+            Can you get cryptographic proof of the history of changes
+            to a given DID Document?
+          </li>
+        </ol>
+      </section> <!-- revocation -->
 
-      <dt><dfn data-lt="you">you</dfn></dt>
-      <dd>
-        Throughout this document we use the second-person pronoun
-        "you" to refer to
-        <a>Evaluator</a>s of a DID Method applying this Rubric.
-      </dd>
-    </dl>
-  </section> <!-- appendix terminology -->
+      <section id="costs">
+        <h3>Costs</h3>
+        <ol>
+          <li>
+            How much does DID creation and key rotation cost a DID
+            Controller?
+          </li>
+          <li>
+            Must individual DIDs be written to the registry?
+          </li>
+          <li>
+            How much do changes to a DID Document cost the DID
+            Controller?
+          </li>
+          <li>
+            Do changes to DID Documents require updating the registry?
+          </li>
+          <li>
+            What is the total cost of ownership for a typical DID and
+            DID Document?
+          </li>
+          <li>
+            Are there free versions of wallets?
+          </li>
+          <li>
+            Are there free versions of registry software?
+          </li>
+          <li>
+            Are the free versions of resolvers?
+          </li>
+        </ol>
+      </section> <!-- costs -->
 
-  <section class="appendix">
-    <h2>Possible additional criteria</h2>
-    <section>
-      <h3>Maturity</h3>
-      <ol>
-        <li>
-          ​How long has the specification been published?
-          <ol type="A">
-            <li>
-              Just a concept sketch
-            </li>
-            <li>
-              A complete draft...
-            </li>
-            <li>
-              ...
-            </li>
-            <li>
-              Published as a fixed, recommended specification
-            </li>
-            <li>
-              [Published for X years]
-            </li>
-          </ol>
-        </li>
-        <li>
-          ​How mature is the entity who controls the specification?
-        </li>
-        <li>
-          ​How long has the specification been in live usage?
-        </li>
-      </ol>
-    </section> <!-- maturity -->
+      <section id="censorship-resistance">
+        <h3>Censorship resistance</h3>
+        <ol>
+          <li>
+            Is there a single legal or natural entity, or set of known
+            entities, who can be targeted with intent to manipulate
+            the operation or governance of the Method?
+          </li>
+          <li>
+            Is participation in operation of the Method dependent on
+            identification using traditional legal credentials, such
+            as a birth certificate, driver's license, or passport?
+          </li>
+          <li>
+            Are activities on the registry traceable to real world
+            individuals?
+          </li>
+          <li>
+            Can DIDs be disabled or revoked by an administrator?
+          </li>
+          <li>
+            Can DID Documents be edited or removed by an administrator?
+          </li>
+        </ol>
+      </section> <!-- censorship -->
 
-    <section>
-      <h3>Cryptography</h3>
-      ​ <ol>
-        <li>
-          Can the individual use their own cryptographic material for
-          key generation
-          without sharing secrets?
-          ​ </li>
-        <li>
-          Can DID Controllers specify their own cryptographic suite
-          for key generation /
-          signing / hashing / etc.?
-          ​ </li>
-        <li>
-          Can DID Controllers specify ANY cryptographic suite for key
-          generation /
-          signing / hashing / etc.?
-          ​ </li>
-        <li>
-          Do DID Controllers have cryptographically provable control
-          over DID Documents?
-          ​ </li>
-        <li>
-          Are all registry transactions publicly inspectable and
-          cryptographically
-          verifiable?Does the Method support specific cryptographic
-          capabilities?
-          <ol type="A">
-            <li>
-              Multi-sig
-            </li>
-            <li>
-              Shamir secret sharing
-            </li>
-            <li>
-              HD Keys
-            </li>
-            <li>
-              Object capabilities
-            </li>
-          </ol>
-          ​
-        </li>
-        <li>
-          Does the Method provide a cryptographic DID, or does it try
-          to provide a
-          human-readable name?
-          ​ </li>
-        <li>
-          Do DIDs with a few random substitutions result in different
-          valid DIDs, or is
-          there cryptographic error correction to identify
-          transmission errors and
-          typosquatting?
-          ​ </li>
-        <li>
-          Can the Method-specific-id be generated without the use of a
-          per-Method
-          centralized registry service (as required in the DID
-          specification [[DID-CORE]])?
-        </li>
-      </ol>
-    </section> <!-- cryptography -->
+      <section id="uncategorized">
+        <h3>Uncategorized</h3>
+        <ol>
+          <li>
+            Is the Method name definitive? (there are no known
+            alternative forks or namespace collisions)
+          </li>
+          <li>
+            Is the Method resilient against registry forks?
+          </li>
+          <li>
+            Permissioned: governed/operation vs. use/creation
+          </li>
+          <li>
+            Open source: multiple independent implementations
+          </li>
+          <li>
+            Open standard
+          </li>
+          <li>
+            Does the individual create and control?
+          </li>
+          <li>
+            Can the individual choose how keys are managed?
+          </li>
+          <li>
+            Does the issuer/controller have a fiduciary responsibility
+            to DID Controller?
+          </li>
+          <li>
+            Does it support social recovery?
+          </li>
+          <li>
+            What does a single DID cost? TCO
+          </li>
+          <li>
+            Is resolution observable?
+          </li>
+          <li>
+            Are stealth DIDs supported?
+          </li>
+          <li>
+            Is deactivation publicly documented?
+          </li>
+          <li>
+            After control is lost can other people deactivate?
+          </li>
+          <li>
+            Possible confusion between implementations and DID Methods
+          </li>
+          <li>
+            Does it support HD Keys?
+          </li>
+          <li>
+            Are transactions publicly cryptographically verifiable?
+          </li>
+          <li>
+            Are DIDs permanent (unremovable--still able to be
+            deactivated but all traces can never vanish)?
+          </li>
+          <li>
+            Can you get the latest version and older versions?
+            Provable order of versions?
+          </li>
+          <li>
+            Is the Method published?
+          </li>
+          <li>
+            Is that Method independently implementable?
+          </li>
+          <li>
+            Is there a centralized database?
+          </li>
+          <li>
+            Is its blockchain byzantine fault tolerant?
+          </li>
+          <li>
+            Does a single party control a majority of the source of
+            truth? (Under what conditions can the DID controller lose
+            capability?)
+          </li>
+          <li>
+            If you give control away, can you get it back?
+          </li>
+        </ol>
+      </section> <!-- uncategorized -->
+    </section> <!-- appendix additional criteria -->
 
-    <section>
-      <h3>Fiduciary commitments</h3>
-      ​ <ol>
-        <li>
-          Do operators of resolvers accept fiduciary responsibility to
-          users? Do any?
-          ​ </li>
-        <li>
-          Do operators of registry nodes accept fiduciary
-          responsibility to users? Do
-          any?
-          ​ </li>
-        <li>
-          Do the parties in charge of governance accept fiduciary
-          responsibility to
-          users? Do any?
-          ​ </li>
-        <li>
-          Do wallet creators & maintainers accept fiduciary
-          responsibility to users? Do
-          any?
-        </li>
-      </ol>
-    </section> <!-- fiduciary -->
-
-    <section>
-      <h3>Reliable recovery</h3>
-      ​ <ol>
-        <li>
-          Are there mechanisms to recover from key loss?
-          ​ </li>
-        <li>
-          Are there non-administrative mechanisms to recover from key
-          loss
-          ​ </li>
-        <li>
-          Are there cryptographically robust mechanisms for key
-          recovery that allow
-          individuals to select specific advocates or stewards?
-        </li>
-      </ol>
-    </section> <!-- reliable recovery -->
-
-    <section>
-      <h3>Substitutability</h3>
-      ​ <ol>
-        <li>
-          Are the DIDs portable to other Methods?
-          ​ </li>
-        <li>
-          Are the DIDs portable to multiple registries?
-          ​ </li>
-        <li>
-          Does the Method allow DID Controllers to specify where the
-          DID Document resides?
-          ​ </li>
-        <li>
-          Does the Method allow DID Controllers to specify wherever
-          they want the DID
-          Document to reside?
-        </li>
-      </ol>
-    </section> <!-- substitutability -->
-
-    <section>
-      <h3>Revocation / deactivation / deletion</h3>
-      ​ <ol>
-        <li>
-          Is it possible to provably remove a DID from the system (and
-          all nodes)?
-          ​ </li>
-        <li>
-          Is it possible to provably remove a DID Document from the
-          system (and all
-          nodes)?
-          ​ </li>
-        <li>
-          Are revocations and deactivations provably documented?
-          ​ </li>
-        <li>
-          Do revocations and deactivations allow for publicly visible
-          explanations?
-          ​ </li>
-        <li>
-          Can cryptographic material be selectively revoked or
-          rotated?
-          ​ </li>
-        <li>
-          Resolution
-          ​ </li>
-        <li>
-          Are all DIDs globally resolvable to a definitive, provably
-          current DID Document?
-          ​ </li>
-        <li>
-          Are private DIDs (which are NOT globally resolvable)
-          supported?
-          ​ </li>
-        <li>
-          Can access to DID Documents be limited to authorized
-          parties?
-          ​ </li>
-        <li>
-          Can you get older versions by version number and by
-          timestamp?
-          ​ </li>
-        <li>
-          Can you get cryptographic proof of the history of changes to
-          a given DID
-          Document?
-        </li>
-      </ol>
-    </section> <!-- revocation -->
-
-    <section>
-      <h3>Costs</h3>
-      <ol>
-        <li>
-          How much does DID creation and key rotation cost a DID
-          Controller?
-          ​ </li>
-        <li>
-          Must individual DIDs be written to the registry?
-          ​ </li>
-        <li>
-          How much do changes to a DID Document cost the DID
-          Controller?
-          ​ </li>
-        <li>
-          Do changes to DID Documents require updating the registry?
-          ​ </li>
-        <li>
-          What is the total cost of ownership for a typical DID and
-          DID Document?
-          ​ </li>
-        <li>
-          Are there free versions of wallets?
-          ​ </li>
-        <li>
-          Are there free versions of registry software?
-          ​ </li>
-        <li>
-          Are the free versions of resolvers?
-        </li>
-      </ol>
-    </section> <!-- costs -->
-
-    <section>
-      <h3>Censorship resistance</h3>
-      <ol>
-        <li>
-          Is there a single legal or natural entity, or set of known
-          entities, who can
-          be targeted with intent to manipulate the operation or
-          governance of the Method?
-          ​</li>
-        <li>
-          Is participation in operation of the Method dependent on
-          identification using
-          traditional legal credentials, such as a birth certificate,
-          driver's license, or passport?
-          ​</li>
-        <li>
-          Are activities on the registry traceable to real world
-          individuals?
-          ​</li>
-        <li>
-          Can DIDs be disabled or revoked by an administrator?
-          ​</li>
-        <li>
-          Can DID Documents be edited or removed by an administrator?
-        </li>
-      </ol>
-    </section> <!-- censorship -->
-
-    <section>
-      <h3>Uncategorized</h3>
-      <ol>
-        <li>
-          Is the Method name definitive? (there are no known
-          alternative forks or
-          namespace collisions)
-        </li>
-        <li>
-          Is the Method resilient against registry forks?
-          ​ </li>
-        <li>
-          Permissioned: governed/operation vs. use/creation
-          ​ </li>
-        <li>
-          Open source: multiple independent implementations
-          ​ </li>
-        <li>
-          Open standard
-          ​ </li>
-        <li>
-          Does the individual create and control?
-          ​ </li>
-        <li>
-          Can the individual choose how keys are managed?
-          ​ </li>
-        <li>
-          Does the issuer/controller have a fiduciary responsibility
-          to DID Controller?
-          ​ </li>
-        <li>
-          Does it support social recovery?
-          ​ </li>
-        <li>
-          What does a single DID cost? TCO
-          ​ </li>
-        <li>
-          Is resolution observable?
-          ​ </li>
-        <li>
-          Are stealth DIDs supported?
-          ​ </li>
-        <li>
-          Is deactivation publicly documented?
-          ​ </li>
-        <li>
-          After control is lost can other people deactivate?
-          ​ </li>
-        <li>
-          Possible confusion between implementations and DID Methods
-          ​ </li>
-        <li>
-          Does it support HD Keys?
-          ​ </li>
-        <li>
-          Are transactions publicly cryptographically verifiable?
-          ​ </li>
-        <li>
-          Are DIDs permanent (unremovable--still able to be
-          deactivated but all traces
-          can never vanish)?
-          ​ </li>
-        <li>
-          Can you get the latest version and older versions? Provable
-          order of versions?
-          ​ </li>
-        <li>
-          Is the Method published?
-          ​ </li>
-        <li>
-          Is that Method independently implementable?
-          ​ </li>
-        <li>
-          did:web and the .onion TLD (truly decentralized) RFC 6761
-          and 7686
-          ​ </li>
-        <li>
-          Is there a centralized database?
-          ​ </li>
-        <li>
-          Is its blockchain byzantine fault tolerant?
-          ​ </li>
-        <li>
-          Does a single party control a majority of the source of
-          truth? (Under what
-          conditions can the DID controller lose capability?)
-          ​ </li>
-        <li>
-          If you give control away, can you get it back?
-        </li>
-      </ol>
-    </section> <!-- uncategorized -->
-  </section> <!-- appendix additional criteria -->
-
-  <section class="appendix">
-    <h2>Acknowledgements</h2>
-    <p>
-      This Note is a derivative work of [[[DID-DEC-RUBRIC]]], a
-      collaborative paper written at <a
-        href="https://rwot9.eventbrite.com/">Rebooting the Web of
-        Trust IX</a> by Joe Andrieu, Shannon Appelcline, Amy
-      Guy, Joachim Lohkamp, Drummond Reed, Markus Sabadello, and
-      Oliver Terbu.
-    </p>
-  </section> <!-- appendix acknowledgements -->
-</body>
+    <section id="acknowledgements" class="appendix">
+      <h2>Acknowledgements</h2>
+      <p>
+        This Note is a derivative work of [[[DID-DEC-RUBRIC]]], a
+        collaborative paper written at <a
+        href="https://rwot9.eventbrite.com/">Rebooting the Web of Trust
+        IX</a> by Joe Andrieu, Shannon Appelcline, Amy Guy, Joachim
+        Lohkamp, Drummond Reed, Markus Sabadello, and Oliver Terbu.
+      </p>
+    </section> <!-- appendix acknowledgements -->
+  </body>
 
 </html>
