@@ -1,9 +1,9 @@
 
 ![W3C Logo](https://www.w3.org/Icons/w3c_home)
 
-# DID Method Rubric v1.0
+# DID Method Rubric v2.0
 
-This is the repository of the W3C’s note on DID Method Rubric v1.0, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/). The editors’ draft of the specification can also be [read directly](https://w3c.github.io/did-rubric/).
+This is the repository of the W3C’s note, *DID Method Rubric v2.0*, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/). The editors’ draft of the specification can also be [read directly](https://w3c.github.io/did-rubric/).
 
 ## Contributing to the Repository
 
