@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { promises as fs } from "fs";
 import path from "path";
-import { CRITERIA_ROOT, EVALUATIONS_ROOT, RUBRIC_OUTLINE_FILE, OUTPUT_FILE, EVALUATIONS_OUTPUT_FILE, loadAllCriteria, readJson, isJsonFile } from "./utils.js";
+import { CRITERIA_ROOT, EVALUATIONS_ROOT, METHODS_ROOT, RUBRIC_OUTLINE_FILE, OUTPUT_FILE, EVALUATIONS_OUTPUT_FILE, METHODS_OUTPUT_FILE, loadAllCriteria, readJson, isJsonFile } from "./utils.js";
 
 
 async function buildRubric(criteriaIndex) {
@@ -86,6 +86,28 @@ async function buildEvaluations() {
   );
 }
 
+async function buildMethods() {
+  const entries = await fs.readdir(METHODS_ROOT, { withFileTypes: true });
+  const jsonFiles = entries
+    .filter((e) => e.isFile() && isJsonFile(e.name))
+    .map((e) => e.name)
+    .sort();
+
+  const methods = [];
+  for (const filename of jsonFiles) {
+    const fullPath = path.join(METHODS_ROOT, filename);
+    const parsed = await readJson(fullPath);
+    methods.push(parsed);
+  }
+
+  const outputContent = `var methodsJson = ${JSON.stringify(methods, null, 2)}`;
+  await fs.writeFile(METHODS_OUTPUT_FILE, outputContent + "\n", "utf8");
+
+  console.log(
+    `Wrote methods (${methods.length}) -> ${path.relative(process.cwd(), METHODS_OUTPUT_FILE)}`
+  );
+}
+
 async function main() {
   // Ensure criteria root exists
   try {
@@ -102,6 +124,9 @@ async function main() {
 
   // Build evaluations.js
   await buildEvaluations();
+
+  // Build methodsConsidered.js
+  await buildMethods();
 }
 
 main().catch((err) => {
