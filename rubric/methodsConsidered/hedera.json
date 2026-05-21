@@ -1,0 +1,9 @@
+{
+  "method": "did:hedera",
+  "specification": {
+    "name": "Hedera Hashgraph DID Method Specification",
+    "url": "https://github.com/hashgraph/did-method/blob/master/did-method-specification.md"
+  },
+  "network": "Hashgraph, Inc",
+  "registry": "DIDs written to a ledger that uses Hashgraph consensus as an alternative to traditional blockchain."
+}

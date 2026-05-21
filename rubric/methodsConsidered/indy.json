@@ -1,0 +1,9 @@
+{
+  "method": "did:indy",
+  "specification": {
+    "name": "did:indy Method Spec",
+    "url": "https://github.com/hyperledger/indy-did-method"
+  },
+  "network": "Hyperledger Indy community",
+  "registry": "Supersedes did:sov to service all Indy-based ledgers."
+}

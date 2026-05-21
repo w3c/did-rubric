@@ -1,0 +1,9 @@
+{
+  "method": "did:web",
+  "specification": {
+    "name": "did:web Method Specification",
+    "url": "https://w3c-ccg.github.io/did-method-web/"
+  },
+  "network": "CCG work item",
+  "registry": "DIDs associated with control of a domain name (DNS)."
+}

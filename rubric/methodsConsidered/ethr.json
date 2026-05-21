@@ -1,0 +1,9 @@
+{
+  "method": "did:ethr",
+  "specification": {
+    "name": "ethr DID Method Spec",
+    "url": "https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md"
+  },
+  "network": "Ethereum",
+  "registry": "Specific smart contracts for each network."
+}

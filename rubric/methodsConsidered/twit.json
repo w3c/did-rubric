@@ -1,0 +1,9 @@
+{
+  "method": "did:twit",
+  "specification": {
+    "name": "Twit DID method specification",
+    "url": "https://github.com/did-twit/did-twit/blob/master/spec/index.md"
+  },
+  "network": "Gabe Cohen",
+  "registry": "Publish a DID via Twitter feed."
+}

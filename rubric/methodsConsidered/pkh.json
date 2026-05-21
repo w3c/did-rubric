@@ -1,0 +1,9 @@
+{
+  "method": "did:pkh",
+  "specification": {
+    "name": "did:pkh Method Specification",
+    "url": "https://github.com/spruceid/ssi/blob/9ecc25cb4082709d146206b779cf8e8442f9eaf3/did-pkh/did-pkh-method-draft.md"
+  },
+  "network": "Spruce ID",
+  "registry": "Wrap an identifier (e.g., payment address) from one of many existing blockchains in did format."
+}

@@ -1,0 +1,9 @@
+{
+  "method": "did:btcr",
+  "specification": {
+    "name": "DID Method BTCR",
+    "url": "https://w3c-ccg.github.io/didm-btcr/"
+  },
+  "network": "Bitcoin",
+  "registry": "Bitcoin"
+}

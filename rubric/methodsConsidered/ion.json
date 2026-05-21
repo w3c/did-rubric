@@ -1,0 +1,9 @@
+{
+  "method": "did:ion",
+  "specification": {
+    "name": "did:ion Method Spec",
+    "url": "https://github.com/decentralized-identity/ion"
+  },
+  "network": "Bitcoin and IPFS",
+  "registry": "Bitcoin and IPFS"
+}

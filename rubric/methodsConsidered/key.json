@@ -1,0 +1,9 @@
+{
+  "method": "did:key",
+  "specification": {
+    "name": "The did:key Method v0.7",
+    "url": "https://w3c-ccg.github.io/did-method-key/"
+  },
+  "network": "CCG work item",
+  "registry": "Use a keypair as a DID."
+}
