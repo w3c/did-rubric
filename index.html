@@ -12,9 +12,12 @@
       class="remove"></script>
     <script src="./tooling/src/render-evaluations.js"
       class="remove"></script>
+    <script src="./tooling/src/render-methods.js"
+      class="remove"></script>
     <script src="./rubric/rubric.js"></script>
     <script src="./rubric/retired-criteria.js"></script>
     <script src="./rubric/evaluations.js"></script>
+    <script src="./rubric/methodsConsidered.js"></script>
 
     <link rel="stylesheet" href="rubric.css">
 
@@ -46,7 +49,7 @@
 
         // extend the bibliography entries
         localBiblio: ccg.localBiblio,
-        preProcess: [window.renderCategories, window.renderRetired, window.renderEvaluations],
+        preProcess: [window.renderCategories, window.renderRetired, window.renderEvaluations, window.renderMethods],
 
         github: {
           repoURL: "https://github.com/w3c/did-rubric/",
@@ -492,248 +495,14 @@
 
       <section id="methods-considered">
         <h3>Methods Considered</h3>
-        <table class="simple">
-          <tr>
-            <th>
-              Method
-            </th>
-            <th>
-              Specification
-            </th>
-            <th>
-              Network
-            </th>
-            <th>
-              Registry
-            </th>
-          </tr>
-          <tr id="did:peer">
-            <td>
-              did:peer
-            </td>
-            <td>
-              <a
-                href="https://identity.foundation/peer-did-method-spec/index.html">Peer
-                DID
-                Method Spec</a>
-            </td>
-            <td>
-              n/a (communications can flow over any agreeable channel)
-            </td>
-            <td>
-              Held by each peer
-            </td>
-          </tr>
-          <tr id="did:git">
-            <td>
-              did:git
-            </td>
-            <td>
-              <a
-                href="https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md">
-                DID git Spec</a>
-            </td>
-            <td>
-              <a href="https://git-scm.com/">git</a> (an open source
-              version control system)
-            </td>
-            <td>
-              Any Method-compliant git repository
-            </td>
-          </tr>
-          <tr id="did:btcr">
-            <td>
-              did:btcr
-            </td>
-            <td>
-              <a href="https://w3c-ccg.github.io/didm-btcr/">DID Method
-                BTCR</a>
-            </td>
-            <td>
-              Bitcoin
-            </td>
-            <td>
-              Bitcoin
-            </td>
-          </tr>
-          <tr id="did:sov">
-            <td>
-              did:sov
-            </td>
-            <td>
-              <a
-                href="https://github.com/sovrin-foundation/sovrin/blob/master/spec/did-method-spec-template.html">
-                Sovrin DID Method Spec</a>
-            </td>
-            <td>
-              Hyperledger Indy
-            </td>
-            <td>
-              A particular instance of Hyperledger Indy
-            </td>
-          </tr>
-          <tr id="did:ethr">
-            <td>
-              did:ethr
-            </td>
-            <td>
-              <a
-                href="https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md">
-                ethr DID Method Spec</a>
-            </td>
-            <td>
-              Ethereum
-            </td>
-            <td>
-              Specific smart contracts for each network.
-            </td>
-          </tr>
-          <tr id="did:jolo">
-            <td>
-              did:jolo
-            </td>
-            <td>
-              <a
-                href="https://github.com/jolocom/jolocom-did-driver/blob/master/jolocom-did-method-specification.md">
-                Jolocom DID Method Specification</a>
-            </td>
-            <td>
-              Ethereum
-            </td>
-            <td>
-              Specific smart contracts for different networks and
-              subnetworks.
-            </td>
-          </tr>
-          <tr id="did:web">
-            <td>
-              did:web
-            </td>
-            <td>
-              <a href="https://w3c-ccg.github.io/did-method-web/">
-                did:web Method Specification</a>
-            </td>
-            <td>
-              CCG work item
-            </td>
-            <td>
-              DIDs associated with control of a domain name (DNS).
-            </td>
-          </tr>
-          <tr id="did:indy">
-            <td>
-              did:indy
-            </td>
-            <td>
-              <a href="https://github.com/hyperledger/indy-did-method">
-                did:indy Method Spec</a>
-            </td>
-            <td>
-              Hyperledger Indy community
-            </td>
-            <td>
-              Supersedes did:sov to service all Indy-based ledgers.
-            </td>
-          </tr>
-          <tr id="did:hedera">
-            <td>
-              did:hedera
-            </td>
-            <td>
-              <a
-                href="https://github.com/hashgraph/did-method/blob/master/did-method-specification.md">
-                Hedera Hashgraph DID Method Specification</a>
-            </td>
-            <td>
-              Hashgraph, Inc
-            </td>
-            <td>
-              DIDs written to a ledger that uses Hashgraph consensus as
-              an alternative to traditional blockchain.
-            </td>
-          </tr>
-          <tr id="did:key">
-            <td>
-              did:key
-            </td>
-            <td>
-              <a href="https://w3c-ccg.github.io/did-method-key/">
-                The did:key Method v0.7</a>
-            </td>
-            <td>
-              CCG work item
-            </td>
-            <td>
-              Use a keypair as a DID.
-            </td>
-          </tr>
-          <tr id="did:twit">
-            <td>
-              did:twit
-            </td>
-            <td>
-              <a
-                href="https://github.com/did-twit/did-twit/blob/master/spec/index.md">
-                Twit DID method specification</a>
-            </td>
-            <td>
-              Gabe Cohen
-            </td>
-            <td>
-              Publish a DID via Twitter feed.
-            </td>
-          </tr>
-          <tr id="did:pkh">
-            <td>
-              did:pkh
-            </td>
-            <td>
-              <a
-                href="https://github.com/spruceid/ssi/blob/9ecc25cb4082709d146206b779cf8e8442f9eaf3/did-pkh/did-pkh-method-draft.md">
-                did:pkh Method Specification</a>
-            </td>
-            <td>
-              Spruce ID
-            </td>
-            <td>
-              Wrap an identifier (e.g., payment address) from one of
-              many existing blockchains in did format.
-            </td>
-          </tr>
-          <tr id="did:trustbloc">
-            <td>
-              did:trustbloc
-            </td>
-            <td>
-              <a
-                href="https://github.com/trustbloc/trustbloc-did-method/blob/main/docs/spec/trustbloc-did-method.md">
-                TrustBloc DID Method Specification 0.1</a>
-            </td>
-            <td>
-              Trustbloc
-            </td>
-            <td>
-              Persist DIDs via Sidetree wrapper around a permissioned
-              ledger.
-            </td>
-          </tr>
-          <tr id="did:jlinc">
-            <td>
-              did:jlinc
-            </td>
-            <td>
-              <a href="https://did-spec.jlinc.org/">
-                JLINC DID Method Specification</a>
-            </td>
-            <td>
-              JLincLabs
-            </td>
-            <td>
-              Register DIDs over the JLinc protocol for sharing data
-              with terms and conditions.
-            </td>
-          </tr>
-        </table>
+        <p>
+          This is not a comprehensive list (see the <a
+          href="https://www.w3.org/TR/did-spec-registries/">DID
+          Specification Registries</a> for a current list of registered
+          Methods). Rather, this section aggregates the methods used in
+          Example Assessments of current criteria for easy reference.
+        </p>
+        <div id="methods-considered-table"></div>
       </section>
       <section id="criteria-and-criterion">
         <h3>Criteria and Criterion</h3>
@@ -830,7 +599,7 @@
           <li>
             Methods, and evaluations cited within a criteria MUST
             include a local link to a full citation in the relevant
-            citation section: Methods Evaluated and Evaluations Cited,
+            citation section: Methods Considered and Evaluations Cited,
             respectively.
           </li>
           <li>
@@ -1371,10 +1140,10 @@
         internally referenceable label, anchor tag, and the necessary
         details for the contents of each.
         </p>
-        <section id="evaluations-cited">
+        <section id="evaluations-metadata">
           <h3>Evaluations Cited</h3>
           <p>
-            Every example evaluation cited in the Notes entry in an evaluation MUST link to a proper citation in this section.
+            Every example evaluation cited in the Notes entry in a assessment MUST link to a proper citation in this <a href="#did-evaluations-cited">DID Evaluations Cited</a> table.
           </p>
           <p>
             This is not a comprehensive listing of DID Method Rubric evaluations. It is expected that such evaluations are developed and published elsewhere, in support of various methods and use cases. Only those evaluations cited as Example Assessments in current criteria will be listed.
@@ -1408,52 +1177,45 @@
           </ol>
 
         </section> <!-- Evaluations Cited -->
-        <section id="methods-evaluated">
-          <h3>Methods Evaluated</h3>
+        <section id="methods-considered-metadata">
+          <h3>Methods Considered</h3>
           <p>
-            Every DID method cited in the Example Evaluations MUST
-            link to a proper citation in this section.
+            Every DID method cited in an Example Assessment MUST link to a
+            proper citation in the <a href="#methods-considered">Methods
+            Considered table</a>. The table MUST only contain methods
+            that are explicitly cited in the Example Assessments.
           </p>
           <p>
-            This is not a comprehensive list (see the <a
-            href="https://www.w3.org/TR/did-spec-registries/">DID
-            Specification Registries</a> for a current list of
-            registered Methods). Rather, this section aggregates the
-            methods used in example evaluations of current criteria
-            for easy reference.
+            The table is generated from individual JSON files under
+            <code>rubric/methodsConsidered/</code>. To add or
+            update a method, edit the corresponding JSON file rather than
+            this table directly.
           </p>
-          <p>
-            Each entry in the table SHOULD contain the following:
-          </p>
+          <p>Each entry SHOULD contain the following:</p>
           <ol>
+            <li>A label for the DID method within the registry.</li>
             <li>
-              A label for the DID method within the registry
+              An anchor tag so that the entry in the table can be linked
+              by fragment from Example Assessments.
             </li>
             <li>
-              An anchor tag so that the entry in the table can be
-              linked by fragment from example evaluations.
+              Columns for the Specification, the Network, and the Registry
+              (SNR) considered with this label.
             </li>
             <li>
-              Columns for the Specification, the Network, and the
-              Registry (SNR) evaluated with this label.
+              In the case that all three SNR entries would be identical for
+              different rows in the same table, subsequent entries MAY refer
+              to the prior entry by Method (with link), along with a
+              description of the difference, in a single column spanning all
+              three SNR columns.
             </li>
             <li>
-              In the case that all three SNR entries would be
-              identical for different rows in the same table,
-              subsequent entries MAY refer to the prior entry by
-              Method (with link), along with a description of the
-              difference, in a single column spanning all three SNR
-              columns.
-            </li>
-            <li>
-              Each SNR entry should uniquely describe the component
-              evaluated.
+              Each SNR entry should uniquely describe the component considered.
               <ol type="a">
                 <li>
-                  <strong>Specification</strong> identifies the DID
-                  Method specification under evaluation, with a
-                  hyperlink to the specification (at the time of the
-                  evaluation).
+                  <strong>Specification</strong> identifies the DID Method
+                  specification under consideration, with a hyperlink to the
+                  specification (at the time of the assessment).
                 </li>
                 <li>
                   <strong>Network</strong> identifies the communications
@@ -1461,18 +1223,18 @@
                   update, and deactivate) are communicated.
                 </li>
                 <li>
-                  <strong>Registry</strong> should unambiguously
-                  identify the state management substrate of the
-                  method's Verifiable Data Registry.
+                  <strong>Registry</strong> should unambiguously identify the
+                  state management substrate of the method's Verifiable Data
+                  Registry.
                 </li>
               </ol>
             </li>
             <li>
-              Each SNR entry SHOULD include a hyperlinked URL when
-              additional details are available.
+              Each SNR entry SHOULD include a hyperlinked URL when additional
+              details are available.
             </li>
           </ol>
-        </section><!-- Methods Evaluated -->
+        </section> <!-- Methods Considered -->
       </section><!-- Metadata Tables -->
       <section id="registration-process-editorial-acceptance">
         <h3>Editorial Acceptance & Publication</h3>
