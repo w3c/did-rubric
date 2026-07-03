@@ -238,7 +238,7 @@
         </p>
         <p>
           Each <a>Evaluation</a> should start with an explicit framing
-          of the use under consideration. Are you evaluating the
+          of the use under consideration. Are <a>you</a> evaluating the
           Method for use in Internet-of-Things (IoT)? For school
           childrens' extra-curricular activities? For international
           travel? The use, or set of uses, will directly affect how
@@ -246,10 +246,10 @@
         </p>
         <p>
           Where a given Method offers variability, such as multiple
-          networks for the same Method, then evaluate each variant.
+          <a>networks</a> for the same Method, then evaluate each variant.
           For example, did:ethr supports Ethereum mainnet, multiple
           testnets and permissioned EVM-compliant networks such as
-          Quorum. To apply a criteria to did:ethr, you will evaluate
+          Quorum. To apply a criteria to did:ethr, <a>you</a> will evaluate
           it against all the variations that matter <em>to you</em>.
           Each variation should get its own <a>Assessment</a>. This
           applies to Level 2 Networks that can operate on multiple
@@ -434,7 +434,7 @@
         <p>
           When evaluating the governance of DID Methods, three
           potentially independent layers should be considered: the
-          specification, the network, and the registry.
+          specification, the <a>network</a>, and the <a>registry</a>.
         </p>
         <ul>
           <li>
@@ -461,12 +461,12 @@
         </p>
         <p>
           For Operations, the criteria should be evaluated against the
-          network and the registry. The specification is taken as a
+          <a>network</a> and the <a>registry</a>. The specification is taken as a
           given (it is the core output of Rulemaking).
         </p>
         <p>
           For Adoption, the criteria should be evaluated for each major
-          software component: wallet, resolver, and registry.
+          software component: wallet, resolver, and </a>registry</a>.
         </p>
         <p>
           For the examples in the rest of this document we refer to a
@@ -916,7 +916,7 @@
             </li>
             <li>
               Accepted criteria MUST have at least
-              three example assessments, and generally SHOULD have no
+              three example <a>assessments</a>, and generally SHOULD have no
               more example assessments than there are possible
               responses to its question. Each example should
               distinctly illustrate one possible response to the
@@ -1234,11 +1234,11 @@
         <section id="criteria-example-assessments">
           <h4>Criteria.ExampleAssessments</h4>
           <p>
-            This subcomponent lists example assessments of different
+            This subcomponent lists example <a>assessments</a> of different
             DID methods against this criteria. Each example assessment
             is an evaluation of a specific DID method, structured
             according to the criteria's <a
-            href="#criteriaassessmenttemplate">assessmentTemplate</a>.
+            href="#criteria-assessment-template">assessmentTemplate</a>.
             The set of example assessments is presented as a table for
             easy comparison across methods.
           </p>
@@ -1579,6 +1579,14 @@
       <h2>Terminology</h2>
       <dl>
         <dt>
+          <dfn data-lt="assessment | assessments">
+            Assessment
+          </dfn>
+        </dt>
+        <dd>
+          A single answer to a criteria question for a single DID method variant.
+        </dd>
+        <dt>
           <dfn data-lt="Evaluator">
             Evaluator
           </dfn>
@@ -1594,11 +1602,12 @@
           </dfn>
         </dt>
         <dd>
-          The process of and analysis from answering the question in
-          each selected criteria for a given DID Method. Evaluation
-          could refer to deciding the answer to a single criteria or
-          to a "complete" set, where completeness is in the judgment
-          of the <a>Evaluator</a>.
+          The process of and analysis from producing a collection of
+          assessments for a given set of criteria and DID methods.
+          An <a>Evaluator</a> identifies a use case,
+          selects a set of criteria and performs an evaluation over
+          some set of DID methods by producing an assessment for each
+          criteria and DID method combination.
         </dd>
 
         <dt>
