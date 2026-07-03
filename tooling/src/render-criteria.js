@@ -2,7 +2,7 @@
 async function renderCategories() {
   const { document } = window;
   const criteriaSection = document.getElementById('criteria');
-  // this section must already exist in the document, 
+  // this section must already exist in the document,
   // inside  a <section> element.
 
 
@@ -60,7 +60,7 @@ function nameRow(criteria) {
 function idRow(criteria) {
   let criteriaIdFragment = criteria.id.split('#')[1];
   return `
-    <div class="id-row"> 
+    <div class="id-row">
         <span class="label">ID:</span>
         <a class="id" href="#${criteriaIdFragment}">${criteria.id}</a>
     </div>
@@ -78,7 +78,7 @@ function versionRow(criteria) {
 
 function sourceRow(criteria) {
   if ((typeof criteria.source === "undefined") ||
-    criteria.source === ".") 
+    criteria.source === ".")
     return ``;
   return `
   <div class="source-row">
@@ -97,14 +97,14 @@ function questionRow(criteria) {
 
 function instructionRow(criteria) {
   if ((typeof criteria.question.instruction === 'undefined') ||
-    criteria.question.instruction === "") 
+    criteria.question.instruction === "")
     return ``;
-  
+
   return `
     <div class="instructions-row">
         <span class="label">Instructions</span>
         <span class="instruction">${criteria.question.instruction}</span>
-      
+
     </div>
     `;
 }
@@ -129,9 +129,9 @@ function responsesRow(criteria) {
 function criteriaResponse(possibleResponse, index) {
   return `
   <tr class="possibleResponse">
-    <td class="label ${index ? '' : 'first'}">${possibleResponse.label}:</td> 
+    <td class="label ${index ? '' : 'first'}">${possibleResponse.label}:</td>
     <td class="meaning  ${index ? '' : 'first'}">${possibleResponse.meaning || ''}
-  
+
     </td>
   </tr>
   `;
@@ -151,7 +151,7 @@ function relevanceRow(criteria) {
 
 function assessmentsRow(criteria) {
   if ((typeof criteria.exampleAssessments === "undefined") ||
-    (criteria.exampleAssessments.length === 0)) 
+    (criteria.exampleAssessments.length === 0))
     return '';
 
   return `
@@ -191,20 +191,30 @@ function assessmentRow(assessment, index, columns) {
 }
 
 function makeColumn(assessment, column) {
-  return `
-  <td>
-    ${assessment[column.propertyRef]}
-    ${citeEvaluation(assessment, column)}
-  </td>
-  `;   /// citeEvaluation only returns something if column = notes
+  const colValue = assessment[column.propertyRef];
+  if (column.propertyRef == 'method') {
+    return `
+    <td>
+      <a href="#${colValue}">${colValue}</a>
+    </td>
+    `;
+  } else {
+    return `
+    <td>
+      ${colValue}
+      ${citeEvaluation(assessment, column)}
+    </td>
+    `;
+  }
 }
 
+// citeEvaluation only returns something if column = notes
 function citeEvaluation(assessment, column) {
   if (column.propertyRef != 'note')
     return '';
 
   return `[<a href="${assessment.evaluationCitation}">${assessment.evaluationCitation.slice(1)}</a>]`;
-    
+
 }
 
 window.renderCategories = renderCategories;

@@ -4,9 +4,11 @@ import path from "path";
 export const RUBRIC_ROOT = path.resolve(process.cwd(), "../rubric");
 export const CRITERIA_ROOT = path.resolve(RUBRIC_ROOT, "criteria");
 export const EVALUATIONS_ROOT = path.resolve(RUBRIC_ROOT, "evaluationCitations");
+export const METHODS_ROOT = path.resolve(RUBRIC_ROOT, "methodsConsidered");
 export const RUBRIC_OUTLINE_FILE = path.join(RUBRIC_ROOT, "rubric-outline.json");
 export const OUTPUT_FILE = path.join(RUBRIC_ROOT, "rubric.js");
 export const EVALUATIONS_OUTPUT_FILE = path.join(RUBRIC_ROOT, "evaluations.js");
+export const METHODS_OUTPUT_FILE = path.join(RUBRIC_ROOT, "methodsConsidered.js");
 
 export function isJsonFile(name) {
   return name.toLowerCase().endsWith(".json");

@@ -33,10 +33,11 @@ jobs:
           mkdir -p site/rubric site/tooling/src
           cp index.html common.js rubric.css site/
           cp rubric/rubric.js rubric/retired-criteria.js site/rubric/
-          cp rubric/evaluations.js site/rubric/
+          cp rubric/evaluations.js rubric/methodsConsidered.js site/rubric/
           cp tooling/src/render-criteria.js site/tooling/src/
           cp tooling/src/render-retired.js site/tooling/src/
           cp tooling/src/render-evaluations.js site/tooling/src/
+          cp tooling/src/render-methods.js site/tooling/src/
       - name: Select deploy target folder
         id: deploy_target
         run: |

@@ -1,0 +1,9 @@
+{
+  "method": "did:jolo",
+  "specification": {
+    "name": "Jolocom DID Method Specification",
+    "url": "https://github.com/jolocom/jolocom-did-driver/blob/master/jolocom-did-method-specification.md"
+  },
+  "network": "Ethereum",
+  "registry": "Specific smart contracts for different networks and subnetworks."
+}

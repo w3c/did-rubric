@@ -1,0 +1,9 @@
+{
+  "method": "did:peer",
+  "specification": {
+    "name": "Peer DID Method Spec",
+    "url": "https://identity.foundation/peer-did-method-spec/index.html"
+  },
+  "network": "n/a (communications can flow over any agreeable channel)",
+  "registry": "Held by each peer"
+}
