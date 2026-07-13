@@ -84,9 +84,7 @@
       "description": "Addresses the ability of a DID method to ensure various privacy mechanisms. When DIDs are used as identifiers for people, it becomes important to consider what tools a DID method offers to operate at different levels of privacy. Use cases that focus on IoT or institutions may not feel that this dimension is especially important (though institutional privacy may sometimes be desirable).",
       "criteria": [
         "https://www.w3.org/TR/did-rubric#criteria-33",
-        "https://www.w3.org/TR/did-rubric#criteria-35",
-        "https://www.w3.org/TR/did-rubric#criteria-36"
-      ]
+        "https://www.w3.org/TR/did-rubric#criteria-35"      ]
     }
   ]
 }

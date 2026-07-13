@@ -70,5 +70,9 @@ const retiredCriteria = [
     {
         "id": "https://www.w3.org/TR/did-rubric#criteria-34",
         "permalink": "https://www.w3.org/TR/2021/NOTE-did-rubric-20211119/#criteria-34"
+    },
+    {
+        "id": "https://www.w3.org/TR/did-rubric#criteria-36",
+        "permalink": "https://www.w3.org/TR/2021/NOTE-did-rubric-20211119/#criteria-36"
     }
 ]
