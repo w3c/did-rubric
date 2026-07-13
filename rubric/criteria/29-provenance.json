@@ -1,0 +1,80 @@
+{
+  "name": "Provenance",
+  "question": {
+    "question": "Is the current state of a DID document provably correct from a history that's visible to anyone who can resolve the DID?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": ".",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The update history of the DID document is recorded, accessible, and linked appropriately to its predecessor. Arbitrary versions can be queried and proved correct, and they have a reasonably useful timestamp."
+      },
+      {
+        "label": "B",
+        "meaning": "The update history of the DID document exists, and a forensic analysis could prove correctness. However, it's not exposed for consumption of ordinary resolvers, it lacks supporting metadata, or it's exposed in a very suboptimal way."
+      },
+      {
+        "label": "C",
+        "meaning": "Limited evidence of proper DID document updates exists."
+      },
+      {
+        "label": "D",
+        "meaning": "No evidence of proper DID document updates exist; the user has to trust the system's assertion that the current state resulted from something appropriate."
+      }
+    ]
+  },
+  "relevance": "It's possible to tamper with systems that don't actively prove the correctness of their current state. Such tampering is not easy to discover.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-29",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-135",
+      "method": "did:v1.testnet",
+      "reg": "A",
+      "note": "All document updates are recorded in a non-repudiable manner on the Veres One Ledger.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-136",
+      "method": "did:v1.production",
+      "reg": "A",
+      "note": "All document updates are recorded in a non-repudiable manner on the Veres One Ledger.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-137",
+      "method": "did:web",
+      "reg": "D",
+      "note": "The method does not require the website serving the DID Document to demonstrate any form of provenance.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-138",
+      "method": "did:ion",
+      "reg": "B",
+      "note": "As long as the IPFS-based transaction bundles are available (either via IPFS or somewhere else), the provenance of each DID Document is independently validatable. Similarly, if bitcoin state is lost, it would be impossible to verify the provenance of did:ion DID Documents. In both cases, it is relatively straightforward to address this by retaining your own copy of the state information, e.g., running your own bitcoin node and hosting the did:ion transaction bundles on your own IPFS node. In addition, late publishing https://identity.foundation/sidetree/spec/#late-publishing could allow multiple versions of DID Documents to be simultaneously seen as canonical.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "name": "Financial Entanglements",
+  "question": {
+    "question": "How was the Method funded?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "State-sponsored funding"
+      },
+      {
+        "label": "B",
+        "meaning": "Regulated not-for-profit entity"
+      },
+      {
+        "label": "C",
+        "meaning": "Private equity"
+      },
+      {
+        "label": "D",
+        "meaning": "Operational budget"
+      },
+      {
+        "label": "E",
+        "meaning": "Cryptocurrency"
+      },
+      {
+        "label": "F",
+        "meaning": "Tokenized Initial Coin Offering"
+      },
+      {
+        "label": "G",
+        "meaning": "Initial Public Offering (public equity funding)"
+      },
+      {
+        "label": "H",
+        "meaning": "Other -- State what in the notes"
+      }
+    ]
+  },
+  "relevance": "Funding can create financial entanglements. Those methods that depend on outside financing should be further evaluated to understand the potential consequences of funding to-date.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-59",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/25",
+  "exampleAssessments": [
+    {
+      "id": "a-107",
+      "method": "did:v1.testnet",
+      "spec": "D",
+      "net": "D",
+      "reg": "D",
+      "note": "Spec (D), Net (D), and Reg (D): did:v1 was funded by Digital Bazaar through internal operational budgets",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-108",
+      "method": "did:v1.production",
+      "spec": "D",
+      "net": "D",
+      "reg": "D",
+      "note": "Spec (D), Net (D), and Reg (D): did:v1 was funded by Digital Bazaar through internal operational budgets",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-109",
+      "method": "did:web",
+      "spec": "D",
+      "net": "A/B/C/D/G",
+      "reg": "H",
+      "note": "Spec (D): Specification was developed largely by independent firms using operational budgets .\nNet: The web was funded initially by the US Department of Defense and national TLD Administrators are funded by nation-states (A). Network infrastructure of TLD Administrators, hosting services, etc., have largely been funded by non-profits (B), private firms using either private equity (C), operational budgets (D), or public equity offerings (G).\nReg (H): Individual websites and network services have been funded in just about every way imaginable.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-110",
+      "method": "did:ion",
+      "spec": "D",
+      "net": "E/C/D",
+      "reg": "E/C/D",
+      "note": "Spec (D): Specification was developed largely by independent firms using operational budgets\nNet and Reg: Bitcoin is a self-funding cryptocurrency (E), IPFS was developed by Protocol Labs, using some combination of private equity and operating budget (C/D).",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

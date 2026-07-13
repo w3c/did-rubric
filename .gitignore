@@ -1,1 +1,6 @@
 .idea
+.history
+rubric/rubric.js
+rubric/evaluations.js
+rubric/methodsConsidered.js
+node_modules/

@@ -1,0 +1,9 @@
+{
+  "method": "did:trustbloc",
+  "specification": {
+    "name": "TrustBloc DID Method Specification 0.1",
+    "url": "https://github.com/trustbloc/trustbloc-did-method/blob/main/docs/spec/trustbloc-did-method.md"
+  },
+  "network": "Trustbloc",
+  "registry": "Persist DIDs via Sidetree wrapper around a permissioned ledger."
+}

@@ -1,0 +1,89 @@
+{
+  "name": "Expert Review (Consensus)",
+  "question": {
+    "question": "If the method makes use of a distributed consensus mechanism, has the registry’s consensus mechanism undergone sufficient review?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Yes. A formal proof has been published in a peer reviewed journal"
+      },
+      {
+        "label": "B",
+        "meaning": "Yes. A formal proof has been published"
+      },
+      {
+        "label": "C",
+        "meaning": "No. An informal argument has been published"
+      },
+      {
+        "label": "D",
+        "meaning": "No. The consensus algorithm is opaque to registry users."
+      }
+    ]
+  },
+  "relevance": "Decentralized systems are notoriously difficult to get right. Consensus ordering, in particular, is known to be a hard problem solved by distributed ledgers. Even simpler registries may trade off provable finality with probabilistic finality. It is vital that the Method used for high-value or life-critical application be rigorously evaluated for potential flaws.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-63",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/29",
+  "exampleAssessments": [
+    {
+      "id": "a-131",
+      "method": "did:v1.testnet",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): Mathematical proofs have been peer reviewed for publication in a not-yet-published book on consensus algorithms and as a special IEEE journal publication on network consensus algorithms.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-132",
+      "method": "did:v1.production",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): Mathematical proofs have been peer reviewed for publication in a not-yet-published book on consensus algorithms and as a special IEEE journal publication on network consensus algorithms.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-133",
+      "method": "did:web",
+      "net": "A",
+      "reg": "n/a",
+      "note": "Net (A): The DNS and TLS systems have been thoroughly reviewed in academic literature in research about the Internet and the World Wide Web.\nReg (n/a) : The method provides no consensus mechanism with regard to the https server itself. The entity controlling the server operates independently. (n/a)",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-134",
+      "method": "did:ion",
+      "net": "A",
+      "reg": "A",
+      "note": "Net (A) and Reg (A): Bitcoin’s proof of work consensus algorithm has been thoroughly reviewed. IPFS uses a Kademlia hash table algorithm, which has also undergone thorough academic review since publication in 2002. However, compromising the hash table would not compromise the content of a DID Document; rather it would affect the ability to resolve the DID to that DID Document. IPFS’s content-hash addressing is based on multihash, and did:ion requires using the SHA-256 variant of multihash. SHA-256 is extremely well reviewed.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

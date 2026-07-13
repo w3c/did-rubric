@@ -1,0 +1,94 @@
+{
+  "name": "United States Federal Compliance",
+  "question": {
+    "question": "Is the Method compliant with US Federal requirements for the use of cryptography?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Both registry consensus *and* transaction validation are compliant"
+      },
+      {
+        "label": "B",
+        "meaning": "Transaction validation is compliant but consensus is not"
+      },
+      {
+        "label": "C",
+        "meaning": "No. Neither consensus nor transactions are compliant"
+      }
+    ]
+  },
+  "relevance": "Many US Federal programs and projects require use of cryptography according to standards set by the National Institute of Standards and Technology (NIST), such as:FIPS 186-5 (https://csrc.nist.gov/publications/detail/fips/186/5/draft)NIST 800-131Ar2 (https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final)SP 800-186 (https://csrc.nist.gov/publications/detail/sp/800-186/draft)NIST FIPS 186-4 https://csrc.nist.gov/publications/detail/fips/186/4/final)NIST 800-38D (https://csrc.nist.gov/publications/detail/sp/800-38d/final)NIST 800-38F (https://csrc.nist.gov/publications/detail/sp/800-38f/final)FIPS 180-4 (https://csrc.nist.gov/publications/detail/fips/180/4/final)FIPS 800-107r1. (https://csrc.nist.gov/publications/detail/sp/800-107/rev-1/final)",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-64",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/30",
+  "exampleAssessments": [
+    {
+      "id": "a-139",
+      "method": "did:v1.testnet",
+      "spec": "A",
+      "net": "A",
+      "reg": "A",
+      "note": "Spec (A), Net (A), and Reg (A): did:v1 was written to be compatible with all NIST requirements, including those specified in the Relevance section (6.8.3)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-140",
+      "method": "did:v1.production",
+      "spec": "A",
+      "net": "A",
+      "reg": "A",
+      "note": "Spec (A), Net (A), and Reg (A): did:v1 was written to be compatible with all NIST requirements, including those specified in the Relevance section (6.8.3)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-141",
+      "method": "did:web",
+      "spec": "A",
+      "net": "A",
+      "reg": "A",
+      "note": "Spec (A), Net (A), and Reg (A): Due to the flexibility of the underlying web architecture, any layer *might* be non-compliant; However, the web is a mature platform with many years of solutions that do, in fact, meet US federal requirements.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-142",
+      "method": "did:ion",
+      "spec": "B",
+      "net": "B",
+      "reg": "B",
+      "note": "Spec (B), Net (B), and Reg (B): Bitcoin is likely not NIST compliant thanks to the adoption of Schnorr signatures (with the taproot extension), which are not yet NIST approved. However, recent signals from NIST suggest that (1) bitcoin use of cryptography is not prima facie out of compliance and (2) NIST’s previous evaluations of Schnorr hinged on patent concerns; now that those patents are expired, many are optimistic that Schnoor will be given serious consideration in future evaluations. IPFS allows non-approved hash algorithms through multihash, however did:ion adds the requirement that all hashes be SHA-256, which is NIST compliant.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

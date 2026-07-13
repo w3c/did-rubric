@@ -1,0 +1,93 @@
+{
+  "name": "Maturity",
+  "question": {
+    "question": "How long has the underlying network/registry been available to third parties for non-trivial use?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The network/registry has been operationalized for ten years or more."
+      },
+      {
+        "label": "B",
+        "meaning": "The network/registry has been operationalized for five years or more"
+      },
+      {
+        "label": "C",
+        "meaning": "The network/registry has been operationalized for one year or more"
+      },
+      {
+        "label": "D",
+        "meaning": "The network/registry has been operationalized for less than one year"
+      },
+      {
+        "label": "E",
+        "meaning": "The network/registry is not operationalized for non-trivial use"
+      }
+    ]
+  },
+  "relevance": "Some errors only become apparent after sufficient time to test edge cases and performance boundaries.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-62",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/28",
+  "exampleAssessments": [
+    {
+      "id": "a-119",
+      "method": "did:v1.testnet",
+      "net": "C",
+      "reg": "C",
+      "note": "Net (C) and Reg (C): The Veres One test network has been operational for over 3 years in three major release iterations.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-120",
+      "method": "did:v1.production",
+      "net": "E",
+      "reg": "E",
+      "note": "Net (E) and Reg (E): The Veres One production network has not yet been released.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-121",
+      "method": "did:web",
+      "net": "A",
+      "reg": "D",
+      "note": "Net (A): The web has been around since 1991.\nReg (D): We know of no websites that have operationalized did:web earlier than July 2021.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-122",
+      "method": "did:ion",
+      "net": "D/A/B",
+      "reg": "D/A/B",
+      "note": "Net and Reg: did:ion entered production on Jan 22, 2021 (less than one year at the point of this Evaluation) (D). Bitcoin has been in operation since 2009 (A) and IPFS since 2015 (B).",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Availability",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-28",
+  "source": ".",
+  "question": {
+    "question": "How robust are protections against attempts to suppress information flow, whether legal (cease and desist) or technical (denial of service)?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The VDR is practically immune from this risk."
+      },
+      {
+        "label": "B",
+        "meaning": "The VDR has reasonable protections in place. However, motivated and well resourced attackers could temporarily disrupt access in a targeted context."
+      },
+      {
+        "label": "C",
+        "meaning": "Attackers could permanently disrupt access in a targeted context."
+      }
+    ]
+  },
+  "relevance": "Control over an identifier is far less valuable if the propagation of that control can be limited by someone else.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "2.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-84",
+      "method": "did:btcr",
+      "reg": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "The global bitcoin network has a strong track record of uptime , stretching back for well over a decade, even in the face of motivated attack."
+    },
+    {
+      "id": "a-261",
+      "method": "did:v1.production",
+      "reg": "B",
+      "note": "Veres One is operated by known parties; if all such parties are attacked, especially via legal means, the network could be shut down or additional rules applied. However, no single party can deny the consensus process. Like any publicly accessible service, Veres One is subject to distributed denial of service attacks. Counter measures are in place, but cannot be 100% ameliorated. (B)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-262",
+      "method": "did:web",
+      "reg": "C",
+      "note": "There are a number of attack vectors for each layer in the system; however, each layer also has its own mechanisms for addressing disruption. (C)",
+      "evaluationCitation": "#eval-4"
+    }
+  ]
+}

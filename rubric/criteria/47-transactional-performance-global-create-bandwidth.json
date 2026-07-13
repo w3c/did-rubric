@@ -1,0 +1,105 @@
+{
+  "name": "Transactional Performance - Global Create Bandwidth",
+  "question": {
+    "question": "How many DIDs of this method can be created per time period, globally?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "More than 1,000,000 Transactions Per Second"
+      },
+      {
+        "label": "B",
+        "meaning": "100,001 - 1,000,000 TPS"
+      },
+      {
+        "label": "C",
+        "meaning": "10,001 - 100,000 TPS"
+      },
+      {
+        "label": "D",
+        "meaning": "1,001 - 10,000 TPS"
+      },
+      {
+        "label": "E",
+        "meaning": "101 - 1,000 TPS"
+      },
+      {
+        "label": "F",
+        "meaning": "11 - 100 TPS"
+      },
+      {
+        "label": "G",
+        "meaning": "1-10 TPS"
+      },
+      {
+        "label": "H",
+        "meaning": "Less than 1 TPS"
+      }
+    ]
+  },
+  "relevance": "The number of new DIDs that can be created in a second inform the scalability of the network in regards to onboarding new users and allowing for new uses by existing users.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-47",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/13",
+  "exampleAssessments": [
+    {
+      "id": "a-61",
+      "method": "did:v1.testnet",
+      "net": "n/a",
+      "reg": "n/a",
+      "note": "Net (n/a) and Reg (n/a): Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-62",
+      "method": "did:v1.production",
+      "net": "n/a",
+      "reg": "n/a",
+      "note": "Net (n/a) and Reg (n/a): Veres One DID creation is a local cryptographic process. There is no network or registry involved.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-63",
+      "method": "did:web",
+      "net": "A",
+      "reg": "A",
+      "note": "Net (A) and Reg (A): Architecturally, the World Wide Web can easily handle +1,000,000 transactions per second. Thanks to the way domain names can be routed to specific servers in a round-robin fashion, a given domain could, theoretically, reach 1,000,000 TPS. However, we know of no single domain currently engineered to handle that scale.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-64",
+      "method": "did:ion",
+      "net": "n/a",
+      "reg": "n/a",
+      "note": "Net (n/a) and Reg (n/a): Creation is offline, so there is effectively no limit.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

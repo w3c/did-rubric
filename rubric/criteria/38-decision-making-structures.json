@@ -1,0 +1,106 @@
+{
+  "name": "Decision Making Structures",
+  "question": {
+    "question": "How is each decision making body structured?",
+    "instruction": "Evaluate this criteria for each decision making body from https://www.w3.org/TR/did-rubric#criteria-37."
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Decision Making Body",
+        "type": "enhancedLetter",
+        "propertyRef": "decision making body"
+      },
+      {
+        "heading": "Governance Structure",
+        "type": "enhancedLetter",
+        "propertyRef": "governance structure"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/2",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Individual. Sole proprietorship"
+      },
+      {
+        "label": "B",
+        "meaning": "Informal Group. Unincorporated Partnership / Open Community"
+      },
+      {
+        "label": "C",
+        "meaning": "For-profit formal organization. For-profit Corporation / LLC / Partnership"
+      },
+      {
+        "label": "D",
+        "meaning": "Quasi not-for-profit formal organization. B-Corp https://bcorporation.net/  / CIC https://en.wikipedia.org/wiki/Community_interest_company"
+      },
+      {
+        "label": "E",
+        "meaning": "Recognized not-for-profit formal organization. Not-for-profit public benefit organization (NGOs, 501c(3/4/6), etc)"
+      },
+      {
+        "label": "F",
+        "meaning": "NGO"
+      },
+      {
+        "label": "G",
+        "meaning": "Trade Association"
+      },
+      {
+        "label": "H",
+        "meaning": "Charity"
+      },
+      {
+        "label": "I",
+        "meaning": "Public agency (federal, state, or local)"
+      },
+      {
+        "label": "J",
+        "meaning": "Other"
+      }
+    ]
+  },
+  "relevance": "Different governance structures have different implications for how decisions are made and who wields influence throughout the process.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-38",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-10",
+      "method": "did:v1.testnet",
+      "decision making body": "Digital Bazaar",
+      "governance structure": "C",
+      "note": "Digital Bazaar is a closely held startup with a seventeen year track record. (C)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-11",
+      "method": "did:v1.production",
+      "decision making body": "Veres One Community Group",
+      "governance structure": "E",
+      "note": "The Veres One Community Group is a community group operating under the rules of the World Wide Web Consortium. Open to the public, self-elected leadership (E)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-12",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "governance structure": "E",
+      "note": "The Veres Foundation operates under the non-profit regulations of Ontario, Canada. Self-propagating board of directors overseeing a non-profit organization. (E)",
+      "evaluationCitation": "#eval-3"
+    }
+  ]
+}

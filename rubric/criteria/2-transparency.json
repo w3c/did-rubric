@@ -1,0 +1,92 @@
+{
+  "name": "Transparency",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-2",
+  "source": ".",
+  "question": {
+    "question": "How visible are rulemaking processes?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Agendas and participation details for all meetings are publicly announced, the meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+      },
+      {
+        "label": "B",
+        "meaning": "Minutes of meetings are reviewable by the public, including all votes and who cast them, but real-time observation may be limited."
+      },
+      {
+        "label": "C",
+        "meaning": "All current rules are publicly available."
+      },
+      {
+        "label": "D",
+        "meaning": "Rules may be changed without public notice."
+      }
+    ],
+    "possibleResponses[0]": {
+      "meaning": "Agendas and participation details for all governance discussions are publicly announced, any meetings are broadcast in real-time to any listeners, and all minutes and recordings are captured in realtime and publicly reviewable in perpetuity."
+    }
+  },
+  "relevance": "While participation measures active contribution, transparency measures the visibility of discussions affecting rule making. If such discussions are only visible to a limited group, it centralizes decision making in ways that Evaluators and users cannot easily see.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "1.0.1",
+  "exampleAssessments": [
+    {
+      "id": "a-4",
+      "method": "did:btcr",
+      "spec": "C",
+      "net": "C",
+      "reg": "C",
+      "evaluationCitation": "#eval-1",
+      "note": "The spec is maintained by volunteers, operating in an open fashion but without formal processes for announcements and meeting notes. The network and registry are bitcoin, which has a fairly public but messy innovation process, without formal meetings or votes."
+    },
+    {
+      "id": "a-5",
+      "method": "did:ion",
+      "spec": "A",
+      "net": "A-/A",
+      "reg": "A-/A",
+      "note": "Spec (A): method spec maintained by DIF, using open and transparent processes.\nNet (A-/A) and Reg (A-/A): It can be hard to track conversations about Bitcoin Improvement Proposals (BIPs) and decision processes differ for different BIPs, which can affect visibility (A-). IPFS has great support for realtime zoom participation and Notes(A)",
+      "evaluationCitation": "#eval-5"
+    },
+    {
+      "id": "a-6",
+      "method": "did:peer",
+      "spec": "C",
+      "net": "n/a",
+      "reg": "B",
+      "evaluationCitation": "#eval-1",
+      "note": "Rules for accepting changes to the business rules are bilaterally negotiated between the peers, subject to conformance with the specification."
+    }
+  ]
+}

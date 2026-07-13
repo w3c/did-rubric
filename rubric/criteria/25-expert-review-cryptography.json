@@ -1,0 +1,84 @@
+{
+  "name": "Expert Review (Cryptography)",
+  "question": {
+    "question": "Does the system use cryptographic and security primitives that are well vetted by technical experts, and battle hardened in the school of experience?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": ".",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Experts generally consider the system very secure, and this opinion is reinforced by a track record of secure production use."
+      },
+      {
+        "label": "B",
+        "meaning": "The theoretical security of the system looks excellent, and no known attacks or substantive criticisms are unaddressed. However, limited review or limited experience informs the opinion."
+      },
+      {
+        "label": "C",
+        "meaning": "Credible reports of vulnerabilities or design shortcomings have not been addressed."
+      },
+      {
+        "label": "D",
+        "meaning": "The system actively uses mechanisms that are officially deprecated."
+      },
+      {
+        "label": "E",
+        "meaning": "The system uses mechanisms that have not been vetted."
+      }
+    ]
+  },
+  "relevance": "Exotic crypto and other security mechanisms without expert review and a production track record is likely to contain hidden risks.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-25",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-127",
+      "method": "did:v1.testnet",
+      "reg": "A",
+      "note": "Ed25519 and SHA256 are highly regarded cryptographic algorithms and are the only cryptographic primitives used in Veres One. (A)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-128",
+      "method": "did:v1.production",
+      "reg": "A",
+      "note": "Ed25519 and SHA256 are highly regarded cryptographic algorithms and are the only cryptographic primitives used in Veres One. (A)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-129",
+      "method": "did:web",
+      "reg": "A/E",
+      "note": "TLS/SSL (a requirement for did:web) is the most widespread adoption of cryptographic technology with well-tested, proven implementations (A). The method itself does not require any additional cryptographic primitives. The did:web method does inherit the known short-comings of DNS, which can be mitigated with DNSSec, in some cases. However, this is not a cryptographic problem. In addition, each webserver is free to use any authentication and authorization technique for creating, updating, and deactivating a DID and DID Document. The method relies on this layer to function, but the implementation of this layer may or may not use vetted cryptography (E).",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-130",
+      "method": "did:ion",
+      "reg": "A",
+      "note": "Bitcoin’s security has proven robust. (A)",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

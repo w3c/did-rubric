@@ -1,0 +1,9 @@
+{
+  "method": "did:sov",
+  "specification": {
+    "name": "Sovrin DID Method Spec",
+    "url": "https://github.com/sovrin-foundation/sovrin/blob/master/spec/did-method-spec-template.html"
+  },
+  "network": "Hyperledger Indy",
+  "registry": "A particular instance of Hyperledger Indy"
+}

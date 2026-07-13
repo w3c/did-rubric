@@ -1,0 +1,89 @@
+{
+  "name": "Open contribution (participation)",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-1",
+  "source": ".",
+  "version": "1.0.1",
+  "question": {
+    "question": "How open is participation in governance decisions?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Anyone can participate in an open, fair process where all participants have equal opportunity to be heard and influence decisions."
+      },
+      {
+        "label": "B",
+        "meaning": "Anyone can comment and contribute to open debate, but decisions are ultimately made by a closed group."
+      },
+      {
+        "label": "C",
+        "meaning": "Debate is restricted to a selected but known group."
+      },
+      {
+        "label": "D",
+        "meaning": "Debate is conducted in secret by an unknown group."
+      }
+    ]
+  },
+  "relevance": "Governance determines how the rules of the underlying network are set and maintained. The more parties that are able to contribute to governance debates, the more decentralized the governance.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "exampleAssessments": [
+    {
+      "id": "a-1",
+      "method": "did:web",
+      "spec": "A",
+      "net": "B",
+      "reg": "C/D",
+      "note": "Spec (A): Owned by CCG at W3C, anyone can join.\rNet (B): Most of the network is controlled by public or private entities.\nReg: Controlled by the Domain Holder, which is a restricted set (C) and in some cases may not be known to the resolving party (D).",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-2",
+      "method": "did:git",
+      "spec": "B",
+      "net": "C",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "The git network is the git source code, which is controlled (currently) by 16 people. They do not have a public issues process. The spec is openly developed on github by a listed set of contributors and issues may be raised by anyone. Each registry is controlled by potentially unknown parties as negotiated in \"meatspace\"."
+    },
+    {
+      "id": "a-3",
+      "method": "did:btcr",
+      "spec": "B",
+      "net": "D",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "Changes to the bitcoin protocol are chaotic and uncertain. They use BIPs, but the path to adoption is uncertain and the relative power of developers, miners, and users is open to debate. The spec is openly developed on github by a listed set of contributors and issues may be raised by anyone."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+name: Deploy GitHub Pages
+on:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build and Deploy Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+      - name: Install tooling dependencies
+        working-directory: tooling
+        run: npm i
+      - name: Validate rubric
+        working-directory: tooling
+        run: npm run validate-rubric
+      - name: Generate rubric JS
+        working-directory: tooling
+        run: npm run generate-rubric
+      - name: Prepare site bundle
+        run: |
+          mkdir -p site/rubric site/tooling/src
+          cp index.html common.js rubric.css site/
+          cp rubric/rubric.js rubric/retired-criteria.js site/rubric/
+          cp rubric/evaluations.js rubric/methodsConsidered.js site/rubric/
+          cp tooling/src/render-criteria.js site/tooling/src/
+          cp tooling/src/render-retired.js site/tooling/src/
+          cp tooling/src/render-evaluations.js site/tooling/src/
+          cp tooling/src/render-methods.js site/tooling/src/
+      - name: Select deploy target folder
+        id: deploy_target
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "target=" >> "$GITHUB_OUTPUT"
+          else
+            echo "target=branch/${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          target-folder: ${{ steps.deploy_target.outputs.target }}

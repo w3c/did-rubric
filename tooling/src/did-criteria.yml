@@ -1,0 +1,131 @@
+---
+title: DID Criteria Entry
+description: This schema defines the shape of criteria entries in the DID rubric
+type: object
+additionalProperties: false
+required:
+  - name
+  - id
+  - version
+  - source
+  - question
+  - response
+  - relevance
+  - assessmentTemplate
+properties:
+  name:
+    description: https://www.w3.org/TR/did-rubric/#criteria-name
+    type: string
+  id:
+    description: https://www.w3.org/TR/did-rubric/#criteria-id
+    type: string
+  version:
+    description: https://www.w3.org/TR/did-rubric/#criteria-version
+    type: string
+  source:
+    description: https://www.w3.org/TR/did-rubric/#criteria-source
+    type: string
+  question:
+    description: https://www.w3.org/TR/did-rubric/#criteria-question
+    type: object
+    additionalProperties: false
+    required:
+      - question
+    properties:
+      question:
+        description: The main question text
+        type: string
+      instruction:
+        description: Additional instructions for answering the question
+        type: string
+  response:
+    description: The response structure defining how answers are structured
+    type: object
+    additionalProperties: true
+    # required:
+      # - type
+    properties:
+      type:
+        description: The type of response, typically "multipleChoice"
+        type: string
+      possibleResponses:
+        description: An array of possible response options
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          required:
+            - label
+            - meaning
+          properties:
+            label:
+              description: The label for the response option (e.g., "A", "B", "C", "D")
+              type: string
+            meaning:
+              description: The meaning or description of what this response option represents
+              type: string
+  relevance:
+    description: https://www.w3.org/TR/did-rubric/#criteria-relevance
+    type:
+      - string
+  assessmentTemplate:
+    description: Template structure for how assessments are presented
+    type: object
+    additionalProperties: true
+    properties:
+      columns:
+        description: Array of column definitions for the assessment table
+        type:
+          - array
+        items:
+          type: object
+          additionalProperties: false
+          required:
+            - heading
+            - type
+            - propertyRef
+          properties:
+            heading:
+              description: The column heading text
+              type: string
+            type:
+              description: The type of column (e.g., "method", "enhancedLetter", "note")
+              type: string
+            propertyRef:
+              description: The property reference for this column (e.g., "method", "spec", "net", "reg", "note", "score")
+              type: string
+  exampleAssessments:
+    description: Example assessments demonstrating how different DID methods score on this criteria
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+      required:
+        - id
+        - method
+        - evaluationCitation
+      properties:
+        id:
+          description: Unique identifier for this example assessment
+          type: string
+        method:
+          description: The DID method being assessed (e.g., "did:web", "did:btcr")
+          type: string
+        spec:
+          description: Assessment score for the specification aspect
+          type: string
+        net:
+          description: Assessment score for the network aspect
+          type: string
+        reg:
+          description: Assessment score for the registry aspect
+          type: string
+        score:
+          description: Overall assessment score (used when spec/net/reg breakdown is not applicable)
+          type: string
+        note:
+          description: Additional notes explaining the assessment
+          type: string
+        evaluationCitation:
+          description: Citation reference to the evaluation source
+          type: string

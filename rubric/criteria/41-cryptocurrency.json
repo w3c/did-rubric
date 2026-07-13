@@ -1,0 +1,72 @@
+{
+  "name": "Cryptocurrency",
+  "question": {
+    "question": "What cryptocurrency, if any, is required for Method operations?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Spec.",
+        "type": "enhancedLetter",
+        "propertyRef": "spec"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "None"
+      },
+      {
+        "label": "B",
+        "meaning": "At least one. [List the required crypto-currencies in the Notes]"
+      }
+    ]
+  },
+  "relevance": "The use of particular cryptocurrencies create a long term dependency on the viability of those currencies. Such dependency may be a deterrent for some applications. Similarly, if no cryptocurrency is used, there is likely a dependency elsewhere, such as on the organization managing consensus rules and operation.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-41",
+  "version": "1.0.0",
+  "source": "https://didcriteria.com/criteria/5",
+  "exampleAssessments": [
+    {
+      "id": "a-25",
+      "method": "did:v1.testnet",
+      "spec": "A",
+      "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-26",
+      "method": "did:v1.production",
+      "spec": "A",
+      "note": "Spec (A): The V1 DID Method operates on its own blockchain with a novel, non-cryptocurrency consensus algorithm.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-27",
+      "method": "did:web",
+      "spec": "A",
+      "note": "Spec (B): did:web, which is based on the World Wide Web and DNS does not rely on any cryptocurrency.",
+      "evaluationCitation": "#eval-4"
+    },
+    {
+      "id": "a-28",
+      "method": "did:ion",
+      "spec": "B",
+      "note": "Spec (B): One must use bitcoin. BTC is required for anchoring transactions. The IPFS layer does not require cryptocurrency, but the bitcoin layer is required for all operations.",
+      "evaluationCitation": "#eval-5"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "method": "did:v1.production",
+  "specification": {
+    "name": "did:v1 Method Specification",
+    "url": "https://w3c-ccg.github.io/did-method-v1/"
+  },
+  "network": {
+    "name": "https://veres.one/network/",
+    "url": "https://veres.one/network/"
+  },
+  "registry": "Same as network"
+}

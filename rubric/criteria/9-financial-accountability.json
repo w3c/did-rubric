@@ -1,0 +1,81 @@
+{
+  "name": "Financial accountability",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-9",
+  "source": ".",
+  "question": {
+    "question": "How transparent are the economics of the Method?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "All operational finances are transparent and accounted for."
+      },
+      {
+        "label": "B",
+        "meaning": "Compensation for primary operators is transparent."
+      },
+      {
+        "label": "C",
+        "meaning": "Some financial flows are visible."
+      },
+      {
+        "label": "D",
+        "meaning": "Operation is privatized with no visibility."
+      }
+    ]
+  },
+  "relevance": "Similar to Governance, financial accountability reflects the integrity and sustainability of the DID registry. The more open, transparent, and accountable the system, the greater the confidence a DID controller may have that it will remain stable and operational, and therefore continue to provide service.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "1.0.1",
+  "exampleAssessments": [
+    {
+      "id": "a-49",
+      "method": "did:peer",
+      "net": "D",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "The financials of both parties have no visibility."
+    },
+    {
+      "id": "a-106",
+      "method": "did:v1.production",
+      "net": "B",
+      "reg": "B",
+      "note": "Net (B) and Reg (B): Once operations are transferred to the Foundation, finances should be considerably more transparent.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-51",
+      "method": "did:btcr",
+      "net": "A-",
+      "reg": "A-",
+      "evaluationCitation": "#eval-1",
+      "note": "Bitcoin is transparent, although operations are somewhat obscured by pseudonymous transaction addresses."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "method": "did:git",
+  "specification": {
+    "name": "DID git Spec",
+    "url": "https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md"
+  },
+  "network": {
+    "name": "git",
+    "url": "https://git-scm.com/",
+    "note": "(an open source version control system)"
+  },
+  "registry": "Any Method-compliant git repository"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "Permissioned Operation",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-6",
+  "source": ".",
+  "question": {
+    "question": "Does one need permission to use the DID Method?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Anyone can participate fully (full read/write and participation in consensus)."
+      },
+      {
+        "label": "B",
+        "meaning": "Anyone can read/write, but consensus mechanism is permissioned."
+      },
+      {
+        "label": "C",
+        "meaning": "Anyone can read, but writing and consensus is permissioned."
+      },
+      {
+        "label": "D",
+        "meaning": "All participation is permissioned."
+      }
+    ]
+  },
+  "relevance": "Permissioned operation impacts the availability of the network to various participants, which can affect inclusivity with regard to underserved or vulnerable populations. Permissioned networks also expose the permission giver to legal or other attacks.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Net.",
+        "type": "enhancedLetter",
+        "propertyRef": "net"
+      },
+      {
+        "heading": "Reg.",
+        "type": "enhancedLetter",
+        "propertyRef": "reg"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "version": "1.0.1",
+  "exampleAssessments": [
+    {
+      "id": "a-19",
+      "method": "did:ethr",
+      "net": "A",
+      "reg": "A",
+      "evaluationCitation": "#eval-1",
+      "note": "Ethereum is open to anyone. The registry is accessible to anyone."
+    },
+    {
+      "id": "a-20",
+      "method": "did:v1.production",
+      "net": "B+",
+      "reg": "B+",
+      "note": "Net (B+) and Reg (B+)The ledger is available to the public for reading, and anyone can submit a transaction (either through paying an accelerator or in-kind contribution), however, only Witnesses are able to approve updates to the chain. The propagation rules of the peer network restrict the ability for Witnesses to selectively approve transactions, but ultimately, the decision remains with a supermajority of Witnesses.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-21",
+      "method": "did:git",
+      "net": "A",
+      "reg": "D",
+      "evaluationCitation": "#eval-1",
+      "note": "Git software is available to anyone. Participation and access is controlled by the repo maintainers."
+    }
+  ]
+}

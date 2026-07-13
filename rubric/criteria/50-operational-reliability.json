@@ -1,0 +1,93 @@
+{
+  "name": "Operational Reliability",
+  "question": {
+    "question": "For each layer, how many operational components may be offline without that layer losing availability?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Layer",
+        "type": "enhancedLetter",
+        "propertyRef": "layer"
+      },
+      {
+        "heading": "Response",
+        "type": "enhancedLetter",
+        "propertyRef": "response"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/16",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Equation based on the consensus algorithm"
+      },
+      {
+        "label": "B",
+        "meaning": "Known number"
+      },
+      {
+        "label": "C",
+        "meaning": "Percentage"
+      },
+      {
+        "label": "D",
+        "meaning": "NONE (specific components MUST be operational)"
+      },
+      {
+        "label": "E",
+        "meaning": "OPTIONAL (operations do not depend on the layer being available)"
+      }
+    ]
+  },
+  "relevance": "Along with the type of consensus algorithm the number of offline nodes has both security--i.e. DDOS attacks--and reliability implications.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-50",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-73",
+      "method": "did:v1.testnet",
+      "layer": "Witnesses",
+      "response": "4",
+      "note": "The BFT consensus algorithm used by Veres One requires a supermajority of 9/13 witness nodes to formulate consensus.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-74",
+      "method": "did:v1.testnet",
+      "layer": "Peers",
+      "response": "N/A",
+      "note": "Peer nodes are not needed in the formulation of consensus.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-75",
+      "method": "did:v1.production",
+      "layer": "Witnesses",
+      "response": "4",
+      "note": "The BFT consensus algorithm used by Veres One requires a supermajority of 9/13 witness nodes to formulate consensus.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-76",
+      "method": "did:v1.production",
+      "layer": "Peers",
+      "response": "N/A",
+      "note": "Peer nodes are not needed in the formulation of consensus.",
+      "evaluationCitation": "#eval-3"
+    }
+  ]
+}

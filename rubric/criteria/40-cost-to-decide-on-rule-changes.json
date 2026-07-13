@@ -1,0 +1,86 @@
+{
+  "name": "Cost to decide on rule changes",
+  "question": {
+    "question": "How expensive is it to participate as a peer in a governance decision by the governing body?",
+    "instruction": "Evaluate this criteria for each decision making body from https://www.w3.org/TR/did-rubric#criteria-37."
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Decision Making Body",
+        "type": "enhancedLetter",
+        "propertyRef": "decision making body"
+      },
+      {
+        "heading": "Cost",
+        "type": "enhancedLetter",
+        "propertyRef": "cost"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/4",
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Free to all"
+      },
+      {
+        "label": "B",
+        "meaning": "Inexpensive, but accessible"
+      },
+      {
+        "label": "C",
+        "meaning": "Modest cost for interested parties"
+      },
+      {
+        "label": "D",
+        "meaning": "Expensive and restricted"
+      },
+      {
+        "label": "E",
+        "meaning": "Not possible to participate because the rules are immutable"
+      }
+    ]
+  },
+  "relevance": "Governance takes resources, which can limit the ability of interested parties to influence rulemaking. Generally, the more expensive it is to participate, the more governance centralizes to those parties most able to make the investment.",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-40",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-16",
+      "method": "did:v1.testnet",
+      "decision making body": "Digital Bazaar",
+      "cost": "D",
+      "note": "The most common way to be involved is by invitation from Digital Bazaar, either as an employee, subcontractor, or advisor. (D)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-17",
+      "method": "did:v1.production",
+      "decision making body": "Veres One Community Group",
+      "cost": "B",
+      "note": "The largest cost is time to participate and a track record for credibility. (B)",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-18",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "cost": "D",
+      "note": "Foundation leadership is initially selected by Digital Bazaar and self-selecting thereafter. (D)",
+      "evaluationCitation": "#eval-3"
+    }
+  ]
+}

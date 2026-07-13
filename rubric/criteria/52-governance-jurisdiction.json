@@ -1,0 +1,53 @@
+{
+  "name": "Governance Jurisdiction",
+  "question": {
+    "question": "In which jurisdiction is the governing body located?"
+  },
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Decision Making Body",
+        "type": "enhancedLetter",
+        "propertyRef": "decision making body"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "source": "https://didcriteria.com/criteria/18",
+  "relevance": "Different jurisdictions have different laws which may affect the operation of the method.",
+  "response": {},
+  "id": "https://www.w3.org/TR/did-rubric#criteria-52",
+  "version": "1.0.0",
+  "exampleAssessments": [
+    {
+      "id": "a-84",
+      "method": "did:v1.testnet",
+      "decision making body": "Digital Bazaar, Inc.",
+      "note": "Digital Bazaar created Veres One. It is a corporation formed in the commonwealth of Virginia, USA.",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-85",
+      "method": "did:v1.production",
+      "decision making body": "Veres One Community Group",
+      "note": "In production, the Veres One Community Group is the public-facing decision making body designed for discussing technical matters. It operates under the auspices of the World Wide Web Consortium. The W3C does not have a single physical headquarters. There are four institutions that \"host\" W3C: MIT (in Cambridge, MA, USA), ERCIM (in Sophia-Antipolis, France), Keio University (near Tokyo, Japan), and Beihang University (in Beijing, China).",
+      "evaluationCitation": "#eval-3"
+    },
+    {
+      "id": "a-86",
+      "method": "did:v1.production",
+      "decision making body": "Veres Foundation Board",
+      "note": "The Veres Foundation holds responsibility for the financial and legal decisions necessary to keep the network operational. It is based in Ottawa, Canada.",
+      "evaluationCitation": "#eval-3"
+    }
+  ]
+}

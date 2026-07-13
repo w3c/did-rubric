@@ -1,0 +1,66 @@
+{
+  "name": "Diffuse Control",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-31",
+  "source": ".",
+  "version": "1.0.0",
+  "question": {
+    "question": "To what extent does the system support mechanisms where DID control is distributed across multiple parties (m-of-n control, threshold signatures, etc.)?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "Rich diffuse control mechanisms are a first-class feature, and anyone who resolves a DID can see whether they are in use so confidence is increased. This may include device revocation (where keys must be exercised on a particular device to be valid)."
+      },
+      {
+        "label": "B",
+        "meaning": "Some diffuse control is possible but has important deficits in documentation, maturity, or visibility."
+      },
+      {
+        "label": "C",
+        "meaning": "Multiple parties can exercise control independently. Diffuse control is possible outside the system (e.g., using Shamir secret sharing to reconstitute a single key before updating a DID document). It's not possible to know whether such mechanisms are in use."
+      },
+      {
+        "label": "D",
+        "meaning": "Only a single party can exercise control at a time."
+      }
+    ]
+  },
+  "relevance": "Diffuse trust makes hacking harder and recovery more robust (but maybe more complex).",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "exampleAssessments": [
+    {
+      "id": "a-125",
+      "method": "did:key",
+      "score": "C",
+      "evaluationCitation": "#eval-2",
+      "note": "did:key is controlled by a single key. If aggregate control is desired, these keys can be sharded, but that is outside the method's feature set."
+    },
+    {
+      "id": "a-126",
+      "method": "did:peer",
+      "score": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "Dynamic peer DIDs explicitly define an m-of-n scheme that can be used to authorize any evolution of state, or any verification method supported by the DID."
+    }
+  ]
+}

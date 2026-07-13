@@ -1,0 +1,69 @@
+{
+  "name": "Incentives for Multicontext DIDs",
+  "id": "https://www.w3.org/TR/did-rubric#criteria-35",
+  "source": ".",
+  "version": "1.0.0",
+  "question": {
+    "question": "To what extent does the method incentivize (due to cost, hassle, etc.) a DID to be reused in multiple contexts?"
+  },
+  "response": {
+    "type": "multipleChoice",
+    "possibleResponses": [
+      {
+        "label": "A",
+        "meaning": "The natural and default behavior is to create a new DID in each new context, and there is no meaningful incentive to do otherwise."
+      },
+      {
+        "label": "B",
+        "meaning": "It is possible to create and manage numerous DIDs, but the latency, complexity, or monetary expense of doing so results in modest pressure to reuse a DID."
+      },
+      {
+        "label": "C",
+        "meaning": "Each DID is expensive in at least one important dimension. Incentives to reuse are strong."
+      }
+    ]
+  },
+  "relevance": "People will often trade away privacy for a low price or ease of use. Methods that encourage this tradeoff are less optimal from a privacy perspective, even if their privacy features are theoretically reasonable.",
+  "assessmentTemplate": {
+    "columns": [
+      {
+        "heading": "Method",
+        "type": "method",
+        "propertyRef": "method"
+      },
+      {
+        "heading": "Score",
+        "type": "enhancedLetter",
+        "propertyRef": "score"
+      },
+      {
+        "heading": "Notes",
+        "type": "note",
+        "propertyRef": "note"
+      }
+    ]
+  },
+  "exampleAssessments": [
+    {
+      "id": "a-148",
+      "method": "did:btcr",
+      "score": "C",
+      "evaluationCitation": "#eval-2",
+      "note": "At times when Bitcoin value has spiked, creating a DID on Bitcoin has required an expensive transaction. Finality also takes a significant amount of time. This creates incentives to reuse a DID in multiple contexts."
+    },
+    {
+      "id": "a-149",
+      "method": "did:sov",
+      "score": "C",
+      "evaluationCitation": "#eval-2",
+      "note": "The Sovrin ledger deliberately charges for ledger writes to discourage its use for privacy-oriented identifiers."
+    },
+    {
+      "id": "a-150",
+      "method": "did:peer",
+      "score": "A",
+      "evaluationCitation": "#eval-2",
+      "note": "Creating a peer DIDs is free and nearly instantaneous. There are no incentives for reuse."
+    }
+  ]
+}
