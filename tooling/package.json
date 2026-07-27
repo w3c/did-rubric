@@ -5,7 +5,7 @@
     "private": true,
     "dependencies": {
       "ajv": "^8.6.3",
-      "js-yaml": "^4.1.0"
+      "js-yaml": "^4.3.0"
     },
     "type": "module",
     "scripts": {
